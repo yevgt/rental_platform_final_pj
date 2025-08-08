@@ -1,0 +1,77 @@
+2025-08-08 21:32:02,221 | INFO | requests | pid=31420 tid=29868 | {'method': 'GET', 'path': '/api/docs/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 11, 'query': ''}
+2025-08-08 21:32:02,809 | INFO | requests | pid=31420 tid=29868 | {'method': 'GET', 'path': '/api/schema/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 180, 'query': ''}
+2025-08-08 21:32:27,056 | INFO | requests | pid=31420 tid=29868 | {'method': 'GET', 'path': '/api/docs/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 8, 'query': ''}
+2025-08-08 21:32:27,604 | INFO | requests | pid=31420 tid=29868 | {'method': 'GET', 'path': '/api/schema/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 113, 'query': ''}
+2025-08-08 21:40:10,655 | INFO | requests | pid=33960 tid=28536 | {'method': 'POST', 'path': '/api/bookings/1/confirm/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 8, 'query': ''}
+2025-08-08 21:41:02,615 | INFO | requests | pid=34392 tid=18964 | {'method': 'POST', 'path': '/api/properties/', 'status': 201, 'user': 'user_id=1', 'duration_ms': 21, 'query': ''}
+2025-08-08 21:41:02,625 | INFO | requests | pid=34392 tid=18964 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'anon', 'duration_ms': 9, 'query': 'search=ÐºÐ²Ð°Ñ\x80Ñ\x82Ð¸Ñ\x80Ð°&ordering=-price'}
+2025-08-08 21:41:07,901 | INFO | requests | pid=34392 tid=18964 | {'method': 'POST', 'path': '/api/properties/', 'status': 201, 'user': 'user_id=1', 'duration_ms': 5, 'query': ''}
+2025-08-08 21:41:09,667 | ERROR | django.request | pid=34392 tid=18964 | Internal Server Error: /api/bookings/
+Traceback (most recent call last):
+  File "C:\Users\ICH\PycharmProjects\rental_platform\venv2\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ICH\PycharmProjects\rental_platform\venv2\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ICH\PycharmProjects\rental_platform\venv2\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\ICH\PycharmProjects\rental_platform\venv2\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\PycharmProjects\rental_platform\venv2\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\ICH\PycharmProjects\rental_platform\venv2\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\ICH\PycharmProjects\rental_platform\venv2\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\ICH\PycharmProjects\rental_platform\venv2\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\ICH\PycharmProjects\rental_platform\venv2\Lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\ICH\PycharmProjects\rental_platform\bookings\views.py", line 34, in perform_create
+    booking = serializer.save(user=self.request.user)
+  File "C:\Users\ICH\PycharmProjects\rental_platform\venv2\Lib\site-packages\rest_framework\serializers.py", line 210, in save
+    self.instance = self.create(validated_data)
+                    ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\PycharmProjects\rental_platform\bookings\serializers.py", line 42, in create
+    return Booking.objects.create(user=user, status=Booking.Status.PENDING, **validated_data)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: django.db.models.query.QuerySet.create() got multiple values for keyword argument 'user'
+2025-08-08 21:41:09,679 | INFO | requests | pid=34392 tid=18964 | {'method': 'POST', 'path': '/api/bookings/', 'status': 500, 'user': 'user_id=2', 'duration_ms': 47, 'query': ''}
+2025-08-08 21:41:15,597 | INFO | requests | pid=34392 tid=18964 | {'method': 'POST', 'path': '/api/bookings/1/confirm/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 8, 'query': ''}
+2025-08-08 21:41:22,834 | INFO | requests | pid=34392 tid=18964 | {'method': 'POST', 'path': '/api/bookings/1/confirm/', 'status': 404, 'user': 'user_id=2', 'duration_ms': 4, 'query': ''}
+2025-08-08 21:41:22,834 | WARNING | django.request | pid=34392 tid=18964 | Not Found: /api/bookings/1/confirm/
+2025-08-08 21:41:22,853 | INFO | requests | pid=34392 tid=18964 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'anon', 'duration_ms': 3, 'query': ''}
+2025-08-08 21:41:28,143 | INFO | requests | pid=34392 tid=18964 | {'method': 'GET', 'path': '/api/notifications/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 5, 'query': 'is_read=false'}
+2025-08-08 21:41:28,148 | INFO | requests | pid=34392 tid=18964 | {'method': 'POST', 'path': '/api/notifications/1/read/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 4, 'query': ''}
+2025-08-08 21:41:28,156 | INFO | requests | pid=34392 tid=18964 | {'method': 'POST', 'path': '/api/bookings/1/confirm/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 6, 'query': ''}
+2025-08-08 21:41:29,886 | INFO | requests | pid=34392 tid=18964 | {'method': 'GET', 'path': '/api/notifications/', 'status': 200, 'user': 'user_id=2', 'duration_ms': 3, 'query': 'is_read=false'}
+2025-08-08 21:41:29,891 | INFO | requests | pid=34392 tid=18964 | {'method': 'POST', 'path': '/api/notifications/read_all/', 'status': 200, 'user': 'user_id=2', 'duration_ms': 3, 'query': ''}
+2025-08-08 21:41:29,894 | INFO | requests | pid=34392 tid=18964 | {'method': 'GET', 'path': '/api/notifications/', 'status': 200, 'user': 'user_id=2', 'duration_ms': 2, 'query': 'is_read=false'}
+2025-08-08 21:48:45,870 | INFO | requests | pid=14792 tid=26664 | {'method': 'POST', 'path': '/api/properties/', 'status': 201, 'user': 'user_id=1', 'duration_ms': 23, 'query': ''}
+2025-08-08 21:48:45,882 | INFO | requests | pid=14792 tid=26664 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'anon', 'duration_ms': 10, 'query': 'search=ÐºÐ²Ð°Ñ\x80Ñ\x82Ð¸Ñ\x80Ð°&ordering=-price'}
+2025-08-08 21:48:51,342 | INFO | requests | pid=14792 tid=26664 | {'method': 'POST', 'path': '/api/properties/', 'status': 201, 'user': 'user_id=1', 'duration_ms': 5, 'query': ''}
+2025-08-08 21:48:53,096 | INFO | requests | pid=14792 tid=26664 | {'method': 'POST', 'path': '/api/bookings/', 'status': 201, 'user': 'user_id=2', 'duration_ms': 10, 'query': ''}
+2025-08-08 21:48:53,104 | INFO | requests | pid=14792 tid=26664 | {'method': 'POST', 'path': '/api/bookings/1/confirm/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 6, 'query': ''}
+2025-08-08 21:48:53,111 | INFO | requests | pid=14792 tid=26664 | {'method': 'POST', 'path': '/api/reviews/', 'status': 400, 'user': 'user_id=2', 'duration_ms': 5, 'query': ''}
+2025-08-08 21:48:53,113 | WARNING | django.request | pid=14792 tid=26664 | Bad Request: /api/reviews/
+2025-08-08 21:48:53,122 | INFO | requests | pid=14792 tid=26664 | {'method': 'POST', 'path': '/api/reviews/', 'status': 201, 'user': 'user_id=2', 'duration_ms': 5, 'query': ''}
+2025-08-08 21:48:53,130 | INFO | requests | pid=14792 tid=26664 | {'method': 'GET', 'path': '/api/reviews/', 'status': 200, 'user': 'user_id=2', 'duration_ms': 6, 'query': 'property=1'}
+2025-08-08 21:48:58,398 | INFO | requests | pid=14792 tid=26664 | {'method': 'POST', 'path': '/api/bookings/1/confirm/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 6, 'query': ''}
+2025-08-08 21:49:05,534 | INFO | requests | pid=14792 tid=26664 | {'method': 'POST', 'path': '/api/bookings/1/confirm/', 'status': 403, 'user': 'user_id=2', 'duration_ms': 4, 'query': ''}
+2025-08-08 21:49:05,534 | WARNING | django.request | pid=14792 tid=26664 | Forbidden: /api/bookings/1/confirm/
+2025-08-08 21:49:05,546 | INFO | requests | pid=14792 tid=26664 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'anon', 'duration_ms': 4, 'query': ''}
+2025-08-08 21:49:10,871 | INFO | requests | pid=14792 tid=26664 | {'method': 'GET', 'path': '/api/notifications/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 4, 'query': 'is_read=false'}
+2025-08-08 21:49:10,877 | INFO | requests | pid=14792 tid=26664 | {'method': 'POST', 'path': '/api/notifications/1/read/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 4, 'query': ''}
+2025-08-08 21:49:10,884 | INFO | requests | pid=14792 tid=26664 | {'method': 'POST', 'path': '/api/bookings/1/confirm/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 6, 'query': ''}
+2025-08-08 21:49:12,582 | INFO | requests | pid=14792 tid=26664 | {'method': 'GET', 'path': '/api/notifications/', 'status': 200, 'user': 'user_id=2', 'duration_ms': 3, 'query': 'is_read=false'}
+2025-08-08 21:49:12,586 | INFO | requests | pid=14792 tid=26664 | {'method': 'POST', 'path': '/api/notifications/read_all/', 'status': 200, 'user': 'user_id=2', 'duration_ms': 2, 'query': ''}
+2025-08-08 21:49:12,591 | INFO | requests | pid=14792 tid=26664 | {'method': 'GET', 'path': '/api/notifications/', 'status': 200, 'user': 'user_id=2', 'duration_ms': 3, 'query': 'is_read=false'}
+2025-08-08 21:49:50,861 | INFO | requests | pid=34892 tid=19424 | {'method': 'GET', 'path': '/api/docs/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 57, 'query': ''}
+2025-08-08 21:49:52,847 | INFO | requests | pid=34892 tid=19424 | {'method': 'GET', 'path': '/api/schema/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 204, 'query': ''}
+2025-08-08 22:03:32,380 | INFO | requests | pid=34892 tid=4136 | {'method': 'GET', 'path': '/api/accounts/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 35, 'query': ''}
+2025-08-08 22:03:42,193 | INFO | requests | pid=34892 tid=4136 | {'method': 'GET', 'path': '/api/accounts/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 12, 'query': ''}
+2025-08-08 22:04:01,506 | INFO | requests | pid=34892 tid=4136 | {'method': 'GET', 'path': '/api/accounts/me/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 90, 'query': ''}
+2025-08-08 22:04:08,646 | INFO | requests | pid=34892 tid=4136 | {'method': 'GET', 'path': '/api/accounts/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 11, 'query': ''}
+2025-08-08 22:04:22,271 | INFO | requests | pid=34892 tid=4136 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 70, 'query': ''}

@@ -1,0 +1,288 @@
+2025-08-08 21:30:56,354 | INFO | django.utils.autoreload | pid=31420 tid=20064 | Watching for file changes with StatReloader
+2025-08-08 21:40:10,605 | ERROR | rental_platform.middleware | pid=33960 tid=28536 | Failed to log request/response
+Traceback (most recent call last):
+  File "C:\Users\ICH\PycharmProjects\rental_platform\rental_platform\middleware.py", line 51, in process_response
+    requests_logger.info("request", extra={"message": str(msg)})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1519, in info
+    self._log(INFO, msg, args, **kwargs)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1662, in _log
+    record = self.makeRecord(self.name, level, fn, lno, msg, args,
+                             exc_info, func, extra, sinfo)
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1636, in makeRecord
+    raise KeyError("Attempt to overwrite %r in LogRecord" % key)
+KeyError: "Attempt to overwrite 'message' in LogRecord"
+2025-08-08 21:40:10,654 | INFO | bookings.views | pid=33960 tid=28536 | Booking confirmed booking_id=1 owner_id=1 renter_id=2
+2025-08-08 21:41:00,933 | ERROR | rental_platform.middleware | pid=34392 tid=18964 | Failed to log request/response
+Traceback (most recent call last):
+  File "C:\Users\ICH\PycharmProjects\rental_platform\rental_platform\middleware.py", line 51, in process_response
+    requests_logger.info("request", extra={"message": str(msg)})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1519, in info
+    self._log(INFO, msg, args, **kwargs)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1662, in _log
+    record = self.makeRecord(self.name, level, fn, lno, msg, args,
+                             exc_info, func, extra, sinfo)
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1636, in makeRecord
+    raise KeyError("Attempt to overwrite %r in LogRecord" % key)
+KeyError: "Attempt to overwrite 'message' in LogRecord"
+2025-08-08 21:41:02,590 | ERROR | rental_platform.middleware | pid=34392 tid=18964 | Failed to log request/response
+Traceback (most recent call last):
+  File "C:\Users\ICH\PycharmProjects\rental_platform\rental_platform\middleware.py", line 51, in process_response
+    requests_logger.info("request", extra={"message": str(msg)})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1519, in info
+    self._log(INFO, msg, args, **kwargs)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1662, in _log
+    record = self.makeRecord(self.name, level, fn, lno, msg, args,
+                             exc_info, func, extra, sinfo)
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1636, in makeRecord
+    raise KeyError("Attempt to overwrite %r in LogRecord" % key)
+KeyError: "Attempt to overwrite 'message' in LogRecord"
+2025-08-08 21:41:07,893 | ERROR | rental_platform.middleware | pid=34392 tid=18964 | Failed to log request/response
+Traceback (most recent call last):
+  File "C:\Users\ICH\PycharmProjects\rental_platform\rental_platform\middleware.py", line 51, in process_response
+    requests_logger.info("request", extra={"message": str(msg)})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1519, in info
+    self._log(INFO, msg, args, **kwargs)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1662, in _log
+    record = self.makeRecord(self.name, level, fn, lno, msg, args,
+                             exc_info, func, extra, sinfo)
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1636, in makeRecord
+    raise KeyError("Attempt to overwrite %r in LogRecord" % key)
+KeyError: "Attempt to overwrite 'message' in LogRecord"
+2025-08-08 21:41:09,629 | ERROR | rental_platform.middleware | pid=34392 tid=18964 | Failed to log request/response
+Traceback (most recent call last):
+  File "C:\Users\ICH\PycharmProjects\rental_platform\rental_platform\middleware.py", line 51, in process_response
+    requests_logger.info("request", extra={"message": str(msg)})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1519, in info
+    self._log(INFO, msg, args, **kwargs)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1662, in _log
+    record = self.makeRecord(self.name, level, fn, lno, msg, args,
+                             exc_info, func, extra, sinfo)
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1636, in makeRecord
+    raise KeyError("Attempt to overwrite %r in LogRecord" % key)
+KeyError: "Attempt to overwrite 'message' in LogRecord"
+2025-08-08 21:41:15,586 | ERROR | rental_platform.middleware | pid=34392 tid=18964 | Failed to log request/response
+Traceback (most recent call last):
+  File "C:\Users\ICH\PycharmProjects\rental_platform\rental_platform\middleware.py", line 51, in process_response
+    requests_logger.info("request", extra={"message": str(msg)})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1519, in info
+    self._log(INFO, msg, args, **kwargs)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1662, in _log
+    record = self.makeRecord(self.name, level, fn, lno, msg, args,
+                             exc_info, func, extra, sinfo)
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1636, in makeRecord
+    raise KeyError("Attempt to overwrite %r in LogRecord" % key)
+KeyError: "Attempt to overwrite 'message' in LogRecord"
+2025-08-08 21:41:15,596 | INFO | bookings.views | pid=34392 tid=18964 | Booking confirmed booking_id=1 owner_id=1 renter_id=2
+2025-08-08 21:41:22,826 | ERROR | rental_platform.middleware | pid=34392 tid=18964 | Failed to log request/response
+Traceback (most recent call last):
+  File "C:\Users\ICH\PycharmProjects\rental_platform\rental_platform\middleware.py", line 51, in process_response
+    requests_logger.info("request", extra={"message": str(msg)})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1519, in info
+    self._log(INFO, msg, args, **kwargs)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1662, in _log
+    record = self.makeRecord(self.name, level, fn, lno, msg, args,
+                             exc_info, func, extra, sinfo)
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1636, in makeRecord
+    raise KeyError("Attempt to overwrite %r in LogRecord" % key)
+KeyError: "Attempt to overwrite 'message' in LogRecord"
+2025-08-08 21:41:28,133 | ERROR | rental_platform.middleware | pid=34392 tid=18964 | Failed to log request/response
+Traceback (most recent call last):
+  File "C:\Users\ICH\PycharmProjects\rental_platform\rental_platform\middleware.py", line 51, in process_response
+    requests_logger.info("request", extra={"message": str(msg)})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1519, in info
+    self._log(INFO, msg, args, **kwargs)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1662, in _log
+    record = self.makeRecord(self.name, level, fn, lno, msg, args,
+                             exc_info, func, extra, sinfo)
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1636, in makeRecord
+    raise KeyError("Attempt to overwrite %r in LogRecord" % key)
+KeyError: "Attempt to overwrite 'message' in LogRecord"
+2025-08-08 21:41:28,155 | INFO | bookings.views | pid=34392 tid=18964 | Booking confirmed booking_id=1 owner_id=1 renter_id=2
+2025-08-08 21:41:29,880 | ERROR | rental_platform.middleware | pid=34392 tid=18964 | Failed to log request/response
+Traceback (most recent call last):
+  File "C:\Users\ICH\PycharmProjects\rental_platform\rental_platform\middleware.py", line 51, in process_response
+    requests_logger.info("request", extra={"message": str(msg)})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1519, in info
+    self._log(INFO, msg, args, **kwargs)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1662, in _log
+    record = self.makeRecord(self.name, level, fn, lno, msg, args,
+                             exc_info, func, extra, sinfo)
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1636, in makeRecord
+    raise KeyError("Attempt to overwrite %r in LogRecord" % key)
+KeyError: "Attempt to overwrite 'message' in LogRecord"
+2025-08-08 21:46:07,026 | INFO | django.utils.autoreload | pid=31420 tid=20064 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\views.py changed, reloading.
+2025-08-08 21:46:09,640 | INFO | django.utils.autoreload | pid=3992 tid=36716 | Watching for file changes with StatReloader
+2025-08-08 21:48:03,652 | INFO | django.utils.autoreload | pid=3992 tid=36716 | C:\Users\ICH\PycharmProjects\rental_platform\rental_platform\settings.py changed, reloading.
+2025-08-08 21:48:05,641 | INFO | django.utils.autoreload | pid=34892 tid=5936 | Watching for file changes with StatReloader
+2025-08-08 21:48:43,979 | ERROR | rental_platform.middleware | pid=14792 tid=26664 | Failed to log request/response
+Traceback (most recent call last):
+  File "C:\Users\ICH\PycharmProjects\rental_platform\rental_platform\middleware.py", line 51, in process_response
+    requests_logger.info("request", extra={"message": str(msg)})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1519, in info
+    self._log(INFO, msg, args, **kwargs)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1662, in _log
+    record = self.makeRecord(self.name, level, fn, lno, msg, args,
+                             exc_info, func, extra, sinfo)
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1636, in makeRecord
+    raise KeyError("Attempt to overwrite %r in LogRecord" % key)
+KeyError: "Attempt to overwrite 'message' in LogRecord"
+2025-08-08 21:48:45,844 | ERROR | rental_platform.middleware | pid=14792 tid=26664 | Failed to log request/response
+Traceback (most recent call last):
+  File "C:\Users\ICH\PycharmProjects\rental_platform\rental_platform\middleware.py", line 51, in process_response
+    requests_logger.info("request", extra={"message": str(msg)})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1519, in info
+    self._log(INFO, msg, args, **kwargs)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1662, in _log
+    record = self.makeRecord(self.name, level, fn, lno, msg, args,
+                             exc_info, func, extra, sinfo)
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1636, in makeRecord
+    raise KeyError("Attempt to overwrite %r in LogRecord" % key)
+KeyError: "Attempt to overwrite 'message' in LogRecord"
+2025-08-08 21:48:45,870 | INFO | requests | pid=14792 tid=26664 | {'method': 'POST', 'path': '/api/properties/', 'status': 201, 'user': 'user_id=1', 'duration_ms': 23, 'query': ''}
+2025-08-08 21:48:45,882 | INFO | requests | pid=14792 tid=26664 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'anon', 'duration_ms': 10, 'query': 'search=ÐºÐ²Ð°Ñ\x80Ñ\x82Ð¸Ñ\x80Ð°&ordering=-price'}
+2025-08-08 21:48:51,334 | ERROR | rental_platform.middleware | pid=14792 tid=26664 | Failed to log request/response
+Traceback (most recent call last):
+  File "C:\Users\ICH\PycharmProjects\rental_platform\rental_platform\middleware.py", line 51, in process_response
+    requests_logger.info("request", extra={"message": str(msg)})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1519, in info
+    self._log(INFO, msg, args, **kwargs)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1662, in _log
+    record = self.makeRecord(self.name, level, fn, lno, msg, args,
+                             exc_info, func, extra, sinfo)
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1636, in makeRecord
+    raise KeyError("Attempt to overwrite %r in LogRecord" % key)
+KeyError: "Attempt to overwrite 'message' in LogRecord"
+2025-08-08 21:48:51,342 | INFO | requests | pid=14792 tid=26664 | {'method': 'POST', 'path': '/api/properties/', 'status': 201, 'user': 'user_id=1', 'duration_ms': 5, 'query': ''}
+2025-08-08 21:48:53,083 | ERROR | rental_platform.middleware | pid=14792 tid=26664 | Failed to log request/response
+Traceback (most recent call last):
+  File "C:\Users\ICH\PycharmProjects\rental_platform\rental_platform\middleware.py", line 51, in process_response
+    requests_logger.info("request", extra={"message": str(msg)})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1519, in info
+    self._log(INFO, msg, args, **kwargs)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1662, in _log
+    record = self.makeRecord(self.name, level, fn, lno, msg, args,
+                             exc_info, func, extra, sinfo)
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1636, in makeRecord
+    raise KeyError("Attempt to overwrite %r in LogRecord" % key)
+KeyError: "Attempt to overwrite 'message' in LogRecord"
+2025-08-08 21:48:53,096 | INFO | bookings.views | pid=14792 tid=26664 | Booking created booking_id=1 property_id=1 renter_id=2 start=2025-08-08 end=2025-08-11 status=pending
+2025-08-08 21:48:53,096 | INFO | requests | pid=14792 tid=26664 | {'method': 'POST', 'path': '/api/bookings/', 'status': 201, 'user': 'user_id=2', 'duration_ms': 10, 'query': ''}
+2025-08-08 21:48:53,104 | INFO | bookings.views | pid=14792 tid=26664 | Booking confirmed booking_id=1 owner_id=1 renter_id=2
+2025-08-08 21:48:53,104 | INFO | requests | pid=14792 tid=26664 | {'method': 'POST', 'path': '/api/bookings/1/confirm/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 6, 'query': ''}
+2025-08-08 21:48:53,111 | INFO | requests | pid=14792 tid=26664 | {'method': 'POST', 'path': '/api/reviews/', 'status': 400, 'user': 'user_id=2', 'duration_ms': 5, 'query': ''}
+2025-08-08 21:48:53,122 | INFO | requests | pid=14792 tid=26664 | {'method': 'POST', 'path': '/api/reviews/', 'status': 201, 'user': 'user_id=2', 'duration_ms': 5, 'query': ''}
+2025-08-08 21:48:53,130 | INFO | requests | pid=14792 tid=26664 | {'method': 'GET', 'path': '/api/reviews/', 'status': 200, 'user': 'user_id=2', 'duration_ms': 6, 'query': 'property=1'}
+2025-08-08 21:48:58,388 | ERROR | rental_platform.middleware | pid=14792 tid=26664 | Failed to log request/response
+Traceback (most recent call last):
+  File "C:\Users\ICH\PycharmProjects\rental_platform\rental_platform\middleware.py", line 51, in process_response
+    requests_logger.info("request", extra={"message": str(msg)})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1519, in info
+    self._log(INFO, msg, args, **kwargs)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1662, in _log
+    record = self.makeRecord(self.name, level, fn, lno, msg, args,
+                             exc_info, func, extra, sinfo)
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1636, in makeRecord
+    raise KeyError("Attempt to overwrite %r in LogRecord" % key)
+KeyError: "Attempt to overwrite 'message' in LogRecord"
+2025-08-08 21:48:58,397 | INFO | bookings.views | pid=14792 tid=26664 | Booking confirmed booking_id=1 owner_id=1 renter_id=2
+2025-08-08 21:48:58,398 | INFO | requests | pid=14792 tid=26664 | {'method': 'POST', 'path': '/api/bookings/1/confirm/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 6, 'query': ''}
+2025-08-08 21:49:05,527 | ERROR | rental_platform.middleware | pid=14792 tid=26664 | Failed to log request/response
+Traceback (most recent call last):
+  File "C:\Users\ICH\PycharmProjects\rental_platform\rental_platform\middleware.py", line 51, in process_response
+    requests_logger.info("request", extra={"message": str(msg)})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1519, in info
+    self._log(INFO, msg, args, **kwargs)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1662, in _log
+    record = self.makeRecord(self.name, level, fn, lno, msg, args,
+                             exc_info, func, extra, sinfo)
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1636, in makeRecord
+    raise KeyError("Attempt to overwrite %r in LogRecord" % key)
+KeyError: "Attempt to overwrite 'message' in LogRecord"
+2025-08-08 21:49:05,533 | WARNING | bookings.views | pid=14792 tid=26664 | Confirm forbidden booking_id=1 by user_id=2 (not owner)
+2025-08-08 21:49:05,534 | INFO | requests | pid=14792 tid=26664 | {'method': 'POST', 'path': '/api/bookings/1/confirm/', 'status': 403, 'user': 'user_id=2', 'duration_ms': 4, 'query': ''}
+2025-08-08 21:49:05,546 | INFO | requests | pid=14792 tid=26664 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'anon', 'duration_ms': 4, 'query': ''}
+2025-08-08 21:49:10,863 | ERROR | rental_platform.middleware | pid=14792 tid=26664 | Failed to log request/response
+Traceback (most recent call last):
+  File "C:\Users\ICH\PycharmProjects\rental_platform\rental_platform\middleware.py", line 51, in process_response
+    requests_logger.info("request", extra={"message": str(msg)})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1519, in info
+    self._log(INFO, msg, args, **kwargs)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1662, in _log
+    record = self.makeRecord(self.name, level, fn, lno, msg, args,
+                             exc_info, func, extra, sinfo)
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1636, in makeRecord
+    raise KeyError("Attempt to overwrite %r in LogRecord" % key)
+KeyError: "Attempt to overwrite 'message' in LogRecord"
+2025-08-08 21:49:10,871 | INFO | requests | pid=14792 tid=26664 | {'method': 'GET', 'path': '/api/notifications/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 4, 'query': 'is_read=false'}
+2025-08-08 21:49:10,877 | INFO | requests | pid=14792 tid=26664 | {'method': 'POST', 'path': '/api/notifications/1/read/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 4, 'query': ''}
+2025-08-08 21:49:10,883 | INFO | bookings.views | pid=14792 tid=26664 | Booking confirmed booking_id=1 owner_id=1 renter_id=2
+2025-08-08 21:49:10,884 | INFO | requests | pid=14792 tid=26664 | {'method': 'POST', 'path': '/api/bookings/1/confirm/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 6, 'query': ''}
+2025-08-08 21:49:12,576 | ERROR | rental_platform.middleware | pid=14792 tid=26664 | Failed to log request/response
+Traceback (most recent call last):
+  File "C:\Users\ICH\PycharmProjects\rental_platform\rental_platform\middleware.py", line 51, in process_response
+    requests_logger.info("request", extra={"message": str(msg)})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1519, in info
+    self._log(INFO, msg, args, **kwargs)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1662, in _log
+    record = self.makeRecord(self.name, level, fn, lno, msg, args,
+                             exc_info, func, extra, sinfo)
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1636, in makeRecord
+    raise KeyError("Attempt to overwrite %r in LogRecord" % key)
+KeyError: "Attempt to overwrite 'message' in LogRecord"
+2025-08-08 21:49:12,582 | INFO | requests | pid=14792 tid=26664 | {'method': 'GET', 'path': '/api/notifications/', 'status': 200, 'user': 'user_id=2', 'duration_ms': 3, 'query': 'is_read=false'}
+2025-08-08 21:49:12,586 | INFO | requests | pid=14792 tid=26664 | {'method': 'POST', 'path': '/api/notifications/read_all/', 'status': 200, 'user': 'user_id=2', 'duration_ms': 2, 'query': ''}
+2025-08-08 21:49:12,591 | INFO | requests | pid=14792 tid=26664 | {'method': 'GET', 'path': '/api/notifications/', 'status': 200, 'user': 'user_id=2', 'duration_ms': 3, 'query': 'is_read=false'}
+2025-08-08 21:49:50,861 | INFO | requests | pid=34892 tid=19424 | {'method': 'GET', 'path': '/api/docs/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 57, 'query': ''}
+2025-08-08 21:49:52,847 | INFO | requests | pid=34892 tid=19424 | {'method': 'GET', 'path': '/api/schema/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 204, 'query': ''}
+2025-08-08 22:03:32,380 | INFO | requests | pid=34892 tid=4136 | {'method': 'GET', 'path': '/api/accounts/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 35, 'query': ''}
+2025-08-08 22:03:42,193 | INFO | requests | pid=34892 tid=4136 | {'method': 'GET', 'path': '/api/accounts/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 12, 'query': ''}
+2025-08-08 22:04:01,506 | INFO | requests | pid=34892 tid=4136 | {'method': 'GET', 'path': '/api/accounts/me/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 90, 'query': ''}
+2025-08-08 22:04:08,646 | INFO | requests | pid=34892 tid=4136 | {'method': 'GET', 'path': '/api/accounts/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 11, 'query': ''}
+2025-08-08 22:04:22,271 | INFO | requests | pid=34892 tid=4136 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 70, 'query': ''}
+2025-08-08 22:06:14,836 | INFO | django.utils.autoreload | pid=34892 tid=5936 | C:\Users\ICH\PycharmProjects\rental_platform\accounts\models.py changed, reloading.
+2025-08-08 22:06:16,835 | INFO | django.utils.autoreload | pid=16320 tid=36516 | Watching for file changes with StatReloader
+2025-08-08 22:07:05,640 | INFO | django.utils.autoreload | pid=16320 tid=36516 | C:\Users\ICH\PycharmProjects\rental_platform\accounts\models.py changed, reloading.
+2025-08-08 22:07:07,291 | INFO | django.utils.autoreload | pid=24344 tid=34316 | Watching for file changes with StatReloader
+2025-08-08 22:07:26,644 | INFO | django.utils.autoreload | pid=24344 tid=34316 | C:\Users\ICH\PycharmProjects\rental_platform\accounts\models.py changed, reloading.
+2025-08-08 22:07:28,163 | INFO | django.utils.autoreload | pid=16844 tid=35884 | Watching for file changes with StatReloader
+2025-08-08 22:08:55,545 | INFO | django.utils.autoreload | pid=16844 tid=35884 | C:\Users\ICH\PycharmProjects\rental_platform\accounts\models.py changed, reloading.
+2025-08-08 22:08:56,961 | INFO | django.utils.autoreload | pid=7656 tid=8052 | Watching for file changes with StatReloader
+2025-08-08 22:11:50,525 | INFO | django.utils.autoreload | pid=7656 tid=8052 | C:\Users\ICH\PycharmProjects\rental_platform\accounts\models.py changed, reloading.
+2025-08-08 22:11:52,986 | INFO | django.utils.autoreload | pid=35300 tid=8288 | Watching for file changes with StatReloader
+2025-08-08 22:12:11,439 | INFO | django.utils.autoreload | pid=35300 tid=8288 | C:\Users\ICH\PycharmProjects\rental_platform\accounts\models.py changed, reloading.
+2025-08-08 22:12:13,273 | INFO | django.utils.autoreload | pid=15728 tid=16048 | Watching for file changes with StatReloader
+2025-08-08 22:12:48,891 | INFO | django.utils.autoreload | pid=35364 tid=26608 | Watching for file changes with StatReloader
