@@ -38,10 +38,15 @@ class UserManager(BaseUserManager):
 
 
 class User(AbstractUser):
-    # используем email вместо username
+    class Roles(models.TextChoices):
+        RENTER = "renter", "Арендатор"
+        LANDLORD = "landlord", "Арендодатель"
+
+    #используем email вместо username
     username = None
     email = models.EmailField(unique=True)
     name = models.CharField(max_length=150, blank=True)
+    role = models.CharField(max_length=20, choices=Roles.choices, default=Roles.RENTER)
 
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = ["name"]  # что дополнительно спросить при createsuperuser
@@ -49,7 +54,7 @@ class User(AbstractUser):
     objects = UserManager()
 
     def __str__(self):
-        return self.email
+        return f"{self.email} ({self.role})"
 
 # from django.contrib.auth.models import AbstractUser
 # from django.contrib.auth.base_user import BaseUserManager
