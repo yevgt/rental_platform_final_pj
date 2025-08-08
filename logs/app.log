@@ -286,3 +286,5 @@ KeyError: "Attempt to overwrite 'message' in LogRecord"
 2025-08-08 22:12:11,439 | INFO | django.utils.autoreload | pid=35300 tid=8288 | C:\Users\ICH\PycharmProjects\rental_platform\accounts\models.py changed, reloading.
 2025-08-08 22:12:13,273 | INFO | django.utils.autoreload | pid=15728 tid=16048 | Watching for file changes with StatReloader
 2025-08-08 22:12:48,891 | INFO | django.utils.autoreload | pid=35364 tid=26608 | Watching for file changes with StatReloader
+2025-08-08 22:14:55,495 | INFO | requests | pid=35364 tid=23124 | {'method': 'POST', 'path': '/api-auth/logout/', 'status': 302, 'user': 'anon', 'duration_ms': 16, 'query': 'next=/api/properties/'}
+2025-08-08 22:14:55,542 | INFO | requests | pid=35364 tid=23124 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'anon', 'duration_ms': 40, 'query': ''}
