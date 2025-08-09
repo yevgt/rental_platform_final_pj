@@ -5,6 +5,7 @@ class ListingSerializer(serializers.ModelSerializer):
     class Meta:
         model = Listing
         fields = ["id", "is_active", "created_at", "updated_at"]
+        read_only_fields = fields
 
 class PropertySerializer(serializers.ModelSerializer):
     owner_id = serializers.IntegerField(source="owner.id", read_only=True)
@@ -18,6 +19,19 @@ class PropertySerializer(serializers.ModelSerializer):
             "status", "views_count", "created_at", "updated_at",
             "listing",
         ]
+        read_only_fields = ["id", "owner_id", "views_count", "created_at", "updated_at", "listing"]
+
+    # Базовые проверки
+    def validate_price(self, value):
+        if value <= 0:
+            raise serializers.ValidationError("Цена должна быть > 0.")
+        return value
+
+    def validate_number_of_rooms(self, value):
+        if value <= 0:
+            raise serializers.ValidationError("Количество комнат должно быть > 0.")
+        return value
+
 
     def create(self, validated_data):
         user = self.context["request"].user

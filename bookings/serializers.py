@@ -25,7 +25,9 @@ class BookingSerializer(serializers.ModelSerializer):
         if prop.status != Property.Status.ACTIVE:
             raise serializers.ValidationError("Нельзя бронировать неактивное объявление.")
         overlap = Booking.objects.filter(
-            property=prop, status=Booking.Status.CONFIRMED
+            # property=prop, status=Booking.Status.CONFIRMED
+            property=prop,
+            status__in=[Booking.Status.CONFIRMED, Booking.Status.PENDING]
         ).filter(
             Q(start_date__lt=end) & Q(end_date__gt=start)
         ).exists()

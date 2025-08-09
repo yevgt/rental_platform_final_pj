@@ -1,4 +1,5 @@
 from rest_framework import viewsets, permissions, filters
+from django.db.models import Avg
 from .models import Review
 from .serializers import ReviewSerializer
 
@@ -6,7 +7,7 @@ class ReviewViewSet(viewsets.ModelViewSet):
     serializer_class = ReviewSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     filter_backends = [filters.OrderingFilter]
-    ordering_fields = ["created_at"]
+    ordering_fields = ["created_at",]
 
     def get_queryset(self):
         qs = Review.objects.select_related("property", "user")
