@@ -8,6 +8,7 @@ pytest==8.4.1
 pytest-django==4.11.1
 mysqlclient
 drf-spectacular==0.28.0
+Pillow==11.3.0
 
 
 django-environ

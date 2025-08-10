@@ -1,6 +1,12 @@
 from django.urls import path
-from .views import RegisterView, MeView, DeleteAccountView
-from .views import accounts_root
+from .views import (
+    RegisterView,
+    MeView,
+    ProfileUpdateView,
+    PasswordChangeView,
+    DeleteAccountView,
+    accounts_root,
+)
 
 urlpatterns = [
     # Root для /api/accounts/ со списком кликабельных ссылок
@@ -8,5 +14,7 @@ urlpatterns = [
 
     path("register/", RegisterView.as_view(), name="register"),
     path("me/", MeView.as_view(), name="me"),
+    path("me-update/", ProfileUpdateView.as_view(), name="me-update"),
+    path("change-password/", PasswordChangeView.as_view(), name="change-password"),
     path("delete/", DeleteAccountView.as_view(), name="delete-account"),
 ]

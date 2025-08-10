@@ -45,16 +45,27 @@ class User(AbstractUser):
     #используем email вместо username
     username = None
     email = models.EmailField(unique=True)
-    name = models.CharField(max_length=150, blank=True)
+    # name = models.CharField(max_length=150, blank=True)
     role = models.CharField(max_length=20, choices=Roles.choices, default=Roles.RENTER)
 
+    phone_number = models.CharField(max_length=20, blank=True)
+    profile_picture = models.ImageField(upload_to='profiles/', blank=True, null=True)
+    date_of_birth = models.DateField(blank=True, null=True)
+
     USERNAME_FIELD = "email"
-    REQUIRED_FIELDS = ["name"]  # что дополнительно спросить при createsuperuser
+    REQUIRED_FIELDS = ["first_name", "last_name"]  # что дополнительно спросить при createsuperuser
 
     objects = UserManager()
 
     def __str__(self):
         return f"{self.email} ({self.role})"
+
+    @property
+    def full_name(self):
+        return f"{self.first_name} {self.last_name}".strip()
+
+    class Meta:
+        db_table = 'auth_user'
 
 # from django.contrib.auth.models import AbstractUser
 # from django.contrib.auth.base_user import BaseUserManager

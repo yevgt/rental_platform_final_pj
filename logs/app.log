@@ -448,3 +448,93 @@ KeyError: "Attempt to overwrite 'message' in LogRecord"
 2025-08-09 14:21:33,026 | INFO | requests | pid=4592 tid=30792 | {'method': 'GET', 'path': '/api/analytics/top-properties/', 'status': 200, 'user': 'user_id=3', 'duration_ms': 12, 'query': ''}
 2025-08-09 14:21:51,550 | INFO | requests | pid=4592 tid=30792 | {'method': 'GET', 'path': '/api/analytics/popular-searches', 'status': 404, 'user': 'user_id=3', 'duration_ms': 8, 'query': ''}
 2025-08-09 14:21:51,567 | INFO | requests | pid=4592 tid=21248 | {'method': 'GET', 'path': '/api/analytics/popular-searches/', 'status': 200, 'user': 'user_id=3', 'duration_ms': 9, 'query': ''}
+2025-08-09 14:45:42,661 | ERROR | rental_platform.middleware | pid=16844 tid=34792 | Failed to log request/response
+Traceback (most recent call last):
+  File "C:\Users\ICH\PycharmProjects\rental_platform\rental_platform\middleware.py", line 51, in process_response
+    requests_logger.info("request", extra={"message": str(msg)})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1519, in info
+    self._log(INFO, msg, args, **kwargs)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1662, in _log
+    record = self.makeRecord(self.name, level, fn, lno, msg, args,
+                             exc_info, func, extra, sinfo)
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1636, in makeRecord
+    raise KeyError("Attempt to overwrite %r in LogRecord" % key)
+KeyError: "Attempt to overwrite 'message' in LogRecord"
+2025-08-09 14:45:44,114 | ERROR | rental_platform.middleware | pid=16844 tid=34792 | Failed to log request/response
+Traceback (most recent call last):
+  File "C:\Users\ICH\PycharmProjects\rental_platform\rental_platform\middleware.py", line 51, in process_response
+    requests_logger.info("request", extra={"message": str(msg)})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1519, in info
+    self._log(INFO, msg, args, **kwargs)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1662, in _log
+    record = self.makeRecord(self.name, level, fn, lno, msg, args,
+                             exc_info, func, extra, sinfo)
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1636, in makeRecord
+    raise KeyError("Attempt to overwrite %r in LogRecord" % key)
+KeyError: "Attempt to overwrite 'message' in LogRecord"
+2025-08-09 14:45:44,136 | INFO | requests | pid=16844 tid=34792 | {'method': 'POST', 'path': '/api/properties/', 'status': 201, 'user': 'user_id=1', 'duration_ms': 18, 'query': ''}
+2025-08-09 14:45:44,144 | INFO | requests | pid=16844 tid=34792 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'anon', 'duration_ms': 7, 'query': 'search=ÐºÐ²Ð°Ñ\x80Ñ\x82Ð¸Ñ\x80Ð°&ordering=-price'}
+2025-08-10 12:07:35,119 | INFO | django.utils.autoreload | pid=24944 tid=8732 | Watching for file changes with StatReloader
+2025-08-10 12:07:45,521 | INFO | requests | pid=24944 tid=31592 | {'method': 'GET', 'path': '/api/docs/', 'status': 200, 'user': 'user_id=3', 'duration_ms': 86, 'query': ''}
+2025-08-10 12:07:46,315 | INFO | requests | pid=24944 tid=31592 | {'method': 'GET', 'path': '/api/schema/', 'status': 200, 'user': 'user_id=3', 'duration_ms': 207, 'query': ''}
+2025-08-10 12:15:44,202 | INFO | django.utils.autoreload | pid=24944 tid=8732 | C:\Users\ICH\PycharmProjects\rental_platform\accounts\models.py changed, reloading.
+2025-08-10 12:15:46,536 | INFO | django.utils.autoreload | pid=34300 tid=8456 | Watching for file changes with StatReloader
+2025-08-10 12:17:21,199 | INFO | django.utils.autoreload | pid=34300 tid=8456 | C:\Users\ICH\PycharmProjects\rental_platform\accounts\models.py changed, reloading.
+2025-08-10 12:17:22,820 | INFO | django.utils.autoreload | pid=24156 tid=34120 | Watching for file changes with StatReloader
+2025-08-10 12:58:40,639 | INFO | django.utils.autoreload | pid=26500 tid=15464 | Watching for file changes with StatReloader
+2025-08-10 13:00:32,170 | INFO | django.utils.autoreload | pid=26500 tid=15464 | C:\Users\ICH\PycharmProjects\rental_platform\accounts\serializers.py changed, reloading.
+2025-08-10 13:00:34,196 | INFO | django.utils.autoreload | pid=13748 tid=4780 | Watching for file changes with StatReloader
+2025-08-10 13:02:41,517 | INFO | django.utils.autoreload | pid=13748 tid=4780 | C:\Users\ICH\PycharmProjects\rental_platform\accounts\admin.py changed, reloading.
+2025-08-10 13:02:43,517 | INFO | django.utils.autoreload | pid=2576 tid=19564 | Watching for file changes with StatReloader
+2025-08-10 13:21:53,588 | INFO | django.utils.autoreload | pid=2576 tid=19564 | C:\Users\ICH\PycharmProjects\rental_platform\accounts\serializers.py changed, reloading.
+2025-08-10 13:21:55,227 | INFO | django.utils.autoreload | pid=12248 tid=29264 | Watching for file changes with StatReloader
+2025-08-10 13:22:42,554 | INFO | django.utils.autoreload | pid=12248 tid=29264 | C:\Users\ICH\PycharmProjects\rental_platform\accounts\serializers.py changed, reloading.
+2025-08-10 13:22:44,066 | INFO | django.utils.autoreload | pid=22648 tid=12776 | Watching for file changes with StatReloader
+2025-08-10 13:23:18,283 | INFO | django.utils.autoreload | pid=22648 tid=12776 | C:\Users\ICH\PycharmProjects\rental_platform\accounts\serializers.py changed, reloading.
+2025-08-10 13:23:19,668 | INFO | django.utils.autoreload | pid=34760 tid=1716 | Watching for file changes with StatReloader
+2025-08-10 13:23:37,614 | INFO | django.utils.autoreload | pid=34760 tid=1716 | C:\Users\ICH\PycharmProjects\rental_platform\accounts\serializers.py changed, reloading.
+2025-08-10 13:23:39,150 | INFO | django.utils.autoreload | pid=36488 tid=29056 | Watching for file changes with StatReloader
+2025-08-10 13:24:27,160 | INFO | django.utils.autoreload | pid=36488 tid=29056 | C:\Users\ICH\PycharmProjects\rental_platform\accounts\serializers.py changed, reloading.
+2025-08-10 13:24:28,870 | INFO | django.utils.autoreload | pid=35776 tid=19656 | Watching for file changes with StatReloader
+2025-08-10 13:25:36,514 | INFO | django.utils.autoreload | pid=35776 tid=19656 | C:\Users\ICH\PycharmProjects\rental_platform\accounts\serializers.py changed, reloading.
+2025-08-10 13:25:37,889 | INFO | django.utils.autoreload | pid=21248 tid=27296 | Watching for file changes with StatReloader
+2025-08-10 13:27:25,406 | INFO | django.utils.autoreload | pid=21248 tid=27296 | C:\Users\ICH\PycharmProjects\rental_platform\accounts\serializers.py changed, reloading.
+2025-08-10 13:27:27,398 | INFO | django.utils.autoreload | pid=4936 tid=1832 | Watching for file changes with StatReloader
+2025-08-10 13:29:29,052 | INFO | django.utils.autoreload | pid=4936 tid=1832 | C:\Users\ICH\PycharmProjects\rental_platform\accounts\views.py changed, reloading.
+2025-08-10 13:29:30,652 | INFO | django.utils.autoreload | pid=10824 tid=23816 | Watching for file changes with StatReloader
+2025-08-10 13:29:53,335 | INFO | django.utils.autoreload | pid=10824 tid=23816 | C:\Users\ICH\PycharmProjects\rental_platform\accounts\views.py changed, reloading.
+2025-08-10 13:29:54,929 | INFO | django.utils.autoreload | pid=10436 tid=28436 | Watching for file changes with StatReloader
+2025-08-10 13:31:48,634 | INFO | django.utils.autoreload | pid=10436 tid=28436 | C:\Users\ICH\PycharmProjects\rental_platform\accounts\views.py changed, reloading.
+2025-08-10 13:31:49,873 | INFO | django.utils.autoreload | pid=9388 tid=34456 | Watching for file changes with StatReloader
+2025-08-10 13:32:07,182 | INFO | django.utils.autoreload | pid=9388 tid=34456 | C:\Users\ICH\PycharmProjects\rental_platform\accounts\views.py changed, reloading.
+2025-08-10 13:32:08,746 | INFO | django.utils.autoreload | pid=34448 tid=5028 | Watching for file changes with StatReloader
+2025-08-10 13:33:15,306 | INFO | django.utils.autoreload | pid=34448 tid=5028 | C:\Users\ICH\PycharmProjects\rental_platform\accounts\urls.py changed, reloading.
+2025-08-10 13:33:16,681 | INFO | django.utils.autoreload | pid=34304 tid=32296 | Watching for file changes with StatReloader
+2025-08-10 13:34:22,685 | INFO | django.utils.autoreload | pid=34304 tid=32296 | C:\Users\ICH\PycharmProjects\rental_platform\accounts\urls.py changed, reloading.
+2025-08-10 13:34:24,527 | INFO | django.utils.autoreload | pid=32320 tid=11764 | Watching for file changes with StatReloader
+2025-08-10 13:37:13,074 | INFO | django.utils.autoreload | pid=29168 tid=19928 | Watching for file changes with StatReloader
+2025-08-10 13:37:18,820 | INFO | requests | pid=29168 tid=8772 | {'method': 'GET', 'path': '/', 'status': 200, 'user': 'user_id=3', 'duration_ms': 8, 'query': ''}
+2025-08-10 13:37:30,203 | INFO | requests | pid=29168 tid=8772 | {'method': 'GET', 'path': '/api/accounts/', 'status': 500, 'user': 'user_id=3', 'duration_ms': 155, 'query': ''}
+2025-08-10 13:40:15,712 | INFO | django.utils.autoreload | pid=29168 tid=19928 | C:\Users\ICH\PycharmProjects\rental_platform\accounts\views.py changed, reloading.
+2025-08-10 13:40:17,461 | INFO | django.utils.autoreload | pid=3144 tid=13224 | Watching for file changes with StatReloader
+2025-08-10 13:40:18,105 | INFO | requests | pid=3144 tid=9296 | {'method': 'GET', 'path': '/api/accounts/', 'status': 200, 'user': 'user_id=3', 'duration_ms': 80, 'query': ''}
+2025-08-10 13:40:23,358 | INFO | requests | pid=3144 tid=9296 | {'method': 'GET', 'path': '/api/accounts/me-update/', 'status': 405, 'user': 'user_id=3', 'duration_ms': 38, 'query': ''}
+2025-08-10 13:54:04,797 | INFO | django.utils.autoreload | pid=3144 tid=13224 | C:\Users\ICH\PycharmProjects\rental_platform\accounts\serializers.py changed, reloading.
+2025-08-10 13:54:07,528 | INFO | django.utils.autoreload | pid=23000 tid=36952 | Watching for file changes with StatReloader
+2025-08-10 13:55:31,766 | INFO | django.utils.autoreload | pid=23000 tid=36952 | C:\Users\ICH\PycharmProjects\rental_platform\accounts\serializers.py changed, reloading.
+2025-08-10 13:55:33,962 | INFO | django.utils.autoreload | pid=33032 tid=32636 | Watching for file changes with StatReloader
+2025-08-10 13:56:26,644 | INFO | requests | pid=33032 tid=35256 | {'method': 'GET', 'path': '/api/accounts/', 'status': 200, 'user': 'user_id=3', 'duration_ms': 132, 'query': ''}
+2025-08-10 13:56:35,207 | INFO | requests | pid=33032 tid=35256 | {'method': 'GET', 'path': '/api/accounts/me-update/', 'status': 405, 'user': 'user_id=3', 'duration_ms': 41, 'query': ''}
+2025-08-10 14:04:23,150 | INFO | django.utils.autoreload | pid=33032 tid=32636 | C:\Users\ICH\PycharmProjects\rental_platform\accounts\serializers.py changed, reloading.
+2025-08-10 14:04:24,990 | INFO | django.utils.autoreload | pid=13772 tid=19876 | Watching for file changes with StatReloader
+2025-08-10 14:06:09,415 | INFO | django.utils.autoreload | pid=13772 tid=19876 | C:\Users\ICH\PycharmProjects\rental_platform\accounts\serializers.py changed, reloading.
+2025-08-10 14:06:10,920 | INFO | django.utils.autoreload | pid=36060 tid=25756 | Watching for file changes with StatReloader
+2025-08-10 14:11:11,907 | INFO | django.utils.autoreload | pid=36060 tid=25756 | C:\Users\ICH\PycharmProjects\rental_platform\accounts\serializers.py changed, reloading.
+2025-08-10 14:11:13,288 | INFO | django.utils.autoreload | pid=9160 tid=36232 | Watching for file changes with StatReloader
+2025-08-10 14:12:02,803 | INFO | django.utils.autoreload | pid=9160 tid=36232 | C:\Users\ICH\PycharmProjects\rental_platform\accounts\serializers.py changed, reloading.
+2025-08-10 14:12:04,361 | INFO | django.utils.autoreload | pid=15972 tid=12044 | Watching for file changes with StatReloader
+2025-08-10 14:12:14,281 | INFO | django.utils.autoreload | pid=2972 tid=12212 | Watching for file changes with StatReloader
