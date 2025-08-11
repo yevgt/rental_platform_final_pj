@@ -538,3 +538,935 @@ KeyError: "Attempt to overwrite 'message' in LogRecord"
 2025-08-10 14:12:02,803 | INFO | django.utils.autoreload | pid=9160 tid=36232 | C:\Users\ICH\PycharmProjects\rental_platform\accounts\serializers.py changed, reloading.
 2025-08-10 14:12:04,361 | INFO | django.utils.autoreload | pid=15972 tid=12044 | Watching for file changes with StatReloader
 2025-08-10 14:12:14,281 | INFO | django.utils.autoreload | pid=2972 tid=12212 | Watching for file changes with StatReloader
+2025-08-10 14:21:42,436 | INFO | django.utils.autoreload | pid=2972 tid=12212 | C:\Users\ICH\PycharmProjects\rental_platform\analytics\models.py changed, reloading.
+2025-08-10 14:21:44,944 | INFO | django.utils.autoreload | pid=18840 tid=32308 | Watching for file changes with StatReloader
+2025-08-10 14:21:49,791 | INFO | requests | pid=18840 tid=36228 | {'method': 'GET', 'path': '/api/analytics/', 'status': 200, 'user': 'user_id=3', 'duration_ms': 153, 'query': ''}
+2025-08-10 14:21:54,033 | INFO | requests | pid=18840 tid=36228 | {'method': 'GET', 'path': '/api/analytics/top-properties/', 'status': 200, 'user': 'user_id=3', 'duration_ms': 15, 'query': ''}
+2025-08-10 14:21:59,194 | INFO | requests | pid=18840 tid=36228 | {'method': 'GET', 'path': '/api/analytics/', 'status': 200, 'user': 'user_id=3', 'duration_ms': 11, 'query': ''}
+2025-08-10 14:22:00,706 | INFO | requests | pid=18840 tid=36228 | {'method': 'GET', 'path': '/api/analytics/popular-searches/', 'status': 200, 'user': 'user_id=3', 'duration_ms': 15, 'query': ''}
+2025-08-10 14:22:03,266 | INFO | requests | pid=18840 tid=36228 | {'method': 'GET', 'path': '/api/analytics/', 'status': 200, 'user': 'user_id=3', 'duration_ms': 9, 'query': ''}
+2025-08-10 14:40:46,833 | INFO | django.utils.autoreload | pid=29576 tid=12800 | Watching for file changes with StatReloader
+2025-08-10 14:40:49,451 | INFO | requests | pid=29576 tid=34956 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=3', 'duration_ms': 196, 'query': ''}
+2025-08-10 14:41:34,993 | INFO | bookings.views | pid=29576 tid=34956 | Booking created booking_id=5 property_id=2 renter_id=3 start=2025-08-11 end=2025-08-12 status=pending
+2025-08-10 14:41:35,021 | INFO | requests | pid=29576 tid=34956 | {'method': 'POST', 'path': '/api/bookings/', 'status': 201, 'user': 'user_id=3', 'duration_ms': 57, 'query': ''}
+2025-08-10 14:41:59,441 | INFO | requests | pid=29576 tid=34956 | {'method': 'GET', 'path': '/api/notifications/', 'status': 200, 'user': 'user_id=3', 'duration_ms': 21, 'query': ''}
+2025-08-10 14:48:40,697 | INFO | requests | pid=29576 tid=34956 | {'method': 'GET', 'path': '/api/accounts/me/', 'status': 200, 'user': 'user_id=3', 'duration_ms': 99, 'query': ''}
+2025-08-10 14:48:47,250 | INFO | requests | pid=29576 tid=34956 | {'method': 'GET', 'path': '/api/accounts/', 'status': 200, 'user': 'user_id=3', 'duration_ms': 9, 'query': ''}
+2025-08-10 14:48:55,020 | INFO | requests | pid=29576 tid=34956 | {'method': 'GET', 'path': '/api/accounts/delete/', 'status': 405, 'user': 'user_id=3', 'duration_ms': 9, 'query': ''}
+2025-08-10 14:48:58,179 | INFO | requests | pid=29576 tid=34956 | {'method': 'GET', 'path': '/api/accounts/', 'status': 200, 'user': 'user_id=3', 'duration_ms': 8, 'query': ''}
+2025-08-10 14:49:41,800 | INFO | requests | pid=29576 tid=34956 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=3', 'duration_ms': 42, 'query': ''}
+2025-08-10 14:50:01,382 | INFO | requests | pid=29576 tid=34956 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=3', 'duration_ms': 28, 'query': 'ordering=property__owner__id'}
+2025-08-10 14:53:50,432 | INFO | requests | pid=29576 tid=34956 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=3', 'duration_ms': 54, 'query': ''}
+2025-08-10 14:55:05,538 | INFO | requests | pid=29576 tid=34956 | {'method': 'GET', 'path': '/api/properties/1', 'status': 404, 'user': 'user_id=3', 'duration_ms': 7, 'query': ''}
+2025-08-10 14:55:05,577 | INFO | requests | pid=29576 tid=10896 | {'method': 'GET', 'path': '/api/properties/1/', 'status': 200, 'user': 'user_id=3', 'duration_ms': 30, 'query': ''}
+2025-08-10 14:55:15,082 | INFO | requests | pid=29576 tid=10896 | {'method': 'GET', 'path': '/api/properties/1/toggle_status/', 'status': 405, 'user': 'user_id=3', 'duration_ms': 8, 'query': ''}
+2025-08-10 14:59:22,500 | INFO | requests | pid=29576 tid=10896 | {'method': 'GET', 'path': '/api/properties/1/', 'status': 200, 'user': 'user_id=3', 'duration_ms': 33, 'query': ''}
+2025-08-10 14:59:40,075 | INFO | requests | pid=29576 tid=10896 | {'method': 'GET', 'path': '/api/accounts/', 'status': 200, 'user': 'user_id=3', 'duration_ms': 15, 'query': ''}
+2025-08-10 14:59:46,448 | INFO | requests | pid=29576 tid=10896 | {'method': 'GET', 'path': '/api/accounts/me/', 'status': 200, 'user': 'user_id=3', 'duration_ms': 10, 'query': ''}
+2025-08-10 14:59:50,495 | INFO | requests | pid=29576 tid=10896 | {'method': 'GET', 'path': '/api/accounts/me/2', 'status': 404, 'user': 'user_id=3', 'duration_ms': 10, 'query': ''}
+2025-08-10 15:16:01,198 | INFO | django.utils.autoreload | pid=29576 tid=12800 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\admin.py changed, reloading.
+2025-08-10 15:16:04,814 | INFO | django.utils.autoreload | pid=11376 tid=37164 | Watching for file changes with StatReloader
+2025-08-10 16:24:14,499 | INFO | django.utils.autoreload | pid=11376 tid=37164 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\models.py changed, reloading.
+2025-08-10 16:24:16,062 | INFO | django.utils.autoreload | pid=13772 tid=20864 | Watching for file changes with StatReloader
+2025-08-10 16:25:28,718 | INFO | django.utils.autoreload | pid=13772 tid=20864 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\serializers.py changed, reloading.
+2025-08-10 16:25:30,779 | INFO | django.utils.autoreload | pid=36932 tid=30880 | Watching for file changes with StatReloader
+2025-08-10 16:32:32,313 | INFO | django.utils.autoreload | pid=36932 tid=30880 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\serializers.py changed, reloading.
+2025-08-10 16:32:33,822 | INFO | django.utils.autoreload | pid=30088 tid=30588 | Watching for file changes with StatReloader
+2025-08-10 16:42:11,653 | INFO | django.utils.autoreload | pid=30088 tid=30588 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\serializers.py changed, reloading.
+2025-08-10 16:42:13,841 | INFO | django.utils.autoreload | pid=32484 tid=18940 | Watching for file changes with StatReloader
+2025-08-10 16:42:23,300 | INFO | django.utils.autoreload | pid=32484 tid=18940 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\serializers.py changed, reloading.
+2025-08-10 16:42:25,303 | INFO | django.utils.autoreload | pid=36952 tid=29580 | Watching for file changes with StatReloader
+2025-08-10 16:43:02,240 | INFO | django.utils.autoreload | pid=36952 tid=29580 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\serializers.py changed, reloading.
+2025-08-10 16:43:03,603 | INFO | django.utils.autoreload | pid=15044 tid=13748 | Watching for file changes with StatReloader
+2025-08-10 16:46:01,993 | INFO | django.utils.autoreload | pid=15044 tid=13748 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\serializers.py changed, reloading.
+2025-08-10 16:46:03,465 | INFO | django.utils.autoreload | pid=34660 tid=35880 | Watching for file changes with StatReloader
+2025-08-10 16:46:52,044 | INFO | django.utils.autoreload | pid=34660 tid=35880 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\serializers.py changed, reloading.
+2025-08-10 16:46:53,200 | INFO | django.utils.autoreload | pid=34600 tid=36460 | Watching for file changes with StatReloader
+2025-08-10 16:47:27,035 | INFO | django.utils.autoreload | pid=34600 tid=36460 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\serializers.py changed, reloading.
+2025-08-10 16:47:28,432 | INFO | django.utils.autoreload | pid=1940 tid=28400 | Watching for file changes with StatReloader
+2025-08-10 16:48:09,998 | INFO | django.utils.autoreload | pid=1940 tid=28400 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\serializers.py changed, reloading.
+2025-08-10 16:48:11,342 | INFO | django.utils.autoreload | pid=6768 tid=9088 | Watching for file changes with StatReloader
+2025-08-10 16:48:53,095 | INFO | django.utils.autoreload | pid=6768 tid=9088 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\serializers.py changed, reloading.
+2025-08-10 16:48:54,209 | INFO | django.utils.autoreload | pid=34564 tid=25700 | Watching for file changes with StatReloader
+2025-08-10 17:01:45,809 | INFO | django.utils.autoreload | pid=34564 tid=25700 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\admin.py changed, reloading.
+2025-08-10 17:01:47,365 | INFO | django.utils.autoreload | pid=26628 tid=31708 | Watching for file changes with StatReloader
+2025-08-10 17:46:29,489 | INFO | django.utils.autoreload | pid=26628 tid=31708 | C:\Users\ICH\PycharmProjects\rental_platform\rental_platform\permissions.py changed, reloading.
+2025-08-10 17:46:31,003 | INFO | django.utils.autoreload | pid=19900 tid=25200 | Watching for file changes with StatReloader
+2025-08-10 17:46:59,478 | INFO | django.utils.autoreload | pid=19900 tid=25200 | C:\Users\ICH\PycharmProjects\rental_platform\rental_platform\permissions.py changed, reloading.
+2025-08-10 17:47:00,891 | INFO | django.utils.autoreload | pid=16636 tid=28952 | Watching for file changes with StatReloader
+2025-08-10 17:47:40,532 | INFO | django.utils.autoreload | pid=16636 tid=28952 | C:\Users\ICH\PycharmProjects\rental_platform\rental_platform\permissions.py changed, reloading.
+2025-08-10 17:47:41,797 | INFO | django.utils.autoreload | pid=18388 tid=7176 | Watching for file changes with StatReloader
+2025-08-10 18:11:18,066 | INFO | django.utils.autoreload | pid=18388 tid=7176 | C:\Users\ICH\PycharmProjects\rental_platform\properties\views.py changed, reloading.
+2025-08-10 18:11:19,300 | INFO | django.utils.autoreload | pid=35096 tid=35196 | Watching for file changes with StatReloader
+2025-08-10 18:18:43,407 | INFO | django.utils.autoreload | pid=35096 tid=35196 | C:\Users\ICH\PycharmProjects\rental_platform\properties\views.py changed, reloading.
+2025-08-10 18:18:49,334 | INFO | django.utils.autoreload | pid=11696 tid=11932 | Watching for file changes with StatReloader
+2025-08-10 18:18:58,352 | INFO | django.utils.autoreload | pid=11696 tid=11932 | C:\Users\ICH\PycharmProjects\rental_platform\properties\views.py changed, reloading.
+2025-08-10 18:19:02,408 | INFO | django.utils.autoreload | pid=11136 tid=15704 | Watching for file changes with StatReloader
+2025-08-10 18:23:22,393 | INFO | django.utils.autoreload | pid=11136 tid=15704 | C:\Users\ICH\PycharmProjects\rental_platform\properties\views.py changed, reloading.
+2025-08-10 18:23:23,668 | INFO | django.utils.autoreload | pid=11396 tid=6736 | Watching for file changes with StatReloader
+2025-08-10 18:36:10,473 | INFO | django.utils.autoreload | pid=11396 tid=6736 | C:\Users\ICH\PycharmProjects\rental_platform\properties\models.py changed, reloading.
+2025-08-10 18:36:12,673 | INFO | django.utils.autoreload | pid=33592 tid=36428 | Watching for file changes with StatReloader
+2025-08-10 18:37:24,935 | INFO | django.utils.autoreload | pid=33592 tid=36428 | C:\Users\ICH\PycharmProjects\rental_platform\properties\admin.py changed, reloading.
+2025-08-10 18:37:27,623 | INFO | django.utils.autoreload | pid=20048 tid=14908 | Watching for file changes with StatReloader
+2025-08-10 18:39:19,229 | INFO | django.utils.autoreload | pid=20048 tid=14908 | C:\Users\ICH\PycharmProjects\rental_platform\properties\admin.py changed, reloading.
+2025-08-10 18:39:22,802 | INFO | django.utils.autoreload | pid=26772 tid=35272 | Watching for file changes with StatReloader
+2025-08-10 18:45:17,354 | INFO | django.utils.autoreload | pid=26772 tid=35272 | C:\Users\ICH\PycharmProjects\rental_platform\properties\views.py changed, reloading.
+2025-08-10 18:45:20,429 | INFO | django.utils.autoreload | pid=35992 tid=36960 | Watching for file changes with StatReloader
+2025-08-10 18:45:53,411 | INFO | django.utils.autoreload | pid=35992 tid=36960 | C:\Users\ICH\PycharmProjects\rental_platform\properties\views.py changed, reloading.
+2025-08-10 18:45:57,084 | INFO | django.utils.autoreload | pid=13412 tid=29068 | Watching for file changes with StatReloader
+2025-08-10 18:48:07,273 | INFO | django.utils.autoreload | pid=13412 tid=29068 | C:\Users\ICH\PycharmProjects\rental_platform\properties\views.py changed, reloading.
+2025-08-10 18:48:10,052 | INFO | django.utils.autoreload | pid=23040 tid=35216 | Watching for file changes with StatReloader
+2025-08-10 18:50:15,435 | INFO | django.utils.autoreload | pid=23040 tid=35216 | C:\Users\ICH\PycharmProjects\rental_platform\properties\views.py changed, reloading.
+2025-08-10 18:50:18,417 | INFO | django.utils.autoreload | pid=13096 tid=37304 | Watching for file changes with StatReloader
+2025-08-10 18:51:39,252 | INFO | django.utils.autoreload | pid=13096 tid=37304 | C:\Users\ICH\PycharmProjects\rental_platform\properties\views.py changed, reloading.
+2025-08-10 18:51:40,959 | INFO | django.utils.autoreload | pid=13052 tid=24928 | Watching for file changes with StatReloader
+2025-08-10 18:52:11,594 | INFO | django.utils.autoreload | pid=13052 tid=24928 | C:\Users\ICH\PycharmProjects\rental_platform\properties\views.py changed, reloading.
+2025-08-10 18:52:13,243 | INFO | django.utils.autoreload | pid=23352 tid=34656 | Watching for file changes with StatReloader
+2025-08-10 18:52:44,379 | INFO | django.utils.autoreload | pid=23352 tid=34656 | C:\Users\ICH\PycharmProjects\rental_platform\properties\views.py changed, reloading.
+2025-08-10 18:52:45,823 | INFO | django.utils.autoreload | pid=35740 tid=10280 | Watching for file changes with StatReloader
+2025-08-10 18:53:02,180 | INFO | django.utils.autoreload | pid=35740 tid=10280 | C:\Users\ICH\PycharmProjects\rental_platform\properties\views.py changed, reloading.
+2025-08-10 18:53:06,093 | INFO | django.utils.autoreload | pid=35088 tid=35156 | Watching for file changes with StatReloader
+2025-08-10 18:55:06,268 | INFO | django.utils.autoreload | pid=35088 tid=35156 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\models.py changed, reloading.
+2025-08-10 18:55:09,274 | INFO | django.utils.autoreload | pid=34016 tid=696 | Watching for file changes with StatReloader
+2025-08-10 18:57:10,907 | INFO | django.utils.autoreload | pid=34016 tid=696 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\models.py changed, reloading.
+2025-08-10 18:57:12,364 | INFO | django.utils.autoreload | pid=3344 tid=32796 | Watching for file changes with StatReloader
+2025-08-10 18:57:50,355 | INFO | django.utils.autoreload | pid=3344 tid=32796 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\models.py changed, reloading.
+2025-08-10 18:57:51,652 | INFO | django.utils.autoreload | pid=3188 tid=15488 | Watching for file changes with StatReloader
+2025-08-10 19:03:39,345 | INFO | django.utils.autoreload | pid=3188 tid=15488 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\serializers.py changed, reloading.
+2025-08-10 19:03:42,828 | INFO | django.utils.autoreload | pid=26964 tid=35004 | Watching for file changes with StatReloader
+2025-08-10 19:12:01,156 | INFO | django.utils.autoreload | pid=26964 tid=35004 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\serializers.py changed, reloading.
+2025-08-10 19:12:03,178 | INFO | django.utils.autoreload | pid=36368 tid=37788 | Watching for file changes with StatReloader
+2025-08-10 19:12:53,944 | INFO | django.utils.autoreload | pid=36368 tid=37788 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\serializers.py changed, reloading.
+2025-08-10 19:12:55,586 | INFO | django.utils.autoreload | pid=9868 tid=7256 | Watching for file changes with StatReloader
+2025-08-10 19:13:09,269 | INFO | django.utils.autoreload | pid=9868 tid=7256 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\serializers.py changed, reloading.
+2025-08-10 19:13:11,206 | INFO | django.utils.autoreload | pid=33752 tid=6220 | Watching for file changes with StatReloader
+2025-08-10 19:13:43,382 | INFO | django.utils.autoreload | pid=33752 tid=6220 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\serializers.py changed, reloading.
+2025-08-10 19:13:45,626 | INFO | django.utils.autoreload | pid=9836 tid=34304 | Watching for file changes with StatReloader
+2025-08-10 19:16:12,114 | INFO | django.utils.autoreload | pid=9836 tid=34304 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\serializers.py changed, reloading.
+2025-08-10 19:16:13,761 | INFO | django.utils.autoreload | pid=17768 tid=31412 | Watching for file changes with StatReloader
+2025-08-10 19:16:59,421 | INFO | django.utils.autoreload | pid=17768 tid=31412 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\serializers.py changed, reloading.
+2025-08-10 19:17:04,347 | INFO | django.utils.autoreload | pid=23880 tid=16688 | Watching for file changes with StatReloader
+2025-08-10 19:19:23,348 | INFO | django.utils.autoreload | pid=23880 tid=16688 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\views.py changed, reloading.
+2025-08-10 19:19:31,119 | INFO | django.utils.autoreload | pid=35552 tid=6360 | Watching for file changes with StatReloader
+2025-08-10 19:19:49,966 | INFO | django.utils.autoreload | pid=35552 tid=6360 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\views.py changed, reloading.
+2025-08-10 19:19:51,986 | INFO | django.utils.autoreload | pid=22672 tid=1092 | Watching for file changes with StatReloader
+2025-08-10 19:20:02,284 | INFO | django.utils.autoreload | pid=22672 tid=1092 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\views.py changed, reloading.
+2025-08-10 19:20:07,059 | INFO | django.utils.autoreload | pid=22524 tid=29832 | Watching for file changes with StatReloader
+2025-08-10 19:23:55,767 | INFO | django.utils.autoreload | pid=22524 tid=29832 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\views.py changed, reloading.
+2025-08-10 19:24:01,757 | INFO | django.utils.autoreload | pid=7216 tid=14332 | Watching for file changes with StatReloader
+2025-08-10 19:29:23,000 | INFO | django.utils.autoreload | pid=7216 tid=14332 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\views.py changed, reloading.
+2025-08-10 19:29:24,674 | INFO | django.utils.autoreload | pid=30392 tid=18936 | Watching for file changes with StatReloader
+2025-08-10 19:34:32,779 | INFO | django.utils.autoreload | pid=30392 tid=18936 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\views.py changed, reloading.
+2025-08-10 19:34:35,391 | INFO | django.utils.autoreload | pid=2252 tid=22164 | Watching for file changes with StatReloader
+2025-08-10 19:35:20,434 | INFO | django.utils.autoreload | pid=2252 tid=22164 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\views.py changed, reloading.
+2025-08-10 19:35:21,931 | INFO | django.utils.autoreload | pid=12676 tid=25060 | Watching for file changes with StatReloader
+2025-08-10 19:38:47,884 | INFO | django.utils.autoreload | pid=12676 tid=25060 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\views.py changed, reloading.
+2025-08-10 19:38:50,173 | INFO | django.utils.autoreload | pid=37780 tid=36464 | Watching for file changes with StatReloader
+2025-08-10 19:39:09,721 | INFO | django.utils.autoreload | pid=37780 tid=36464 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\views.py changed, reloading.
+2025-08-10 19:39:12,252 | INFO | django.utils.autoreload | pid=34192 tid=21552 | Watching for file changes with StatReloader
+2025-08-10 19:40:14,799 | INFO | django.utils.autoreload | pid=34192 tid=21552 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\views.py changed, reloading.
+2025-08-10 19:40:16,415 | INFO | django.utils.autoreload | pid=12704 tid=14940 | Watching for file changes with StatReloader
+2025-08-10 19:40:36,148 | INFO | django.utils.autoreload | pid=12704 tid=14940 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\views.py changed, reloading.
+2025-08-10 19:40:38,132 | INFO | django.utils.autoreload | pid=37684 tid=26424 | Watching for file changes with StatReloader
+2025-08-10 19:40:54,800 | INFO | django.utils.autoreload | pid=37684 tid=26424 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\views.py changed, reloading.
+2025-08-10 19:40:56,758 | INFO | django.utils.autoreload | pid=33568 tid=20048 | Watching for file changes with StatReloader
+2025-08-10 19:45:43,496 | INFO | django.utils.autoreload | pid=33568 tid=20048 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\views.py changed, reloading.
+2025-08-10 19:45:44,996 | INFO | django.utils.autoreload | pid=37352 tid=14800 | Watching for file changes with StatReloader
+2025-08-10 19:46:40,583 | INFO | django.utils.autoreload | pid=37352 tid=14800 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\views.py changed, reloading.
+2025-08-10 19:46:41,708 | INFO | django.utils.autoreload | pid=9632 tid=10648 | Watching for file changes with StatReloader
+2025-08-10 19:47:20,208 | INFO | django.utils.autoreload | pid=9632 tid=10648 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\views.py changed, reloading.
+2025-08-10 19:47:21,477 | INFO | django.utils.autoreload | pid=22164 tid=1716 | Watching for file changes with StatReloader
+2025-08-10 19:47:57,821 | INFO | django.utils.autoreload | pid=22164 tid=1716 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\views.py changed, reloading.
+2025-08-10 19:47:59,364 | INFO | django.utils.autoreload | pid=35776 tid=37320 | Watching for file changes with StatReloader
+2025-08-10 19:50:20,408 | INFO | django.utils.autoreload | pid=35776 tid=37320 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\views.py changed, reloading.
+2025-08-10 19:50:21,898 | INFO | django.utils.autoreload | pid=9320 tid=34660 | Watching for file changes with StatReloader
+2025-08-10 19:50:46,782 | INFO | django.utils.autoreload | pid=9320 tid=34660 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\views.py changed, reloading.
+2025-08-10 19:50:48,378 | INFO | django.utils.autoreload | pid=27376 tid=29416 | Watching for file changes with StatReloader
+2025-08-10 19:52:28,480 | INFO | django.utils.autoreload | pid=27376 tid=29416 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\views.py changed, reloading.
+2025-08-10 19:52:29,782 | INFO | django.utils.autoreload | pid=24600 tid=28572 | Watching for file changes with StatReloader
+2025-08-10 19:52:50,030 | INFO | django.utils.autoreload | pid=24600 tid=28572 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\views.py changed, reloading.
+2025-08-10 19:52:51,291 | INFO | django.utils.autoreload | pid=10600 tid=5912 | Watching for file changes with StatReloader
+2025-08-10 19:53:59,378 | INFO | django.utils.autoreload | pid=10600 tid=5912 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\views.py changed, reloading.
+2025-08-10 19:54:00,754 | INFO | django.utils.autoreload | pid=27764 tid=37336 | Watching for file changes with StatReloader
+2025-08-10 19:55:29,992 | INFO | django.utils.autoreload | pid=27764 tid=37336 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\views.py changed, reloading.
+2025-08-10 19:55:32,147 | INFO | django.utils.autoreload | pid=30584 tid=20604 | Watching for file changes with StatReloader
+2025-08-10 20:14:50,003 | INFO | django.utils.autoreload | pid=21608 tid=26260 | Watching for file changes with StatReloader
+2025-08-10 20:15:01,873 | INFO | requests | pid=21608 tid=12408 | {'method': 'GET', 'path': '/', 'status': 200, 'user': 'user_id=3', 'duration_ms': 12, 'query': ''}
+2025-08-10 20:15:22,511 | INFO | requests | pid=21608 tid=12408 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=3', 'duration_ms': 144, 'query': ''}
+2025-08-10 20:15:34,601 | INFO | requests | pid=21608 tid=33084 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=3', 'duration_ms': 24, 'query': ''}
+2025-08-10 20:15:38,325 | INFO | requests | pid=21608 tid=33084 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=3', 'duration_ms': 21, 'query': ''}
+2025-08-10 20:15:48,750 | INFO | requests | pid=21608 tid=33084 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=3', 'duration_ms': 46, 'query': ''}
+2025-08-10 20:28:59,976 | INFO | django.utils.autoreload | pid=21608 tid=26260 | C:\Users\ICH\PycharmProjects\rental_platform\properties\views.py changed, reloading.
+2025-08-10 20:29:02,000 | INFO | django.utils.autoreload | pid=30236 tid=15044 | Watching for file changes with StatReloader
+2025-08-10 20:34:36,362 | INFO | django.utils.autoreload | pid=30236 tid=15044 | C:\Users\ICH\PycharmProjects\rental_platform\properties\views.py changed, reloading.
+2025-08-10 20:34:37,629 | INFO | django.utils.autoreload | pid=3336 tid=37324 | Watching for file changes with StatReloader
+2025-08-10 20:35:00,331 | INFO | django.utils.autoreload | pid=3336 tid=37324 | C:\Users\ICH\PycharmProjects\rental_platform\properties\views.py changed, reloading.
+2025-08-10 20:35:02,195 | INFO | django.utils.autoreload | pid=18960 tid=36020 | Watching for file changes with StatReloader
+2025-08-10 20:35:33,597 | INFO | django.utils.autoreload | pid=18960 tid=36020 | C:\Users\ICH\PycharmProjects\rental_platform\properties\views.py changed, reloading.
+2025-08-10 20:35:34,814 | INFO | django.utils.autoreload | pid=36544 tid=25140 | Watching for file changes with StatReloader
+2025-08-10 20:35:52,554 | INFO | django.utils.autoreload | pid=36544 tid=25140 | C:\Users\ICH\PycharmProjects\rental_platform\properties\urls.py changed, reloading.
+2025-08-10 20:35:54,295 | INFO | django.utils.autoreload | pid=31080 tid=30588 | Watching for file changes with StatReloader
+2025-08-10 20:36:33,245 | INFO | requests | pid=31080 tid=37240 | {'method': 'GET', 'path': '/', 'status': 200, 'user': 'user_id=3', 'duration_ms': 13, 'query': ''}
+2025-08-10 20:36:36,087 | INFO | requests | pid=31080 tid=37240 | {'method': 'GET', 'path': '/', 'status': 200, 'user': 'user_id=3', 'duration_ms': 0, 'query': ''}
+2025-08-10 20:36:39,222 | INFO | requests | pid=31080 tid=37240 | {'method': 'GET', 'path': '/api/properties/', 'status': 403, 'user': 'user_id=3', 'duration_ms': 94, 'query': ''}
+2025-08-10 20:37:23,245 | INFO | requests | pid=31080 tid=37240 | {'method': 'POST', 'path': '/api-auth/logout/', 'status': 302, 'user': 'anon', 'duration_ms': 20, 'query': 'next=/api/properties/'}
+2025-08-10 20:37:23,265 | INFO | requests | pid=31080 tid=37240 | {'method': 'GET', 'path': '/api/properties/', 'status': 401, 'user': 'anon', 'duration_ms': 11, 'query': ''}
+2025-08-10 20:37:24,534 | INFO | requests | pid=31080 tid=37240 | {'method': 'GET', 'path': '/api-auth/login/', 'status': 200, 'user': 'anon', 'duration_ms': 11, 'query': 'next=/api/properties/'}
+2025-08-10 20:37:41,793 | INFO | requests | pid=31080 tid=37240 | {'method': 'POST', 'path': '/api-auth/login/', 'status': 302, 'user': 'user_id=4', 'duration_ms': 2577, 'query': ''}
+2025-08-10 20:37:41,911 | INFO | requests | pid=31080 tid=37240 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=4', 'duration_ms': 99, 'query': ''}
+2025-08-10 21:06:29,825 | INFO | requests | pid=31080 tid=12268 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=4', 'duration_ms': 45, 'query': ''}
+2025-08-10 21:06:54,658 | INFO | requests | pid=31080 tid=34420 | {'method': 'GET', 'path': '/api/properties/public/', 'status': 200, 'user': 'user_id=4', 'duration_ms': 39, 'query': ''}
+2025-08-10 21:07:19,824 | INFO | requests | pid=31080 tid=34420 | {'method': 'GET', 'path': '/api/properties/public/', 'status': 200, 'user': 'user_id=4', 'duration_ms': 41, 'query': 'price_min=&price_max=&rooms_min=&rooms_max=&location=Kiel&property_type=&status='}
+2025-08-10 21:07:44,590 | INFO | requests | pid=31080 tid=34420 | {'method': 'POST', 'path': '/api-auth/logout/', 'status': 302, 'user': 'anon', 'duration_ms': 10, 'query': 'next=/api/properties/public/'}
+2025-08-10 21:07:44,619 | INFO | requests | pid=31080 tid=34420 | {'method': 'GET', 'path': '/api/properties/public/', 'status': 200, 'user': 'anon', 'duration_ms': 20, 'query': ''}
+2025-08-10 21:07:58,096 | INFO | requests | pid=31080 tid=34420 | {'method': 'GET', 'path': '/api/properties/public/', 'status': 200, 'user': 'anon', 'duration_ms': 21, 'query': ''}
+2025-08-10 21:08:11,879 | INFO | requests | pid=31080 tid=34420 | {'method': 'GET', 'path': '/api/properties/', 'status': 401, 'user': 'anon', 'duration_ms': 7, 'query': ''}
+2025-08-10 21:08:12,453 | INFO | requests | pid=31080 tid=34420 | {'method': 'GET', 'path': '/api/properties/', 'status': 401, 'user': 'anon', 'duration_ms': 4, 'query': ''}
+2025-08-10 21:08:24,581 | INFO | requests | pid=31080 tid=24204 | {'method': 'GET', 'path': '/', 'status': 200, 'user': 'anon', 'duration_ms': 0, 'query': ''}
+2025-08-10 21:08:26,844 | INFO | requests | pid=31080 tid=24204 | {'method': 'GET', 'path': '/api/bookings/', 'status': 401, 'user': 'anon', 'duration_ms': 7, 'query': ''}
+2025-08-10 21:08:35,008 | INFO | requests | pid=31080 tid=24204 | {'method': 'GET', 'path': '/api-auth/login/', 'status': 200, 'user': 'anon', 'duration_ms': 1, 'query': 'next=/api/bookings/'}
+2025-08-10 21:08:56,334 | INFO | requests | pid=31080 tid=24204 | {'method': 'POST', 'path': '/api-auth/login/', 'status': 302, 'user': 'user_id=4', 'duration_ms': 1786, 'query': ''}
+2025-08-10 21:08:56,365 | INFO | requests | pid=31080 tid=24204 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=4', 'duration_ms': 15, 'query': ''}
+2025-08-10 21:09:07,473 | INFO | requests | pid=31080 tid=24204 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=4', 'duration_ms': 20, 'query': 'ordering=id'}
+2025-08-10 21:10:17,581 | INFO | requests | pid=31080 tid=24204 | {'method': 'GET', 'path': '/', 'status': 200, 'user': 'user_id=4', 'duration_ms': 0, 'query': ''}
+2025-08-10 21:10:22,849 | INFO | requests | pid=31080 tid=24204 | {'method': 'GET', 'path': '/api/analytics/', 'status': 200, 'user': 'user_id=4', 'duration_ms': 9, 'query': ''}
+2025-08-10 21:10:26,985 | INFO | requests | pid=31080 tid=24204 | {'method': 'GET', 'path': '/api/analytics/top-properties/', 'status': 200, 'user': 'user_id=4', 'duration_ms': 14, 'query': ''}
+2025-08-10 21:10:31,990 | INFO | requests | pid=31080 tid=24204 | {'method': 'GET', 'path': '/api/analytics/popular-searches/', 'status': 200, 'user': 'user_id=4', 'duration_ms': 14, 'query': ''}
+2025-08-10 21:11:11,746 | INFO | requests | pid=31080 tid=20792 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=4', 'duration_ms': 52, 'query': ''}
+2025-08-10 21:11:29,052 | INFO | requests | pid=31080 tid=20792 | {'method': 'GET', 'path': '/api/properties/public', 'status': 404, 'user': 'user_id=4', 'duration_ms': 10, 'query': ''}
+2025-08-10 21:11:29,086 | INFO | requests | pid=31080 tid=23152 | {'method': 'GET', 'path': '/api/properties/public/', 'status': 200, 'user': 'user_id=4', 'duration_ms': 25, 'query': ''}
+2025-08-10 21:11:53,535 | INFO | requests | pid=31080 tid=23152 | {'method': 'GET', 'path': '/api/properties/public/', 'status': 200, 'user': 'user_id=4', 'duration_ms': 18, 'query': 'price_min=&price_max=&rooms_min=&rooms_max=&location=Hamburg&property_type=&status='}
+2025-08-10 21:12:26,135 | INFO | requests | pid=31080 tid=23152 | {'method': 'GET', 'path': '/api/properties/public/', 'status': 200, 'user': 'user_id=4', 'duration_ms': 27, 'query': 'price_min=&price_max=&rooms_min=&rooms_max=&location=Hamburg&property_type=&status='}
+2025-08-10 21:12:46,718 | INFO | requests | pid=31080 tid=23152 | {'method': 'GET', 'path': '/api/properties/public/', 'status': 200, 'user': 'user_id=4', 'duration_ms': 40, 'query': 'search=1+zimmer'}
+2025-08-10 21:13:19,073 | INFO | requests | pid=31080 tid=23152 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=4', 'duration_ms': 27, 'query': ''}
+2025-08-10 21:13:23,311 | INFO | requests | pid=31080 tid=23152 | {'method': 'GET', 'path': '/', 'status': 200, 'user': 'user_id=4', 'duration_ms': 0, 'query': ''}
+2025-08-10 21:13:30,808 | INFO | requests | pid=31080 tid=23152 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=4', 'duration_ms': 16, 'query': ''}
+2025-08-10 21:13:33,331 | INFO | requests | pid=31080 tid=23152 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=4', 'duration_ms': 18, 'query': 'ordering=property'}
+2025-08-10 21:18:18,257 | INFO | django.utils.autoreload | pid=31080 tid=30588 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\views.py changed, reloading.
+2025-08-10 21:18:21,471 | INFO | django.utils.autoreload | pid=29420 tid=31316 | Watching for file changes with StatReloader
+2025-08-10 21:20:11,943 | INFO | django.utils.autoreload | pid=29420 tid=31316 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\views.py changed, reloading.
+2025-08-10 21:20:13,884 | INFO | django.utils.autoreload | pid=33724 tid=14504 | Watching for file changes with StatReloader
+2025-08-10 21:20:38,431 | INFO | django.utils.autoreload | pid=33724 tid=14504 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\serializers.py changed, reloading.
+2025-08-10 21:20:40,899 | INFO | django.utils.autoreload | pid=34908 tid=33488 | Watching for file changes with StatReloader
+2025-08-10 21:20:41,855 | INFO | requests | pid=34908 tid=30588 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=4', 'duration_ms': 117, 'query': 'ordering=property'}
+2025-08-10 21:20:55,400 | INFO | requests | pid=34908 tid=30588 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=4', 'duration_ms': 17, 'query': ''}
+2025-08-10 21:20:58,664 | INFO | requests | pid=34908 tid=30588 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=4', 'duration_ms': 20, 'query': ''}
+2025-08-10 21:28:30,759 | INFO | django.utils.autoreload | pid=34908 tid=33488 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\serializers.py changed, reloading.
+2025-08-10 21:28:33,616 | INFO | django.utils.autoreload | pid=36632 tid=28068 | Watching for file changes with StatReloader
+2025-08-10 21:28:51,781 | INFO | requests | pid=36632 tid=13556 | {'method': 'POST', 'path': '/api-auth/logout/', 'status': 302, 'user': 'anon', 'duration_ms': 18, 'query': 'next=/api/bookings/'}
+2025-08-10 21:28:51,877 | INFO | requests | pid=36632 tid=13556 | {'method': 'GET', 'path': '/api/bookings/', 'status': 401, 'user': 'anon', 'duration_ms': 84, 'query': ''}
+2025-08-10 21:28:54,143 | INFO | requests | pid=36632 tid=13556 | {'method': 'GET', 'path': '/api-auth/login/', 'status': 200, 'user': 'anon', 'duration_ms': 8, 'query': 'next=/api/bookings/'}
+2025-08-10 21:29:18,672 | INFO | requests | pid=36632 tid=13556 | {'method': 'POST', 'path': '/api-auth/login/', 'status': 302, 'user': 'user_id=1', 'duration_ms': 1875, 'query': ''}
+2025-08-10 21:29:18,704 | INFO | requests | pid=36632 tid=13556 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 18, 'query': ''}
+2025-08-10 21:29:23,262 | INFO | requests | pid=36632 tid=13556 | {'method': 'POST', 'path': '/api-auth/logout/', 'status': 302, 'user': 'anon', 'duration_ms': 14, 'query': 'next=/api/bookings/'}
+2025-08-10 21:29:23,273 | INFO | requests | pid=36632 tid=13556 | {'method': 'GET', 'path': '/api/bookings/', 'status': 401, 'user': 'anon', 'duration_ms': 4, 'query': ''}
+2025-08-10 21:29:24,489 | INFO | requests | pid=36632 tid=13556 | {'method': 'GET', 'path': '/api-auth/login/', 'status': 200, 'user': 'anon', 'duration_ms': 2, 'query': 'next=/api/bookings/'}
+2025-08-10 21:29:42,723 | INFO | requests | pid=36632 tid=13556 | {'method': 'POST', 'path': '/api-auth/login/', 'status': 302, 'user': 'user_id=2', 'duration_ms': 1796, 'query': ''}
+2025-08-10 21:29:42,786 | INFO | requests | pid=36632 tid=13556 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=2', 'duration_ms': 48, 'query': ''}
+2025-08-10 21:30:24,652 | INFO | requests | pid=36632 tid=13556 | {'method': 'GET', 'path': '/', 'status': 200, 'user': 'user_id=2', 'duration_ms': 1, 'query': ''}
+2025-08-10 21:30:28,750 | INFO | requests | pid=36632 tid=13556 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=2', 'duration_ms': 21, 'query': ''}
+2025-08-10 21:30:32,046 | INFO | requests | pid=36632 tid=13556 | {'method': 'GET', 'path': '/api/properties/', 'status': 403, 'user': 'user_id=2', 'duration_ms': 7, 'query': ''}
+2025-08-10 21:30:43,412 | INFO | requests | pid=36632 tid=13556 | {'method': 'GET', 'path': '/api/properties/public', 'status': 404, 'user': 'user_id=2', 'duration_ms': 9, 'query': ''}
+2025-08-10 21:30:43,455 | INFO | requests | pid=36632 tid=7492 | {'method': 'GET', 'path': '/api/properties/public/', 'status': 200, 'user': 'user_id=2', 'duration_ms': 32, 'query': ''}
+2025-08-10 21:30:56,127 | INFO | requests | pid=36632 tid=7492 | {'method': 'GET', 'path': '/api/properties/public/1', 'status': 404, 'user': 'user_id=2', 'duration_ms': 6, 'query': ''}
+2025-08-10 21:30:56,162 | INFO | requests | pid=36632 tid=8200 | {'method': 'GET', 'path': '/api/properties/public/1/', 'status': 200, 'user': 'user_id=2', 'duration_ms': 24, 'query': ''}
+2025-08-10 21:40:24,618 | INFO | django.utils.autoreload | pid=36632 tid=28068 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\views.py changed, reloading.
+2025-08-10 21:40:31,024 | INFO | django.utils.autoreload | pid=36552 tid=37012 | Watching for file changes with StatReloader
+2025-08-10 21:41:27,749 | INFO | django.utils.autoreload | pid=36552 tid=37012 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\views.py changed, reloading.
+2025-08-10 21:41:29,367 | INFO | django.utils.autoreload | pid=37100 tid=36368 | Watching for file changes with StatReloader
+2025-08-10 21:42:26,059 | INFO | django.utils.autoreload | pid=37100 tid=36368 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\views.py changed, reloading.
+2025-08-10 21:42:28,542 | INFO | django.utils.autoreload | pid=26280 tid=26912 | Watching for file changes with StatReloader
+2025-08-10 21:44:08,304 | INFO | django.utils.autoreload | pid=26280 tid=26912 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\views.py changed, reloading.
+2025-08-10 21:44:09,774 | INFO | django.utils.autoreload | pid=12628 tid=37032 | Watching for file changes with StatReloader
+2025-08-10 21:45:58,094 | INFO | django.utils.autoreload | pid=12628 tid=37032 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\views.py changed, reloading.
+2025-08-10 21:46:00,097 | INFO | django.utils.autoreload | pid=33164 tid=26388 | Watching for file changes with StatReloader
+2025-08-10 21:46:19,245 | INFO | django.utils.autoreload | pid=33164 tid=26388 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\views.py changed, reloading.
+2025-08-10 21:46:21,002 | INFO | django.utils.autoreload | pid=10720 tid=1228 | Watching for file changes with StatReloader
+2025-08-10 21:46:47,341 | INFO | django.utils.autoreload | pid=10720 tid=1228 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\views.py changed, reloading.
+2025-08-10 21:46:48,510 | INFO | django.utils.autoreload | pid=20704 tid=7760 | Watching for file changes with StatReloader
+2025-08-10 21:47:11,776 | INFO | django.utils.autoreload | pid=20704 tid=7760 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\views.py changed, reloading.
+2025-08-10 21:47:13,140 | INFO | django.utils.autoreload | pid=18380 tid=13424 | Watching for file changes with StatReloader
+2025-08-10 21:48:55,772 | INFO | django.utils.autoreload | pid=18380 tid=13424 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\views.py changed, reloading.
+2025-08-10 21:48:57,259 | INFO | django.utils.autoreload | pid=34600 tid=23968 | Watching for file changes with StatReloader
+2025-08-10 21:49:20,255 | INFO | django.utils.autoreload | pid=34600 tid=23968 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\views.py changed, reloading.
+2025-08-10 21:49:21,650 | INFO | django.utils.autoreload | pid=6520 tid=29900 | Watching for file changes with StatReloader
+2025-08-10 21:53:49,863 | INFO | django.utils.autoreload | pid=6520 tid=29900 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\views.py changed, reloading.
+2025-08-10 21:53:51,475 | INFO | django.utils.autoreload | pid=16016 tid=21148 | Watching for file changes with StatReloader
+2025-08-10 21:54:27,395 | INFO | django.utils.autoreload | pid=16016 tid=21148 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\views.py changed, reloading.
+2025-08-10 21:54:28,887 | INFO | django.utils.autoreload | pid=24768 tid=31708 | Watching for file changes with StatReloader
+2025-08-10 21:56:06,779 | INFO | django.utils.autoreload | pid=24768 tid=31708 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\views.py changed, reloading.
+2025-08-10 21:56:08,359 | INFO | django.utils.autoreload | pid=31148 tid=35448 | Watching for file changes with StatReloader
+2025-08-10 21:56:25,585 | INFO | django.utils.autoreload | pid=31148 tid=35448 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\views.py changed, reloading.
+2025-08-10 21:56:27,426 | INFO | django.utils.autoreload | pid=16088 tid=37152 | Watching for file changes with StatReloader
+2025-08-10 21:56:48,179 | INFO | django.utils.autoreload | pid=16088 tid=37152 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\views.py changed, reloading.
+2025-08-10 21:56:49,691 | INFO | django.utils.autoreload | pid=33024 tid=34964 | Watching for file changes with StatReloader
+2025-08-10 22:02:45,124 | INFO | django.utils.autoreload | pid=33024 tid=34964 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\views.py changed, reloading.
+2025-08-10 22:02:46,776 | INFO | django.utils.autoreload | pid=26632 tid=36640 | Watching for file changes with StatReloader
+2025-08-10 22:03:16,274 | INFO | django.utils.autoreload | pid=26632 tid=36640 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\views.py changed, reloading.
+2025-08-10 22:03:18,664 | INFO | django.utils.autoreload | pid=37700 tid=32448 | Watching for file changes with StatReloader
+2025-08-10 22:08:13,455 | INFO | django.utils.autoreload | pid=37700 tid=32448 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\views.py changed, reloading.
+2025-08-10 22:08:15,279 | INFO | django.utils.autoreload | pid=26756 tid=4988 | Watching for file changes with StatReloader
+2025-08-10 22:11:11,743 | INFO | django.utils.autoreload | pid=26756 tid=4988 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\views.py changed, reloading.
+2025-08-10 22:11:13,151 | INFO | django.utils.autoreload | pid=37080 tid=14988 | Watching for file changes with StatReloader
+2025-08-10 22:13:36,593 | INFO | requests | pid=37080 tid=16212 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=2', 'duration_ms': 178, 'query': ''}
+2025-08-10 22:15:49,584 | INFO | requests | pid=37080 tid=27032 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=2', 'duration_ms': 30, 'query': 'status=active&property_id=&renter_id=&start_date_from=&start_date_to=&end_date_from=&end_date_to='}
+2025-08-10 22:16:08,706 | INFO | requests | pid=37080 tid=27032 | {'method': 'POST', 'path': '/api/bookings/', 'status': 400, 'user': 'user_id=2', 'duration_ms': 29, 'query': 'status=active&property_id=&renter_id=&start_date_from=&start_date_to=&end_date_from=&end_date_to='}
+2025-08-10 22:16:18,942 | INFO | requests | pid=37080 tid=27032 | {'method': 'POST', 'path': '/api/bookings/', 'status': 400, 'user': 'user_id=2', 'duration_ms': 22, 'query': 'status=active&property_id=&renter_id=&start_date_from=&start_date_to=&end_date_from=&end_date_to='}
+2025-08-10 22:23:20,575 | INFO | requests | pid=37080 tid=14208 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=2', 'duration_ms': 33, 'query': ''}
+2025-08-10 22:23:46,492 | INFO | requests | pid=37080 tid=14208 | {'method': 'POST', 'path': '/api-auth/logout/', 'status': 302, 'user': 'anon', 'duration_ms': 14, 'query': 'next=/api/bookings/'}
+2025-08-10 22:23:46,503 | INFO | requests | pid=37080 tid=14208 | {'method': 'GET', 'path': '/api/bookings/', 'status': 401, 'user': 'anon', 'duration_ms': 4, 'query': ''}
+2025-08-10 22:23:47,947 | INFO | requests | pid=37080 tid=14208 | {'method': 'GET', 'path': '/api-auth/login/', 'status': 200, 'user': 'anon', 'duration_ms': 7, 'query': 'next=/api/bookings/'}
+2025-08-10 22:24:22,081 | INFO | requests | pid=37080 tid=14208 | {'method': 'POST', 'path': '/api-auth/login/', 'status': 302, 'user': 'user_id=6', 'duration_ms': 1860, 'query': ''}
+2025-08-10 22:24:22,141 | INFO | requests | pid=37080 tid=14208 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=6', 'duration_ms': 41, 'query': ''}
+2025-08-10 22:24:30,868 | INFO | requests | pid=37080 tid=14208 | {'method': 'POST', 'path': '/api-auth/logout/', 'status': 302, 'user': 'anon', 'duration_ms': 16, 'query': 'next=/api/bookings/'}
+2025-08-10 22:24:30,883 | INFO | requests | pid=37080 tid=14208 | {'method': 'GET', 'path': '/api/bookings/', 'status': 401, 'user': 'anon', 'duration_ms': 4, 'query': ''}
+2025-08-10 22:24:32,305 | INFO | requests | pid=37080 tid=14208 | {'method': 'GET', 'path': '/api-auth/login/', 'status': 200, 'user': 'anon', 'duration_ms': 2, 'query': 'next=/api/bookings/'}
+2025-08-10 22:24:50,536 | INFO | requests | pid=37080 tid=14208 | {'method': 'POST', 'path': '/api-auth/login/', 'status': 302, 'user': 'user_id=1', 'duration_ms': 1853, 'query': ''}
+2025-08-10 22:24:50,576 | INFO | requests | pid=37080 tid=14208 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 25, 'query': ''}
+2025-08-10 22:25:37,303 | INFO | requests | pid=37080 tid=14208 | {'method': 'GET', 'path': '/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 2, 'query': ''}
+2025-08-10 22:25:40,655 | INFO | requests | pid=37080 tid=14208 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 31, 'query': ''}
+2025-08-10 22:26:31,044 | INFO | requests | pid=37080 tid=14208 | {'method': 'POST', 'path': '/api/properties/', 'status': 201, 'user': 'user_id=1', 'duration_ms': 30, 'query': ''}
+2025-08-10 22:27:18,529 | INFO | requests | pid=37080 tid=14208 | {'method': 'POST', 'path': '/api/properties/', 'status': 201, 'user': 'user_id=1', 'duration_ms': 41, 'query': ''}
+2025-08-10 22:27:34,810 | INFO | requests | pid=37080 tid=14208 | {'method': 'GET', 'path': '/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 0, 'query': ''}
+2025-08-10 22:27:37,854 | INFO | requests | pid=37080 tid=14208 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 27, 'query': ''}
+2025-08-10 22:27:56,644 | INFO | requests | pid=37080 tid=14208 | {'method': 'GET', 'path': '/api/properties/2', 'status': 404, 'user': 'user_id=1', 'duration_ms': 13, 'query': ''}
+2025-08-10 22:27:56,674 | INFO | requests | pid=37080 tid=4148 | {'method': 'GET', 'path': '/api/properties/2/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 18, 'query': ''}
+2025-08-10 22:28:08,110 | INFO | requests | pid=37080 tid=4148 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 48, 'query': ''}
+2025-08-10 22:28:09,828 | INFO | requests | pid=37080 tid=4148 | {'method': 'GET', 'path': '/api/properties/6', 'status': 404, 'user': 'user_id=1', 'duration_ms': 8, 'query': ''}
+2025-08-10 22:28:09,868 | INFO | requests | pid=37080 tid=26492 | {'method': 'GET', 'path': '/api/properties/6/', 'status': 404, 'user': 'user_id=1', 'duration_ms': 29, 'query': ''}
+2025-08-10 22:28:21,334 | INFO | requests | pid=37080 tid=26492 | {'method': 'GET', 'path': '/api/properties/3', 'status': 404, 'user': 'user_id=1', 'duration_ms': 12, 'query': ''}
+2025-08-10 22:28:21,373 | INFO | requests | pid=37080 tid=27184 | {'method': 'GET', 'path': '/api/properties/3/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 30, 'query': ''}
+2025-08-10 22:28:47,414 | INFO | requests | pid=37080 tid=27184 | {'method': 'POST', 'path': '/api-auth/logout/', 'status': 302, 'user': 'anon', 'duration_ms': 13, 'query': 'next=/api/properties/3/'}
+2025-08-10 22:28:47,427 | INFO | requests | pid=37080 tid=27184 | {'method': 'GET', 'path': '/api/properties/3/', 'status': 401, 'user': 'anon', 'duration_ms': 4, 'query': ''}
+2025-08-10 22:28:52,531 | INFO | requests | pid=37080 tid=27184 | {'method': 'GET', 'path': '/', 'status': 200, 'user': 'anon', 'duration_ms': 0, 'query': ''}
+2025-08-10 22:28:57,479 | INFO | requests | pid=37080 tid=27184 | {'method': 'GET', 'path': '/api/properties/', 'status': 401, 'user': 'anon', 'duration_ms': 3, 'query': ''}
+2025-08-10 22:29:07,998 | INFO | requests | pid=37080 tid=27184 | {'method': 'GET', 'path': '/api/properties/public', 'status': 404, 'user': 'anon', 'duration_ms': 11, 'query': ''}
+2025-08-10 22:29:08,041 | INFO | requests | pid=37080 tid=36104 | {'method': 'GET', 'path': '/api/properties/public/', 'status': 200, 'user': 'anon', 'duration_ms': 32, 'query': ''}
+2025-08-10 22:29:34,731 | INFO | requests | pid=37080 tid=36104 | {'method': 'GET', 'path': '/api/properties/public/', 'status': 200, 'user': 'anon', 'duration_ms': 30, 'query': 'search=1+room'}
+2025-08-10 22:29:50,357 | INFO | requests | pid=37080 tid=36104 | {'method': 'GET', 'path': '/api/properties/public/', 'status': 200, 'user': 'anon', 'duration_ms': 28, 'query': 'search=Nord'}
+2025-08-10 22:30:05,392 | INFO | requests | pid=37080 tid=36104 | {'method': 'GET', 'path': '/api/properties/public/4', 'status': 404, 'user': 'anon', 'duration_ms': 6, 'query': ''}
+2025-08-10 22:30:05,423 | INFO | requests | pid=37080 tid=34756 | {'method': 'GET', 'path': '/api/properties/public/4/', 'status': 200, 'user': 'anon', 'duration_ms': 23, 'query': ''}
+2025-08-10 22:30:09,964 | INFO | requests | pid=37080 tid=34756 | {'method': 'GET', 'path': '/api-auth/login/', 'status': 200, 'user': 'anon', 'duration_ms': 2, 'query': 'next=/api/properties/public/4/'}
+2025-08-10 22:30:29,868 | INFO | requests | pid=37080 tid=34756 | {'method': 'POST', 'path': '/api-auth/login/', 'status': 302, 'user': 'user_id=2', 'duration_ms': 1478, 'query': ''}
+2025-08-10 22:30:29,905 | INFO | requests | pid=37080 tid=34756 | {'method': 'GET', 'path': '/api/properties/public/4/', 'status': 200, 'user': 'user_id=2', 'duration_ms': 24, 'query': ''}
+2025-08-10 22:31:06,505 | INFO | requests | pid=37080 tid=34756 | {'method': 'GET', 'path': '/', 'status': 200, 'user': 'user_id=2', 'duration_ms': 0, 'query': ''}
+2025-08-10 22:31:09,730 | INFO | requests | pid=37080 tid=34756 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=2', 'duration_ms': 36, 'query': ''}
+2025-08-10 22:31:24,067 | INFO | requests | pid=37080 tid=34756 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=2', 'duration_ms': 33, 'query': 'search=Nord'}
+2025-08-10 22:32:08,390 | INFO | bookings.views | pid=37080 tid=34756 | Booking created id=6 property=3 renter=2 start=2025-08-12 end=2025-08-13 status=pending
+2025-08-10 22:32:08,408 | INFO | requests | pid=37080 tid=34756 | {'method': 'POST', 'path': '/api/bookings/', 'status': 201, 'user': 'user_id=2', 'duration_ms': 49, 'query': 'search=Nord'}
+2025-08-10 22:32:36,786 | INFO | requests | pid=37080 tid=34756 | {'method': 'POST', 'path': '/api-auth/logout/', 'status': 302, 'user': 'anon', 'duration_ms': 13, 'query': 'next=/api/bookings/'}
+2025-08-10 22:32:36,798 | INFO | requests | pid=37080 tid=34756 | {'method': 'GET', 'path': '/api/bookings/', 'status': 401, 'user': 'anon', 'duration_ms': 5, 'query': ''}
+2025-08-10 22:32:38,233 | INFO | requests | pid=37080 tid=34756 | {'method': 'GET', 'path': '/api-auth/login/', 'status': 200, 'user': 'anon', 'duration_ms': 1, 'query': 'next=/api/bookings/'}
+2025-08-10 22:32:57,789 | INFO | requests | pid=37080 tid=34756 | {'method': 'POST', 'path': '/api-auth/login/', 'status': 302, 'user': 'user_id=3', 'duration_ms': 1552, 'query': ''}
+2025-08-10 22:32:57,824 | INFO | requests | pid=37080 tid=34756 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=3', 'duration_ms': 22, 'query': ''}
+2025-08-10 22:33:11,600 | INFO | requests | pid=37080 tid=34756 | {'method': 'POST', 'path': '/api-auth/logout/', 'status': 302, 'user': 'anon', 'duration_ms': 10, 'query': 'next=/api/bookings/'}
+2025-08-10 22:33:11,610 | INFO | requests | pid=37080 tid=34756 | {'method': 'GET', 'path': '/api/bookings/', 'status': 401, 'user': 'anon', 'duration_ms': 4, 'query': ''}
+2025-08-10 22:33:13,074 | INFO | requests | pid=37080 tid=34756 | {'method': 'GET', 'path': '/api-auth/login/', 'status': 200, 'user': 'anon', 'duration_ms': 1, 'query': 'next=/api/bookings/'}
+2025-08-10 22:33:32,111 | INFO | requests | pid=37080 tid=34756 | {'method': 'POST', 'path': '/api-auth/login/', 'status': 302, 'user': 'user_id=1', 'duration_ms': 1740, 'query': ''}
+2025-08-10 22:33:32,157 | INFO | requests | pid=37080 tid=34756 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 29, 'query': ''}
+2025-08-10 22:33:46,319 | INFO | requests | pid=37080 tid=34756 | {'method': 'GET', 'path': '/api/bookings/4', 'status': 404, 'user': 'user_id=1', 'duration_ms': 7, 'query': ''}
+2025-08-10 22:33:46,347 | INFO | requests | pid=37080 tid=3636 | {'method': 'GET', 'path': '/api/bookings/4/', 'status': 403, 'user': 'user_id=1', 'duration_ms': 19, 'query': ''}
+2025-08-10 22:33:58,659 | INFO | requests | pid=37080 tid=3636 | {'method': 'GET', 'path': '/api/bookings/6/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 29, 'query': ''}
+2025-08-10 22:34:21,055 | INFO | requests | pid=37080 tid=3636 | {'method': 'PUT', 'path': '/api/bookings/6/', 'status': 400, 'user': 'user_id=1', 'duration_ms': 27, 'query': ''}
+2025-08-10 22:34:30,892 | INFO | requests | pid=37080 tid=3636 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 26, 'query': ''}
+2025-08-10 22:34:32,765 | INFO | requests | pid=37080 tid=3636 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 22, 'query': ''}
+2025-08-10 22:34:35,456 | INFO | requests | pid=37080 tid=3636 | {'method': 'GET', 'path': '/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 0, 'query': ''}
+2025-08-10 22:34:38,767 | INFO | requests | pid=37080 tid=3636 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 29, 'query': ''}
+2025-08-10 22:35:00,413 | INFO | requests | pid=37080 tid=3636 | {'method': 'GET', 'path': '/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 0, 'query': ''}
+2025-08-10 22:35:05,398 | INFO | requests | pid=37080 tid=3636 | {'method': 'GET', 'path': '/api/analytics/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 9, 'query': ''}
+2025-08-10 22:35:07,136 | INFO | requests | pid=37080 tid=3636 | {'method': 'GET', 'path': '/api/analytics/top-properties/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 11, 'query': ''}
+2025-08-10 22:35:15,198 | INFO | requests | pid=37080 tid=3636 | {'method': 'GET', 'path': '/api/analytics/popular-searches/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 13, 'query': ''}
+2025-08-10 22:40:17,915 | INFO | requests | pid=37080 tid=31012 | {'method': 'GET', 'path': '/api/docs/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 15, 'query': ''}
+2025-08-10 22:40:18,592 | INFO | requests | pid=37080 tid=31012 | {'method': 'GET', 'path': '/api/schema/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 166, 'query': ''}
+2025-08-10 22:45:35,480 | INFO | requests | pid=37080 tid=1016 | {'method': 'GET', 'path': '/api/accounts/me/', 'status': 401, 'user': 'anon', 'duration_ms': 42, 'query': ''}
+2025-08-10 22:46:45,316 | ERROR | rental_platform.middleware | pid=37080 tid=1016 | Failed to log request/response
+Traceback (most recent call last):
+  File "C:\Users\ICH\PycharmProjects\rental_platform\rental_platform\middleware.py", line 51, in process_response
+    requests_logger.info("request", extra={"message": str(msg)})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1519, in info
+    self._log(INFO, msg, args, **kwargs)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1662, in _log
+    record = self.makeRecord(self.name, level, fn, lno, msg, args,
+                             exc_info, func, extra, sinfo)
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1636, in makeRecord
+    raise KeyError("Attempt to overwrite %r in LogRecord" % key)
+KeyError: "Attempt to overwrite 'message' in LogRecord"
+2025-08-10 22:47:44,997 | INFO | requests | pid=37080 tid=1016 | {'method': 'GET', 'path': '/api/accounts/me/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 7, 'query': ''}
+2025-08-10 22:48:01,362 | INFO | requests | pid=37080 tid=1016 | {'method': 'GET', 'path': '/api/analytics/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 4, 'query': ''}
+2025-08-10 22:48:13,655 | INFO | requests | pid=37080 tid=1016 | {'method': 'GET', 'path': '/api/analytics/popular-searches/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 5, 'query': ''}
+2025-08-10 22:48:30,048 | INFO | requests | pid=37080 tid=1016 | {'method': 'GET', 'path': '/api/bookings/1/', 'status': 403, 'user': 'user_id=1', 'duration_ms': 7, 'query': ''}
+2025-08-10 23:15:48,162 | INFO | requests | pid=37080 tid=23104 | {'method': 'GET', 'path': '/api/redoc/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 10, 'query': ''}
+2025-08-10 23:15:48,874 | INFO | requests | pid=37080 tid=23104 | {'method': 'GET', 'path': '/api/schema/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 349, 'query': ''}
+2025-08-10 23:27:40,803 | INFO | django.utils.autoreload | pid=37080 tid=14988 | C:\Users\ICH\PycharmProjects\rental_platform\properties\models.py changed, reloading.
+2025-08-10 23:27:43,214 | INFO | django.utils.autoreload | pid=36508 tid=23356 | Watching for file changes with StatReloader
+2025-08-10 23:27:59,797 | INFO | django.utils.autoreload | pid=36508 tid=23356 | C:\Users\ICH\PycharmProjects\rental_platform\properties\models.py changed, reloading.
+2025-08-10 23:28:01,946 | INFO | django.utils.autoreload | pid=36912 tid=26756 | Watching for file changes with StatReloader
+2025-08-10 23:28:48,874 | INFO | django.utils.autoreload | pid=36912 tid=26756 | C:\Users\ICH\PycharmProjects\rental_platform\properties\models.py changed, reloading.
+2025-08-10 23:28:50,630 | INFO | django.utils.autoreload | pid=13560 tid=24636 | Watching for file changes with StatReloader
+2025-08-10 23:29:14,674 | INFO | django.utils.autoreload | pid=13560 tid=24636 | C:\Users\ICH\PycharmProjects\rental_platform\properties\models.py changed, reloading.
+2025-08-10 23:29:16,412 | INFO | django.utils.autoreload | pid=2868 tid=35552 | Watching for file changes with StatReloader
+2025-08-10 23:44:10,937 | INFO | django.utils.autoreload | pid=2868 tid=35552 | C:\Users\ICH\PycharmProjects\rental_platform\properties\serializers.py changed, reloading.
+2025-08-10 23:44:13,129 | INFO | django.utils.autoreload | pid=7836 tid=5352 | Watching for file changes with StatReloader
+2025-08-11 00:07:58,485 | INFO | django.utils.autoreload | pid=7836 tid=5352 | C:\Users\ICH\PycharmProjects\rental_platform\rental_platform\settings.py changed, reloading.
+2025-08-11 00:08:02,355 | INFO | django.utils.autoreload | pid=28200 tid=13616 | Watching for file changes with StatReloader
+2025-08-11 00:10:21,405 | INFO | django.utils.autoreload | pid=28200 tid=13616 | C:\Users\ICH\PycharmProjects\rental_platform\rental_platform\urls.py changed, reloading.
+2025-08-11 00:10:22,821 | INFO | django.utils.autoreload | pid=15584 tid=16832 | Watching for file changes with StatReloader
+2025-08-11 00:10:42,751 | INFO | django.utils.autoreload | pid=15584 tid=16832 | C:\Users\ICH\PycharmProjects\rental_platform\rental_platform\urls.py changed, reloading.
+2025-08-11 00:10:44,194 | INFO | django.utils.autoreload | pid=26804 tid=34660 | Watching for file changes with StatReloader
+2025-08-11 00:12:35,844 | INFO | django.utils.autoreload | pid=26804 tid=34660 | C:\Users\ICH\PycharmProjects\rental_platform\properties\models.py changed, reloading.
+2025-08-11 00:12:37,566 | INFO | django.utils.autoreload | pid=18032 tid=35132 | Watching for file changes with StatReloader
+2025-08-11 00:16:53,560 | INFO | django.utils.autoreload | pid=18032 tid=35132 | C:\Users\ICH\PycharmProjects\rental_platform\properties\models.py changed, reloading.
+2025-08-11 00:16:57,132 | INFO | django.utils.autoreload | pid=25964 tid=32284 | Watching for file changes with StatReloader
+2025-08-11 00:17:36,587 | INFO | django.utils.autoreload | pid=25964 tid=32284 | C:\Users\ICH\PycharmProjects\rental_platform\properties\models.py changed, reloading.
+2025-08-11 00:17:38,390 | INFO | django.utils.autoreload | pid=33180 tid=8320 | Watching for file changes with StatReloader
+2025-08-11 00:17:55,408 | INFO | django.utils.autoreload | pid=33180 tid=8320 | C:\Users\ICH\PycharmProjects\rental_platform\properties\models.py changed, reloading.
+2025-08-11 00:17:58,207 | INFO | django.utils.autoreload | pid=1712 tid=12800 | Watching for file changes with StatReloader
+2025-08-11 00:19:15,963 | INFO | django.utils.autoreload | pid=1712 tid=12800 | C:\Users\ICH\PycharmProjects\rental_platform\properties\models.py changed, reloading.
+2025-08-11 00:19:17,663 | INFO | django.utils.autoreload | pid=21344 tid=34420 | Watching for file changes with StatReloader
+2025-08-11 00:19:26,446 | INFO | django.utils.autoreload | pid=21344 tid=34420 | C:\Users\ICH\PycharmProjects\rental_platform\properties\models.py changed, reloading.
+2025-08-11 00:19:29,372 | INFO | django.utils.autoreload | pid=33964 tid=30340 | Watching for file changes with StatReloader
+2025-08-11 00:24:19,549 | INFO | django.utils.autoreload | pid=33964 tid=30340 | C:\Users\ICH\PycharmProjects\rental_platform\properties\serializers.py changed, reloading.
+2025-08-11 00:24:21,625 | INFO | django.utils.autoreload | pid=25972 tid=34124 | Watching for file changes with StatReloader
+2025-08-11 00:24:37,139 | INFO | django.utils.autoreload | pid=25972 tid=34124 | C:\Users\ICH\PycharmProjects\rental_platform\properties\serializers.py changed, reloading.
+2025-08-11 00:24:39,252 | INFO | django.utils.autoreload | pid=7768 tid=28956 | Watching for file changes with StatReloader
+2025-08-11 00:24:56,243 | INFO | django.utils.autoreload | pid=7768 tid=28956 | C:\Users\ICH\PycharmProjects\rental_platform\properties\serializers.py changed, reloading.
+2025-08-11 00:24:59,338 | INFO | django.utils.autoreload | pid=36392 tid=37460 | Watching for file changes with StatReloader
+2025-08-11 00:29:19,325 | INFO | django.utils.autoreload | pid=36392 tid=37460 | C:\Users\ICH\PycharmProjects\rental_platform\properties\serializers.py changed, reloading.
+2025-08-11 00:29:25,428 | INFO | django.utils.autoreload | pid=17624 tid=37076 | Watching for file changes with StatReloader
+2025-08-11 00:29:35,121 | INFO | django.utils.autoreload | pid=17624 tid=37076 | C:\Users\ICH\PycharmProjects\rental_platform\properties\serializers.py changed, reloading.
+2025-08-11 00:29:37,977 | INFO | django.utils.autoreload | pid=23168 tid=34160 | Watching for file changes with StatReloader
+2025-08-11 00:30:29,645 | INFO | django.utils.autoreload | pid=23168 tid=34160 | C:\Users\ICH\PycharmProjects\rental_platform\properties\serializers.py changed, reloading.
+2025-08-11 00:30:32,993 | INFO | django.utils.autoreload | pid=1796 tid=15784 | Watching for file changes with StatReloader
+2025-08-11 00:34:27,700 | INFO | django.utils.autoreload | pid=1796 tid=15784 | C:\Users\ICH\PycharmProjects\rental_platform\properties\serializers.py changed, reloading.
+2025-08-11 00:34:30,762 | INFO | django.utils.autoreload | pid=30672 tid=27936 | Watching for file changes with StatReloader
+2025-08-11 00:35:38,556 | INFO | django.utils.autoreload | pid=30672 tid=27936 | C:\Users\ICH\PycharmProjects\rental_platform\properties\serializers.py changed, reloading.
+2025-08-11 00:35:42,304 | INFO | django.utils.autoreload | pid=34016 tid=1752 | Watching for file changes with StatReloader
+2025-08-11 00:40:39,457 | INFO | django.utils.autoreload | pid=34016 tid=1752 | C:\Users\ICH\PycharmProjects\rental_platform\properties\views.py changed, reloading.
+2025-08-11 00:40:48,063 | INFO | django.utils.autoreload | pid=23824 tid=23060 | Watching for file changes with StatReloader
+2025-08-11 00:40:54,964 | INFO | django.utils.autoreload | pid=23824 tid=23060 | C:\Users\ICH\PycharmProjects\rental_platform\properties\views.py changed, reloading.
+2025-08-11 00:40:57,555 | INFO | django.utils.autoreload | pid=33600 tid=13816 | Watching for file changes with StatReloader
+2025-08-11 00:41:39,283 | INFO | django.utils.autoreload | pid=33600 tid=13816 | C:\Users\ICH\PycharmProjects\rental_platform\properties\views.py changed, reloading.
+2025-08-11 00:41:44,647 | INFO | django.utils.autoreload | pid=35724 tid=24312 | Watching for file changes with StatReloader
+2025-08-11 00:42:21,338 | INFO | django.utils.autoreload | pid=35724 tid=24312 | C:\Users\ICH\PycharmProjects\rental_platform\properties\views.py changed, reloading.
+2025-08-11 00:42:23,560 | INFO | django.utils.autoreload | pid=6544 tid=3132 | Watching for file changes with StatReloader
+2025-08-11 00:42:38,897 | INFO | django.utils.autoreload | pid=6544 tid=3132 | C:\Users\ICH\PycharmProjects\rental_platform\properties\views.py changed, reloading.
+2025-08-11 00:42:41,695 | INFO | django.utils.autoreload | pid=36552 tid=35696 | Watching for file changes with StatReloader
+2025-08-11 00:45:58,127 | INFO | django.utils.autoreload | pid=36552 tid=35696 | C:\Users\ICH\PycharmProjects\rental_platform\properties\views.py changed, reloading.
+2025-08-11 00:46:00,084 | INFO | django.utils.autoreload | pid=31420 tid=5448 | Watching for file changes with StatReloader
+2025-08-11 00:46:25,474 | INFO | django.utils.autoreload | pid=31420 tid=5448 | C:\Users\ICH\PycharmProjects\rental_platform\properties\views.py changed, reloading.
+2025-08-11 00:46:28,085 | INFO | django.utils.autoreload | pid=35372 tid=13648 | Watching for file changes with StatReloader
+2025-08-11 00:47:18,941 | INFO | django.utils.autoreload | pid=35372 tid=13648 | C:\Users\ICH\PycharmProjects\rental_platform\properties\views.py changed, reloading.
+2025-08-11 00:47:25,909 | INFO | django.utils.autoreload | pid=88 tid=19724 | Watching for file changes with StatReloader
+2025-08-11 00:52:04,861 | INFO | django.utils.autoreload | pid=88 tid=19724 | C:\Users\ICH\PycharmProjects\rental_platform\properties\views.py changed, reloading.
+2025-08-11 00:52:07,080 | INFO | django.utils.autoreload | pid=30148 tid=36464 | Watching for file changes with StatReloader
+2025-08-11 00:53:26,601 | INFO | django.utils.autoreload | pid=30148 tid=36464 | C:\Users\ICH\PycharmProjects\rental_platform\properties\views.py changed, reloading.
+2025-08-11 00:53:32,082 | INFO | django.utils.autoreload | pid=36592 tid=15784 | Watching for file changes with StatReloader
+2025-08-11 00:59:27,486 | INFO | django.utils.autoreload | pid=28868 tid=29592 | Watching for file changes with StatReloader
+2025-08-11 01:14:12,535 | INFO | requests | pid=28868 tid=34236 | {'method': 'GET', 'path': '/api/accounts/profile/', 'status': 404, 'user': 'user_id=1', 'duration_ms': 64, 'query': ''}
+2025-08-11 01:14:16,663 | INFO | requests | pid=28868 tid=34236 | {'method': 'GET', 'path': '/swagger/', 'status': 404, 'user': 'user_id=1', 'duration_ms': 21, 'query': ''}
+2025-08-11 01:14:18,619 | INFO | requests | pid=28868 tid=34236 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 312, 'query': ''}
+2025-08-11 01:14:19,254 | INFO | requests | pid=28868 tid=14224 | {'method': 'GET', 'path': '/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 2, 'query': ''}
+2025-08-11 01:14:20,540 | INFO | requests | pid=28868 tid=14224 | {'method': 'GET', 'path': '/api/v1/auth/register/', 'status': 404, 'user': 'user_id=1', 'duration_ms': 14, 'query': ''}
+2025-08-11 01:14:21,811 | INFO | requests | pid=28868 tid=28196 | {'method': 'GET', 'path': '/api/redoc/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 13, 'query': ''}
+2025-08-11 01:14:23,034 | INFO | requests | pid=28868 tid=28196 | {'method': 'GET', 'path': '/api/schema/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 626, 'query': ''}
+2025-08-11 01:14:37,888 | INFO | requests | pid=28868 tid=20932 | {'method': 'GET', 'path': '/api/accounts/me/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 130, 'query': ''}
+2025-08-11 01:14:46,069 | INFO | requests | pid=28868 tid=14224 | {'method': 'GET', 'path': '/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 0, 'query': ''}
+2025-08-11 01:14:50,074 | INFO | requests | pid=28868 tid=14224 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 36, 'query': ''}
+2025-08-11 01:21:54,768 | INFO | requests | pid=28868 tid=27672 | {'method': 'GET', 'path': '/api/bookings/6', 'status': 404, 'user': 'user_id=1', 'duration_ms': 44, 'query': ''}
+2025-08-11 01:21:54,869 | INFO | requests | pid=28868 tid=23740 | {'method': 'GET', 'path': '/api/bookings/6/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 85, 'query': ''}
+2025-08-11 01:22:16,170 | INFO | requests | pid=28868 tid=31536 | {'method': 'GET', 'path': '/api/bookings/6/confirm', 'status': 404, 'user': 'user_id=1', 'duration_ms': 12, 'query': ''}
+2025-08-11 01:22:16,219 | INFO | requests | pid=28868 tid=25456 | {'method': 'GET', 'path': '/api/bookings/6/confirm/', 'status': 405, 'user': 'user_id=1', 'duration_ms': 41, 'query': ''}
+2025-08-11 01:25:34,753 | INFO | requests | pid=28868 tid=25456 | {'method': 'GET', 'path': '/api/bookings/6/confirm/', 'status': 405, 'user': 'user_id=1', 'duration_ms': 47, 'query': ''}
+2025-08-11 01:29:10,618 | INFO | bookings.views | pid=28868 tid=25456 | Booking confirmed booking_id=6 owner_id=1 renter_id=2
+2025-08-11 01:29:10,633 | INFO | requests | pid=28868 tid=25456 | {'method': 'POST', 'path': '/api/bookings/6/confirm/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 77, 'query': ''}
+2025-08-11 01:29:34,047 | INFO | requests | pid=28868 tid=25456 | {'method': 'GET', 'path': '/api/bookings', 'status': 404, 'user': 'user_id=1', 'duration_ms': 9, 'query': ''}
+2025-08-11 01:29:34,096 | INFO | requests | pid=28868 tid=26128 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 39, 'query': ''}
+2025-08-11 01:33:13,098 | INFO | requests | pid=28868 tid=26128 | {'method': 'GET', 'path': '/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 1, 'query': ''}
+2025-08-11 01:33:18,036 | INFO | requests | pid=28868 tid=26128 | {'method': 'GET', 'path': '/api/accounts/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 21, 'query': ''}
+2025-08-11 01:46:13,239 | INFO | django.utils.autoreload | pid=28868 tid=29592 | C:\Users\ICH\PycharmProjects\rental_platform\properties\urls.py changed, reloading.
+2025-08-11 01:46:19,665 | INFO | django.utils.autoreload | pid=32980 tid=35188 | Watching for file changes with StatReloader
+2025-08-11 02:06:24,611 | INFO | django.utils.autoreload | pid=15384 tid=20184 | Watching for file changes with StatReloader
+2025-08-11 02:06:29,095 | INFO | requests | pid=15384 tid=5116 | {'method': 'GET', 'path': '/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 17, 'query': ''}
+2025-08-11 02:06:32,857 | INFO | requests | pid=15384 tid=5116 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 67, 'query': ''}
+2025-08-11 02:06:47,645 | INFO | requests | pid=15384 tid=5116 | {'method': 'GET', 'path': '/api/properties/public/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 128, 'query': ''}
+2025-08-11 02:06:55,349 | INFO | requests | pid=15384 tid=23224 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 0, 'query': ''}
+2025-08-11 02:06:59,790 | INFO | requests | pid=15384 tid=23224 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 0, 'query': ''}
+2025-08-11 02:07:07,580 | INFO | requests | pid=15384 tid=23224 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 0, 'query': ''}
+2025-08-11 02:07:09,369 | INFO | requests | pid=15384 tid=23224 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 0, 'query': ''}
+2025-08-11 02:07:12,158 | INFO | requests | pid=15384 tid=23224 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 0, 'query': ''}
+2025-08-11 02:09:24,012 | INFO | requests | pid=15384 tid=29292 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 0, 'query': ''}
+2025-08-11 02:09:27,189 | INFO | requests | pid=15384 tid=29292 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 0, 'query': ''}
+2025-08-11 02:24:11,233 | INFO | requests | pid=15384 tid=9968 | {'method': 'GET', 'path': '/api/properties/2', 'status': 404, 'user': 'user_id=1', 'duration_ms': 68, 'query': ''}
+2025-08-11 02:24:11,331 | INFO | requests | pid=15384 tid=33880 | {'method': 'GET', 'path': '/api/properties/2/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 84, 'query': ''}
+2025-08-11 09:40:02,368 | INFO | django.utils.autoreload | pid=23724 tid=19924 | Watching for file changes with StatReloader
+2025-08-11 09:40:21,352 | INFO | requests | pid=23724 tid=8400 | {'method': 'GET', 'path': '/', 'status': 200, 'user': 'anon', 'duration_ms': 11, 'query': ''}
+2025-08-11 09:40:21,479 | INFO | requests | pid=23724 tid=8400 | {'method': 'GET', 'path': '/favicon.ico', 'status': 404, 'user': 'anon', 'duration_ms': 8, 'query': ''}
+2025-08-11 09:40:25,412 | INFO | requests | pid=23724 tid=9460 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'anon', 'duration_ms': 31, 'query': ''}
+2025-08-11 09:46:59,352 | INFO | requests | pid=23724 tid=34984 | {'method': 'GET', 'path': '/', 'status': 200, 'user': 'anon', 'duration_ms': 0, 'query': ''}
+2025-08-11 09:47:03,021 | INFO | requests | pid=23724 tid=34984 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'anon', 'duration_ms': 0, 'query': ''}
+2025-08-11 09:49:10,372 | INFO | requests | pid=23724 tid=34984 | {'method': 'GET', 'path': '/', 'status': 200, 'user': 'anon', 'duration_ms': 0, 'query': ''}
+2025-08-11 09:49:16,902 | INFO | requests | pid=23724 tid=34984 | {'method': 'GET', 'path': '/api/accounts/', 'status': 200, 'user': 'anon', 'duration_ms': 27, 'query': ''}
+2025-08-11 09:49:30,826 | INFO | requests | pid=23724 tid=34984 | {'method': 'GET', 'path': '/', 'status': 200, 'user': 'anon', 'duration_ms': 0, 'query': ''}
+2025-08-11 09:49:34,647 | INFO | requests | pid=23724 tid=34984 | {'method': 'GET', 'path': '/api/reviews/', 'status': 200, 'user': 'anon', 'duration_ms': 11, 'query': ''}
+2025-08-11 09:49:40,592 | INFO | requests | pid=23724 tid=34984 | {'method': 'GET', 'path': '/api/analytics/', 'status': 200, 'user': 'anon', 'duration_ms': 2, 'query': ''}
+2025-08-11 09:49:51,150 | INFO | requests | pid=23724 tid=34984 | {'method': 'GET', 'path': '/api/notifications/', 'status': 401, 'user': 'anon', 'duration_ms': 4, 'query': ''}
+2025-08-11 09:50:00,538 | INFO | requests | pid=23724 tid=34984 | {'method': 'GET', 'path': '/api/docs/', 'status': 200, 'user': 'anon', 'duration_ms': 7, 'query': ''}
+2025-08-11 09:50:01,067 | INFO | requests | pid=23724 tid=34984 | {'method': 'GET', 'path': '/api/schema/', 'status': 200, 'user': 'anon', 'duration_ms': 171, 'query': ''}
+2025-08-11 09:50:03,185 | INFO | requests | pid=23724 tid=34984 | {'method': 'GET', 'path': '/api/redoc/', 'status': 200, 'user': 'anon', 'duration_ms': 4, 'query': ''}
+2025-08-11 09:50:03,712 | INFO | requests | pid=23724 tid=34984 | {'method': 'GET', 'path': '/api/schema/', 'status': 200, 'user': 'anon', 'duration_ms': 247, 'query': ''}
+2025-08-11 09:50:20,632 | INFO | requests | pid=23724 tid=34984 | {'method': 'GET', 'path': '/api/analytics/', 'status': 200, 'user': 'anon', 'duration_ms': 6, 'query': ''}
+2025-08-11 09:55:15,020 | INFO | requests | pid=23724 tid=34984 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'anon', 'duration_ms': 0, 'query': ''}
+2025-08-11 09:55:22,746 | INFO | requests | pid=23724 tid=34984 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'anon', 'duration_ms': 0, 'query': ''}
+2025-08-11 09:55:24,595 | INFO | requests | pid=23724 tid=34984 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'anon', 'duration_ms': 0, 'query': ''}
+2025-08-11 09:55:30,008 | INFO | requests | pid=23724 tid=34984 | {'method': 'GET', 'path': '/api/bookings/available_properties/', 'status': 200, 'user': 'anon', 'duration_ms': 71, 'query': ''}
+2025-08-11 09:55:41,281 | INFO | requests | pid=23724 tid=34984 | {'method': 'GET', 'path': '/api/bookings/available_properties/', 'status': 200, 'user': 'anon', 'duration_ms': 37, 'query': ''}
+2025-08-11 11:31:39,816 | INFO | django.utils.autoreload | pid=23724 tid=19924 | C:\Users\ICH\PycharmProjects\rental_platform\properties\views.py changed, reloading.
+2025-08-11 11:31:41,396 | INFO | django.utils.autoreload | pid=5776 tid=2396 | Watching for file changes with StatReloader
+2025-08-11 11:33:10,508 | INFO | django.utils.autoreload | pid=5776 tid=2396 | C:\Users\ICH\PycharmProjects\rental_platform\properties\views.py changed, reloading.
+2025-08-11 11:33:12,636 | INFO | django.utils.autoreload | pid=13468 tid=35804 | Watching for file changes with StatReloader
+2025-08-11 11:40:35,903 | INFO | django.utils.autoreload | pid=13468 tid=35804 | C:\Users\ICH\PycharmProjects\rental_platform\properties\views.py changed, reloading.
+2025-08-11 11:40:36,890 | INFO | django.utils.autoreload | pid=4300 tid=7128 | Watching for file changes with StatReloader
+2025-08-11 11:42:12,689 | INFO | django.utils.autoreload | pid=4300 tid=7128 | C:\Users\ICH\PycharmProjects\rental_platform\properties\views.py changed, reloading.
+2025-08-11 11:42:15,209 | INFO | django.utils.autoreload | pid=2244 tid=13448 | Watching for file changes with StatReloader
+2025-08-11 11:43:39,173 | INFO | django.utils.autoreload | pid=2244 tid=13448 | C:\Users\ICH\PycharmProjects\rental_platform\properties\views.py changed, reloading.
+2025-08-11 11:43:43,130 | INFO | django.utils.autoreload | pid=30248 tid=35520 | Watching for file changes with StatReloader
+2025-08-11 11:45:36,791 | INFO | django.utils.autoreload | pid=30248 tid=35520 | C:\Users\ICH\PycharmProjects\rental_platform\properties\views.py changed, reloading.
+2025-08-11 11:45:39,293 | INFO | django.utils.autoreload | pid=34112 tid=25244 | Watching for file changes with StatReloader
+2025-08-11 11:48:47,418 | INFO | django.utils.autoreload | pid=34112 tid=25244 | C:\Users\ICH\PycharmProjects\rental_platform\properties\views.py changed, reloading.
+2025-08-11 11:48:49,737 | INFO | django.utils.autoreload | pid=14796 tid=24528 | Watching for file changes with StatReloader
+2025-08-11 11:53:33,146 | INFO | django.utils.autoreload | pid=14796 tid=24528 | C:\Users\ICH\PycharmProjects\rental_platform\properties\serializers.py changed, reloading.
+2025-08-11 11:53:34,997 | INFO | django.utils.autoreload | pid=10704 tid=27488 | Watching for file changes with StatReloader
+2025-08-11 12:08:27,368 | INFO | django.utils.autoreload | pid=10704 tid=27488 | C:\Users\ICH\PycharmProjects\rental_platform\properties\serializers.py changed, reloading.
+2025-08-11 12:08:28,319 | INFO | django.utils.autoreload | pid=17476 tid=10824 | Watching for file changes with StatReloader
+2025-08-11 12:12:05,155 | ERROR | rental_platform.middleware | pid=17476 tid=15688 | Failed to log request/response
+Traceback (most recent call last):
+  File "C:\Users\ICH\PycharmProjects\rental_platform\rental_platform\middleware.py", line 51, in process_response
+    requests_logger.info("request", extra={"message": str(msg)})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1519, in info
+    self._log(INFO, msg, args, **kwargs)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1662, in _log
+    record = self.makeRecord(self.name, level, fn, lno, msg, args,
+                             exc_info, func, extra, sinfo)
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1636, in makeRecord
+    raise KeyError("Attempt to overwrite %r in LogRecord" % key)
+KeyError: "Attempt to overwrite 'message' in LogRecord"
+2025-08-11 12:13:32,215 | ERROR | rental_platform.middleware | pid=17476 tid=20816 | Failed to log request/response
+Traceback (most recent call last):
+  File "C:\Users\ICH\PycharmProjects\rental_platform\rental_platform\middleware.py", line 51, in process_response
+    requests_logger.info("request", extra={"message": str(msg)})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1519, in info
+    self._log(INFO, msg, args, **kwargs)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1662, in _log
+    record = self.makeRecord(self.name, level, fn, lno, msg, args,
+                             exc_info, func, extra, sinfo)
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1636, in makeRecord
+    raise KeyError("Attempt to overwrite %r in LogRecord" % key)
+KeyError: "Attempt to overwrite 'message' in LogRecord"
+2025-08-11 12:14:34,077 | ERROR | rental_platform.middleware | pid=17476 tid=20816 | Failed to log request/response
+Traceback (most recent call last):
+  File "C:\Users\ICH\PycharmProjects\rental_platform\rental_platform\middleware.py", line 51, in process_response
+    requests_logger.info("request", extra={"message": str(msg)})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1519, in info
+    self._log(INFO, msg, args, **kwargs)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1662, in _log
+    record = self.makeRecord(self.name, level, fn, lno, msg, args,
+                             exc_info, func, extra, sinfo)
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1636, in makeRecord
+    raise KeyError("Attempt to overwrite %r in LogRecord" % key)
+KeyError: "Attempt to overwrite 'message' in LogRecord"
+2025-08-11 12:15:03,280 | ERROR | rental_platform.middleware | pid=17476 tid=20816 | Failed to log request/response
+Traceback (most recent call last):
+  File "C:\Users\ICH\PycharmProjects\rental_platform\rental_platform\middleware.py", line 51, in process_response
+    requests_logger.info("request", extra={"message": str(msg)})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1519, in info
+    self._log(INFO, msg, args, **kwargs)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1662, in _log
+    record = self.makeRecord(self.name, level, fn, lno, msg, args,
+                             exc_info, func, extra, sinfo)
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1636, in makeRecord
+    raise KeyError("Attempt to overwrite %r in LogRecord" % key)
+KeyError: "Attempt to overwrite 'message' in LogRecord"
+2025-08-11 12:15:25,114 | ERROR | rental_platform.middleware | pid=17476 tid=20816 | Failed to log request/response
+Traceback (most recent call last):
+  File "C:\Users\ICH\PycharmProjects\rental_platform\rental_platform\middleware.py", line 51, in process_response
+    requests_logger.info("request", extra={"message": str(msg)})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1519, in info
+    self._log(INFO, msg, args, **kwargs)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1662, in _log
+    record = self.makeRecord(self.name, level, fn, lno, msg, args,
+                             exc_info, func, extra, sinfo)
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1636, in makeRecord
+    raise KeyError("Attempt to overwrite %r in LogRecord" % key)
+KeyError: "Attempt to overwrite 'message' in LogRecord"
+2025-08-11 12:35:31,479 | ERROR | rental_platform.middleware | pid=17476 tid=20408 | Failed to log request/response
+Traceback (most recent call last):
+  File "C:\Users\ICH\PycharmProjects\rental_platform\rental_platform\middleware.py", line 51, in process_response
+    requests_logger.info("request", extra={"message": str(msg)})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1519, in info
+    self._log(INFO, msg, args, **kwargs)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1662, in _log
+    record = self.makeRecord(self.name, level, fn, lno, msg, args,
+                             exc_info, func, extra, sinfo)
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1636, in makeRecord
+    raise KeyError("Attempt to overwrite %r in LogRecord" % key)
+KeyError: "Attempt to overwrite 'message' in LogRecord"
+2025-08-11 12:35:55,314 | INFO | requests | pid=17476 tid=20408 | {'method': 'GET', 'path': '/', 'status': 200, 'user': 'anon', 'duration_ms': 2, 'query': ''}
+2025-08-11 12:36:01,433 | INFO | requests | pid=17476 tid=20408 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'anon', 'duration_ms': 0, 'query': ''}
+2025-08-11 12:36:12,443 | INFO | requests | pid=17476 tid=20408 | {'method': 'GET', 'path': '/api/properties/public/', 'status': 200, 'user': 'anon', 'duration_ms': 51, 'query': ''}
+2025-08-11 12:36:26,816 | INFO | requests | pid=17476 tid=20408 | {'method': 'GET', 'path': '/', 'status': 200, 'user': 'anon', 'duration_ms': 0, 'query': ''}
+2025-08-11 12:36:28,679 | INFO | requests | pid=17476 tid=20408 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'anon', 'duration_ms': 0, 'query': ''}
+2025-08-11 12:36:59,685 | INFO | requests | pid=17476 tid=20408 | {'method': 'GET', 'path': '/api/bookings/available_properties/', 'status': 200, 'user': 'anon', 'duration_ms': 32, 'query': ''}
+2025-08-11 12:37:05,001 | INFO | requests | pid=17476 tid=20408 | {'method': 'GET', 'path': '/', 'status': 200, 'user': 'anon', 'duration_ms': 0, 'query': ''}
+2025-08-11 12:37:07,284 | INFO | requests | pid=17476 tid=20408 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'anon', 'duration_ms': 0, 'query': ''}
+2025-08-11 12:37:13,106 | INFO | requests | pid=17476 tid=20408 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'anon', 'duration_ms': 0, 'query': ''}
+2025-08-11 12:37:25,144 | INFO | requests | pid=17476 tid=20408 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'anon', 'duration_ms': 0, 'query': ''}
+2025-08-11 12:37:40,086 | INFO | requests | pid=17476 tid=20408 | {'method': 'GET', 'path': '/api-auth/login/', 'status': 200, 'user': 'anon', 'duration_ms': 5, 'query': ''}
+2025-08-11 12:38:07,323 | INFO | requests | pid=17476 tid=20408 | {'method': 'POST', 'path': '/api-auth/login/', 'status': 302, 'user': 'user_id=7', 'duration_ms': 1143, 'query': ''}
+2025-08-11 12:38:07,340 | INFO | requests | pid=17476 tid=20408 | {'method': 'GET', 'path': '/accounts/profile/', 'status': 404, 'user': 'user_id=7', 'duration_ms': 4, 'query': ''}
+2025-08-11 12:44:16,308 | INFO | django.utils.autoreload | pid=17476 tid=10824 | C:\Users\ICH\PycharmProjects\rental_platform\properties\views.py changed, reloading.
+2025-08-11 12:44:17,757 | INFO | django.utils.autoreload | pid=6216 tid=3140 | Watching for file changes with StatReloader
+2025-08-11 12:59:03,111 | INFO | django.utils.autoreload | pid=6216 tid=3140 | C:\Users\ICH\PycharmProjects\rental_platform\properties\views.py changed, reloading.
+2025-08-11 12:59:04,275 | INFO | django.utils.autoreload | pid=30764 tid=16092 | Watching for file changes with StatReloader
+2025-08-11 13:14:55,337 | INFO | django.utils.autoreload | pid=30764 tid=16092 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\models.py changed, reloading.
+2025-08-11 13:14:57,707 | INFO | django.utils.autoreload | pid=10764 tid=20576 | Watching for file changes with StatReloader
+2025-08-11 13:16:07,112 | INFO | django.utils.autoreload | pid=10764 tid=20576 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\models.py changed, reloading.
+2025-08-11 13:16:08,036 | INFO | django.utils.autoreload | pid=24616 tid=22948 | Watching for file changes with StatReloader
+2025-08-11 13:16:21,282 | INFO | django.utils.autoreload | pid=24616 tid=22948 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\models.py changed, reloading.
+2025-08-11 13:16:22,489 | INFO | django.utils.autoreload | pid=22140 tid=16836 | Watching for file changes with StatReloader
+2025-08-11 15:25:36,352 | ERROR | rental_platform.middleware | pid=25388 tid=8568 | Failed to log request/response
+Traceback (most recent call last):
+  File "C:\Users\ICH\PycharmProjects\rental_platform\rental_platform\middleware.py", line 51, in process_response
+    requests_logger.info("request", extra={"message": str(msg)})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1519, in info
+    self._log(INFO, msg, args, **kwargs)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1662, in _log
+    record = self.makeRecord(self.name, level, fn, lno, msg, args,
+                             exc_info, func, extra, sinfo)
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1636, in makeRecord
+    raise KeyError("Attempt to overwrite %r in LogRecord" % key)
+KeyError: "Attempt to overwrite 'message' in LogRecord"
+2025-08-11 15:25:36,426 | INFO | requests | pid=25388 tid=8568 | {'method': 'POST', 'path': '/api/properties/', 'status': 200, 'user': 'anon', 'duration_ms': 39, 'query': ''}
+2025-08-11 15:25:40,299 | ERROR | rental_platform.middleware | pid=25388 tid=8568 | Failed to log request/response
+Traceback (most recent call last):
+  File "C:\Users\ICH\PycharmProjects\rental_platform\rental_platform\middleware.py", line 51, in process_response
+    requests_logger.info("request", extra={"message": str(msg)})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1519, in info
+    self._log(INFO, msg, args, **kwargs)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1662, in _log
+    record = self.makeRecord(self.name, level, fn, lno, msg, args,
+                             exc_info, func, extra, sinfo)
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1636, in makeRecord
+    raise KeyError("Attempt to overwrite %r in LogRecord" % key)
+KeyError: "Attempt to overwrite 'message' in LogRecord"
+2025-08-11 15:25:40,303 | INFO | requests | pid=25388 tid=8568 | {'method': 'POST', 'path': '/api/properties/', 'status': 200, 'user': 'anon', 'duration_ms': 0, 'query': ''}
+2025-08-11 15:25:44,956 | ERROR | rental_platform.middleware | pid=25388 tid=8568 | Failed to log request/response
+Traceback (most recent call last):
+  File "C:\Users\ICH\PycharmProjects\rental_platform\rental_platform\middleware.py", line 51, in process_response
+    requests_logger.info("request", extra={"message": str(msg)})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1519, in info
+    self._log(INFO, msg, args, **kwargs)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1662, in _log
+    record = self.makeRecord(self.name, level, fn, lno, msg, args,
+                             exc_info, func, extra, sinfo)
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1636, in makeRecord
+    raise KeyError("Attempt to overwrite %r in LogRecord" % key)
+KeyError: "Attempt to overwrite 'message' in LogRecord"
+2025-08-11 15:25:45,000 | INFO | requests | pid=25388 tid=8568 | {'method': 'PATCH', 'path': '/api/properties/1/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 41, 'query': ''}
+2025-08-11 15:25:45,008 | INFO | requests | pid=25388 tid=8568 | {'method': 'PATCH', 'path': '/api/properties/2/', 'status': 403, 'user': 'user_id=1', 'duration_ms': 5, 'query': ''}
+2025-08-11 15:25:46,753 | INFO | requests | pid=25388 tid=8568 | {'method': 'GET', 'path': '/api/properties/public/', 'status': 200, 'user': 'anon', 'duration_ms': 8, 'query': ''}
+2025-08-11 17:25:48,701 | INFO | django.utils.autoreload | pid=25180 tid=14660 | Watching for file changes with StatReloader
+2025-08-11 17:25:53,475 | INFO | requests | pid=25180 tid=25624 | {'method': 'GET', 'path': '/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 10, 'query': ''}
+2025-08-11 17:29:38,338 | INFO | requests | pid=25180 tid=25624 | {'method': 'GET', 'path': '/api/accounts/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 160, 'query': ''}
+2025-08-11 17:34:29,317 | INFO | django.utils.autoreload | pid=25180 tid=14660 | C:\Users\ICH\PycharmProjects\rental_platform\rental_platform\urls.py changed, reloading.
+2025-08-11 17:34:31,063 | INFO | django.utils.autoreload | pid=29496 tid=34828 | Watching for file changes with StatReloader
+2025-08-11 17:34:40,848 | INFO | requests | pid=29496 tid=37432 | {'method': 'GET', 'path': '/api-auth/login/', 'status': 404, 'user': 'user_id=7', 'duration_ms': 20, 'query': ''}
+2025-08-11 17:34:50,934 | INFO | requests | pid=29496 tid=37432 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 41, 'query': ''}
+2025-08-11 17:34:55,447 | INFO | requests | pid=29496 tid=37432 | {'method': 'GET', 'path': '/api-auth/login/', 'status': 404, 'user': 'user_id=7', 'duration_ms': 9, 'query': ''}
+2025-08-11 17:35:12,495 | INFO | django.utils.autoreload | pid=29496 tid=34828 | C:\Users\ICH\PycharmProjects\rental_platform\rental_platform\urls.py changed, reloading.
+2025-08-11 17:35:13,889 | INFO | django.utils.autoreload | pid=18088 tid=9276 | Watching for file changes with StatReloader
+2025-08-11 17:35:14,571 | INFO | requests | pid=18088 tid=15076 | {'method': 'GET', 'path': '/api-auth/login/', 'status': 404, 'user': 'user_id=7', 'duration_ms': 9, 'query': ''}
+2025-08-11 17:35:15,867 | INFO | requests | pid=18088 tid=15076 | {'method': 'GET', 'path': '/api-auth/login/', 'status': 404, 'user': 'user_id=7', 'duration_ms': 5, 'query': ''}
+2025-08-11 17:35:16,251 | INFO | requests | pid=18088 tid=15076 | {'method': 'GET', 'path': '/api-auth/login/', 'status': 404, 'user': 'user_id=7', 'duration_ms': 3, 'query': ''}
+2025-08-11 17:35:23,339 | INFO | requests | pid=18088 tid=15076 | {'method': 'GET', 'path': '/api-auth/login/', 'status': 404, 'user': 'user_id=7', 'duration_ms': 5, 'query': ''}
+2025-08-11 17:35:46,623 | ERROR | rental_platform.middleware | pid=18088 tid=15076 | Failed to log request/response
+Traceback (most recent call last):
+  File "C:\Users\ICH\PycharmProjects\rental_platform\rental_platform\middleware.py", line 51, in process_response
+    requests_logger.info("request", extra={"message": str(msg)})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1519, in info
+    self._log(INFO, msg, args, **kwargs)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1662, in _log
+    record = self.makeRecord(self.name, level, fn, lno, msg, args,
+                             exc_info, func, extra, sinfo)
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1636, in makeRecord
+    raise KeyError("Attempt to overwrite %r in LogRecord" % key)
+KeyError: "Attempt to overwrite 'message' in LogRecord"
+2025-08-11 17:35:57,631 | INFO | requests | pid=18088 tid=15076 | {'method': 'GET', 'path': '/api/accounts/me/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 91, 'query': ''}
+2025-08-11 17:36:03,227 | INFO | requests | pid=18088 tid=15076 | {'method': 'GET', 'path': '/api/accounts/me-update/', 'status': 405, 'user': 'user_id=7', 'duration_ms': 29, 'query': ''}
+2025-08-11 17:36:14,614 | ERROR | rental_platform.middleware | pid=18088 tid=15076 | Failed to log request/response
+Traceback (most recent call last):
+  File "C:\Users\ICH\PycharmProjects\rental_platform\rental_platform\middleware.py", line 51, in process_response
+    requests_logger.info("request", extra={"message": str(msg)})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1519, in info
+    self._log(INFO, msg, args, **kwargs)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1662, in _log
+    record = self.makeRecord(self.name, level, fn, lno, msg, args,
+                             exc_info, func, extra, sinfo)
+  File "C:\Users\ICH\AppData\Local\Programs\Python\Python313\Lib\logging\__init__.py", line 1636, in makeRecord
+    raise KeyError("Attempt to overwrite %r in LogRecord" % key)
+KeyError: "Attempt to overwrite 'message' in LogRecord"
+2025-08-11 17:36:20,101 | INFO | requests | pid=18088 tid=15076 | {'method': 'GET', 'path': '/api-auth/logout/', 'status': 404, 'user': 'user_id=7', 'duration_ms': 9, 'query': ''}
+2025-08-11 17:36:54,213 | INFO | requests | pid=18088 tid=15076 | {'method': 'GET', 'path': '/api-auth/login/', 'status': 404, 'user': 'user_id=7', 'duration_ms': 8, 'query': ''}
+2025-08-11 17:39:01,754 | INFO | django.utils.autoreload | pid=18088 tid=9276 | C:\Users\ICH\PycharmProjects\rental_platform\rental_platform\urls.py changed, reloading.
+2025-08-11 17:39:03,250 | INFO | django.utils.autoreload | pid=2416 tid=9748 | Watching for file changes with StatReloader
+2025-08-11 17:43:11,902 | INFO | requests | pid=2416 tid=15988 | {'method': 'GET', 'path': '/api/accounts/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 145, 'query': ''}
+2025-08-11 17:43:14,598 | INFO | requests | pid=2416 tid=15988 | {'method': 'GET', 'path': '/api-auth/logout/', 'status': 405, 'user': 'user_id=7', 'duration_ms': 1, 'query': ''}
+2025-08-11 17:48:08,844 | INFO | django.utils.autoreload | pid=2416 tid=9748 | C:\Users\ICH\PycharmProjects\rental_platform\rental_platform\settings.py changed, reloading.
+2025-08-11 17:48:12,019 | INFO | django.utils.autoreload | pid=4376 tid=22624 | Watching for file changes with StatReloader
+2025-08-11 17:48:45,188 | INFO | django.utils.autoreload | pid=4376 tid=22624 | C:\Users\ICH\PycharmProjects\rental_platform\rental_platform\settings.py changed, reloading.
+2025-08-11 17:48:46,370 | INFO | django.utils.autoreload | pid=3032 tid=17404 | Watching for file changes with StatReloader
+2025-08-11 17:48:47,626 | INFO | requests | pid=3032 tid=20028 | {'method': 'GET', 'path': '/api-auth/logout/', 'status': 405, 'user': 'user_id=7', 'duration_ms': 4, 'query': ''}
+2025-08-11 17:48:57,438 | INFO | requests | pid=3032 tid=20028 | {'method': 'GET', 'path': '/api-auth/login/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 81, 'query': ''}
+2025-08-11 17:49:25,420 | INFO | requests | pid=3032 tid=20028 | {'method': 'POST', 'path': '/api-auth/login/', 'status': 302, 'user': 'user_id=7', 'duration_ms': 1886, 'query': ''}
+2025-08-11 17:49:25,544 | INFO | requests | pid=3032 tid=20028 | {'method': 'GET', 'path': '/api/accounts/me/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 111, 'query': ''}
+2025-08-11 17:50:34,193 | INFO | requests | pid=3032 tid=21928 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 17:50:54,283 | INFO | requests | pid=3032 tid=21928 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 17:51:02,609 | INFO | requests | pid=3032 tid=21928 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 17:52:03,375 | INFO | requests | pid=3032 tid=21928 | {'method': 'GET', 'path': '/api/properties/1', 'status': 404, 'user': 'user_id=7', 'duration_ms': 8, 'query': ''}
+2025-08-11 17:52:03,426 | INFO | requests | pid=3032 tid=12140 | {'method': 'GET', 'path': '/api/properties/1/', 'status': 404, 'user': 'user_id=7', 'duration_ms': 42, 'query': ''}
+2025-08-11 17:58:29,822 | INFO | requests | pid=3032 tid=19856 | {'method': 'OPTIONS', 'path': '/api/properties', 'status': 404, 'user': 'anon', 'duration_ms': 5, 'query': ''}
+2025-08-11 17:58:29,826 | INFO | requests | pid=3032 tid=34884 | {'method': 'OPTIONS', 'path': '/api/properties/', 'status': 200, 'user': 'anon', 'duration_ms': 0, 'query': ''}
+2025-08-11 17:58:29,899 | INFO | requests | pid=3032 tid=25248 | {'method': 'PROPFIND', 'path': '/api/properties', 'status': 404, 'user': 'anon', 'duration_ms': 4, 'query': ''}
+2025-08-11 17:58:29,905 | INFO | requests | pid=3032 tid=37212 | {'method': 'PROPFIND', 'path': '/api/properties/', 'status': 403, 'user': 'anon', 'duration_ms': 2, 'query': ''}
+2025-08-11 17:58:29,992 | INFO | requests | pid=3032 tid=37212 | {'method': 'PROPFIND', 'path': '/api/properties/', 'status': 403, 'user': 'anon', 'duration_ms': 1, 'query': ''}
+2025-08-11 17:58:29,996 | INFO | requests | pid=3032 tid=37212 | {'method': 'PROPFIND', 'path': '/api/properties/', 'status': 403, 'user': 'anon', 'duration_ms': 1, 'query': ''}
+2025-08-11 17:58:30,000 | INFO | requests | pid=3032 tid=37212 | {'method': 'PROPFIND', 'path': '/api/properties/', 'status': 403, 'user': 'anon', 'duration_ms': 2, 'query': ''}
+2025-08-11 17:58:30,015 | INFO | requests | pid=3032 tid=11248 | {'method': 'PROPFIND', 'path': '/api/properties', 'status': 404, 'user': 'anon', 'duration_ms': 6, 'query': ''}
+2025-08-11 17:58:30,023 | INFO | requests | pid=3032 tid=29348 | {'method': 'PROPFIND', 'path': '/api/properties/', 'status': 403, 'user': 'anon', 'duration_ms': 3, 'query': ''}
+2025-08-11 17:58:30,093 | INFO | requests | pid=3032 tid=29348 | {'method': 'PROPFIND', 'path': '/api/properties/', 'status': 403, 'user': 'anon', 'duration_ms': 2, 'query': ''}
+2025-08-11 17:58:30,096 | INFO | requests | pid=3032 tid=29348 | {'method': 'PROPFIND', 'path': '/api/properties/', 'status': 403, 'user': 'anon', 'duration_ms': 1, 'query': ''}
+2025-08-11 17:58:30,099 | INFO | requests | pid=3032 tid=29348 | {'method': 'PROPFIND', 'path': '/api/properties/', 'status': 403, 'user': 'anon', 'duration_ms': 1, 'query': ''}
+2025-08-11 17:58:30,150 | INFO | requests | pid=3032 tid=10112 | {'method': 'PROPFIND', 'path': '/api/properties', 'status': 404, 'user': 'anon', 'duration_ms': 5, 'query': ''}
+2025-08-11 17:58:30,158 | INFO | requests | pid=3032 tid=21724 | {'method': 'PROPFIND', 'path': '/api/properties/', 'status': 403, 'user': 'anon', 'duration_ms': 3, 'query': ''}
+2025-08-11 17:58:30,165 | INFO | requests | pid=3032 tid=21724 | {'method': 'PROPFIND', 'path': '/api/properties/', 'status': 403, 'user': 'anon', 'duration_ms': 3, 'query': ''}
+2025-08-11 17:58:30,169 | INFO | requests | pid=3032 tid=21724 | {'method': 'PROPFIND', 'path': '/api/properties/', 'status': 403, 'user': 'anon', 'duration_ms': 1, 'query': ''}
+2025-08-11 17:58:30,174 | INFO | requests | pid=3032 tid=21724 | {'method': 'PROPFIND', 'path': '/api/properties/', 'status': 403, 'user': 'anon', 'duration_ms': 2, 'query': ''}
+2025-08-11 17:58:30,189 | INFO | requests | pid=3032 tid=27060 | {'method': 'PROPFIND', 'path': '/api', 'status': 404, 'user': 'anon', 'duration_ms': 6, 'query': ''}
+2025-08-11 17:58:30,206 | INFO | requests | pid=3032 tid=6096 | {'method': 'PROPFIND', 'path': '/api/properties', 'status': 404, 'user': 'anon', 'duration_ms': 7, 'query': ''}
+2025-08-11 17:58:30,212 | INFO | requests | pid=3032 tid=35192 | {'method': 'PROPFIND', 'path': '/api/properties/', 'status': 403, 'user': 'anon', 'duration_ms': 2, 'query': ''}
+2025-08-11 17:58:30,217 | INFO | requests | pid=3032 tid=35192 | {'method': 'PROPFIND', 'path': '/api/properties/', 'status': 403, 'user': 'anon', 'duration_ms': 1, 'query': ''}
+2025-08-11 17:58:30,223 | INFO | requests | pid=3032 tid=35192 | {'method': 'PROPFIND', 'path': '/api/properties/', 'status': 403, 'user': 'anon', 'duration_ms': 3, 'query': ''}
+2025-08-11 17:58:30,227 | INFO | requests | pid=3032 tid=35192 | {'method': 'PROPFIND', 'path': '/api/properties/', 'status': 403, 'user': 'anon', 'duration_ms': 2, 'query': ''}
+2025-08-11 17:59:08,319 | INFO | requests | pid=3032 tid=8308 | {'method': 'GET', 'path': '/api/properties/1', 'status': 404, 'user': 'user_id=7', 'duration_ms': 9, 'query': ''}
+2025-08-11 17:59:08,354 | INFO | requests | pid=3032 tid=19960 | {'method': 'GET', 'path': '/api/properties/1/', 'status': 404, 'user': 'user_id=7', 'duration_ms': 26, 'query': ''}
+2025-08-11 18:05:15,514 | INFO | requests | pid=3032 tid=32640 | {'method': 'GET', 'path': '/api/properties', 'status': 404, 'user': 'user_id=7', 'duration_ms': 4, 'query': ''}
+2025-08-11 18:05:15,525 | INFO | requests | pid=3032 tid=33392 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 18:15:25,989 | INFO | requests | pid=3032 tid=22140 | {'method': 'GET', 'path': '/api/properties/1', 'status': 404, 'user': 'user_id=7', 'duration_ms': 7, 'query': ''}
+2025-08-11 18:15:26,016 | INFO | requests | pid=3032 tid=18444 | {'method': 'GET', 'path': '/api/properties/1/', 'status': 404, 'user': 'user_id=7', 'duration_ms': 19, 'query': ''}
+2025-08-11 18:17:19,398 | INFO | requests | pid=3032 tid=26232 | {'method': 'PUT', 'path': '/api/properties/1/', 'status': 403, 'user': 'user_id=7', 'duration_ms': 11, 'query': ''}
+2025-08-11 18:17:35,316 | INFO | requests | pid=3032 tid=26232 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 18:17:48,215 | INFO | requests | pid=3032 tid=26232 | {'method': 'GET', 'path': '/api/properties/public/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 66, 'query': ''}
+2025-08-11 18:20:07,066 | INFO | django.utils.autoreload | pid=3032 tid=17404 | C:\Users\ICH\PycharmProjects\rental_platform\properties\views.py changed, reloading.
+2025-08-11 18:20:08,220 | INFO | django.utils.autoreload | pid=8116 tid=7128 | Watching for file changes with StatReloader
+2025-08-11 18:52:14,582 | INFO | django.utils.autoreload | pid=8116 tid=7128 | C:\Users\ICH\PycharmProjects\rental_platform\properties\urls.py changed, reloading.
+2025-08-11 18:52:16,434 | INFO | django.utils.autoreload | pid=29544 tid=16276 | Watching for file changes with StatReloader
+2025-08-11 18:52:25,672 | INFO | django.utils.autoreload | pid=29544 tid=16276 | C:\Users\ICH\PycharmProjects\rental_platform\properties\urls.py changed, reloading.
+2025-08-11 18:52:26,946 | INFO | django.utils.autoreload | pid=6752 tid=1224 | Watching for file changes with StatReloader
+2025-08-11 18:52:57,243 | INFO | django.utils.autoreload | pid=6752 tid=1224 | C:\Users\ICH\PycharmProjects\rental_platform\properties\urls.py changed, reloading.
+2025-08-11 18:52:58,665 | INFO | django.utils.autoreload | pid=16996 tid=26532 | Watching for file changes with StatReloader
+2025-08-11 18:53:14,544 | INFO | django.utils.autoreload | pid=16996 tid=26532 | C:\Users\ICH\PycharmProjects\rental_platform\properties\urls.py changed, reloading.
+2025-08-11 18:53:15,865 | INFO | django.utils.autoreload | pid=33648 tid=36280 | Watching for file changes with StatReloader
+2025-08-11 18:53:58,472 | INFO | django.utils.autoreload | pid=33648 tid=36280 | C:\Users\ICH\PycharmProjects\rental_platform\properties\urls.py changed, reloading.
+2025-08-11 18:54:00,587 | INFO | django.utils.autoreload | pid=18236 tid=12176 | Watching for file changes with StatReloader
+2025-08-11 18:54:08,428 | INFO | django.utils.autoreload | pid=18236 tid=12176 | C:\Users\ICH\PycharmProjects\rental_platform\properties\urls.py changed, reloading.
+2025-08-11 18:54:10,209 | INFO | django.utils.autoreload | pid=20448 tid=11868 | Watching for file changes with StatReloader
+2025-08-11 18:57:06,482 | INFO | django.utils.autoreload | pid=20448 tid=11868 | C:\Users\ICH\PycharmProjects\rental_platform\properties\views.py changed, reloading.
+2025-08-11 18:57:08,964 | INFO | django.utils.autoreload | pid=23148 tid=30448 | Watching for file changes with StatReloader
+2025-08-11 18:57:20,393 | INFO | django.utils.autoreload | pid=23148 tid=30448 | C:\Users\ICH\PycharmProjects\rental_platform\properties\views.py changed, reloading.
+2025-08-11 18:57:23,924 | INFO | django.utils.autoreload | pid=26376 tid=31228 | Watching for file changes with StatReloader
+2025-08-11 18:59:25,848 | INFO | requests | pid=26376 tid=32448 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 110, 'query': ''}
+2025-08-11 18:59:39,864 | INFO | requests | pid=26376 tid=9588 | {'method': 'GET', 'path': '/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 18:59:49,222 | INFO | requests | pid=26376 tid=9588 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 35, 'query': ''}
+2025-08-11 19:00:56,673 | INFO | requests | pid=26376 tid=9588 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 19:01:27,885 | INFO | requests | pid=26376 tid=9588 | {'method': 'GET', 'path': '/api/analytics/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 14, 'query': ''}
+2025-08-11 19:01:33,848 | INFO | requests | pid=26376 tid=9588 | {'method': 'GET', 'path': '/api/properties/docs/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 10, 'query': ''}
+2025-08-11 19:08:58,509 | INFO | django.utils.autoreload | pid=26376 tid=31228 | C:\Users\ICH\PycharmProjects\rental_platform\properties\views.py changed, reloading.
+2025-08-11 19:09:01,667 | INFO | django.utils.autoreload | pid=19476 tid=14528 | Watching for file changes with StatReloader
+2025-08-11 19:09:02,395 | INFO | requests | pid=19476 tid=34044 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 28, 'query': ''}
+2025-08-11 21:06:42,321 | INFO | requests | pid=19476 tid=20116 | {'method': 'GET', 'path': '/api/accounts/me/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 245, 'query': ''}
+2025-08-11 21:06:43,312 | INFO | requests | pid=19476 tid=14832 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 1, 'query': ''}
+2025-08-11 21:22:50,478 | INFO | django.utils.autoreload | pid=19476 tid=14528 | C:\Users\ICH\PycharmProjects\rental_platform\properties\urls.py changed, reloading.
+2025-08-11 21:22:52,021 | INFO | django.utils.autoreload | pid=35152 tid=5824 | Watching for file changes with StatReloader
+2025-08-11 21:23:23,573 | INFO | django.utils.autoreload | pid=35152 tid=5824 | C:\Users\ICH\PycharmProjects\rental_platform\properties\urls.py changed, reloading.
+2025-08-11 21:23:24,997 | INFO | django.utils.autoreload | pid=28764 tid=16056 | Watching for file changes with StatReloader
+2025-08-11 21:23:31,445 | INFO | requests | pid=28764 tid=10552 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 37, 'query': ''}
+2025-08-11 21:23:46,454 | INFO | requests | pid=28764 tid=10552 | {'method': 'GET', 'path': '/api/properties/create/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 71, 'query': ''}
+2025-08-11 21:24:12,242 | INFO | requests | pid=28764 tid=10552 | {'method': 'GET', 'path': '/api/properties/docs/', 'status': 404, 'user': 'user_id=7', 'duration_ms': 30, 'query': ''}
+2025-08-11 21:24:13,734 | INFO | requests | pid=28764 tid=10552 | {'method': 'GET', 'path': '/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 2, 'query': ''}
+2025-08-11 21:24:16,723 | INFO | requests | pid=28764 tid=10552 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 21:28:17,480 | INFO | requests | pid=28764 tid=10552 | {'method': 'POST', 'path': '/api/properties/create/', 'status': 201, 'user': 'user_id=7', 'duration_ms': 54, 'query': ''}
+2025-08-11 21:28:48,087 | INFO | requests | pid=28764 tid=10552 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 21:28:49,295 | INFO | requests | pid=28764 tid=10552 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 21:28:49,940 | INFO | requests | pid=28764 tid=10552 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 21:28:50,508 | INFO | requests | pid=28764 tid=10552 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 21:28:51,865 | INFO | requests | pid=28764 tid=10552 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 21:28:52,289 | INFO | requests | pid=28764 tid=10552 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 21:28:52,816 | INFO | requests | pid=28764 tid=10552 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 21:28:53,042 | INFO | requests | pid=28764 tid=10552 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 21:28:53,258 | INFO | requests | pid=28764 tid=10552 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 21:28:53,848 | INFO | requests | pid=28764 tid=10552 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 21:28:54,875 | INFO | requests | pid=28764 tid=10552 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 21:28:55,522 | INFO | requests | pid=28764 tid=10552 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 21:28:56,647 | INFO | requests | pid=28764 tid=10552 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 21:28:57,245 | INFO | requests | pid=28764 tid=10552 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 21:31:07,832 | INFO | django.utils.autoreload | pid=28764 tid=16056 | C:\Users\ICH\PycharmProjects\rental_platform\properties\root_views.py changed, reloading.
+2025-08-11 21:31:09,227 | INFO | django.utils.autoreload | pid=37048 tid=32340 | Watching for file changes with StatReloader
+2025-08-11 21:31:38,174 | INFO | django.utils.autoreload | pid=37048 tid=32340 | C:\Users\ICH\PycharmProjects\rental_platform\properties\root_views.py changed, reloading.
+2025-08-11 21:31:39,281 | INFO | django.utils.autoreload | pid=35624 tid=31496 | Watching for file changes with StatReloader
+2025-08-11 21:31:59,149 | INFO | django.utils.autoreload | pid=35624 tid=31496 | C:\Users\ICH\PycharmProjects\rental_platform\properties\root_views.py changed, reloading.
+2025-08-11 21:32:00,446 | INFO | django.utils.autoreload | pid=28992 tid=2164 | Watching for file changes with StatReloader
+2025-08-11 21:32:31,614 | INFO | django.utils.autoreload | pid=28992 tid=2164 | C:\Users\ICH\PycharmProjects\rental_platform\properties\root_views.py changed, reloading.
+2025-08-11 21:32:32,792 | INFO | django.utils.autoreload | pid=16624 tid=18912 | Watching for file changes with StatReloader
+2025-08-11 21:32:49,148 | INFO | django.utils.autoreload | pid=16624 tid=18912 | C:\Users\ICH\PycharmProjects\rental_platform\properties\root_views.py changed, reloading.
+2025-08-11 21:32:51,362 | INFO | django.utils.autoreload | pid=13148 tid=5876 | Watching for file changes with StatReloader
+2025-08-11 21:34:03,720 | INFO | django.utils.autoreload | pid=13148 tid=5876 | C:\Users\ICH\PycharmProjects\rental_platform\properties\root_views.py changed, reloading.
+2025-08-11 21:34:05,261 | INFO | django.utils.autoreload | pid=30668 tid=19540 | Watching for file changes with StatReloader
+2025-08-11 21:34:08,797 | INFO | requests | pid=30668 tid=12680 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 60, 'query': ''}
+2025-08-11 21:34:12,609 | INFO | requests | pid=30668 tid=12680 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 21:34:15,909 | INFO | requests | pid=30668 tid=12680 | {'method': 'GET', 'path': '/api/properties/create/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 139, 'query': ''}
+2025-08-11 21:34:19,437 | INFO | requests | pid=30668 tid=12680 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 21:38:41,128 | INFO | requests | pid=30668 tid=12680 | {'method': 'GET', 'path': '/api/properties/5', 'status': 404, 'user': 'user_id=7', 'duration_ms': 18, 'query': ''}
+2025-08-11 21:38:41,207 | INFO | requests | pid=30668 tid=11564 | {'method': 'GET', 'path': '/api/properties/5/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 64, 'query': ''}
+2025-08-11 21:52:01,133 | INFO | django.utils.autoreload | pid=30668 tid=19540 | C:\Users\ICH\PycharmProjects\rental_platform\properties\urls.py changed, reloading.
+2025-08-11 21:52:03,987 | INFO | django.utils.autoreload | pid=9872 tid=17824 | Watching for file changes with StatReloader
+2025-08-11 22:27:26,118 | INFO | django.utils.autoreload | pid=9872 tid=17824 | C:\Users\ICH\PycharmProjects\rental_platform\properties\urls.py changed, reloading.
+2025-08-11 22:27:28,145 | INFO | django.utils.autoreload | pid=18016 tid=15556 | Watching for file changes with StatReloader
+2025-08-11 22:29:43,294 | INFO | django.utils.autoreload | pid=18016 tid=15556 | C:\Users\ICH\PycharmProjects\rental_platform\properties\root_views.py changed, reloading.
+2025-08-11 22:29:45,456 | INFO | django.utils.autoreload | pid=15564 tid=21064 | Watching for file changes with StatReloader
+2025-08-11 22:30:12,748 | INFO | django.utils.autoreload | pid=15564 tid=21064 | C:\Users\ICH\PycharmProjects\rental_platform\properties\root_views.py changed, reloading.
+2025-08-11 22:30:13,842 | INFO | django.utils.autoreload | pid=21516 tid=7152 | Watching for file changes with StatReloader
+2025-08-11 22:31:07,521 | INFO | requests | pid=21516 tid=2192 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 128, 'query': ''}
+2025-08-11 22:31:23,958 | INFO | requests | pid=21516 tid=2192 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 37, 'query': ''}
+2025-08-11 22:33:11,619 | INFO | requests | pid=21516 tid=32932 | {'method': 'GET', 'path': '/api/properties/links', 'status': 404, 'user': 'user_id=7', 'duration_ms': 13, 'query': ''}
+2025-08-11 22:33:11,651 | INFO | requests | pid=21516 tid=2416 | {'method': 'GET', 'path': '/api/properties/links/', 'status': 404, 'user': 'user_id=7', 'duration_ms': 24, 'query': ''}
+2025-08-11 22:33:46,558 | INFO | requests | pid=21516 tid=2416 | {'method': 'GET', 'path': '/api/properties/links/', 'status': 404, 'user': 'user_id=7', 'duration_ms': 19, 'query': ''}
+2025-08-11 22:33:53,151 | INFO | requests | pid=21516 tid=2416 | {'method': 'GET', 'path': '/api/links/', 'status': 404, 'user': 'user_id=7', 'duration_ms': 9, 'query': ''}
+2025-08-11 22:34:01,856 | INFO | requests | pid=21516 tid=2416 | {'method': 'GET', 'path': '/links/', 'status': 404, 'user': 'user_id=7', 'duration_ms': 9, 'query': ''}
+2025-08-11 22:34:57,290 | INFO | requests | pid=21516 tid=2416 | {'method': 'GET', 'path': '/api/properties/links/', 'status': 404, 'user': 'user_id=7', 'duration_ms': 24, 'query': ''}
+2025-08-11 22:36:11,154 | INFO | requests | pid=21516 tid=2416 | {'method': 'PUT', 'path': '/api/properties/5/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 26, 'query': ''}
+2025-08-11 22:36:23,792 | INFO | requests | pid=21516 tid=2416 | {'method': 'PUT', 'path': '/api/properties/5/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 25, 'query': ''}
+2025-08-11 22:37:15,757 | INFO | django.utils.autoreload | pid=32756 tid=33896 | Watching for file changes with StatReloader
+2025-08-11 22:37:24,867 | INFO | requests | pid=32756 tid=3136 | {'method': 'GET', 'path': '/api/properties/links/', 'status': 404, 'user': 'user_id=7', 'duration_ms': 396, 'query': ''}
+2025-08-11 22:37:28,326 | INFO | requests | pid=32756 tid=3136 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 51, 'query': ''}
+2025-08-11 22:38:17,854 | INFO | requests | pid=32756 tid=3136 | {'method': 'POST', 'path': '/api/properties/', 'status': 201, 'user': 'user_id=7', 'duration_ms': 44, 'query': ''}
+2025-08-11 22:38:34,392 | INFO | requests | pid=32756 tid=3136 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 37, 'query': ''}
+2025-08-11 22:38:53,690 | INFO | requests | pid=32756 tid=3136 | {'method': 'GET', 'path': '/api/properties/links/', 'status': 404, 'user': 'user_id=7', 'duration_ms': 23, 'query': ''}
+2025-08-11 22:39:09,763 | INFO | requests | pid=32756 tid=3136 | {'method': 'GET', 'path': '/api/properties/public/', 'status': 404, 'user': 'user_id=7', 'duration_ms': 19, 'query': ''}
+2025-08-11 22:39:18,171 | INFO | requests | pid=32756 tid=3136 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 31, 'query': ''}
+2025-08-11 22:40:39,457 | INFO | django.utils.autoreload | pid=32756 tid=33896 | C:\Users\ICH\PycharmProjects\rental_platform\properties\urls.py changed, reloading.
+2025-08-11 22:40:40,860 | INFO | django.utils.autoreload | pid=24116 tid=14224 | Watching for file changes with StatReloader
+2025-08-11 22:42:36,029 | INFO | django.utils.autoreload | pid=24116 tid=14224 | C:\Users\ICH\PycharmProjects\rental_platform\properties\urls.py changed, reloading.
+2025-08-11 22:42:38,071 | INFO | django.utils.autoreload | pid=2944 tid=16352 | Watching for file changes with StatReloader
+2025-08-11 22:44:16,757 | INFO | django.utils.autoreload | pid=2944 tid=16352 | C:\Users\ICH\PycharmProjects\rental_platform\properties\root_views.py changed, reloading.
+2025-08-11 22:44:18,197 | INFO | django.utils.autoreload | pid=34140 tid=20872 | Watching for file changes with StatReloader
+2025-08-11 22:44:21,679 | INFO | requests | pid=34140 tid=1460 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 55, 'query': ''}
+2025-08-11 22:44:45,169 | INFO | requests | pid=34140 tid=1460 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 1, 'query': ''}
+2025-08-11 22:44:46,835 | INFO | requests | pid=34140 tid=1460 | {'method': 'GET', 'path': '/api/properties/public/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 94, 'query': ''}
+2025-08-11 22:45:03,844 | INFO | requests | pid=34140 tid=1460 | {'method': 'GET', 'path': '/api/properties/public/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 46, 'query': ''}
+2025-08-11 22:45:09,312 | INFO | requests | pid=34140 tid=1460 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 22:45:11,955 | INFO | requests | pid=34140 tid=1460 | {'method': 'GET', 'path': '/api/properties/create/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 49, 'query': ''}
+2025-08-11 22:45:20,494 | INFO | requests | pid=34140 tid=1460 | {'method': 'GET', 'path': '/api/properties/create/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 34, 'query': ''}
+2025-08-11 22:45:57,638 | INFO | django.utils.autoreload | pid=34140 tid=20872 | C:\Users\ICH\PycharmProjects\rental_platform\properties\root_views.py changed, reloading.
+2025-08-11 22:45:59,168 | INFO | django.utils.autoreload | pid=29424 tid=34400 | Watching for file changes with StatReloader
+2025-08-11 22:45:59,894 | INFO | requests | pid=29424 tid=1176 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 40, 'query': ''}
+2025-08-11 22:46:25,187 | INFO | requests | pid=29424 tid=1176 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 22:46:39,383 | INFO | requests | pid=29424 tid=1176 | {'method': 'GET', 'path': '/api/properties/create/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 125, 'query': ''}
+2025-08-11 22:46:53,297 | INFO | requests | pid=29424 tid=1176 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 22:58:00,348 | INFO | requests | pid=29424 tid=12444 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 22:58:46,297 | INFO | requests | pid=29424 tid=12444 | {'method': 'GET', 'path': '/api/properties/6', 'status': 404, 'user': 'user_id=7', 'duration_ms': 12, 'query': ''}
+2025-08-11 22:58:46,344 | INFO | requests | pid=29424 tid=36620 | {'method': 'GET', 'path': '/api/properties/6/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 40, 'query': ''}
+2025-08-11 22:58:56,027 | INFO | requests | pid=29424 tid=36620 | {'method': 'DELETE', 'path': '/api/properties/6/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 29, 'query': ''}
+2025-08-11 22:59:50,257 | INFO | requests | pid=29424 tid=36620 | {'method': 'GET', 'path': '/api/properties', 'status': 404, 'user': 'user_id=7', 'duration_ms': 11, 'query': ''}
+2025-08-11 22:59:50,268 | INFO | requests | pid=29424 tid=19832 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 23:00:09,132 | INFO | requests | pid=29424 tid=19832 | {'method': 'GET', 'path': '/api/properties/public/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 77, 'query': ''}
+2025-08-11 23:04:05,444 | INFO | django.utils.autoreload | pid=29424 tid=34400 | C:\Users\ICH\PycharmProjects\rental_platform\properties\root_views.py changed, reloading.
+2025-08-11 23:04:07,425 | INFO | django.utils.autoreload | pid=15076 tid=33500 | Watching for file changes with StatReloader
+2025-08-11 23:04:08,135 | INFO | requests | pid=15076 tid=20292 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 35, 'query': ''}
+2025-08-11 23:04:41,072 | INFO | requests | pid=15076 tid=20292 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 23:04:44,329 | INFO | requests | pid=15076 tid=20292 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 23:05:05,498 | INFO | requests | pid=15076 tid=20292 | {'method': 'GET', 'path': '/api/bookings/1', 'status': 404, 'user': 'user_id=7', 'duration_ms': 15, 'query': ''}
+2025-08-11 23:05:05,576 | INFO | requests | pid=15076 tid=1140 | {'method': 'GET', 'path': '/api/bookings/1/', 'status': 403, 'user': 'user_id=7', 'duration_ms': 69, 'query': ''}
+2025-08-11 23:08:14,107 | INFO | django.utils.autoreload | pid=15076 tid=33500 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\urls.py changed, reloading.
+2025-08-11 23:08:15,755 | INFO | django.utils.autoreload | pid=31992 tid=29620 | Watching for file changes with StatReloader
+2025-08-11 23:08:40,515 | INFO | django.utils.autoreload | pid=31992 tid=29620 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\urls.py changed, reloading.
+2025-08-11 23:08:42,521 | INFO | django.utils.autoreload | pid=30524 tid=15052 | Watching for file changes with StatReloader
+2025-08-11 23:08:44,336 | INFO | requests | pid=30524 tid=13124 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 47, 'query': ''}
+2025-08-11 23:08:57,602 | INFO | requests | pid=30524 tid=13124 | {'method': 'GET', 'path': '/api/bookings/create/', 'status': 405, 'user': 'user_id=7', 'duration_ms': 29, 'query': ''}
+2025-08-11 23:10:10,137 | INFO | requests | pid=30524 tid=13124 | {'method': 'GET', 'path': '/api/bookings/available_properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 61, 'query': ''}
+2025-08-11 23:10:27,543 | INFO | requests | pid=30524 tid=13124 | {'method': 'GET', 'path': '/api/bookings/available_properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 27, 'query': 'search=Berlin'}
+2025-08-11 23:14:27,301 | INFO | django.utils.autoreload | pid=30524 tid=15052 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\root_views.py changed, reloading.
+2025-08-11 23:14:28,531 | INFO | django.utils.autoreload | pid=10132 tid=34784 | Watching for file changes with StatReloader
+2025-08-11 23:15:21,776 | INFO | django.utils.autoreload | pid=10132 tid=34784 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\root_views.py changed, reloading.
+2025-08-11 23:15:22,933 | INFO | django.utils.autoreload | pid=10560 tid=11580 | Watching for file changes with StatReloader
+2025-08-11 23:17:27,087 | INFO | django.utils.autoreload | pid=10560 tid=11580 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\root_views.py changed, reloading.
+2025-08-11 23:17:28,646 | INFO | django.utils.autoreload | pid=27408 tid=27072 | Watching for file changes with StatReloader
+2025-08-11 23:17:29,429 | INFO | requests | pid=27408 tid=23072 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 39, 'query': ''}
+2025-08-11 23:17:34,809 | INFO | requests | pid=27408 tid=23072 | {'method': 'GET', 'path': '/api/bookings/create/', 'status': 405, 'user': 'user_id=7', 'duration_ms': 36, 'query': ''}
+2025-08-11 23:17:51,738 | INFO | requests | pid=27408 tid=23072 | {'method': 'POST', 'path': '/api-auth/logout/', 'status': 302, 'user': 'anon', 'duration_ms': 11, 'query': 'next=/api/bookings/create/'}
+2025-08-11 23:17:51,746 | INFO | requests | pid=27408 tid=23072 | {'method': 'GET', 'path': '/api/bookings/create/', 'status': 401, 'user': 'anon', 'duration_ms': 3, 'query': ''}
+2025-08-11 23:17:53,610 | INFO | requests | pid=27408 tid=23072 | {'method': 'GET', 'path': '/api-auth/login/', 'status': 200, 'user': 'anon', 'duration_ms': 7, 'query': 'next=/api/bookings/create/'}
+2025-08-11 23:18:14,977 | INFO | requests | pid=27408 tid=23072 | {'method': 'POST', 'path': '/api-auth/login/', 'status': 302, 'user': 'user_id=8', 'duration_ms': 1451, 'query': ''}
+2025-08-11 23:18:15,015 | INFO | requests | pid=27408 tid=23072 | {'method': 'GET', 'path': '/api/bookings/create/', 'status': 405, 'user': 'user_id=8', 'duration_ms': 28, 'query': ''}
+2025-08-11 23:18:55,693 | INFO | requests | pid=27408 tid=23072 | {'method': 'POST', 'path': '/api/bookings/create/', 'status': 400, 'user': 'user_id=8', 'duration_ms': 14, 'query': ''}
+2025-08-11 23:19:21,289 | INFO | bookings.views | pid=27408 tid=23072 | Booking created id=7 property=4 renter=8 start=2025-08-17 end=2025-08-25 status=pending
+2025-08-11 23:19:21,307 | INFO | requests | pid=27408 tid=23072 | {'method': 'POST', 'path': '/api/bookings/create/', 'status': 201, 'user': 'user_id=8', 'duration_ms': 40, 'query': ''}
+2025-08-11 23:19:49,014 | INFO | requests | pid=27408 tid=23072 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=8', 'duration_ms': 0, 'query': ''}
+2025-08-11 23:19:54,829 | INFO | requests | pid=27408 tid=23072 | {'method': 'GET', 'path': '/api/bookings/create/', 'status': 405, 'user': 'user_id=8', 'duration_ms': 14, 'query': ''}
+2025-08-11 23:20:12,854 | INFO | requests | pid=27408 tid=23072 | {'method': 'GET', 'path': '/api/bookings/6/', 'status': 403, 'user': 'user_id=8', 'duration_ms': 19, 'query': ''}
+2025-08-11 23:20:25,177 | INFO | requests | pid=27408 tid=23072 | {'method': 'GET', 'path': '/api/bookings/7/', 'status': 200, 'user': 'user_id=8', 'duration_ms': 25, 'query': ''}
+2025-08-11 23:20:35,675 | INFO | requests | pid=27408 tid=23072 | {'method': 'POST', 'path': '/api-auth/logout/', 'status': 302, 'user': 'anon', 'duration_ms': 11, 'query': 'next=/api/bookings/7/'}
+2025-08-11 23:20:35,688 | INFO | requests | pid=27408 tid=23072 | {'method': 'GET', 'path': '/api/bookings/7/', 'status': 401, 'user': 'anon', 'duration_ms': 4, 'query': ''}
+2025-08-11 23:20:38,186 | INFO | requests | pid=27408 tid=23072 | {'method': 'GET', 'path': '/api-auth/login/', 'status': 200, 'user': 'anon', 'duration_ms': 1, 'query': 'next=/api/bookings/7/'}
+2025-08-11 23:20:55,072 | INFO | requests | pid=27408 tid=23072 | {'method': 'POST', 'path': '/api-auth/login/', 'status': 302, 'user': 'user_id=7', 'duration_ms': 1926, 'query': ''}
+2025-08-11 23:20:55,104 | INFO | requests | pid=27408 tid=23072 | {'method': 'GET', 'path': '/api/bookings/7/', 'status': 403, 'user': 'user_id=7', 'duration_ms': 20, 'query': ''}
+2025-08-11 23:21:51,305 | WARNING | bookings.views | pid=27408 tid=23072 | Messages access forbidden booking_id=7 by user_id=7
+2025-08-11 23:21:51,315 | INFO | requests | pid=27408 tid=23072 | {'method': 'GET', 'path': '/api/bookings/7/messages/', 'status': 403, 'user': 'user_id=7', 'duration_ms': 16, 'query': ''}
+2025-08-11 23:22:28,349 | INFO | requests | pid=27408 tid=23072 | {'method': 'GET', 'path': '/api/bookings/7/confirm/', 'status': 405, 'user': 'user_id=7', 'duration_ms': 15, 'query': ''}
+2025-08-11 23:22:47,723 | WARNING | bookings.views | pid=27408 tid=23072 | Messages access forbidden booking_id=7 by user_id=7
+2025-08-11 23:22:47,732 | INFO | requests | pid=27408 tid=23072 | {'method': 'GET', 'path': '/api/bookings/7/messages/', 'status': 403, 'user': 'user_id=7', 'duration_ms': 13, 'query': ''}
+2025-08-11 23:22:56,543 | INFO | requests | pid=27408 tid=23072 | {'method': 'POST', 'path': '/api-auth/logout/', 'status': 302, 'user': 'anon', 'duration_ms': 8, 'query': 'next=/api/bookings/7/messages/'}
+2025-08-11 23:22:56,551 | INFO | requests | pid=27408 tid=23072 | {'method': 'GET', 'path': '/api/bookings/7/messages/', 'status': 401, 'user': 'anon', 'duration_ms': 3, 'query': ''}
+2025-08-11 23:22:57,679 | INFO | requests | pid=27408 tid=23072 | {'method': 'GET', 'path': '/api-auth/login/', 'status': 200, 'user': 'anon', 'duration_ms': 1, 'query': 'next=/api/bookings/7/messages/'}
+2025-08-11 23:23:14,025 | INFO | requests | pid=27408 tid=23072 | {'method': 'POST', 'path': '/api-auth/login/', 'status': 302, 'user': 'user_id=8', 'duration_ms': 1438, 'query': ''}
+2025-08-11 23:23:14,072 | INFO | requests | pid=27408 tid=23072 | {'method': 'GET', 'path': '/api/bookings/7/messages/', 'status': 200, 'user': 'user_id=8', 'duration_ms': 37, 'query': ''}
+2025-08-11 23:23:19,386 | INFO | requests | pid=27408 tid=23072 | {'method': 'GET', 'path': '/api/bookings/7/messages/', 'status': 200, 'user': 'user_id=8', 'duration_ms': 21, 'query': ''}
+2025-08-11 23:23:36,840 | INFO | requests | pid=27408 tid=23072 | {'method': 'GET', 'path': '/api/bookings/7/confirm/', 'status': 405, 'user': 'user_id=8', 'duration_ms': 12, 'query': ''}
+2025-08-11 23:44:02,565 | INFO | django.utils.autoreload | pid=27408 tid=27072 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\root_views.py changed, reloading.
+2025-08-11 23:44:04,520 | INFO | django.utils.autoreload | pid=24780 tid=11520 | Watching for file changes with StatReloader
+2025-08-12 00:21:55,510 | INFO | django.utils.autoreload | pid=24780 tid=11520 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\urls.py changed, reloading.
+2025-08-12 00:21:57,190 | INFO | django.utils.autoreload | pid=34968 tid=15784 | Watching for file changes with StatReloader
+2025-08-12 00:22:11,068 | INFO | django.utils.autoreload | pid=34968 tid=15784 | C:\Users\ICH\PycharmProjects\rental_platform\bookings\urls.py changed, reloading.
+2025-08-12 00:22:12,373 | INFO | django.utils.autoreload | pid=22480 tid=15472 | Watching for file changes with StatReloader

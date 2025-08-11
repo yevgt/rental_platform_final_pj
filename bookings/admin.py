@@ -4,7 +4,7 @@ from .models import Booking, Message
 
 @admin.register(Booking)
 class BookingAdmin(admin.ModelAdmin):
-    list_display = ("id", "property", "owner_email", "user", "status", "start_date", "end_date")
+    list_display = ("id", "property", "monthly_rent",'total_amount', "owner_email", "user", "status", "start_date", "end_date",)
     list_select_related = ("property", "property__owner", "user")
     search_fields = ("property__title", "property__location", "user__email", "property__owner__email")
     list_filter = (
@@ -15,6 +15,7 @@ class BookingAdmin(admin.ModelAdmin):
         ("user", admin.RelatedOnlyFieldListFilter),
     )
     ordering = ("-start_date",)
+    readonly_fields = ['monthly_rent', 'created_at', 'updated_at', 'confirmed_at', 'cancel_until']
 
     @admin.display(description="Владелец (email)")
     def owner_email(self, obj):

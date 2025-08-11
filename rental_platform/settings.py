@@ -50,8 +50,8 @@ INSTALLED_APPS = [
     # Local apps
     "accounts",
     "properties",
-    "bookings",
-    "reviews",
+    "bookings.apps.BookingsConfig",
+    "reviews.apps.ReviewsConfig",
     "analytics",
     "notifications",
 ]
@@ -305,3 +305,9 @@ LOGGING = {
         "notifications": {"level": "INFO"},
     },
 }
+
+MEDIA_URL = "/media/"
+MEDIA_ROOT = BASE_DIR / "media"
+
+LOGIN_REDIRECT_URL = "/api/accounts/me/"
+LOGOUT_REDIRECT_URL = "/api/accounts/me/"

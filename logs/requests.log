@@ -285,3 +285,473 @@ django.urls.exceptions.NoReverseMatch: Reverse for 'profile-update' not found. '
 2025-08-10 13:56:26,644 | INFO | requests | pid=33032 tid=35256 | {'method': 'GET', 'path': '/api/accounts/', 'status': 200, 'user': 'user_id=3', 'duration_ms': 132, 'query': ''}
 2025-08-10 13:56:35,207 | INFO | requests | pid=33032 tid=35256 | {'method': 'GET', 'path': '/api/accounts/me-update/', 'status': 405, 'user': 'user_id=3', 'duration_ms': 41, 'query': ''}
 2025-08-10 13:56:35,210 | WARNING | django.request | pid=33032 tid=35256 | Method Not Allowed: /api/accounts/me-update/
+2025-08-10 14:21:49,791 | INFO | requests | pid=18840 tid=36228 | {'method': 'GET', 'path': '/api/analytics/', 'status': 200, 'user': 'user_id=3', 'duration_ms': 153, 'query': ''}
+2025-08-10 14:21:54,033 | INFO | requests | pid=18840 tid=36228 | {'method': 'GET', 'path': '/api/analytics/top-properties/', 'status': 200, 'user': 'user_id=3', 'duration_ms': 15, 'query': ''}
+2025-08-10 14:21:59,194 | INFO | requests | pid=18840 tid=36228 | {'method': 'GET', 'path': '/api/analytics/', 'status': 200, 'user': 'user_id=3', 'duration_ms': 11, 'query': ''}
+2025-08-10 14:22:00,706 | INFO | requests | pid=18840 tid=36228 | {'method': 'GET', 'path': '/api/analytics/popular-searches/', 'status': 200, 'user': 'user_id=3', 'duration_ms': 15, 'query': ''}
+2025-08-10 14:22:03,266 | INFO | requests | pid=18840 tid=36228 | {'method': 'GET', 'path': '/api/analytics/', 'status': 200, 'user': 'user_id=3', 'duration_ms': 9, 'query': ''}
+2025-08-10 14:40:49,451 | INFO | requests | pid=29576 tid=34956 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=3', 'duration_ms': 196, 'query': ''}
+2025-08-10 14:41:35,021 | INFO | requests | pid=29576 tid=34956 | {'method': 'POST', 'path': '/api/bookings/', 'status': 201, 'user': 'user_id=3', 'duration_ms': 57, 'query': ''}
+2025-08-10 14:41:59,441 | INFO | requests | pid=29576 tid=34956 | {'method': 'GET', 'path': '/api/notifications/', 'status': 200, 'user': 'user_id=3', 'duration_ms': 21, 'query': ''}
+2025-08-10 14:48:40,697 | INFO | requests | pid=29576 tid=34956 | {'method': 'GET', 'path': '/api/accounts/me/', 'status': 200, 'user': 'user_id=3', 'duration_ms': 99, 'query': ''}
+2025-08-10 14:48:47,250 | INFO | requests | pid=29576 tid=34956 | {'method': 'GET', 'path': '/api/accounts/', 'status': 200, 'user': 'user_id=3', 'duration_ms': 9, 'query': ''}
+2025-08-10 14:48:55,020 | INFO | requests | pid=29576 tid=34956 | {'method': 'GET', 'path': '/api/accounts/delete/', 'status': 405, 'user': 'user_id=3', 'duration_ms': 9, 'query': ''}
+2025-08-10 14:48:55,023 | WARNING | django.request | pid=29576 tid=34956 | Method Not Allowed: /api/accounts/delete/
+2025-08-10 14:48:58,179 | INFO | requests | pid=29576 tid=34956 | {'method': 'GET', 'path': '/api/accounts/', 'status': 200, 'user': 'user_id=3', 'duration_ms': 8, 'query': ''}
+2025-08-10 14:49:41,800 | INFO | requests | pid=29576 tid=34956 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=3', 'duration_ms': 42, 'query': ''}
+2025-08-10 14:50:01,382 | INFO | requests | pid=29576 tid=34956 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=3', 'duration_ms': 28, 'query': 'ordering=property__owner__id'}
+2025-08-10 14:53:50,432 | INFO | requests | pid=29576 tid=34956 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=3', 'duration_ms': 54, 'query': ''}
+2025-08-10 14:55:05,538 | INFO | requests | pid=29576 tid=34956 | {'method': 'GET', 'path': '/api/properties/1', 'status': 404, 'user': 'user_id=3', 'duration_ms': 7, 'query': ''}
+2025-08-10 14:55:05,577 | INFO | requests | pid=29576 tid=10896 | {'method': 'GET', 'path': '/api/properties/1/', 'status': 200, 'user': 'user_id=3', 'duration_ms': 30, 'query': ''}
+2025-08-10 14:55:15,082 | INFO | requests | pid=29576 tid=10896 | {'method': 'GET', 'path': '/api/properties/1/toggle_status/', 'status': 405, 'user': 'user_id=3', 'duration_ms': 8, 'query': ''}
+2025-08-10 14:55:15,084 | WARNING | django.request | pid=29576 tid=10896 | Method Not Allowed: /api/properties/1/toggle_status/
+2025-08-10 14:59:22,500 | INFO | requests | pid=29576 tid=10896 | {'method': 'GET', 'path': '/api/properties/1/', 'status': 200, 'user': 'user_id=3', 'duration_ms': 33, 'query': ''}
+2025-08-10 14:59:40,075 | INFO | requests | pid=29576 tid=10896 | {'method': 'GET', 'path': '/api/accounts/', 'status': 200, 'user': 'user_id=3', 'duration_ms': 15, 'query': ''}
+2025-08-10 14:59:46,448 | INFO | requests | pid=29576 tid=10896 | {'method': 'GET', 'path': '/api/accounts/me/', 'status': 200, 'user': 'user_id=3', 'duration_ms': 10, 'query': ''}
+2025-08-10 14:59:50,495 | INFO | requests | pid=29576 tid=10896 | {'method': 'GET', 'path': '/api/accounts/me/2', 'status': 404, 'user': 'user_id=3', 'duration_ms': 10, 'query': ''}
+2025-08-10 14:59:50,496 | WARNING | django.request | pid=29576 tid=10896 | Not Found: /api/accounts/me/2
+2025-08-10 20:15:01,873 | INFO | requests | pid=21608 tid=12408 | {'method': 'GET', 'path': '/', 'status': 200, 'user': 'user_id=3', 'duration_ms': 12, 'query': ''}
+2025-08-10 20:15:22,511 | INFO | requests | pid=21608 tid=12408 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=3', 'duration_ms': 144, 'query': ''}
+2025-08-10 20:15:34,601 | INFO | requests | pid=21608 tid=33084 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=3', 'duration_ms': 24, 'query': ''}
+2025-08-10 20:15:38,325 | INFO | requests | pid=21608 tid=33084 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=3', 'duration_ms': 21, 'query': ''}
+2025-08-10 20:15:48,750 | INFO | requests | pid=21608 tid=33084 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=3', 'duration_ms': 46, 'query': ''}
+2025-08-10 20:36:33,245 | INFO | requests | pid=31080 tid=37240 | {'method': 'GET', 'path': '/', 'status': 200, 'user': 'user_id=3', 'duration_ms': 13, 'query': ''}
+2025-08-10 20:36:36,087 | INFO | requests | pid=31080 tid=37240 | {'method': 'GET', 'path': '/', 'status': 200, 'user': 'user_id=3', 'duration_ms': 0, 'query': ''}
+2025-08-10 20:36:39,222 | INFO | requests | pid=31080 tid=37240 | {'method': 'GET', 'path': '/api/properties/', 'status': 403, 'user': 'user_id=3', 'duration_ms': 94, 'query': ''}
+2025-08-10 20:36:39,225 | WARNING | django.request | pid=31080 tid=37240 | Forbidden: /api/properties/
+2025-08-10 20:37:23,245 | INFO | requests | pid=31080 tid=37240 | {'method': 'POST', 'path': '/api-auth/logout/', 'status': 302, 'user': 'anon', 'duration_ms': 20, 'query': 'next=/api/properties/'}
+2025-08-10 20:37:23,265 | INFO | requests | pid=31080 tid=37240 | {'method': 'GET', 'path': '/api/properties/', 'status': 401, 'user': 'anon', 'duration_ms': 11, 'query': ''}
+2025-08-10 20:37:23,266 | WARNING | django.request | pid=31080 tid=37240 | Unauthorized: /api/properties/
+2025-08-10 20:37:24,534 | INFO | requests | pid=31080 tid=37240 | {'method': 'GET', 'path': '/api-auth/login/', 'status': 200, 'user': 'anon', 'duration_ms': 11, 'query': 'next=/api/properties/'}
+2025-08-10 20:37:41,793 | INFO | requests | pid=31080 tid=37240 | {'method': 'POST', 'path': '/api-auth/login/', 'status': 302, 'user': 'user_id=4', 'duration_ms': 2577, 'query': ''}
+2025-08-10 20:37:41,911 | INFO | requests | pid=31080 tid=37240 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=4', 'duration_ms': 99, 'query': ''}
+2025-08-10 21:06:29,825 | INFO | requests | pid=31080 tid=12268 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=4', 'duration_ms': 45, 'query': ''}
+2025-08-10 21:06:54,658 | INFO | requests | pid=31080 tid=34420 | {'method': 'GET', 'path': '/api/properties/public/', 'status': 200, 'user': 'user_id=4', 'duration_ms': 39, 'query': ''}
+2025-08-10 21:07:19,824 | INFO | requests | pid=31080 tid=34420 | {'method': 'GET', 'path': '/api/properties/public/', 'status': 200, 'user': 'user_id=4', 'duration_ms': 41, 'query': 'price_min=&price_max=&rooms_min=&rooms_max=&location=Kiel&property_type=&status='}
+2025-08-10 21:07:44,590 | INFO | requests | pid=31080 tid=34420 | {'method': 'POST', 'path': '/api-auth/logout/', 'status': 302, 'user': 'anon', 'duration_ms': 10, 'query': 'next=/api/properties/public/'}
+2025-08-10 21:07:44,619 | INFO | requests | pid=31080 tid=34420 | {'method': 'GET', 'path': '/api/properties/public/', 'status': 200, 'user': 'anon', 'duration_ms': 20, 'query': ''}
+2025-08-10 21:07:58,096 | INFO | requests | pid=31080 tid=34420 | {'method': 'GET', 'path': '/api/properties/public/', 'status': 200, 'user': 'anon', 'duration_ms': 21, 'query': ''}
+2025-08-10 21:08:11,879 | INFO | requests | pid=31080 tid=34420 | {'method': 'GET', 'path': '/api/properties/', 'status': 401, 'user': 'anon', 'duration_ms': 7, 'query': ''}
+2025-08-10 21:08:11,880 | WARNING | django.request | pid=31080 tid=34420 | Unauthorized: /api/properties/
+2025-08-10 21:08:12,453 | INFO | requests | pid=31080 tid=34420 | {'method': 'GET', 'path': '/api/properties/', 'status': 401, 'user': 'anon', 'duration_ms': 4, 'query': ''}
+2025-08-10 21:08:12,454 | WARNING | django.request | pid=31080 tid=34420 | Unauthorized: /api/properties/
+2025-08-10 21:08:24,581 | INFO | requests | pid=31080 tid=24204 | {'method': 'GET', 'path': '/', 'status': 200, 'user': 'anon', 'duration_ms': 0, 'query': ''}
+2025-08-10 21:08:26,844 | INFO | requests | pid=31080 tid=24204 | {'method': 'GET', 'path': '/api/bookings/', 'status': 401, 'user': 'anon', 'duration_ms': 7, 'query': ''}
+2025-08-10 21:08:26,845 | WARNING | django.request | pid=31080 tid=24204 | Unauthorized: /api/bookings/
+2025-08-10 21:08:35,008 | INFO | requests | pid=31080 tid=24204 | {'method': 'GET', 'path': '/api-auth/login/', 'status': 200, 'user': 'anon', 'duration_ms': 1, 'query': 'next=/api/bookings/'}
+2025-08-10 21:08:56,334 | INFO | requests | pid=31080 tid=24204 | {'method': 'POST', 'path': '/api-auth/login/', 'status': 302, 'user': 'user_id=4', 'duration_ms': 1786, 'query': ''}
+2025-08-10 21:08:56,365 | INFO | requests | pid=31080 tid=24204 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=4', 'duration_ms': 15, 'query': ''}
+2025-08-10 21:09:07,473 | INFO | requests | pid=31080 tid=24204 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=4', 'duration_ms': 20, 'query': 'ordering=id'}
+2025-08-10 21:10:17,581 | INFO | requests | pid=31080 tid=24204 | {'method': 'GET', 'path': '/', 'status': 200, 'user': 'user_id=4', 'duration_ms': 0, 'query': ''}
+2025-08-10 21:10:22,849 | INFO | requests | pid=31080 tid=24204 | {'method': 'GET', 'path': '/api/analytics/', 'status': 200, 'user': 'user_id=4', 'duration_ms': 9, 'query': ''}
+2025-08-10 21:10:26,985 | INFO | requests | pid=31080 tid=24204 | {'method': 'GET', 'path': '/api/analytics/top-properties/', 'status': 200, 'user': 'user_id=4', 'duration_ms': 14, 'query': ''}
+2025-08-10 21:10:31,990 | INFO | requests | pid=31080 tid=24204 | {'method': 'GET', 'path': '/api/analytics/popular-searches/', 'status': 200, 'user': 'user_id=4', 'duration_ms': 14, 'query': ''}
+2025-08-10 21:11:11,746 | INFO | requests | pid=31080 tid=20792 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=4', 'duration_ms': 52, 'query': ''}
+2025-08-10 21:11:29,052 | INFO | requests | pid=31080 tid=20792 | {'method': 'GET', 'path': '/api/properties/public', 'status': 404, 'user': 'user_id=4', 'duration_ms': 10, 'query': ''}
+2025-08-10 21:11:29,086 | INFO | requests | pid=31080 tid=23152 | {'method': 'GET', 'path': '/api/properties/public/', 'status': 200, 'user': 'user_id=4', 'duration_ms': 25, 'query': ''}
+2025-08-10 21:11:53,535 | INFO | requests | pid=31080 tid=23152 | {'method': 'GET', 'path': '/api/properties/public/', 'status': 200, 'user': 'user_id=4', 'duration_ms': 18, 'query': 'price_min=&price_max=&rooms_min=&rooms_max=&location=Hamburg&property_type=&status='}
+2025-08-10 21:12:26,135 | INFO | requests | pid=31080 tid=23152 | {'method': 'GET', 'path': '/api/properties/public/', 'status': 200, 'user': 'user_id=4', 'duration_ms': 27, 'query': 'price_min=&price_max=&rooms_min=&rooms_max=&location=Hamburg&property_type=&status='}
+2025-08-10 21:12:46,718 | INFO | requests | pid=31080 tid=23152 | {'method': 'GET', 'path': '/api/properties/public/', 'status': 200, 'user': 'user_id=4', 'duration_ms': 40, 'query': 'search=1+zimmer'}
+2025-08-10 21:13:19,073 | INFO | requests | pid=31080 tid=23152 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=4', 'duration_ms': 27, 'query': ''}
+2025-08-10 21:13:23,311 | INFO | requests | pid=31080 tid=23152 | {'method': 'GET', 'path': '/', 'status': 200, 'user': 'user_id=4', 'duration_ms': 0, 'query': ''}
+2025-08-10 21:13:30,808 | INFO | requests | pid=31080 tid=23152 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=4', 'duration_ms': 16, 'query': ''}
+2025-08-10 21:13:33,331 | INFO | requests | pid=31080 tid=23152 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=4', 'duration_ms': 18, 'query': 'ordering=property'}
+2025-08-10 21:20:41,855 | INFO | requests | pid=34908 tid=30588 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=4', 'duration_ms': 117, 'query': 'ordering=property'}
+2025-08-10 21:20:55,400 | INFO | requests | pid=34908 tid=30588 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=4', 'duration_ms': 17, 'query': ''}
+2025-08-10 21:20:58,664 | INFO | requests | pid=34908 tid=30588 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=4', 'duration_ms': 20, 'query': ''}
+2025-08-10 21:28:51,781 | INFO | requests | pid=36632 tid=13556 | {'method': 'POST', 'path': '/api-auth/logout/', 'status': 302, 'user': 'anon', 'duration_ms': 18, 'query': 'next=/api/bookings/'}
+2025-08-10 21:28:51,877 | INFO | requests | pid=36632 tid=13556 | {'method': 'GET', 'path': '/api/bookings/', 'status': 401, 'user': 'anon', 'duration_ms': 84, 'query': ''}
+2025-08-10 21:28:51,882 | WARNING | django.request | pid=36632 tid=13556 | Unauthorized: /api/bookings/
+2025-08-10 21:28:54,143 | INFO | requests | pid=36632 tid=13556 | {'method': 'GET', 'path': '/api-auth/login/', 'status': 200, 'user': 'anon', 'duration_ms': 8, 'query': 'next=/api/bookings/'}
+2025-08-10 21:29:18,672 | INFO | requests | pid=36632 tid=13556 | {'method': 'POST', 'path': '/api-auth/login/', 'status': 302, 'user': 'user_id=1', 'duration_ms': 1875, 'query': ''}
+2025-08-10 21:29:18,704 | INFO | requests | pid=36632 tid=13556 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 18, 'query': ''}
+2025-08-10 21:29:23,262 | INFO | requests | pid=36632 tid=13556 | {'method': 'POST', 'path': '/api-auth/logout/', 'status': 302, 'user': 'anon', 'duration_ms': 14, 'query': 'next=/api/bookings/'}
+2025-08-10 21:29:23,273 | INFO | requests | pid=36632 tid=13556 | {'method': 'GET', 'path': '/api/bookings/', 'status': 401, 'user': 'anon', 'duration_ms': 4, 'query': ''}
+2025-08-10 21:29:23,274 | WARNING | django.request | pid=36632 tid=13556 | Unauthorized: /api/bookings/
+2025-08-10 21:29:24,489 | INFO | requests | pid=36632 tid=13556 | {'method': 'GET', 'path': '/api-auth/login/', 'status': 200, 'user': 'anon', 'duration_ms': 2, 'query': 'next=/api/bookings/'}
+2025-08-10 21:29:42,723 | INFO | requests | pid=36632 tid=13556 | {'method': 'POST', 'path': '/api-auth/login/', 'status': 302, 'user': 'user_id=2', 'duration_ms': 1796, 'query': ''}
+2025-08-10 21:29:42,786 | INFO | requests | pid=36632 tid=13556 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=2', 'duration_ms': 48, 'query': ''}
+2025-08-10 21:30:24,652 | INFO | requests | pid=36632 tid=13556 | {'method': 'GET', 'path': '/', 'status': 200, 'user': 'user_id=2', 'duration_ms': 1, 'query': ''}
+2025-08-10 21:30:28,750 | INFO | requests | pid=36632 tid=13556 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=2', 'duration_ms': 21, 'query': ''}
+2025-08-10 21:30:32,046 | INFO | requests | pid=36632 tid=13556 | {'method': 'GET', 'path': '/api/properties/', 'status': 403, 'user': 'user_id=2', 'duration_ms': 7, 'query': ''}
+2025-08-10 21:30:32,048 | WARNING | django.request | pid=36632 tid=13556 | Forbidden: /api/properties/
+2025-08-10 21:30:43,412 | INFO | requests | pid=36632 tid=13556 | {'method': 'GET', 'path': '/api/properties/public', 'status': 404, 'user': 'user_id=2', 'duration_ms': 9, 'query': ''}
+2025-08-10 21:30:43,455 | INFO | requests | pid=36632 tid=7492 | {'method': 'GET', 'path': '/api/properties/public/', 'status': 200, 'user': 'user_id=2', 'duration_ms': 32, 'query': ''}
+2025-08-10 21:30:56,127 | INFO | requests | pid=36632 tid=7492 | {'method': 'GET', 'path': '/api/properties/public/1', 'status': 404, 'user': 'user_id=2', 'duration_ms': 6, 'query': ''}
+2025-08-10 21:30:56,162 | INFO | requests | pid=36632 tid=8200 | {'method': 'GET', 'path': '/api/properties/public/1/', 'status': 200, 'user': 'user_id=2', 'duration_ms': 24, 'query': ''}
+2025-08-10 22:13:36,593 | INFO | requests | pid=37080 tid=16212 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=2', 'duration_ms': 178, 'query': ''}
+2025-08-10 22:15:49,584 | INFO | requests | pid=37080 tid=27032 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=2', 'duration_ms': 30, 'query': 'status=active&property_id=&renter_id=&start_date_from=&start_date_to=&end_date_from=&end_date_to='}
+2025-08-10 22:16:08,706 | INFO | requests | pid=37080 tid=27032 | {'method': 'POST', 'path': '/api/bookings/', 'status': 400, 'user': 'user_id=2', 'duration_ms': 29, 'query': 'status=active&property_id=&renter_id=&start_date_from=&start_date_to=&end_date_from=&end_date_to='}
+2025-08-10 22:16:08,709 | WARNING | django.request | pid=37080 tid=27032 | Bad Request: /api/bookings/
+2025-08-10 22:16:18,942 | INFO | requests | pid=37080 tid=27032 | {'method': 'POST', 'path': '/api/bookings/', 'status': 400, 'user': 'user_id=2', 'duration_ms': 22, 'query': 'status=active&property_id=&renter_id=&start_date_from=&start_date_to=&end_date_from=&end_date_to='}
+2025-08-10 22:16:18,944 | WARNING | django.request | pid=37080 tid=27032 | Bad Request: /api/bookings/
+2025-08-10 22:23:20,575 | INFO | requests | pid=37080 tid=14208 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=2', 'duration_ms': 33, 'query': ''}
+2025-08-10 22:23:46,492 | INFO | requests | pid=37080 tid=14208 | {'method': 'POST', 'path': '/api-auth/logout/', 'status': 302, 'user': 'anon', 'duration_ms': 14, 'query': 'next=/api/bookings/'}
+2025-08-10 22:23:46,503 | INFO | requests | pid=37080 tid=14208 | {'method': 'GET', 'path': '/api/bookings/', 'status': 401, 'user': 'anon', 'duration_ms': 4, 'query': ''}
+2025-08-10 22:23:46,503 | WARNING | django.request | pid=37080 tid=14208 | Unauthorized: /api/bookings/
+2025-08-10 22:23:47,947 | INFO | requests | pid=37080 tid=14208 | {'method': 'GET', 'path': '/api-auth/login/', 'status': 200, 'user': 'anon', 'duration_ms': 7, 'query': 'next=/api/bookings/'}
+2025-08-10 22:24:22,081 | INFO | requests | pid=37080 tid=14208 | {'method': 'POST', 'path': '/api-auth/login/', 'status': 302, 'user': 'user_id=6', 'duration_ms': 1860, 'query': ''}
+2025-08-10 22:24:22,141 | INFO | requests | pid=37080 tid=14208 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=6', 'duration_ms': 41, 'query': ''}
+2025-08-10 22:24:30,868 | INFO | requests | pid=37080 tid=14208 | {'method': 'POST', 'path': '/api-auth/logout/', 'status': 302, 'user': 'anon', 'duration_ms': 16, 'query': 'next=/api/bookings/'}
+2025-08-10 22:24:30,883 | INFO | requests | pid=37080 tid=14208 | {'method': 'GET', 'path': '/api/bookings/', 'status': 401, 'user': 'anon', 'duration_ms': 4, 'query': ''}
+2025-08-10 22:24:30,884 | WARNING | django.request | pid=37080 tid=14208 | Unauthorized: /api/bookings/
+2025-08-10 22:24:32,305 | INFO | requests | pid=37080 tid=14208 | {'method': 'GET', 'path': '/api-auth/login/', 'status': 200, 'user': 'anon', 'duration_ms': 2, 'query': 'next=/api/bookings/'}
+2025-08-10 22:24:50,536 | INFO | requests | pid=37080 tid=14208 | {'method': 'POST', 'path': '/api-auth/login/', 'status': 302, 'user': 'user_id=1', 'duration_ms': 1853, 'query': ''}
+2025-08-10 22:24:50,576 | INFO | requests | pid=37080 tid=14208 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 25, 'query': ''}
+2025-08-10 22:25:37,303 | INFO | requests | pid=37080 tid=14208 | {'method': 'GET', 'path': '/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 2, 'query': ''}
+2025-08-10 22:25:40,655 | INFO | requests | pid=37080 tid=14208 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 31, 'query': ''}
+2025-08-10 22:26:31,044 | INFO | requests | pid=37080 tid=14208 | {'method': 'POST', 'path': '/api/properties/', 'status': 201, 'user': 'user_id=1', 'duration_ms': 30, 'query': ''}
+2025-08-10 22:27:18,529 | INFO | requests | pid=37080 tid=14208 | {'method': 'POST', 'path': '/api/properties/', 'status': 201, 'user': 'user_id=1', 'duration_ms': 41, 'query': ''}
+2025-08-10 22:27:34,810 | INFO | requests | pid=37080 tid=14208 | {'method': 'GET', 'path': '/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 0, 'query': ''}
+2025-08-10 22:27:37,854 | INFO | requests | pid=37080 tid=14208 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 27, 'query': ''}
+2025-08-10 22:27:56,644 | INFO | requests | pid=37080 tid=14208 | {'method': 'GET', 'path': '/api/properties/2', 'status': 404, 'user': 'user_id=1', 'duration_ms': 13, 'query': ''}
+2025-08-10 22:27:56,674 | INFO | requests | pid=37080 tid=4148 | {'method': 'GET', 'path': '/api/properties/2/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 18, 'query': ''}
+2025-08-10 22:28:08,110 | INFO | requests | pid=37080 tid=4148 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 48, 'query': ''}
+2025-08-10 22:28:09,828 | INFO | requests | pid=37080 tid=4148 | {'method': 'GET', 'path': '/api/properties/6', 'status': 404, 'user': 'user_id=1', 'duration_ms': 8, 'query': ''}
+2025-08-10 22:28:09,868 | INFO | requests | pid=37080 tid=26492 | {'method': 'GET', 'path': '/api/properties/6/', 'status': 404, 'user': 'user_id=1', 'duration_ms': 29, 'query': ''}
+2025-08-10 22:28:09,869 | WARNING | django.request | pid=37080 tid=26492 | Not Found: /api/properties/6/
+2025-08-10 22:28:21,334 | INFO | requests | pid=37080 tid=26492 | {'method': 'GET', 'path': '/api/properties/3', 'status': 404, 'user': 'user_id=1', 'duration_ms': 12, 'query': ''}
+2025-08-10 22:28:21,373 | INFO | requests | pid=37080 tid=27184 | {'method': 'GET', 'path': '/api/properties/3/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 30, 'query': ''}
+2025-08-10 22:28:47,414 | INFO | requests | pid=37080 tid=27184 | {'method': 'POST', 'path': '/api-auth/logout/', 'status': 302, 'user': 'anon', 'duration_ms': 13, 'query': 'next=/api/properties/3/'}
+2025-08-10 22:28:47,427 | INFO | requests | pid=37080 tid=27184 | {'method': 'GET', 'path': '/api/properties/3/', 'status': 401, 'user': 'anon', 'duration_ms': 4, 'query': ''}
+2025-08-10 22:28:47,428 | WARNING | django.request | pid=37080 tid=27184 | Unauthorized: /api/properties/3/
+2025-08-10 22:28:52,531 | INFO | requests | pid=37080 tid=27184 | {'method': 'GET', 'path': '/', 'status': 200, 'user': 'anon', 'duration_ms': 0, 'query': ''}
+2025-08-10 22:28:57,479 | INFO | requests | pid=37080 tid=27184 | {'method': 'GET', 'path': '/api/properties/', 'status': 401, 'user': 'anon', 'duration_ms': 3, 'query': ''}
+2025-08-10 22:28:57,481 | WARNING | django.request | pid=37080 tid=27184 | Unauthorized: /api/properties/
+2025-08-10 22:29:07,998 | INFO | requests | pid=37080 tid=27184 | {'method': 'GET', 'path': '/api/properties/public', 'status': 404, 'user': 'anon', 'duration_ms': 11, 'query': ''}
+2025-08-10 22:29:08,041 | INFO | requests | pid=37080 tid=36104 | {'method': 'GET', 'path': '/api/properties/public/', 'status': 200, 'user': 'anon', 'duration_ms': 32, 'query': ''}
+2025-08-10 22:29:34,731 | INFO | requests | pid=37080 tid=36104 | {'method': 'GET', 'path': '/api/properties/public/', 'status': 200, 'user': 'anon', 'duration_ms': 30, 'query': 'search=1+room'}
+2025-08-10 22:29:50,357 | INFO | requests | pid=37080 tid=36104 | {'method': 'GET', 'path': '/api/properties/public/', 'status': 200, 'user': 'anon', 'duration_ms': 28, 'query': 'search=Nord'}
+2025-08-10 22:30:05,392 | INFO | requests | pid=37080 tid=36104 | {'method': 'GET', 'path': '/api/properties/public/4', 'status': 404, 'user': 'anon', 'duration_ms': 6, 'query': ''}
+2025-08-10 22:30:05,423 | INFO | requests | pid=37080 tid=34756 | {'method': 'GET', 'path': '/api/properties/public/4/', 'status': 200, 'user': 'anon', 'duration_ms': 23, 'query': ''}
+2025-08-10 22:30:09,964 | INFO | requests | pid=37080 tid=34756 | {'method': 'GET', 'path': '/api-auth/login/', 'status': 200, 'user': 'anon', 'duration_ms': 2, 'query': 'next=/api/properties/public/4/'}
+2025-08-10 22:30:29,868 | INFO | requests | pid=37080 tid=34756 | {'method': 'POST', 'path': '/api-auth/login/', 'status': 302, 'user': 'user_id=2', 'duration_ms': 1478, 'query': ''}
+2025-08-10 22:30:29,905 | INFO | requests | pid=37080 tid=34756 | {'method': 'GET', 'path': '/api/properties/public/4/', 'status': 200, 'user': 'user_id=2', 'duration_ms': 24, 'query': ''}
+2025-08-10 22:31:06,505 | INFO | requests | pid=37080 tid=34756 | {'method': 'GET', 'path': '/', 'status': 200, 'user': 'user_id=2', 'duration_ms': 0, 'query': ''}
+2025-08-10 22:31:09,730 | INFO | requests | pid=37080 tid=34756 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=2', 'duration_ms': 36, 'query': ''}
+2025-08-10 22:31:24,067 | INFO | requests | pid=37080 tid=34756 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=2', 'duration_ms': 33, 'query': 'search=Nord'}
+2025-08-10 22:32:08,408 | INFO | requests | pid=37080 tid=34756 | {'method': 'POST', 'path': '/api/bookings/', 'status': 201, 'user': 'user_id=2', 'duration_ms': 49, 'query': 'search=Nord'}
+2025-08-10 22:32:36,786 | INFO | requests | pid=37080 tid=34756 | {'method': 'POST', 'path': '/api-auth/logout/', 'status': 302, 'user': 'anon', 'duration_ms': 13, 'query': 'next=/api/bookings/'}
+2025-08-10 22:32:36,798 | INFO | requests | pid=37080 tid=34756 | {'method': 'GET', 'path': '/api/bookings/', 'status': 401, 'user': 'anon', 'duration_ms': 5, 'query': ''}
+2025-08-10 22:32:36,799 | WARNING | django.request | pid=37080 tid=34756 | Unauthorized: /api/bookings/
+2025-08-10 22:32:38,233 | INFO | requests | pid=37080 tid=34756 | {'method': 'GET', 'path': '/api-auth/login/', 'status': 200, 'user': 'anon', 'duration_ms': 1, 'query': 'next=/api/bookings/'}
+2025-08-10 22:32:57,789 | INFO | requests | pid=37080 tid=34756 | {'method': 'POST', 'path': '/api-auth/login/', 'status': 302, 'user': 'user_id=3', 'duration_ms': 1552, 'query': ''}
+2025-08-10 22:32:57,824 | INFO | requests | pid=37080 tid=34756 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=3', 'duration_ms': 22, 'query': ''}
+2025-08-10 22:33:11,600 | INFO | requests | pid=37080 tid=34756 | {'method': 'POST', 'path': '/api-auth/logout/', 'status': 302, 'user': 'anon', 'duration_ms': 10, 'query': 'next=/api/bookings/'}
+2025-08-10 22:33:11,610 | INFO | requests | pid=37080 tid=34756 | {'method': 'GET', 'path': '/api/bookings/', 'status': 401, 'user': 'anon', 'duration_ms': 4, 'query': ''}
+2025-08-10 22:33:11,611 | WARNING | django.request | pid=37080 tid=34756 | Unauthorized: /api/bookings/
+2025-08-10 22:33:13,074 | INFO | requests | pid=37080 tid=34756 | {'method': 'GET', 'path': '/api-auth/login/', 'status': 200, 'user': 'anon', 'duration_ms': 1, 'query': 'next=/api/bookings/'}
+2025-08-10 22:33:32,111 | INFO | requests | pid=37080 tid=34756 | {'method': 'POST', 'path': '/api-auth/login/', 'status': 302, 'user': 'user_id=1', 'duration_ms': 1740, 'query': ''}
+2025-08-10 22:33:32,157 | INFO | requests | pid=37080 tid=34756 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 29, 'query': ''}
+2025-08-10 22:33:46,319 | INFO | requests | pid=37080 tid=34756 | {'method': 'GET', 'path': '/api/bookings/4', 'status': 404, 'user': 'user_id=1', 'duration_ms': 7, 'query': ''}
+2025-08-10 22:33:46,347 | INFO | requests | pid=37080 tid=3636 | {'method': 'GET', 'path': '/api/bookings/4/', 'status': 403, 'user': 'user_id=1', 'duration_ms': 19, 'query': ''}
+2025-08-10 22:33:46,348 | WARNING | django.request | pid=37080 tid=3636 | Forbidden: /api/bookings/4/
+2025-08-10 22:33:58,659 | INFO | requests | pid=37080 tid=3636 | {'method': 'GET', 'path': '/api/bookings/6/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 29, 'query': ''}
+2025-08-10 22:34:21,055 | INFO | requests | pid=37080 tid=3636 | {'method': 'PUT', 'path': '/api/bookings/6/', 'status': 400, 'user': 'user_id=1', 'duration_ms': 27, 'query': ''}
+2025-08-10 22:34:21,057 | WARNING | django.request | pid=37080 tid=3636 | Bad Request: /api/bookings/6/
+2025-08-10 22:34:30,892 | INFO | requests | pid=37080 tid=3636 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 26, 'query': ''}
+2025-08-10 22:34:32,765 | INFO | requests | pid=37080 tid=3636 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 22, 'query': ''}
+2025-08-10 22:34:35,456 | INFO | requests | pid=37080 tid=3636 | {'method': 'GET', 'path': '/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 0, 'query': ''}
+2025-08-10 22:34:38,767 | INFO | requests | pid=37080 tid=3636 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 29, 'query': ''}
+2025-08-10 22:35:00,413 | INFO | requests | pid=37080 tid=3636 | {'method': 'GET', 'path': '/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 0, 'query': ''}
+2025-08-10 22:35:05,398 | INFO | requests | pid=37080 tid=3636 | {'method': 'GET', 'path': '/api/analytics/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 9, 'query': ''}
+2025-08-10 22:35:07,136 | INFO | requests | pid=37080 tid=3636 | {'method': 'GET', 'path': '/api/analytics/top-properties/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 11, 'query': ''}
+2025-08-10 22:35:15,198 | INFO | requests | pid=37080 tid=3636 | {'method': 'GET', 'path': '/api/analytics/popular-searches/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 13, 'query': ''}
+2025-08-10 22:40:17,915 | INFO | requests | pid=37080 tid=31012 | {'method': 'GET', 'path': '/api/docs/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 15, 'query': ''}
+2025-08-10 22:40:18,592 | INFO | requests | pid=37080 tid=31012 | {'method': 'GET', 'path': '/api/schema/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 166, 'query': ''}
+2025-08-10 22:45:35,480 | INFO | requests | pid=37080 tid=1016 | {'method': 'GET', 'path': '/api/accounts/me/', 'status': 401, 'user': 'anon', 'duration_ms': 42, 'query': ''}
+2025-08-10 22:45:35,481 | WARNING | django.request | pid=37080 tid=1016 | Unauthorized: /api/accounts/me/
+2025-08-10 22:47:44,997 | INFO | requests | pid=37080 tid=1016 | {'method': 'GET', 'path': '/api/accounts/me/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 7, 'query': ''}
+2025-08-10 22:48:01,362 | INFO | requests | pid=37080 tid=1016 | {'method': 'GET', 'path': '/api/analytics/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 4, 'query': ''}
+2025-08-10 22:48:13,655 | INFO | requests | pid=37080 tid=1016 | {'method': 'GET', 'path': '/api/analytics/popular-searches/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 5, 'query': ''}
+2025-08-10 22:48:30,048 | INFO | requests | pid=37080 tid=1016 | {'method': 'GET', 'path': '/api/bookings/1/', 'status': 403, 'user': 'user_id=1', 'duration_ms': 7, 'query': ''}
+2025-08-10 22:48:30,049 | WARNING | django.request | pid=37080 tid=1016 | Forbidden: /api/bookings/1/
+2025-08-10 23:15:48,162 | INFO | requests | pid=37080 tid=23104 | {'method': 'GET', 'path': '/api/redoc/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 10, 'query': ''}
+2025-08-10 23:15:48,874 | INFO | requests | pid=37080 tid=23104 | {'method': 'GET', 'path': '/api/schema/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 349, 'query': ''}
+2025-08-11 01:14:12,535 | INFO | requests | pid=28868 tid=34236 | {'method': 'GET', 'path': '/api/accounts/profile/', 'status': 404, 'user': 'user_id=1', 'duration_ms': 64, 'query': ''}
+2025-08-11 01:14:12,546 | WARNING | django.request | pid=28868 tid=34236 | Not Found: /api/accounts/profile/
+2025-08-11 01:14:16,663 | INFO | requests | pid=28868 tid=34236 | {'method': 'GET', 'path': '/swagger/', 'status': 404, 'user': 'user_id=1', 'duration_ms': 21, 'query': ''}
+2025-08-11 01:14:16,665 | WARNING | django.request | pid=28868 tid=34236 | Not Found: /swagger/
+2025-08-11 01:14:18,619 | INFO | requests | pid=28868 tid=34236 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 312, 'query': ''}
+2025-08-11 01:14:19,254 | INFO | requests | pid=28868 tid=14224 | {'method': 'GET', 'path': '/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 2, 'query': ''}
+2025-08-11 01:14:20,540 | INFO | requests | pid=28868 tid=14224 | {'method': 'GET', 'path': '/api/v1/auth/register/', 'status': 404, 'user': 'user_id=1', 'duration_ms': 14, 'query': ''}
+2025-08-11 01:14:20,545 | WARNING | django.request | pid=28868 tid=14224 | Not Found: /api/v1/auth/register/
+2025-08-11 01:14:21,811 | INFO | requests | pid=28868 tid=28196 | {'method': 'GET', 'path': '/api/redoc/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 13, 'query': ''}
+2025-08-11 01:14:23,034 | INFO | requests | pid=28868 tid=28196 | {'method': 'GET', 'path': '/api/schema/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 626, 'query': ''}
+2025-08-11 01:14:37,888 | INFO | requests | pid=28868 tid=20932 | {'method': 'GET', 'path': '/api/accounts/me/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 130, 'query': ''}
+2025-08-11 01:14:46,069 | INFO | requests | pid=28868 tid=14224 | {'method': 'GET', 'path': '/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 0, 'query': ''}
+2025-08-11 01:14:50,074 | INFO | requests | pid=28868 tid=14224 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 36, 'query': ''}
+2025-08-11 01:21:54,768 | INFO | requests | pid=28868 tid=27672 | {'method': 'GET', 'path': '/api/bookings/6', 'status': 404, 'user': 'user_id=1', 'duration_ms': 44, 'query': ''}
+2025-08-11 01:21:54,869 | INFO | requests | pid=28868 tid=23740 | {'method': 'GET', 'path': '/api/bookings/6/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 85, 'query': ''}
+2025-08-11 01:22:16,170 | INFO | requests | pid=28868 tid=31536 | {'method': 'GET', 'path': '/api/bookings/6/confirm', 'status': 404, 'user': 'user_id=1', 'duration_ms': 12, 'query': ''}
+2025-08-11 01:22:16,219 | INFO | requests | pid=28868 tid=25456 | {'method': 'GET', 'path': '/api/bookings/6/confirm/', 'status': 405, 'user': 'user_id=1', 'duration_ms': 41, 'query': ''}
+2025-08-11 01:22:16,222 | WARNING | django.request | pid=28868 tid=25456 | Method Not Allowed: /api/bookings/6/confirm/
+2025-08-11 01:25:34,753 | INFO | requests | pid=28868 tid=25456 | {'method': 'GET', 'path': '/api/bookings/6/confirm/', 'status': 405, 'user': 'user_id=1', 'duration_ms': 47, 'query': ''}
+2025-08-11 01:25:34,756 | WARNING | django.request | pid=28868 tid=25456 | Method Not Allowed: /api/bookings/6/confirm/
+2025-08-11 01:29:10,633 | INFO | requests | pid=28868 tid=25456 | {'method': 'POST', 'path': '/api/bookings/6/confirm/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 77, 'query': ''}
+2025-08-11 01:29:34,047 | INFO | requests | pid=28868 tid=25456 | {'method': 'GET', 'path': '/api/bookings', 'status': 404, 'user': 'user_id=1', 'duration_ms': 9, 'query': ''}
+2025-08-11 01:29:34,096 | INFO | requests | pid=28868 tid=26128 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 39, 'query': ''}
+2025-08-11 01:33:13,098 | INFO | requests | pid=28868 tid=26128 | {'method': 'GET', 'path': '/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 1, 'query': ''}
+2025-08-11 01:33:18,036 | INFO | requests | pid=28868 tid=26128 | {'method': 'GET', 'path': '/api/accounts/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 21, 'query': ''}
+2025-08-11 02:06:29,095 | INFO | requests | pid=15384 tid=5116 | {'method': 'GET', 'path': '/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 17, 'query': ''}
+2025-08-11 02:06:32,857 | INFO | requests | pid=15384 tid=5116 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 67, 'query': ''}
+2025-08-11 02:06:47,645 | INFO | requests | pid=15384 tid=5116 | {'method': 'GET', 'path': '/api/properties/public/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 128, 'query': ''}
+2025-08-11 02:06:55,349 | INFO | requests | pid=15384 tid=23224 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 0, 'query': ''}
+2025-08-11 02:06:59,790 | INFO | requests | pid=15384 tid=23224 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 0, 'query': ''}
+2025-08-11 02:07:07,580 | INFO | requests | pid=15384 tid=23224 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 0, 'query': ''}
+2025-08-11 02:07:09,369 | INFO | requests | pid=15384 tid=23224 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 0, 'query': ''}
+2025-08-11 02:07:12,158 | INFO | requests | pid=15384 tid=23224 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 0, 'query': ''}
+2025-08-11 02:09:24,012 | INFO | requests | pid=15384 tid=29292 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 0, 'query': ''}
+2025-08-11 02:09:27,189 | INFO | requests | pid=15384 tid=29292 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 0, 'query': ''}
+2025-08-11 02:24:11,233 | INFO | requests | pid=15384 tid=9968 | {'method': 'GET', 'path': '/api/properties/2', 'status': 404, 'user': 'user_id=1', 'duration_ms': 68, 'query': ''}
+2025-08-11 02:24:11,331 | INFO | requests | pid=15384 tid=33880 | {'method': 'GET', 'path': '/api/properties/2/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 84, 'query': ''}
+2025-08-11 09:40:21,352 | INFO | requests | pid=23724 tid=8400 | {'method': 'GET', 'path': '/', 'status': 200, 'user': 'anon', 'duration_ms': 11, 'query': ''}
+2025-08-11 09:40:21,479 | INFO | requests | pid=23724 tid=8400 | {'method': 'GET', 'path': '/favicon.ico', 'status': 404, 'user': 'anon', 'duration_ms': 8, 'query': ''}
+2025-08-11 09:40:21,482 | WARNING | django.request | pid=23724 tid=8400 | Not Found: /favicon.ico
+2025-08-11 09:40:25,412 | INFO | requests | pid=23724 tid=9460 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'anon', 'duration_ms': 31, 'query': ''}
+2025-08-11 09:46:59,352 | INFO | requests | pid=23724 tid=34984 | {'method': 'GET', 'path': '/', 'status': 200, 'user': 'anon', 'duration_ms': 0, 'query': ''}
+2025-08-11 09:47:03,021 | INFO | requests | pid=23724 tid=34984 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'anon', 'duration_ms': 0, 'query': ''}
+2025-08-11 09:49:10,372 | INFO | requests | pid=23724 tid=34984 | {'method': 'GET', 'path': '/', 'status': 200, 'user': 'anon', 'duration_ms': 0, 'query': ''}
+2025-08-11 09:49:16,902 | INFO | requests | pid=23724 tid=34984 | {'method': 'GET', 'path': '/api/accounts/', 'status': 200, 'user': 'anon', 'duration_ms': 27, 'query': ''}
+2025-08-11 09:49:30,826 | INFO | requests | pid=23724 tid=34984 | {'method': 'GET', 'path': '/', 'status': 200, 'user': 'anon', 'duration_ms': 0, 'query': ''}
+2025-08-11 09:49:34,647 | INFO | requests | pid=23724 tid=34984 | {'method': 'GET', 'path': '/api/reviews/', 'status': 200, 'user': 'anon', 'duration_ms': 11, 'query': ''}
+2025-08-11 09:49:40,592 | INFO | requests | pid=23724 tid=34984 | {'method': 'GET', 'path': '/api/analytics/', 'status': 200, 'user': 'anon', 'duration_ms': 2, 'query': ''}
+2025-08-11 09:49:51,150 | INFO | requests | pid=23724 tid=34984 | {'method': 'GET', 'path': '/api/notifications/', 'status': 401, 'user': 'anon', 'duration_ms': 4, 'query': ''}
+2025-08-11 09:49:51,152 | WARNING | django.request | pid=23724 tid=34984 | Unauthorized: /api/notifications/
+2025-08-11 09:50:00,538 | INFO | requests | pid=23724 tid=34984 | {'method': 'GET', 'path': '/api/docs/', 'status': 200, 'user': 'anon', 'duration_ms': 7, 'query': ''}
+2025-08-11 09:50:01,067 | INFO | requests | pid=23724 tid=34984 | {'method': 'GET', 'path': '/api/schema/', 'status': 200, 'user': 'anon', 'duration_ms': 171, 'query': ''}
+2025-08-11 09:50:03,185 | INFO | requests | pid=23724 tid=34984 | {'method': 'GET', 'path': '/api/redoc/', 'status': 200, 'user': 'anon', 'duration_ms': 4, 'query': ''}
+2025-08-11 09:50:03,712 | INFO | requests | pid=23724 tid=34984 | {'method': 'GET', 'path': '/api/schema/', 'status': 200, 'user': 'anon', 'duration_ms': 247, 'query': ''}
+2025-08-11 09:50:20,632 | INFO | requests | pid=23724 tid=34984 | {'method': 'GET', 'path': '/api/analytics/', 'status': 200, 'user': 'anon', 'duration_ms': 6, 'query': ''}
+2025-08-11 09:55:15,020 | INFO | requests | pid=23724 tid=34984 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'anon', 'duration_ms': 0, 'query': ''}
+2025-08-11 09:55:22,746 | INFO | requests | pid=23724 tid=34984 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'anon', 'duration_ms': 0, 'query': ''}
+2025-08-11 09:55:24,595 | INFO | requests | pid=23724 tid=34984 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'anon', 'duration_ms': 0, 'query': ''}
+2025-08-11 09:55:30,008 | INFO | requests | pid=23724 tid=34984 | {'method': 'GET', 'path': '/api/bookings/available_properties/', 'status': 200, 'user': 'anon', 'duration_ms': 71, 'query': ''}
+2025-08-11 09:55:41,281 | INFO | requests | pid=23724 tid=34984 | {'method': 'GET', 'path': '/api/bookings/available_properties/', 'status': 200, 'user': 'anon', 'duration_ms': 37, 'query': ''}
+2025-08-11 12:12:05,196 | WARNING | django.request | pid=17476 tid=15688 | Method Not Allowed: /api/accounts/register/
+2025-08-11 12:15:03,282 | WARNING | django.request | pid=17476 tid=20816 | Method Not Allowed: /api/token/
+2025-08-11 12:35:55,314 | INFO | requests | pid=17476 tid=20408 | {'method': 'GET', 'path': '/', 'status': 200, 'user': 'anon', 'duration_ms': 2, 'query': ''}
+2025-08-11 12:36:01,433 | INFO | requests | pid=17476 tid=20408 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'anon', 'duration_ms': 0, 'query': ''}
+2025-08-11 12:36:12,443 | INFO | requests | pid=17476 tid=20408 | {'method': 'GET', 'path': '/api/properties/public/', 'status': 200, 'user': 'anon', 'duration_ms': 51, 'query': ''}
+2025-08-11 12:36:26,816 | INFO | requests | pid=17476 tid=20408 | {'method': 'GET', 'path': '/', 'status': 200, 'user': 'anon', 'duration_ms': 0, 'query': ''}
+2025-08-11 12:36:28,679 | INFO | requests | pid=17476 tid=20408 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'anon', 'duration_ms': 0, 'query': ''}
+2025-08-11 12:36:59,685 | INFO | requests | pid=17476 tid=20408 | {'method': 'GET', 'path': '/api/bookings/available_properties/', 'status': 200, 'user': 'anon', 'duration_ms': 32, 'query': ''}
+2025-08-11 12:37:05,001 | INFO | requests | pid=17476 tid=20408 | {'method': 'GET', 'path': '/', 'status': 200, 'user': 'anon', 'duration_ms': 0, 'query': ''}
+2025-08-11 12:37:07,284 | INFO | requests | pid=17476 tid=20408 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'anon', 'duration_ms': 0, 'query': ''}
+2025-08-11 12:37:13,106 | INFO | requests | pid=17476 tid=20408 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'anon', 'duration_ms': 0, 'query': ''}
+2025-08-11 12:37:25,144 | INFO | requests | pid=17476 tid=20408 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'anon', 'duration_ms': 0, 'query': ''}
+2025-08-11 12:37:40,086 | INFO | requests | pid=17476 tid=20408 | {'method': 'GET', 'path': '/api-auth/login/', 'status': 200, 'user': 'anon', 'duration_ms': 5, 'query': ''}
+2025-08-11 12:38:07,323 | INFO | requests | pid=17476 tid=20408 | {'method': 'POST', 'path': '/api-auth/login/', 'status': 302, 'user': 'user_id=7', 'duration_ms': 1143, 'query': ''}
+2025-08-11 12:38:07,340 | INFO | requests | pid=17476 tid=20408 | {'method': 'GET', 'path': '/accounts/profile/', 'status': 404, 'user': 'user_id=7', 'duration_ms': 4, 'query': ''}
+2025-08-11 12:38:07,341 | WARNING | django.request | pid=17476 tid=20408 | Not Found: /accounts/profile/
+2025-08-11 15:25:36,426 | INFO | requests | pid=25388 tid=8568 | {'method': 'POST', 'path': '/api/properties/', 'status': 200, 'user': 'anon', 'duration_ms': 39, 'query': ''}
+2025-08-11 15:25:40,303 | INFO | requests | pid=25388 tid=8568 | {'method': 'POST', 'path': '/api/properties/', 'status': 200, 'user': 'anon', 'duration_ms': 0, 'query': ''}
+2025-08-11 15:25:45,000 | INFO | requests | pid=25388 tid=8568 | {'method': 'PATCH', 'path': '/api/properties/1/', 'status': 200, 'user': 'user_id=1', 'duration_ms': 41, 'query': ''}
+2025-08-11 15:25:45,008 | INFO | requests | pid=25388 tid=8568 | {'method': 'PATCH', 'path': '/api/properties/2/', 'status': 403, 'user': 'user_id=1', 'duration_ms': 5, 'query': ''}
+2025-08-11 15:25:45,010 | WARNING | django.request | pid=25388 tid=8568 | Forbidden: /api/properties/2/
+2025-08-11 15:25:46,753 | INFO | requests | pid=25388 tid=8568 | {'method': 'GET', 'path': '/api/properties/public/', 'status': 200, 'user': 'anon', 'duration_ms': 8, 'query': ''}
+2025-08-11 17:25:53,475 | INFO | requests | pid=25180 tid=25624 | {'method': 'GET', 'path': '/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 10, 'query': ''}
+2025-08-11 17:29:38,338 | INFO | requests | pid=25180 tid=25624 | {'method': 'GET', 'path': '/api/accounts/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 160, 'query': ''}
+2025-08-11 17:34:40,848 | INFO | requests | pid=29496 tid=37432 | {'method': 'GET', 'path': '/api-auth/login/', 'status': 404, 'user': 'user_id=7', 'duration_ms': 20, 'query': ''}
+2025-08-11 17:34:40,851 | WARNING | django.request | pid=29496 tid=37432 | Not Found: /api-auth/login/
+2025-08-11 17:34:50,934 | INFO | requests | pid=29496 tid=37432 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 41, 'query': ''}
+2025-08-11 17:34:55,447 | INFO | requests | pid=29496 tid=37432 | {'method': 'GET', 'path': '/api-auth/login/', 'status': 404, 'user': 'user_id=7', 'duration_ms': 9, 'query': ''}
+2025-08-11 17:34:55,447 | WARNING | django.request | pid=29496 tid=37432 | Not Found: /api-auth/login/
+2025-08-11 17:35:14,571 | INFO | requests | pid=18088 tid=15076 | {'method': 'GET', 'path': '/api-auth/login/', 'status': 404, 'user': 'user_id=7', 'duration_ms': 9, 'query': ''}
+2025-08-11 17:35:14,574 | WARNING | django.request | pid=18088 tid=15076 | Not Found: /api-auth/login/
+2025-08-11 17:35:15,867 | INFO | requests | pid=18088 tid=15076 | {'method': 'GET', 'path': '/api-auth/login/', 'status': 404, 'user': 'user_id=7', 'duration_ms': 5, 'query': ''}
+2025-08-11 17:35:15,869 | WARNING | django.request | pid=18088 tid=15076 | Not Found: /api-auth/login/
+2025-08-11 17:35:16,251 | INFO | requests | pid=18088 tid=15076 | {'method': 'GET', 'path': '/api-auth/login/', 'status': 404, 'user': 'user_id=7', 'duration_ms': 3, 'query': ''}
+2025-08-11 17:35:16,252 | WARNING | django.request | pid=18088 tid=15076 | Not Found: /api-auth/login/
+2025-08-11 17:35:23,339 | INFO | requests | pid=18088 tid=15076 | {'method': 'GET', 'path': '/api-auth/login/', 'status': 404, 'user': 'user_id=7', 'duration_ms': 5, 'query': ''}
+2025-08-11 17:35:23,340 | WARNING | django.request | pid=18088 tid=15076 | Not Found: /api-auth/login/
+2025-08-11 17:35:46,629 | WARNING | django.request | pid=18088 tid=15076 | Method Not Allowed: /api/token/
+2025-08-11 17:35:57,631 | INFO | requests | pid=18088 tid=15076 | {'method': 'GET', 'path': '/api/accounts/me/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 91, 'query': ''}
+2025-08-11 17:36:03,227 | INFO | requests | pid=18088 tid=15076 | {'method': 'GET', 'path': '/api/accounts/me-update/', 'status': 405, 'user': 'user_id=7', 'duration_ms': 29, 'query': ''}
+2025-08-11 17:36:03,229 | WARNING | django.request | pid=18088 tid=15076 | Method Not Allowed: /api/accounts/me-update/
+2025-08-11 17:36:14,617 | WARNING | django.request | pid=18088 tid=15076 | Method Not Allowed: /api/token/refresh/
+2025-08-11 17:36:20,101 | INFO | requests | pid=18088 tid=15076 | {'method': 'GET', 'path': '/api-auth/logout/', 'status': 404, 'user': 'user_id=7', 'duration_ms': 9, 'query': ''}
+2025-08-11 17:36:20,102 | WARNING | django.request | pid=18088 tid=15076 | Not Found: /api-auth/logout/
+2025-08-11 17:36:54,213 | INFO | requests | pid=18088 tid=15076 | {'method': 'GET', 'path': '/api-auth/login/', 'status': 404, 'user': 'user_id=7', 'duration_ms': 8, 'query': ''}
+2025-08-11 17:36:54,214 | WARNING | django.request | pid=18088 tid=15076 | Not Found: /api-auth/login/
+2025-08-11 17:43:11,902 | INFO | requests | pid=2416 tid=15988 | {'method': 'GET', 'path': '/api/accounts/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 145, 'query': ''}
+2025-08-11 17:43:14,592 | WARNING | django.request | pid=2416 tid=15988 | Method Not Allowed (GET): /api-auth/logout/
+2025-08-11 17:43:14,598 | INFO | requests | pid=2416 tid=15988 | {'method': 'GET', 'path': '/api-auth/logout/', 'status': 405, 'user': 'user_id=7', 'duration_ms': 1, 'query': ''}
+2025-08-11 17:48:47,616 | WARNING | django.request | pid=3032 tid=20028 | Method Not Allowed (GET): /api-auth/logout/
+2025-08-11 17:48:47,626 | INFO | requests | pid=3032 tid=20028 | {'method': 'GET', 'path': '/api-auth/logout/', 'status': 405, 'user': 'user_id=7', 'duration_ms': 4, 'query': ''}
+2025-08-11 17:48:57,438 | INFO | requests | pid=3032 tid=20028 | {'method': 'GET', 'path': '/api-auth/login/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 81, 'query': ''}
+2025-08-11 17:49:25,420 | INFO | requests | pid=3032 tid=20028 | {'method': 'POST', 'path': '/api-auth/login/', 'status': 302, 'user': 'user_id=7', 'duration_ms': 1886, 'query': ''}
+2025-08-11 17:49:25,544 | INFO | requests | pid=3032 tid=20028 | {'method': 'GET', 'path': '/api/accounts/me/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 111, 'query': ''}
+2025-08-11 17:50:34,193 | INFO | requests | pid=3032 tid=21928 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 17:50:54,283 | INFO | requests | pid=3032 tid=21928 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 17:51:02,609 | INFO | requests | pid=3032 tid=21928 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 17:52:03,375 | INFO | requests | pid=3032 tid=21928 | {'method': 'GET', 'path': '/api/properties/1', 'status': 404, 'user': 'user_id=7', 'duration_ms': 8, 'query': ''}
+2025-08-11 17:52:03,426 | INFO | requests | pid=3032 tid=12140 | {'method': 'GET', 'path': '/api/properties/1/', 'status': 404, 'user': 'user_id=7', 'duration_ms': 42, 'query': ''}
+2025-08-11 17:52:03,427 | WARNING | django.request | pid=3032 tid=12140 | Not Found: /api/properties/1/
+2025-08-11 17:58:29,822 | INFO | requests | pid=3032 tid=19856 | {'method': 'OPTIONS', 'path': '/api/properties', 'status': 404, 'user': 'anon', 'duration_ms': 5, 'query': ''}
+2025-08-11 17:58:29,826 | INFO | requests | pid=3032 tid=34884 | {'method': 'OPTIONS', 'path': '/api/properties/', 'status': 200, 'user': 'anon', 'duration_ms': 0, 'query': ''}
+2025-08-11 17:58:29,899 | INFO | requests | pid=3032 tid=25248 | {'method': 'PROPFIND', 'path': '/api/properties', 'status': 404, 'user': 'anon', 'duration_ms': 4, 'query': ''}
+2025-08-11 17:58:29,905 | INFO | requests | pid=3032 tid=37212 | {'method': 'PROPFIND', 'path': '/api/properties/', 'status': 403, 'user': 'anon', 'duration_ms': 2, 'query': ''}
+2025-08-11 17:58:29,992 | INFO | requests | pid=3032 tid=37212 | {'method': 'PROPFIND', 'path': '/api/properties/', 'status': 403, 'user': 'anon', 'duration_ms': 1, 'query': ''}
+2025-08-11 17:58:29,996 | INFO | requests | pid=3032 tid=37212 | {'method': 'PROPFIND', 'path': '/api/properties/', 'status': 403, 'user': 'anon', 'duration_ms': 1, 'query': ''}
+2025-08-11 17:58:30,000 | INFO | requests | pid=3032 tid=37212 | {'method': 'PROPFIND', 'path': '/api/properties/', 'status': 403, 'user': 'anon', 'duration_ms': 2, 'query': ''}
+2025-08-11 17:58:30,015 | INFO | requests | pid=3032 tid=11248 | {'method': 'PROPFIND', 'path': '/api/properties', 'status': 404, 'user': 'anon', 'duration_ms': 6, 'query': ''}
+2025-08-11 17:58:30,023 | INFO | requests | pid=3032 tid=29348 | {'method': 'PROPFIND', 'path': '/api/properties/', 'status': 403, 'user': 'anon', 'duration_ms': 3, 'query': ''}
+2025-08-11 17:58:30,093 | INFO | requests | pid=3032 tid=29348 | {'method': 'PROPFIND', 'path': '/api/properties/', 'status': 403, 'user': 'anon', 'duration_ms': 2, 'query': ''}
+2025-08-11 17:58:30,096 | INFO | requests | pid=3032 tid=29348 | {'method': 'PROPFIND', 'path': '/api/properties/', 'status': 403, 'user': 'anon', 'duration_ms': 1, 'query': ''}
+2025-08-11 17:58:30,099 | INFO | requests | pid=3032 tid=29348 | {'method': 'PROPFIND', 'path': '/api/properties/', 'status': 403, 'user': 'anon', 'duration_ms': 1, 'query': ''}
+2025-08-11 17:58:30,150 | INFO | requests | pid=3032 tid=10112 | {'method': 'PROPFIND', 'path': '/api/properties', 'status': 404, 'user': 'anon', 'duration_ms': 5, 'query': ''}
+2025-08-11 17:58:30,158 | INFO | requests | pid=3032 tid=21724 | {'method': 'PROPFIND', 'path': '/api/properties/', 'status': 403, 'user': 'anon', 'duration_ms': 3, 'query': ''}
+2025-08-11 17:58:30,165 | INFO | requests | pid=3032 tid=21724 | {'method': 'PROPFIND', 'path': '/api/properties/', 'status': 403, 'user': 'anon', 'duration_ms': 3, 'query': ''}
+2025-08-11 17:58:30,169 | INFO | requests | pid=3032 tid=21724 | {'method': 'PROPFIND', 'path': '/api/properties/', 'status': 403, 'user': 'anon', 'duration_ms': 1, 'query': ''}
+2025-08-11 17:58:30,174 | INFO | requests | pid=3032 tid=21724 | {'method': 'PROPFIND', 'path': '/api/properties/', 'status': 403, 'user': 'anon', 'duration_ms': 2, 'query': ''}
+2025-08-11 17:58:30,189 | INFO | requests | pid=3032 tid=27060 | {'method': 'PROPFIND', 'path': '/api', 'status': 404, 'user': 'anon', 'duration_ms': 6, 'query': ''}
+2025-08-11 17:58:30,190 | WARNING | django.request | pid=3032 tid=27060 | Not Found: /api
+2025-08-11 17:58:30,206 | INFO | requests | pid=3032 tid=6096 | {'method': 'PROPFIND', 'path': '/api/properties', 'status': 404, 'user': 'anon', 'duration_ms': 7, 'query': ''}
+2025-08-11 17:58:30,212 | INFO | requests | pid=3032 tid=35192 | {'method': 'PROPFIND', 'path': '/api/properties/', 'status': 403, 'user': 'anon', 'duration_ms': 2, 'query': ''}
+2025-08-11 17:58:30,217 | INFO | requests | pid=3032 tid=35192 | {'method': 'PROPFIND', 'path': '/api/properties/', 'status': 403, 'user': 'anon', 'duration_ms': 1, 'query': ''}
+2025-08-11 17:58:30,223 | INFO | requests | pid=3032 tid=35192 | {'method': 'PROPFIND', 'path': '/api/properties/', 'status': 403, 'user': 'anon', 'duration_ms': 3, 'query': ''}
+2025-08-11 17:58:30,227 | INFO | requests | pid=3032 tid=35192 | {'method': 'PROPFIND', 'path': '/api/properties/', 'status': 403, 'user': 'anon', 'duration_ms': 2, 'query': ''}
+2025-08-11 17:59:08,319 | INFO | requests | pid=3032 tid=8308 | {'method': 'GET', 'path': '/api/properties/1', 'status': 404, 'user': 'user_id=7', 'duration_ms': 9, 'query': ''}
+2025-08-11 17:59:08,354 | INFO | requests | pid=3032 tid=19960 | {'method': 'GET', 'path': '/api/properties/1/', 'status': 404, 'user': 'user_id=7', 'duration_ms': 26, 'query': ''}
+2025-08-11 17:59:08,356 | WARNING | django.request | pid=3032 tid=19960 | Not Found: /api/properties/1/
+2025-08-11 18:05:15,514 | INFO | requests | pid=3032 tid=32640 | {'method': 'GET', 'path': '/api/properties', 'status': 404, 'user': 'user_id=7', 'duration_ms': 4, 'query': ''}
+2025-08-11 18:05:15,525 | INFO | requests | pid=3032 tid=33392 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 18:15:25,989 | INFO | requests | pid=3032 tid=22140 | {'method': 'GET', 'path': '/api/properties/1', 'status': 404, 'user': 'user_id=7', 'duration_ms': 7, 'query': ''}
+2025-08-11 18:15:26,016 | INFO | requests | pid=3032 tid=18444 | {'method': 'GET', 'path': '/api/properties/1/', 'status': 404, 'user': 'user_id=7', 'duration_ms': 19, 'query': ''}
+2025-08-11 18:15:26,017 | WARNING | django.request | pid=3032 tid=18444 | Not Found: /api/properties/1/
+2025-08-11 18:17:19,398 | INFO | requests | pid=3032 tid=26232 | {'method': 'PUT', 'path': '/api/properties/1/', 'status': 403, 'user': 'user_id=7', 'duration_ms': 11, 'query': ''}
+2025-08-11 18:17:19,399 | WARNING | django.request | pid=3032 tid=26232 | Forbidden: /api/properties/1/
+2025-08-11 18:17:35,316 | INFO | requests | pid=3032 tid=26232 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 18:17:48,215 | INFO | requests | pid=3032 tid=26232 | {'method': 'GET', 'path': '/api/properties/public/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 66, 'query': ''}
+2025-08-11 18:59:25,848 | INFO | requests | pid=26376 tid=32448 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 110, 'query': ''}
+2025-08-11 18:59:39,864 | INFO | requests | pid=26376 tid=9588 | {'method': 'GET', 'path': '/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 18:59:49,222 | INFO | requests | pid=26376 tid=9588 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 35, 'query': ''}
+2025-08-11 19:00:56,673 | INFO | requests | pid=26376 tid=9588 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 19:01:27,885 | INFO | requests | pid=26376 tid=9588 | {'method': 'GET', 'path': '/api/analytics/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 14, 'query': ''}
+2025-08-11 19:01:33,848 | INFO | requests | pid=26376 tid=9588 | {'method': 'GET', 'path': '/api/properties/docs/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 10, 'query': ''}
+2025-08-11 19:09:02,395 | INFO | requests | pid=19476 tid=34044 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 28, 'query': ''}
+2025-08-11 21:06:42,321 | INFO | requests | pid=19476 tid=20116 | {'method': 'GET', 'path': '/api/accounts/me/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 245, 'query': ''}
+2025-08-11 21:06:43,312 | INFO | requests | pid=19476 tid=14832 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 1, 'query': ''}
+2025-08-11 21:23:31,445 | INFO | requests | pid=28764 tid=10552 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 37, 'query': ''}
+2025-08-11 21:23:46,454 | INFO | requests | pid=28764 tid=10552 | {'method': 'GET', 'path': '/api/properties/create/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 71, 'query': ''}
+2025-08-11 21:24:12,242 | INFO | requests | pid=28764 tid=10552 | {'method': 'GET', 'path': '/api/properties/docs/', 'status': 404, 'user': 'user_id=7', 'duration_ms': 30, 'query': ''}
+2025-08-11 21:24:12,245 | WARNING | django.request | pid=28764 tid=10552 | Not Found: /api/properties/docs/
+2025-08-11 21:24:13,734 | INFO | requests | pid=28764 tid=10552 | {'method': 'GET', 'path': '/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 2, 'query': ''}
+2025-08-11 21:24:16,723 | INFO | requests | pid=28764 tid=10552 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 21:28:17,480 | INFO | requests | pid=28764 tid=10552 | {'method': 'POST', 'path': '/api/properties/create/', 'status': 201, 'user': 'user_id=7', 'duration_ms': 54, 'query': ''}
+2025-08-11 21:28:48,087 | INFO | requests | pid=28764 tid=10552 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 21:28:49,295 | INFO | requests | pid=28764 tid=10552 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 21:28:49,940 | INFO | requests | pid=28764 tid=10552 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 21:28:50,508 | INFO | requests | pid=28764 tid=10552 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 21:28:51,865 | INFO | requests | pid=28764 tid=10552 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 21:28:52,289 | INFO | requests | pid=28764 tid=10552 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 21:28:52,816 | INFO | requests | pid=28764 tid=10552 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 21:28:53,042 | INFO | requests | pid=28764 tid=10552 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 21:28:53,258 | INFO | requests | pid=28764 tid=10552 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 21:28:53,848 | INFO | requests | pid=28764 tid=10552 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 21:28:54,875 | INFO | requests | pid=28764 tid=10552 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 21:28:55,522 | INFO | requests | pid=28764 tid=10552 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 21:28:56,647 | INFO | requests | pid=28764 tid=10552 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 21:28:57,245 | INFO | requests | pid=28764 tid=10552 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 21:34:08,797 | INFO | requests | pid=30668 tid=12680 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 60, 'query': ''}
+2025-08-11 21:34:12,609 | INFO | requests | pid=30668 tid=12680 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 21:34:15,909 | INFO | requests | pid=30668 tid=12680 | {'method': 'GET', 'path': '/api/properties/create/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 139, 'query': ''}
+2025-08-11 21:34:19,437 | INFO | requests | pid=30668 tid=12680 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 21:38:41,128 | INFO | requests | pid=30668 tid=12680 | {'method': 'GET', 'path': '/api/properties/5', 'status': 404, 'user': 'user_id=7', 'duration_ms': 18, 'query': ''}
+2025-08-11 21:38:41,207 | INFO | requests | pid=30668 tid=11564 | {'method': 'GET', 'path': '/api/properties/5/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 64, 'query': ''}
+2025-08-11 22:31:07,521 | INFO | requests | pid=21516 tid=2192 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 128, 'query': ''}
+2025-08-11 22:31:23,958 | INFO | requests | pid=21516 tid=2192 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 37, 'query': ''}
+2025-08-11 22:33:11,619 | INFO | requests | pid=21516 tid=32932 | {'method': 'GET', 'path': '/api/properties/links', 'status': 404, 'user': 'user_id=7', 'duration_ms': 13, 'query': ''}
+2025-08-11 22:33:11,651 | INFO | requests | pid=21516 tid=2416 | {'method': 'GET', 'path': '/api/properties/links/', 'status': 404, 'user': 'user_id=7', 'duration_ms': 24, 'query': ''}
+2025-08-11 22:33:11,654 | WARNING | django.request | pid=21516 tid=2416 | Not Found: /api/properties/links/
+2025-08-11 22:33:46,558 | INFO | requests | pid=21516 tid=2416 | {'method': 'GET', 'path': '/api/properties/links/', 'status': 404, 'user': 'user_id=7', 'duration_ms': 19, 'query': ''}
+2025-08-11 22:33:46,559 | WARNING | django.request | pid=21516 tid=2416 | Not Found: /api/properties/links/
+2025-08-11 22:33:53,151 | INFO | requests | pid=21516 tid=2416 | {'method': 'GET', 'path': '/api/links/', 'status': 404, 'user': 'user_id=7', 'duration_ms': 9, 'query': ''}
+2025-08-11 22:33:53,153 | WARNING | django.request | pid=21516 tid=2416 | Not Found: /api/links/
+2025-08-11 22:34:01,856 | INFO | requests | pid=21516 tid=2416 | {'method': 'GET', 'path': '/links/', 'status': 404, 'user': 'user_id=7', 'duration_ms': 9, 'query': ''}
+2025-08-11 22:34:01,857 | WARNING | django.request | pid=21516 tid=2416 | Not Found: /links/
+2025-08-11 22:34:57,290 | INFO | requests | pid=21516 tid=2416 | {'method': 'GET', 'path': '/api/properties/links/', 'status': 404, 'user': 'user_id=7', 'duration_ms': 24, 'query': ''}
+2025-08-11 22:34:57,291 | WARNING | django.request | pid=21516 tid=2416 | Not Found: /api/properties/links/
+2025-08-11 22:36:11,154 | INFO | requests | pid=21516 tid=2416 | {'method': 'PUT', 'path': '/api/properties/5/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 26, 'query': ''}
+2025-08-11 22:36:23,792 | INFO | requests | pid=21516 tid=2416 | {'method': 'PUT', 'path': '/api/properties/5/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 25, 'query': ''}
+2025-08-11 22:37:24,867 | INFO | requests | pid=32756 tid=3136 | {'method': 'GET', 'path': '/api/properties/links/', 'status': 404, 'user': 'user_id=7', 'duration_ms': 396, 'query': ''}
+2025-08-11 22:37:24,870 | WARNING | django.request | pid=32756 tid=3136 | Not Found: /api/properties/links/
+2025-08-11 22:37:28,326 | INFO | requests | pid=32756 tid=3136 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 51, 'query': ''}
+2025-08-11 22:38:17,854 | INFO | requests | pid=32756 tid=3136 | {'method': 'POST', 'path': '/api/properties/', 'status': 201, 'user': 'user_id=7', 'duration_ms': 44, 'query': ''}
+2025-08-11 22:38:34,392 | INFO | requests | pid=32756 tid=3136 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 37, 'query': ''}
+2025-08-11 22:38:53,690 | INFO | requests | pid=32756 tid=3136 | {'method': 'GET', 'path': '/api/properties/links/', 'status': 404, 'user': 'user_id=7', 'duration_ms': 23, 'query': ''}
+2025-08-11 22:38:53,691 | WARNING | django.request | pid=32756 tid=3136 | Not Found: /api/properties/links/
+2025-08-11 22:39:09,763 | INFO | requests | pid=32756 tid=3136 | {'method': 'GET', 'path': '/api/properties/public/', 'status': 404, 'user': 'user_id=7', 'duration_ms': 19, 'query': ''}
+2025-08-11 22:39:09,765 | WARNING | django.request | pid=32756 tid=3136 | Not Found: /api/properties/public/
+2025-08-11 22:39:18,171 | INFO | requests | pid=32756 tid=3136 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 31, 'query': ''}
+2025-08-11 22:44:21,679 | INFO | requests | pid=34140 tid=1460 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 55, 'query': ''}
+2025-08-11 22:44:45,169 | INFO | requests | pid=34140 tid=1460 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 1, 'query': ''}
+2025-08-11 22:44:46,835 | INFO | requests | pid=34140 tid=1460 | {'method': 'GET', 'path': '/api/properties/public/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 94, 'query': ''}
+2025-08-11 22:45:03,844 | INFO | requests | pid=34140 tid=1460 | {'method': 'GET', 'path': '/api/properties/public/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 46, 'query': ''}
+2025-08-11 22:45:09,312 | INFO | requests | pid=34140 tid=1460 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 22:45:11,955 | INFO | requests | pid=34140 tid=1460 | {'method': 'GET', 'path': '/api/properties/create/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 49, 'query': ''}
+2025-08-11 22:45:20,494 | INFO | requests | pid=34140 tid=1460 | {'method': 'GET', 'path': '/api/properties/create/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 34, 'query': ''}
+2025-08-11 22:45:59,894 | INFO | requests | pid=29424 tid=1176 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 40, 'query': ''}
+2025-08-11 22:46:25,187 | INFO | requests | pid=29424 tid=1176 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 22:46:39,383 | INFO | requests | pid=29424 tid=1176 | {'method': 'GET', 'path': '/api/properties/create/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 125, 'query': ''}
+2025-08-11 22:46:53,297 | INFO | requests | pid=29424 tid=1176 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 22:58:00,348 | INFO | requests | pid=29424 tid=12444 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 22:58:46,297 | INFO | requests | pid=29424 tid=12444 | {'method': 'GET', 'path': '/api/properties/6', 'status': 404, 'user': 'user_id=7', 'duration_ms': 12, 'query': ''}
+2025-08-11 22:58:46,344 | INFO | requests | pid=29424 tid=36620 | {'method': 'GET', 'path': '/api/properties/6/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 40, 'query': ''}
+2025-08-11 22:58:56,027 | INFO | requests | pid=29424 tid=36620 | {'method': 'DELETE', 'path': '/api/properties/6/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 29, 'query': ''}
+2025-08-11 22:59:50,257 | INFO | requests | pid=29424 tid=36620 | {'method': 'GET', 'path': '/api/properties', 'status': 404, 'user': 'user_id=7', 'duration_ms': 11, 'query': ''}
+2025-08-11 22:59:50,268 | INFO | requests | pid=29424 tid=19832 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 23:00:09,132 | INFO | requests | pid=29424 tid=19832 | {'method': 'GET', 'path': '/api/properties/public/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 77, 'query': ''}
+2025-08-11 23:04:08,135 | INFO | requests | pid=15076 tid=20292 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 35, 'query': ''}
+2025-08-11 23:04:41,072 | INFO | requests | pid=15076 tid=20292 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 23:04:44,329 | INFO | requests | pid=15076 tid=20292 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-11 23:05:05,498 | INFO | requests | pid=15076 tid=20292 | {'method': 'GET', 'path': '/api/bookings/1', 'status': 404, 'user': 'user_id=7', 'duration_ms': 15, 'query': ''}
+2025-08-11 23:05:05,576 | INFO | requests | pid=15076 tid=1140 | {'method': 'GET', 'path': '/api/bookings/1/', 'status': 403, 'user': 'user_id=7', 'duration_ms': 69, 'query': ''}
+2025-08-11 23:05:05,580 | WARNING | django.request | pid=15076 tid=1140 | Forbidden: /api/bookings/1/
+2025-08-11 23:08:44,336 | INFO | requests | pid=30524 tid=13124 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 47, 'query': ''}
+2025-08-11 23:08:57,602 | INFO | requests | pid=30524 tid=13124 | {'method': 'GET', 'path': '/api/bookings/create/', 'status': 405, 'user': 'user_id=7', 'duration_ms': 29, 'query': ''}
+2025-08-11 23:08:57,605 | WARNING | django.request | pid=30524 tid=13124 | Method Not Allowed: /api/bookings/create/
+2025-08-11 23:10:10,137 | INFO | requests | pid=30524 tid=13124 | {'method': 'GET', 'path': '/api/bookings/available_properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 61, 'query': ''}
+2025-08-11 23:10:27,543 | INFO | requests | pid=30524 tid=13124 | {'method': 'GET', 'path': '/api/bookings/available_properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 27, 'query': 'search=Berlin'}
+2025-08-11 23:17:29,429 | INFO | requests | pid=27408 tid=23072 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 39, 'query': ''}
+2025-08-11 23:17:34,809 | INFO | requests | pid=27408 tid=23072 | {'method': 'GET', 'path': '/api/bookings/create/', 'status': 405, 'user': 'user_id=7', 'duration_ms': 36, 'query': ''}
+2025-08-11 23:17:34,812 | WARNING | django.request | pid=27408 tid=23072 | Method Not Allowed: /api/bookings/create/
+2025-08-11 23:17:51,738 | INFO | requests | pid=27408 tid=23072 | {'method': 'POST', 'path': '/api-auth/logout/', 'status': 302, 'user': 'anon', 'duration_ms': 11, 'query': 'next=/api/bookings/create/'}
+2025-08-11 23:17:51,746 | INFO | requests | pid=27408 tid=23072 | {'method': 'GET', 'path': '/api/bookings/create/', 'status': 401, 'user': 'anon', 'duration_ms': 3, 'query': ''}
+2025-08-11 23:17:51,747 | WARNING | django.request | pid=27408 tid=23072 | Unauthorized: /api/bookings/create/
+2025-08-11 23:17:53,610 | INFO | requests | pid=27408 tid=23072 | {'method': 'GET', 'path': '/api-auth/login/', 'status': 200, 'user': 'anon', 'duration_ms': 7, 'query': 'next=/api/bookings/create/'}
+2025-08-11 23:18:14,977 | INFO | requests | pid=27408 tid=23072 | {'method': 'POST', 'path': '/api-auth/login/', 'status': 302, 'user': 'user_id=8', 'duration_ms': 1451, 'query': ''}
+2025-08-11 23:18:15,015 | INFO | requests | pid=27408 tid=23072 | {'method': 'GET', 'path': '/api/bookings/create/', 'status': 405, 'user': 'user_id=8', 'duration_ms': 28, 'query': ''}
+2025-08-11 23:18:15,016 | WARNING | django.request | pid=27408 tid=23072 | Method Not Allowed: /api/bookings/create/
+2025-08-11 23:18:55,693 | INFO | requests | pid=27408 tid=23072 | {'method': 'POST', 'path': '/api/bookings/create/', 'status': 400, 'user': 'user_id=8', 'duration_ms': 14, 'query': ''}
+2025-08-11 23:18:55,694 | WARNING | django.request | pid=27408 tid=23072 | Bad Request: /api/bookings/create/
+2025-08-11 23:19:21,307 | INFO | requests | pid=27408 tid=23072 | {'method': 'POST', 'path': '/api/bookings/create/', 'status': 201, 'user': 'user_id=8', 'duration_ms': 40, 'query': ''}
+2025-08-11 23:19:49,014 | INFO | requests | pid=27408 tid=23072 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=8', 'duration_ms': 0, 'query': ''}
+2025-08-11 23:19:54,829 | INFO | requests | pid=27408 tid=23072 | {'method': 'GET', 'path': '/api/bookings/create/', 'status': 405, 'user': 'user_id=8', 'duration_ms': 14, 'query': ''}
+2025-08-11 23:19:54,830 | WARNING | django.request | pid=27408 tid=23072 | Method Not Allowed: /api/bookings/create/
+2025-08-11 23:20:12,854 | INFO | requests | pid=27408 tid=23072 | {'method': 'GET', 'path': '/api/bookings/6/', 'status': 403, 'user': 'user_id=8', 'duration_ms': 19, 'query': ''}
+2025-08-11 23:20:12,855 | WARNING | django.request | pid=27408 tid=23072 | Forbidden: /api/bookings/6/
+2025-08-11 23:20:25,177 | INFO | requests | pid=27408 tid=23072 | {'method': 'GET', 'path': '/api/bookings/7/', 'status': 200, 'user': 'user_id=8', 'duration_ms': 25, 'query': ''}
+2025-08-11 23:20:35,675 | INFO | requests | pid=27408 tid=23072 | {'method': 'POST', 'path': '/api-auth/logout/', 'status': 302, 'user': 'anon', 'duration_ms': 11, 'query': 'next=/api/bookings/7/'}
+2025-08-11 23:20:35,688 | INFO | requests | pid=27408 tid=23072 | {'method': 'GET', 'path': '/api/bookings/7/', 'status': 401, 'user': 'anon', 'duration_ms': 4, 'query': ''}
+2025-08-11 23:20:35,689 | WARNING | django.request | pid=27408 tid=23072 | Unauthorized: /api/bookings/7/
+2025-08-11 23:20:38,186 | INFO | requests | pid=27408 tid=23072 | {'method': 'GET', 'path': '/api-auth/login/', 'status': 200, 'user': 'anon', 'duration_ms': 1, 'query': 'next=/api/bookings/7/'}
+2025-08-11 23:20:55,072 | INFO | requests | pid=27408 tid=23072 | {'method': 'POST', 'path': '/api-auth/login/', 'status': 302, 'user': 'user_id=7', 'duration_ms': 1926, 'query': ''}
+2025-08-11 23:20:55,104 | INFO | requests | pid=27408 tid=23072 | {'method': 'GET', 'path': '/api/bookings/7/', 'status': 403, 'user': 'user_id=7', 'duration_ms': 20, 'query': ''}
+2025-08-11 23:20:55,106 | WARNING | django.request | pid=27408 tid=23072 | Forbidden: /api/bookings/7/
+2025-08-11 23:21:51,315 | INFO | requests | pid=27408 tid=23072 | {'method': 'GET', 'path': '/api/bookings/7/messages/', 'status': 403, 'user': 'user_id=7', 'duration_ms': 16, 'query': ''}
+2025-08-11 23:21:51,316 | WARNING | django.request | pid=27408 tid=23072 | Forbidden: /api/bookings/7/messages/
+2025-08-11 23:22:28,349 | INFO | requests | pid=27408 tid=23072 | {'method': 'GET', 'path': '/api/bookings/7/confirm/', 'status': 405, 'user': 'user_id=7', 'duration_ms': 15, 'query': ''}
+2025-08-11 23:22:28,350 | WARNING | django.request | pid=27408 tid=23072 | Method Not Allowed: /api/bookings/7/confirm/
+2025-08-11 23:22:47,732 | INFO | requests | pid=27408 tid=23072 | {'method': 'GET', 'path': '/api/bookings/7/messages/', 'status': 403, 'user': 'user_id=7', 'duration_ms': 13, 'query': ''}
+2025-08-11 23:22:47,732 | WARNING | django.request | pid=27408 tid=23072 | Forbidden: /api/bookings/7/messages/
+2025-08-11 23:22:56,543 | INFO | requests | pid=27408 tid=23072 | {'method': 'POST', 'path': '/api-auth/logout/', 'status': 302, 'user': 'anon', 'duration_ms': 8, 'query': 'next=/api/bookings/7/messages/'}
+2025-08-11 23:22:56,551 | INFO | requests | pid=27408 tid=23072 | {'method': 'GET', 'path': '/api/bookings/7/messages/', 'status': 401, 'user': 'anon', 'duration_ms': 3, 'query': ''}
+2025-08-11 23:22:56,552 | WARNING | django.request | pid=27408 tid=23072 | Unauthorized: /api/bookings/7/messages/
+2025-08-11 23:22:57,679 | INFO | requests | pid=27408 tid=23072 | {'method': 'GET', 'path': '/api-auth/login/', 'status': 200, 'user': 'anon', 'duration_ms': 1, 'query': 'next=/api/bookings/7/messages/'}
+2025-08-11 23:23:14,025 | INFO | requests | pid=27408 tid=23072 | {'method': 'POST', 'path': '/api-auth/login/', 'status': 302, 'user': 'user_id=8', 'duration_ms': 1438, 'query': ''}
+2025-08-11 23:23:14,072 | INFO | requests | pid=27408 tid=23072 | {'method': 'GET', 'path': '/api/bookings/7/messages/', 'status': 200, 'user': 'user_id=8', 'duration_ms': 37, 'query': ''}
+2025-08-11 23:23:19,386 | INFO | requests | pid=27408 tid=23072 | {'method': 'GET', 'path': '/api/bookings/7/messages/', 'status': 200, 'user': 'user_id=8', 'duration_ms': 21, 'query': ''}
+2025-08-11 23:23:36,840 | INFO | requests | pid=27408 tid=23072 | {'method': 'GET', 'path': '/api/bookings/7/confirm/', 'status': 405, 'user': 'user_id=8', 'duration_ms': 12, 'query': ''}
+2025-08-11 23:23:36,841 | WARNING | django.request | pid=27408 tid=23072 | Method Not Allowed: /api/bookings/7/confirm/

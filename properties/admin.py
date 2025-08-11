@@ -1,5 +1,12 @@
 from django.contrib import admin
-from .models import Property
+from .models import Property, PropertyImage, Listing
+
+
+class PropertyImageInline(admin.TabularInline):
+    """Inline admin for property images"""
+    model = PropertyImage
+    extra = 1
+    fields = ['image', 'caption', 'order']
 
 
 class PropertyPriceRangeFilter(admin.SimpleListFilter):
@@ -66,3 +73,22 @@ class PropertyAdmin(admin.ModelAdmin):
     )
     ordering = ("-created_at",)
     date_hierarchy = "created_at"
+
+    inlines = [PropertyImageInline]
+
+
+@admin.register(PropertyImage)
+class PropertyImageAdmin(admin.ModelAdmin):
+    """Admin for PropertyImage model"""
+
+    list_display = ['property', 'caption', 'order', 'created_at']
+    list_filter = ['created_at']
+    search_fields = ['property__title', 'caption']
+    ordering = ['property', 'order']
+
+
+@admin.register(Listing)
+class ListingAdmin(admin.ModelAdmin):
+    list_display = ("id", "property", "is_active", "created_at", "updated_at")
+    list_select_related = ("property",)
+    search_fields = ("property__title", "property__location")

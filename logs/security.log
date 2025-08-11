@@ -1,0 +1,16 @@
+2025-08-11 17:58:29,905 | WARNING | django.security.csrf | pid=3032 tid=37212 | Forbidden (CSRF cookie not set.): /api/properties/
+2025-08-11 17:58:29,991 | WARNING | django.security.csrf | pid=3032 tid=37212 | Forbidden (CSRF cookie not set.): /api/properties/
+2025-08-11 17:58:29,995 | WARNING | django.security.csrf | pid=3032 tid=37212 | Forbidden (CSRF cookie not set.): /api/properties/
+2025-08-11 17:58:29,999 | WARNING | django.security.csrf | pid=3032 tid=37212 | Forbidden (CSRF cookie not set.): /api/properties/
+2025-08-11 17:58:30,022 | WARNING | django.security.csrf | pid=3032 tid=29348 | Forbidden (CSRF cookie not set.): /api/properties/
+2025-08-11 17:58:30,091 | WARNING | django.security.csrf | pid=3032 tid=29348 | Forbidden (CSRF cookie not set.): /api/properties/
+2025-08-11 17:58:30,096 | WARNING | django.security.csrf | pid=3032 tid=29348 | Forbidden (CSRF cookie not set.): /api/properties/
+2025-08-11 17:58:30,099 | WARNING | django.security.csrf | pid=3032 tid=29348 | Forbidden (CSRF cookie not set.): /api/properties/
+2025-08-11 17:58:30,157 | WARNING | django.security.csrf | pid=3032 tid=21724 | Forbidden (CSRF cookie not set.): /api/properties/
+2025-08-11 17:58:30,164 | WARNING | django.security.csrf | pid=3032 tid=21724 | Forbidden (CSRF cookie not set.): /api/properties/
+2025-08-11 17:58:30,169 | WARNING | django.security.csrf | pid=3032 tid=21724 | Forbidden (CSRF cookie not set.): /api/properties/
+2025-08-11 17:58:30,173 | WARNING | django.security.csrf | pid=3032 tid=21724 | Forbidden (CSRF cookie not set.): /api/properties/
+2025-08-11 17:58:30,212 | WARNING | django.security.csrf | pid=3032 tid=35192 | Forbidden (CSRF cookie not set.): /api/properties/
+2025-08-11 17:58:30,216 | WARNING | django.security.csrf | pid=3032 tid=35192 | Forbidden (CSRF cookie not set.): /api/properties/
+2025-08-11 17:58:30,222 | WARNING | django.security.csrf | pid=3032 tid=35192 | Forbidden (CSRF cookie not set.): /api/properties/
+2025-08-11 17:58:30,227 | WARNING | django.security.csrf | pid=3032 tid=35192 | Forbidden (CSRF cookie not set.): /api/properties/
