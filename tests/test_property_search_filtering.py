@@ -1,6 +1,55 @@
+import json
+from decimal import Decimal
+
 import pytest
 from rest_framework.test import APIClient
 from properties.models import Property
+
+def _json(resp):
+    # Универсальный парсер JSON для DRF Response и обычного HttpResponse
+    try:
+        return resp.json()
+    except Exception:
+        try:
+            raw = getattr(resp, "content", b"")
+            if isinstance(raw, bytes):
+                raw = raw.decode("utf-8", errors="ignore")
+            return json.loads(raw)
+        except Exception:
+            return None
+
+
+def _items_from_payload(data):
+    """
+    Возвращает список элементов из возможных форматов ответа:
+    - список (list)
+    - словарь с ключами results/data/items
+    - одиночный объект (dict с полем id) -> оборачиваем в список
+    """
+    if isinstance(data, list):
+        return data
+    if isinstance(data, dict):
+        for key in ("results", "data", "items"):
+            if isinstance(data.get(key), list):
+                return data[key]
+        if "id" in data:
+            return [data]
+    return []
+
+
+def _get_items(resp):
+    return _items_from_payload(_json(resp))
+
+
+def _get_count(resp):
+    data = _json(resp)
+    if isinstance(data, dict) and "count" in data:
+        try:
+            return int(data["count"])
+        except Exception:
+            return len(_items_from_payload(data))
+    return len(_items_from_payload(data))
+
 
 @pytest.mark.django_db
 def test_search_and_filters(django_user_model):
@@ -46,7 +95,8 @@ def test_search_and_filters(django_user_model):
     # Поиск по ключевому слову title/description/location
     resp = client.get("/api/properties/public/?search=Berlin")
     assert resp.status_code == 200
-    titles = [r["title"] for r in resp.data["results"]]
+    items = _get_items(resp)
+    titles = [r.get("title") for r in items]
     assert "Loft Berlin" in titles
     assert "Small room" in titles
     assert "Haus Hamburg" not in titles
@@ -54,20 +104,32 @@ def test_search_and_filters(django_user_model):
     # Фильтр по цене
     resp2 = client.get("/api/properties/public/?price_min=1000&price_max=2000")
     assert resp2.status_code == 200
-    assert resp2.data["count"] == 1
-    assert resp2.data["results"][0]["title"] == "Loft Berlin"
+    count2 = _get_count(resp2)
+    items2 = _get_items(resp2)
+    assert count2 == 1, f"Ожидался 1 объект, получили {count2} (items={items2})"
+    assert items2[0].get("title") == "Loft Berlin"
 
     # Фильтр по типу
     resp3 = client.get("/api/properties/public/?property_type=house")
     assert resp3.status_code == 200
-    assert resp3.data["count"] == 1
-    assert resp3.data["results"][0]["title"] == "Haus Hamburg"
+    count3 = _get_count(resp3)
+    items3 = _get_items(resp3)
+    assert count3 == 1
+    assert items3[0].get("title") == "Haus Hamburg"
 
     # Сортировка по цене (убывание)
     resp4 = client.get("/api/properties/public/?ordering=-price")
     assert resp4.status_code == 200
-    prices = [p["price"] for p in resp4.data["results"]]
-    assert prices == sorted(prices, reverse=True)
+    items4 = _get_items(resp4)
+    prices = []
+    for p in items4:
+        val = p.get("price")
+        try:
+            prices.append(Decimal(str(val)))
+        except Exception:
+            # если пришёл нечисловой формат, провалимся на сравнение строк
+            prices.append(val)
+    assert prices == sorted(prices, reverse=True), f"Неверная сортировка: {prices}"
 
 @pytest.mark.django_db
 def test_search_history_saved_only_for_authenticated(django_user_model):

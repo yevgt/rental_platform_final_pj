@@ -9,6 +9,7 @@ pytest-django==4.11.1
 mysqlclient
 drf-spectacular==0.28.0
 Pillow==11.3.0
+coverage==7.10.3
 
 
 django-environ
@@ -19,11 +20,9 @@ drf_yasg
 pymysql
 djangorestframework-simplejwt==5.5.1
 drf-spectacular==0.28.0
-Pillow
-pytest
-pytest-django
+
+
 factory-boy
-coverage
-pymysql
+
 
 upgrade pip

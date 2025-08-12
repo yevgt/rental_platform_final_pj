@@ -1,6 +1,5 @@
 import pytest
 from datetime import date, timedelta
-from rest_framework.test import APIClient
 from properties.models import Property
 from bookings.models import Booking
 from notifications.models import Notification
@@ -29,6 +28,9 @@ def test_notifications_on_booking_flow(user_factory):
         user=renter,
         start_date=date.today(),
         end_date=date.today() + timedelta(days=2),
+        # В вашей БД monthly_rent NOT NULL — подаём значения
+        monthly_rent=prop.price,
+        total_amount=prop.price,
         status=Booking.Status.PENDING,
     )
     notif_landlord = Notification.objects.filter(user=landlord, type=Notification.Types.BOOKING_NEW)
@@ -40,7 +42,7 @@ def test_notifications_on_booking_flow(user_factory):
     notif_renter_conf = Notification.objects.filter(user=renter, type=Notification.Types.BOOKING_CONFIRMED)
     assert notif_renter_conf.exists()
 
-    # 3) Отклонение (проверяем, что на смену статуса с confirmed->rejected тоже создаётся уведомление)
+    # 3) Отклонение -> уведомление арендатору
     booking.status = Booking.Status.REJECTED
     booking.save(update_fields=["status"])
     notif_renter_rej = Notification.objects.filter(user=renter, type=Notification.Types.BOOKING_REJECTED)

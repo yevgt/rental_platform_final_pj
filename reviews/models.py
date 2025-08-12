@@ -18,7 +18,7 @@ class Review(models.Model):
         ]
         constraints = [
             models.CheckConstraint(
-                check=Q(rating__gte=1) & Q(rating__lte=5),
+                condition=Q(rating__gte=1) & Q(rating__lte=5),
                 name="review_rating_between_1_5",
             )
         ]

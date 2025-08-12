@@ -19,7 +19,8 @@ class BookingAdmin(admin.ModelAdmin):
 
     @admin.display(description="Владелец (email)")
     def owner_email(self, obj):
-        return getattr(getattr(obj.property, "owner", None), "email", None)
+        # Безопасный доступ: obj -> property -> owner -> email
+        return getattr(getattr(getattr(obj, "property", None), "owner", None), "email", None)
 
 
 @admin.register(Message)
