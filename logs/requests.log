@@ -755,3 +755,65 @@ django.urls.exceptions.NoReverseMatch: Reverse for 'profile-update' not found. '
 2025-08-11 23:23:19,386 | INFO | requests | pid=27408 tid=23072 | {'method': 'GET', 'path': '/api/bookings/7/messages/', 'status': 200, 'user': 'user_id=8', 'duration_ms': 21, 'query': ''}
 2025-08-11 23:23:36,840 | INFO | requests | pid=27408 tid=23072 | {'method': 'GET', 'path': '/api/bookings/7/confirm/', 'status': 405, 'user': 'user_id=8', 'duration_ms': 12, 'query': ''}
 2025-08-11 23:23:36,841 | WARNING | django.request | pid=27408 tid=23072 | Method Not Allowed: /api/bookings/7/confirm/
+2025-08-12 02:09:28,734 | INFO | requests | pid=25492 tid=25060 | {'method': 'GET', 'path': '/api/bookings/7/confirm/', 'status': 405, 'user': 'user_id=8', 'duration_ms': 250, 'query': ''}
+2025-08-12 02:09:28,741 | WARNING | django.request | pid=25492 tid=25060 | Method Not Allowed: /api/bookings/7/confirm/
+2025-08-12 02:09:46,813 | INFO | requests | pid=25492 tid=25060 | {'method': 'GET', 'path': '/api/bookings/7/messages/', 'status': 200, 'user': 'user_id=8', 'duration_ms': 48, 'query': ''}
+2025-08-12 02:09:55,618 | INFO | requests | pid=25492 tid=25060 | {'method': 'GET', 'path': '/api/bookings/7/messages/', 'status': 200, 'user': 'user_id=8', 'duration_ms': 39, 'query': ''}
+2025-08-12 02:10:16,111 | INFO | requests | pid=25492 tid=25060 | {'method': 'OPTIONS', 'path': '/api/bookings/7/messages/', 'status': 200, 'user': 'user_id=8', 'duration_ms': 36, 'query': ''}
+2025-08-12 02:10:17,158 | INFO | requests | pid=25492 tid=25060 | {'method': 'OPTIONS', 'path': '/api/bookings/7/messages/', 'status': 200, 'user': 'user_id=8', 'duration_ms': 30, 'query': ''}
+2025-08-12 02:10:19,667 | INFO | requests | pid=25492 tid=25060 | {'method': 'GET', 'path': '/api/bookings/7/messages/', 'status': 200, 'user': 'user_id=8', 'duration_ms': 32, 'query': ''}
+2025-08-12 02:10:29,643 | INFO | requests | pid=25492 tid=25060 | {'method': 'GET', 'path': '/api/bookings/7', 'status': 404, 'user': 'user_id=8', 'duration_ms': 17, 'query': ''}
+2025-08-12 02:10:29,710 | INFO | requests | pid=25492 tid=22632 | {'method': 'GET', 'path': '/api/bookings/7/', 'status': 200, 'user': 'user_id=8', 'duration_ms': 56, 'query': ''}
+2025-08-12 02:31:48,557 | INFO | requests | pid=16924 tid=136 | {'method': 'GET', 'path': '/api/bookings/7/', 'status': 200, 'user': 'user_id=8', 'duration_ms': 141, 'query': ''}
+2025-08-12 02:32:00,230 | INFO | requests | pid=16924 tid=136 | {'method': 'GET', 'path': '/api/bookings/7/messages/', 'status': 200, 'user': 'user_id=8', 'duration_ms': 52, 'query': ''}
+2025-08-12 02:32:14,408 | INFO | requests | pid=16924 tid=136 | {'method': 'GET', 'path': '/api/bookings/7/', 'status': 200, 'user': 'user_id=8', 'duration_ms': 33, 'query': ''}
+2025-08-12 02:33:06,339 | INFO | requests | pid=16924 tid=136 | {'method': 'GET', 'path': '/api/bookings/7/messages/', 'status': 200, 'user': 'user_id=8', 'duration_ms': 34, 'query': ''}
+2025-08-12 02:33:53,982 | INFO | requests | pid=3976 tid=13620 | {'method': 'GET', 'path': '/api/bookings/7/messages/', 'status': 200, 'user': 'user_id=8', 'duration_ms': 139, 'query': ''}
+2025-08-12 02:34:19,017 | INFO | requests | pid=3976 tid=13620 | {'method': 'GET', 'path': '/api/bookings/7', 'status': 404, 'user': 'user_id=8', 'duration_ms': 14, 'query': ''}
+2025-08-12 02:34:19,087 | INFO | requests | pid=3976 tid=9844 | {'method': 'GET', 'path': '/api/bookings/7/', 'status': 200, 'user': 'user_id=8', 'duration_ms': 58, 'query': ''}
+2025-08-12 02:48:14,979 | INFO | requests | pid=29112 tid=36260 | {'method': 'GET', 'path': '/api/bookings/7/', 'status': 200, 'user': 'user_id=8', 'duration_ms': 178, 'query': ''}
+2025-08-12 02:48:26,362 | INFO | requests | pid=29112 tid=36260 | {'method': 'GET', 'path': '/api/bookings/7/messages/', 'status': 200, 'user': 'user_id=8', 'duration_ms': 58, 'query': ''}
+2025-08-12 02:49:45,642 | INFO | requests | pid=29112 tid=36260 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=8', 'duration_ms': 1, 'query': ''}
+2025-08-12 02:49:47,488 | INFO | requests | pid=29112 tid=36260 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=8', 'duration_ms': 1, 'query': ''}
+2025-08-12 02:49:52,388 | INFO | requests | pid=29112 tid=36260 | {'method': 'GET', 'path': '/api/notifications/', 'status': 200, 'user': 'user_id=8', 'duration_ms': 24, 'query': ''}
+2025-08-12 02:50:11,982 | INFO | requests | pid=29112 tid=9636 | {'method': 'GET', 'path': '/api/notifications/', 'status': 200, 'user': 'user_id=8', 'duration_ms': 20, 'query': ''}
+2025-08-12 02:51:55,134 | INFO | requests | pid=29112 tid=9636 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=8', 'duration_ms': 0, 'query': ''}
+2025-08-12 02:52:05,625 | INFO | requests | pid=29112 tid=9636 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=8', 'duration_ms': 0, 'query': ''}
+2025-08-12 02:52:15,097 | INFO | requests | pid=29112 tid=9636 | {'method': 'GET', 'path': '/api/analytics/', 'status': 200, 'user': 'user_id=8', 'duration_ms': 13, 'query': ''}
+2025-08-12 02:52:17,399 | INFO | requests | pid=29112 tid=20760 | {'method': 'GET', 'path': '/api/analytics/top-properties/', 'status': 200, 'user': 'user_id=8', 'duration_ms': 13, 'query': ''}
+2025-08-12 02:52:24,650 | INFO | requests | pid=29112 tid=20760 | {'method': 'GET', 'path': '/api/analytics/', 'status': 200, 'user': 'user_id=8', 'duration_ms': 22, 'query': ''}
+2025-08-12 02:52:27,150 | INFO | requests | pid=29112 tid=20760 | {'method': 'GET', 'path': '/api/analytics/popular-searches/', 'status': 200, 'user': 'user_id=8', 'duration_ms': 14, 'query': ''}
+2025-08-12 02:52:34,772 | INFO | requests | pid=29112 tid=20760 | {'method': 'GET', 'path': '/api/docs/', 'status': 200, 'user': 'user_id=8', 'duration_ms': 17, 'query': ''}
+2025-08-12 02:52:35,661 | INFO | requests | pid=29112 tid=20760 | {'method': 'GET', 'path': '/api/schema/', 'status': 200, 'user': 'user_id=8', 'duration_ms': 267, 'query': ''}
+2025-08-12 02:53:22,000 | INFO | requests | pid=29112 tid=20760 | {'method': 'GET', 'path': '/api/notifications/', 'status': 200, 'user': 'user_id=8', 'duration_ms': 19, 'query': ''}
+2025-08-12 02:53:27,154 | INFO | requests | pid=29112 tid=20760 | {'method': 'GET', 'path': '/api/notifications/1', 'status': 404, 'user': 'user_id=8', 'duration_ms': 10, 'query': ''}
+2025-08-12 02:53:27,158 | WARNING | django.request | pid=29112 tid=20760 | Not Found: /api/notifications/1
+2025-08-12 03:02:11,918 | INFO | requests | pid=29112 tid=11824 | {'method': 'POST', 'path': '/api/bookings/7/messages/', 'status': 400, 'user': 'user_id=8', 'duration_ms': 23, 'query': ''}
+2025-08-12 03:02:11,921 | WARNING | django.request | pid=29112 tid=11824 | Bad Request: /api/bookings/7/messages/
+2025-08-12 03:09:11,255 | INFO | requests | pid=11752 tid=27332 | {'method': 'POST', 'path': '/api/bookings/7/messages/', 'status': 201, 'user': 'user_id=8', 'duration_ms': 190, 'query': ''}
+2025-08-12 03:09:15,985 | INFO | requests | pid=11752 tid=27332 | {'method': 'POST', 'path': '/api/bookings/7/messages/', 'status': 201, 'user': 'user_id=8', 'duration_ms': 46, 'query': ''}
+2025-08-12 03:09:38,438 | INFO | requests | pid=11752 tid=27332 | {'method': 'POST', 'path': '/api-auth/logout/', 'status': 302, 'user': 'anon', 'duration_ms': 14, 'query': 'next=/api/bookings/7/messages/'}
+2025-08-12 03:09:38,451 | INFO | requests | pid=11752 tid=27332 | {'method': 'GET', 'path': '/api/bookings/7/messages/', 'status': 401, 'user': 'anon', 'duration_ms': 7, 'query': ''}
+2025-08-12 03:09:38,453 | WARNING | django.request | pid=11752 tid=27332 | Unauthorized: /api/bookings/7/messages/
+2025-08-12 03:09:43,712 | INFO | requests | pid=11752 tid=27332 | {'method': 'GET', 'path': '/api-auth/login/', 'status': 200, 'user': 'anon', 'duration_ms': 8, 'query': 'next=/api/bookings/7/messages/'}
+2025-08-12 03:10:10,687 | INFO | requests | pid=11752 tid=27332 | {'method': 'POST', 'path': '/api-auth/login/', 'status': 302, 'user': 'user_id=7', 'duration_ms': 3187, 'query': ''}
+2025-08-12 03:10:10,723 | INFO | requests | pid=11752 tid=27332 | {'method': 'GET', 'path': '/api/bookings/7/messages/', 'status': 403, 'user': 'user_id=7', 'duration_ms': 20, 'query': ''}
+2025-08-12 03:10:10,725 | WARNING | django.request | pid=11752 tid=27332 | Forbidden: /api/bookings/7/messages/
+2025-08-12 03:10:41,093 | INFO | requests | pid=11752 tid=27332 | {'method': 'GET', 'path': '/api/bookings/7/', 'status': 403, 'user': 'user_id=7', 'duration_ms': 49, 'query': ''}
+2025-08-12 03:10:41,094 | WARNING | django.request | pid=11752 tid=27332 | Forbidden: /api/bookings/7/
+2025-08-12 03:10:49,194 | INFO | requests | pid=11752 tid=27332 | {'method': 'GET', 'path': '/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 3, 'query': ''}
+2025-08-12 03:10:57,263 | INFO | requests | pid=11752 tid=27332 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 1, 'query': ''}
+2025-08-12 03:11:00,315 | INFO | requests | pid=11752 tid=27332 | {'method': 'GET', 'path': '/api/bookings/create/', 'status': 405, 'user': 'user_id=7', 'duration_ms': 7, 'query': ''}
+2025-08-12 03:11:00,316 | WARNING | django.request | pid=11752 tid=27332 | Method Not Allowed: /api/bookings/create/
+2025-08-12 03:11:10,141 | INFO | requests | pid=11752 tid=27332 | {'method': 'GET', 'path': '/api/properties/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 0, 'query': ''}
+2025-08-12 03:11:12,188 | INFO | requests | pid=11752 tid=27332 | {'method': 'GET', 'path': '/api/properties/create/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 43, 'query': ''}
+2025-08-12 03:11:25,687 | INFO | requests | pid=11752 tid=27332 | {'method': 'GET', 'path': '/api/properties/public/', 'status': 200, 'user': 'user_id=7', 'duration_ms': 61, 'query': ''}
+2025-08-12 03:14:05,648 | INFO | requests | pid=11752 tid=27332 | {'method': 'POST', 'path': '/api-auth/logout/', 'status': 302, 'user': 'anon', 'duration_ms': 18, 'query': 'next=/api/properties/public/'}
+2025-08-12 03:14:05,714 | INFO | requests | pid=11752 tid=27332 | {'method': 'GET', 'path': '/api/properties/public/', 'status': 200, 'user': 'anon', 'duration_ms': 57, 'query': ''}
+2025-08-12 03:14:06,767 | INFO | requests | pid=11752 tid=27332 | {'method': 'GET', 'path': '/api-auth/login/', 'status': 200, 'user': 'anon', 'duration_ms': 2, 'query': 'next=/api/properties/public/'}
+2025-08-12 03:14:31,017 | INFO | requests | pid=11752 tid=27332 | {'method': 'POST', 'path': '/api-auth/login/', 'status': 302, 'user': 'user_id=8', 'duration_ms': 1629, 'query': ''}
+2025-08-12 03:14:31,086 | INFO | requests | pid=11752 tid=27332 | {'method': 'GET', 'path': '/api/properties/public/', 'status': 200, 'user': 'user_id=8', 'duration_ms': 53, 'query': ''}
+2025-08-12 03:14:59,153 | INFO | requests | pid=11752 tid=27332 | {'method': 'GET', 'path': '/', 'status': 200, 'user': 'user_id=8', 'duration_ms': 0, 'query': ''}
+2025-08-12 03:15:01,369 | INFO | requests | pid=11752 tid=27332 | {'method': 'GET', 'path': '/api/bookings/', 'status': 200, 'user': 'user_id=8', 'duration_ms': 0, 'query': ''}
+2025-08-12 03:15:03,196 | INFO | requests | pid=11752 tid=27332 | {'method': 'GET', 'path': '/api/bookings/create/', 'status': 405, 'user': 'user_id=8', 'duration_ms': 15, 'query': ''}
+2025-08-12 03:15:03,197 | WARNING | django.request | pid=11752 tid=27332 | Method Not Allowed: /api/bookings/create/

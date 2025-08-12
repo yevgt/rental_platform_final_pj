@@ -7,6 +7,7 @@ class Notification(models.Model):
         BOOKING_CONFIRMED = "booking_confirmed", "Подтверждение бронирования (для арендатора)"
         BOOKING_REJECTED = "booking_rejected", "Отклонение бронирования (для арендатора)"
         REVIEW_NEW = "review_new", "Новый отзыв"
+        MESSAGE_NEW = "message_new", "Новое сообщение в переписке по бронированию"
 
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="notifications")
     type = models.CharField(max_length=50, choices=Types.choices)

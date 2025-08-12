@@ -6,6 +6,7 @@ from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import viewsets, permissions, decorators, response, status
 from rest_framework.filters import OrderingFilter, SearchFilter
 from rest_framework.response import Response
+from rest_framework.exceptions import NotFound
 
 from rental_platform.permissions import IsRenter , IsLandlord
 from .models import Booking, Message
@@ -14,8 +15,11 @@ from .filters import BookingFilter
 
 # Для available_properties
 from properties.models import Property
-from properties.serializers import PropertySerializer
+from properties.serializers import PropertySerializer, ReviewSerializer
 from properties.filters import PropertyFilter  # используем тот же фильтр что и в объявлениях
+from reviews.models import Review
+from notifications.models import Notification
+
 
 logger = logging.getLogger(__name__)
 
@@ -52,6 +56,7 @@ class BookingViewSet(viewsets.ModelViewSet):
     serializer_class = BookingSerializer
     permission_classes = [permissions.IsAuthenticated]
     queryset = Booking.objects.select_related("property", "property__owner", "user")
+    lookup_value_regex = r"\d+"  # опционально: принимать только числовые id
 
     # Поддержка фильтрации / поиска / сортировки для бронирований
     filter_backends = [DjangoFilterBackend, OrderingFilter, SearchFilter]
@@ -128,6 +133,16 @@ class BookingViewSet(viewsets.ModelViewSet):
         # Получаем объект без фильтрации по текущему пользователю,
         # чтобы корректно вернуть 403 для посторонних (а не 404).
         return Booking.objects.select_related("property", "property__owner", "user").get(pk=pk)
+
+    def _get_booking_unrestricted(self, pk: int) -> Booking:
+        """
+        Получаем Booking без фильтрации по текущему пользователю.
+        Если не найден — отдаём корректный 404 вместо 500.
+        """
+        try:
+            return Booking.objects.select_related("property", "property__owner", "user").get(pk=pk)
+        except Booking.DoesNotExist:
+            raise NotFound(detail="Бронирование не найдено.")
 
     @decorators.action(detail=True, methods=["post"])
     def cancel(self, request, pk=None):
@@ -225,11 +240,11 @@ class BookingViewSet(viewsets.ModelViewSet):
         )
         return response.Response({"status": booking.status})
 
-    @decorators.action(detail=True, methods=["get", "post"])
+    @decorators.action(detail=True, methods=["get", "post"], serializer_class=MessageSerializer)
     def messages(self, request, pk=None):
         booking = self._get_booking_unrestricted(pk)
         user = request.user
-        # Проверка участника диалога
+        # Разрешаем переписку только участникам
         if user != booking.user and user != booking.property.owner:
             logger.warning(
                 "Messages access forbidden booking_id=%s by user_id=%s",
@@ -237,6 +252,28 @@ class BookingViewSet(viewsets.ModelViewSet):
                 getattr(user, "id", None),
             )
             return response.Response({"detail": "Нет доступа к переписке по этому бронированию."}, status=403)
+
+        method = request.method.lower()
+
+        if method == "get":
+            # Просмотр истории доступен участникам независимо от статуса брони.
+            msgs = booking.messages.select_related("sender", "receiver").all()
+            logger.debug(
+                "Messages listed booking_id=%s requester_id=%s count=%s",
+                booking.id,
+                user.id,
+                msgs.count(),
+            )
+            return response.Response(MessageSerializer(msgs, many=True).data)
+
+        # Разрешаем переписку только при подтверждённой или завершённой брони
+        allowed_statuses = {Booking.Status.PENDING, Booking.Status.CONFIRMED}
+        if booking.status not in allowed_statuses:
+            return response.Response(
+                {"detail": "Отправка сообщений доступна только при ожидающей или подтверждённой брони (PENDING или CONFIRMED)."},
+                status=400,
+            )
+
 
         if request.method.lower() == "get":
             msgs = booking.messages.select_related("sender", "receiver").all()
@@ -249,10 +286,12 @@ class BookingViewSet(viewsets.ModelViewSet):
             return response.Response(MessageSerializer(msgs, many=True).data)
 
         # POST: создать сообщение
-        text = request.data.get("text", "").strip()
+        text = str(request.data.get("text", "")).strip()
         if not text:
             return response.Response({"detail": "text обязателен."}, status=400)
+
         receiver = booking.property.owner if user == booking.user else booking.user
+
         msg = Message.objects.create(booking=booking, sender=user, receiver=receiver, text=text)
         logger.info(
             "Message created message_id=%s booking_id=%s sender_id=%s receiver_id=%s text_len=%s",
@@ -262,6 +301,23 @@ class BookingViewSet(viewsets.ModelViewSet):
             receiver.id,
             len(text),
         )
+
+        # Создаём уведомление получателю
+        try:
+            Notification.objects.create(
+                user=receiver,
+                type=Notification.Types.MESSAGE_NEW,
+                message=f"Новое сообщение по бронированию #{booking.id} от {getattr(user, 'email', user.id)}",
+                data={
+                    "booking_id": booking.id,
+                    "property_id": booking.property_id,
+                    "sender_id": user.id,
+                    "receiver_id": receiver.id,
+                },
+            )
+        except Exception as e:
+            logger.warning("Failed to create message notification: booking_id=%s err=%s", booking.id, e)
+
         return response.Response(MessageSerializer(msg).data, status=201)
 
     @decorators.action(detail=False, methods=["get"])
@@ -312,6 +368,53 @@ class BookingViewSet(viewsets.ModelViewSet):
 
         ser = PropertySerializer(qs, many=True, context={"request": request})
         return response.Response(ser.data)
+
+    @decorators.action(detail=True, methods=["post"])
+    def review(self, request, pk=None):
+        """
+        Создать отзыв по завершённому бронированию.
+        Условия:
+          - requester роль renter
+          - он же владелец бронирования
+          - booking.status == COMPLETED
+          - отзыв ещё не оставлен (один отзыв на бронирование)
+        Тело: {"rating": 1..5, "text": "..."}
+        """
+        booking = self._get_booking_unrestricted(pk)
+
+        if getattr(request.user, "role", None) != "renter":
+            return response.Response({"detail": "Отзывы может оставлять только арендатор."}, status=403)
+        if booking.user_id != request.user.id:
+            return response.Response({"detail": "Можно оставить отзыв только по своему бронированию."}, status=403)
+        if booking.status != Booking.Status.COMPLETED:
+            return response.Response({"detail": "Отзыв можно оставить только после завершения бронирования."},
+                                     status=400)
+        # Определим, есть ли в модели Review поле booking
+        review_fields = {f.name for f in Review._meta.get_fields()}
+
+        if "booking" in review_fields:
+            # Один отзыв на бронирование
+            if Review.objects.filter(booking=booking).exists():
+                return response.Response({"detail": "Отзыв уже был оставлен для этого бронирования."}, status=400)
+            review = Review.objects.create(
+                property=booking.property,
+                booking=booking,
+                user=request.user,
+                rating=int(request.data.get("rating")),
+                text=str(request.data.get("text", "")).strip(),
+            )
+        else:
+            # Фоллбэк: один отзыв на пару (property, user)
+            if Review.objects.filter(property=booking.property, user=request.user).exists():
+                return response.Response({"detail": "Вы уже оставляли отзыв для этого объявления."}, status=400)
+            review = Review.objects.create(
+                property=booking.property,
+                user=request.user,
+                rating=int(request.data.get("rating")),
+                text=str(request.data.get("text", "")).strip(),
+            )
+
+        return response.Response(ReviewSerializer(review).data, status=201)
 
     # Список только pending бронирований для landlord — раскомментируйте при необходимости
     # @decorators.action(detail=False, methods=["get"])

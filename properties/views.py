@@ -10,9 +10,11 @@ from .serializers import (
     PropertySerializer,
     PropertyImageSerializer,
     PropertyImageUploadSerializer,
+    ReviewSerializer,
 )
 from .filters import PropertyFilter
 from analytics.models import ViewHistory, SearchHistory
+from reviews.models import Review
 
 
 class PropertyViewSet(viewsets.ModelViewSet):
@@ -275,6 +277,21 @@ class PublicPropertyViewSet(viewsets.ReadOnlyModelViewSet):
         if request.user.is_authenticated:
             ViewHistory.objects.create(user=request.user, property=obj)
         return response.Response(self.get_serializer(obj).data)
+
+    @decorators.action(detail=True, methods=["get"], url_path="reviews", permission_classes=[permissions.AllowAny])
+    def reviews(self, request, pk=None):
+        """
+        Публичный список отзывов по объявлению.
+        GET /api/properties/public/{id}/reviews/
+        """
+        prop = self.get_object()  # гарантирует ACTIVE
+        qs = Review.objects.filter(property=prop).order_by("-created_at")
+
+        page = self.paginate_queryset(qs)
+        if page is not None:
+            ser = ReviewSerializer(page, many=True)
+            return self.get_paginated_response(ser.data)
+        return response.Response(ReviewSerializer(qs, many=True).data)
 
 
 # from django.db.models import F, Count, Q

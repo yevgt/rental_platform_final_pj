@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from .models import Property, PropertyImage, Listing
+from reviews.models import Review
 
 
 class PropertyImageSerializer(serializers.ModelSerializer):
@@ -114,3 +115,20 @@ class PropertyImageUploadSerializer(serializers.Serializer):
     def create(self, validated_data):
         # Не используется напрямую, action сам создаёт
         return validated_data
+
+class ReviewSerializer(serializers.ModelSerializer):
+    user_id = serializers.IntegerField(source="user.id", read_only=True)
+    booking_id = serializers.SerializerMethodField()
+
+    class Meta:
+        model = Review
+        fields = ["id", "property", "booking_id", "user_id", "rating", "text", "created_at"]
+        read_only_fields = fields
+
+    def get_booking_id(self, obj):
+        return getattr(obj, "booking_id", None)
+
+    def validate_rating(self, value):
+        if not (1 <= value <= 5):
+            raise serializers.ValidationError("Рейтинг должен быть от 1 до 5.")
+        return value
