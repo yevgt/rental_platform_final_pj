@@ -147,8 +147,6 @@ for app_label in ("analytics", "analitic"):
     except LookupError:
         continue
     for model in cfg.get_models():
-        # Можно переопределить для конкретных моделей при необходимости:
-        # if model.__name__ == "SearchQuery": class SearchQueryAdmin(AnalyticsModelAdmin): ...
         try:
             admin.site.register(model, AnalyticsModelAdmin)
         except admin.sites.AlreadyRegistered:

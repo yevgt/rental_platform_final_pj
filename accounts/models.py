@@ -3,6 +3,7 @@ from django.contrib.auth.base_user import BaseUserManager
 from django.db import models
 
 
+# Custom manager for User model
 class UserManager(BaseUserManager):
     use_in_migrations = True
 
@@ -67,33 +68,3 @@ class User(AbstractUser):
     class Meta:
         db_table = 'auth_user'
 
-# from django.contrib.auth.models import AbstractUser
-# from django.contrib.auth.base_user import BaseUserManager
-# from django.db import models
-#
-#
-# class User(AbstractUser):
-#     class Roles(models.TextChoices):
-#         RENTER = "renter", "Арендатор"
-#         LANDLORD = "landlord", "Арендодатель"
-#
-#     # Используем email как логин
-#     USERNAME_FIELD = "email"
-#     REQUIRED_FIELDS = []  # можно добавить ["name"] если хотите требовать имя при createsuperuser
-#
-#     name = models.CharField(max_length=255, blank=True)
-#     email = models.EmailField(unique=True)
-#     role = models.CharField(max_length=20, choices=Roles.choices, default=Roles.RENTER)
-#
-#     def save(self, *args, **kwargs):
-#         # Упростим: используем email как username для входа через JWT
-#         if not self.username:
-#             self.username = self.email
-#         super().save(*args, **kwargs)
-#
-#     def get_username(self):
-#         # Для DRF browsable API после логина будет показано имя, если задано
-#         return self.name or self.username or self.email
-#
-#     def __str__(self):
-#         return f"{self.email} ({self.role})"

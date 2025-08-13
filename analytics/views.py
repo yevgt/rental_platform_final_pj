@@ -38,28 +38,3 @@ def analytics_root(request, format=None):
         "popular_searches": reverse("popular-searches", request=request, format=format),
     })
 
-
-# class AnalyticsViewSet(viewsets.ViewSet):
-#     permission_classes = [permissions.IsAuthenticated]
-#
-#     @decorators.action(detail=False, methods=["get"])
-#     def popular_searches(self, request):
-#         qs = (SearchHistory.objects
-#               .values("search_query")
-#               .annotate(total=Count("id"))
-#               .order_by("-total")[:20])
-#         return response.Response(qs)
-#
-#     @decorators.action(detail=False, methods=["get"])
-#     def popular_properties(self, request):
-#         # Можно использовать views_count из Property
-#         qs = Property.objects.order_by("-views_count")[:20]
-#         data = [
-#             {
-#                 "id": p.id,
-#                 "title": p.title,
-#                 "location": p.location,
-#                 "views_count": p.views_count,
-#             } for p in qs
-#         ]
-#         return response.Response(data)

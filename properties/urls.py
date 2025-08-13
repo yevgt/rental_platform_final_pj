@@ -25,31 +25,3 @@ urlpatterns = [
     # Приватные CRUD/доп. actions
     path("", include(private_router.urls)),
 ]
-
-# from rest_framework.routers import DefaultRouter
-# from django.urls import path, include
-# from .views import PropertyViewSet, PublicPropertyViewSet
-#
-# private_router = DefaultRouter()
-# private_router.register(r"", PropertyViewSet, basename="property")
-#
-# public_router = DefaultRouter()
-# public_router.register(r"", PublicPropertyViewSet, basename="public-property")
-#
-# urlpatterns = [
-#     # Публичный endpoint: /api/properties/public/
-#     path("public/", include(public_router.urls)),
-#     # Приватный (для landlord CRUD): /api/properties/
-#     path("", include(private_router.urls)),
-# ]
-
-# from rest_framework.routers import DefaultRouter
-# from django.urls import path, include
-# from .views import PropertyViewSet
-#
-# router = DefaultRouter()
-# router.register("", PropertyViewSet, basename="property")
-#
-# urlpatterns = [
-#     path("", include(router.urls)),
-# ]

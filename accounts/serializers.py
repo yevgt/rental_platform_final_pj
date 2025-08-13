@@ -74,9 +74,6 @@ class ProfileUpdateSerializer(serializers.ModelSerializer):
     """
     Обновление профиля пользователем.
     """
-    # # Email и роль тут по умолчанию НЕ меняются (можно разрешить при необходимости).
-    # email = serializers.EmailField(read_only=True)
-    # role = serializers.CharField(read_only=True)
 
     date_of_birth = serializers.DateField(required=False)
 
@@ -105,9 +102,6 @@ class ProfileUpdateSerializer(serializers.ModelSerializer):
         return _validate_date_of_birth(value)
 
     def update(self, instance, validated_data):
-        # Если нужно запретить изменение даты рождения после первой установки:
-        # if instance.date_of_birth and 'date_of_birth' in validated_data:
-        #     raise serializers.ValidationError({"date_of_birth": "Изменение даты рождения запрещено."})
         return super().update(instance, validated_data)
 
 

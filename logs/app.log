@@ -4445,3 +4445,89 @@ KeyError: "Attempt to overwrite 'message' in LogRecord"
 2025-08-13 00:28:42,344 | INFO | requests | pid=29320 tid=34580 | {"method": "GET", "path": "/api/bookings/available_properties/", "status": 200, "user": "user_id=2", "duration_ms": 351, "query": ""}
 2025-08-13 08:25:20,834 | INFO | requests | pid=29320 tid=18100 | {"method": "GET", "path": "/api/docs/", "status": 200, "user": "user_id=2", "duration_ms": 226, "query": ""}
 2025-08-13 08:25:21,629 | INFO | requests | pid=29320 tid=18100 | {"method": "GET", "path": "/api/schema/", "status": 200, "user": "user_id=2", "duration_ms": 354, "query": ""}
+2025-08-13 09:57:07,114 | INFO | requests | pid=29320 tid=32468 | {"method": "GET", "path": "/api/docs/", "status": 200, "user": "user_id=2", "duration_ms": 383, "query": ""}
+2025-08-13 09:57:08,460 | INFO | requests | pid=29320 tid=32468 | {"method": "GET", "path": "/api/schema/", "status": 200, "user": "user_id=2", "duration_ms": 500, "query": ""}
+2025-08-13 11:29:44,483 | INFO | django.utils.autoreload | pid=8 tid=139715340614592 | Watching for file changes with StatReloader
+2025-08-13 11:35:45,536 | INFO | requests | pid=29320 tid=3256 | {"method": "GET", "path": "/", "status": 200, "user": "user_id=2", "duration_ms": 123, "query": ""}
+2025-08-13 11:35:52,574 | INFO | requests | pid=29320 tid=3256 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "user_id=2", "duration_ms": 536, "query": ""}
+2025-08-13 11:36:29,650 | INFO | requests | pid=8 tid=139715209590464 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 390, "query": ""}
+2025-08-13 11:36:40,626 | INFO | requests | pid=8 tid=139715209590464 | {"method": "GET", "path": "/api/accounts/", "status": 200, "user": "anon", "duration_ms": 1066, "query": ""}
+2025-08-13 15:40:05,175 | INFO | django.utils.autoreload | pid=15144 tid=12668 | Watching for file changes with StatReloader
+2025-08-13 15:40:10,126 | INFO | requests | pid=15144 tid=36184 | {"method": "GET", "path": "/api/bookings/available_properties/", "status": 200, "user": "user_id=2", "duration_ms": 490, "query": ""}
+2025-08-13 15:40:18,226 | INFO | requests | pid=15144 tid=25180 | {"method": "GET", "path": "/", "status": 200, "user": "user_id=2", "duration_ms": 2, "query": ""}
+2025-08-13 15:40:22,137 | INFO | requests | pid=15144 tid=25180 | {"method": "GET", "path": "/api/accounts/", "status": 200, "user": "user_id=2", "duration_ms": 97, "query": ""}
+2025-08-13 15:44:03,653 | INFO | requests | pid=15144 tid=25180 | {"method": "GET", "path": "/api/bookings/", "status": 200, "user": "user_id=2", "duration_ms": 1, "query": ""}
+2025-08-13 15:44:09,995 | INFO | requests | pid=15144 tid=25180 | {"method": "GET", "path": "/api/bookings/create/", "status": 405, "user": "user_id=2", "duration_ms": 146, "query": ""}
+2025-08-13 15:44:13,380 | INFO | requests | pid=15144 tid=25180 | {"method": "GET", "path": "/api/properties/create/", "status": 403, "user": "user_id=2", "duration_ms": 131, "query": ""}
+2025-08-13 15:44:16,066 | INFO | requests | pid=15144 tid=25180 | {"method": "GET", "path": "/api/accounts/me/", "status": 200, "user": "user_id=2", "duration_ms": 209, "query": ""}
+2025-08-13 15:44:24,508 | INFO | requests | pid=15144 tid=25180 | {"method": "GET", "path": "/api/docs/", "status": 200, "user": "user_id=2", "duration_ms": 115, "query": ""}
+2025-08-13 15:44:25,268 | INFO | requests | pid=15144 tid=25180 | {"method": "GET", "path": "/api/schema/", "status": 200, "user": "user_id=2", "duration_ms": 299, "query": ""}
+2025-08-13 15:44:26,623 | INFO | requests | pid=15144 tid=25180 | {"method": "GET", "path": "/api/redoc/", "status": 200, "user": "user_id=2", "duration_ms": 104, "query": ""}
+2025-08-13 15:44:27,363 | INFO | requests | pid=15144 tid=25180 | {"method": "GET", "path": "/api/schema/", "status": 200, "user": "user_id=2", "duration_ms": 424, "query": ""}
+2025-08-13 15:51:52,018 | INFO | requests | pid=15144 tid=27784 | HTTP GET /api/token/refresh/ -> 405 [anon] 15ms
+2025-08-13 15:52:13,573 | INFO | requests | pid=15144 tid=27784 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "user_id=2", "duration_ms": 0, "query": ""}
+2025-08-13 15:54:33,871 | INFO | requests | pid=15144 tid=27784 | {"method": "GET", "path": "/api/properties/5/upload-images/", "status": 405, "user": "user_id=2", "duration_ms": 107, "query": ""}
+2025-08-13 15:54:49,374 | INFO | requests | pid=15144 tid=27784 | {"method": "OPTIONS", "path": "/api/properties/5/upload-images/", "status": 200, "user": "user_id=2", "duration_ms": 104, "query": ""}
+2025-08-13 15:55:09,420 | INFO | requests | pid=15144 tid=27784 | {"method": "GET", "path": "/api/properties/5/upload-images/", "status": 405, "user": "user_id=2", "duration_ms": 97, "query": ""}
+2025-08-13 15:55:52,948 | INFO | requests | pid=15144 tid=27784 | {"method": "GET", "path": "/api/properties/5/toggle_status/", "status": 405, "user": "user_id=2", "duration_ms": 108, "query": ""}
+2025-08-13 16:29:39,008 | INFO | requests | pid=15144 tid=11784 | {"method": "GET", "path": "/api/properties", "status": 404, "user": "user_id=2", "duration_ms": 66, "query": ""}
+2025-08-13 16:29:39,502 | INFO | requests | pid=15144 tid=14532 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "user_id=2", "duration_ms": 8, "query": ""}
+2025-08-13 16:31:00,492 | INFO | requests | pid=15144 tid=36536 | {"method": "GET", "path": "/api/properties/public/", "status": 200, "user": "user_id=2", "duration_ms": 681, "query": ""}
+2025-08-13 16:34:29,242 | INFO | requests | pid=15144 tid=35976 | {"method": "GET", "path": "/", "status": 200, "user": "user_id=2", "duration_ms": 2, "query": ""}
+2025-08-13 16:34:31,939 | INFO | requests | pid=15144 tid=35976 | {"method": "GET", "path": "/api/bookings/", "status": 200, "user": "user_id=2", "duration_ms": 2, "query": ""}
+2025-08-13 16:44:43,364 | INFO | requests | pid=15144 tid=36392 | {"method": "GET", "path": "/api/bookings/5/messages/", "status": 404, "user": "user_id=2", "duration_ms": 297, "query": ""}
+2025-08-13 16:44:51,695 | INFO | requests | pid=15144 tid=10020 | {"method": "GET", "path": "/api/bookings", "status": 404, "user": "user_id=2", "duration_ms": 6, "query": ""}
+2025-08-13 16:44:51,809 | INFO | requests | pid=15144 tid=13824 | {"method": "GET", "path": "/api/bookings/", "status": 200, "user": "user_id=2", "duration_ms": 0, "query": ""}
+2025-08-13 16:46:59,004 | INFO | requests | pid=15144 tid=11888 | {"method": "GET", "path": "/api/reviews/", "status": 200, "user": "user_id=2", "duration_ms": 154, "query": ""}
+2025-08-13 16:47:51,036 | INFO | requests | pid=15144 tid=20896 | {"method": "GET", "path": "/api/reviews/5", "status": 404, "user": "user_id=2", "duration_ms": 10, "query": ""}
+2025-08-13 16:47:51,186 | INFO | requests | pid=15144 tid=3140 | {"method": "GET", "path": "/api/reviews/5/", "status": 404, "user": "user_id=2", "duration_ms": 139, "query": ""}
+2025-08-13 16:48:30,873 | INFO | requests | pid=15144 tid=21616 | {"method": "GET", "path": "/api/reviews/", "status": 200, "user": "user_id=2", "duration_ms": 138, "query": ""}
+2025-08-13 16:51:36,071 | INFO | requests | pid=15144 tid=32796 | {"method": "GET", "path": "/api/reviews/5/", "status": 404, "user": "user_id=2", "duration_ms": 325, "query": ""}
+2025-08-13 16:52:00,442 | INFO | requests | pid=15144 tid=32796 | {"method": "PUT", "path": "/api/reviews/5/", "status": 404, "user": "user_id=2", "duration_ms": 483, "query": ""}
+2025-08-13 16:52:43,187 | INFO | requests | pid=15144 tid=32796 | {"method": "GET", "path": "/", "status": 200, "user": "user_id=2", "duration_ms": 0, "query": ""}
+2025-08-13 16:52:45,440 | INFO | requests | pid=15144 tid=32796 | {"method": "GET", "path": "/api/analytics/", "status": 200, "user": "user_id=2", "duration_ms": 108, "query": ""}
+2025-08-13 16:54:52,020 | INFO | requests | pid=15144 tid=32796 | {"method": "GET", "path": "/api/notifications/", "status": 200, "user": "user_id=2", "duration_ms": 129, "query": ""}
+2025-08-13 16:57:33,295 | INFO | requests | pid=15144 tid=13012 | {"method": "GET", "path": "/api/docs/", "status": 200, "user": "anon", "duration_ms": 18, "query": ""}
+2025-08-13 16:57:33,963 | INFO | requests | pid=15144 tid=13012 | {"method": "GET", "path": "/api/schema/", "status": 200, "user": "anon", "duration_ms": 198, "query": ""}
+2025-08-13 17:20:08,307 | INFO | requests | pid=15144 tid=29612 | {"method": "GET", "path": "/", "status": 200, "user": "user_id=2", "duration_ms": 1, "query": ""}
+2025-08-13 17:20:19,163 | INFO | requests | pid=15144 tid=29612 | HTTP GET /api/token/ -> 405 [anon] 15ms
+2025-08-13 17:59:06,956 | INFO | django.utils.autoreload | pid=7 tid=139791493286848 | Watching for file changes with StatReloader
+2025-08-13 17:59:31,952 | INFO | requests | pid=7 tid=139791430579904 | {"method": "GET", "path": "/", "status": 200, "user": "anon", "duration_ms": 24, "query": ""}
+2025-08-13 17:59:36,847 | INFO | requests | pid=7 tid=139791430579904 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 84, "query": ""}
+2025-08-13 17:59:51,257 | INFO | requests | pid=7 tid=139791430579904 | {"method": "GET", "path": "/api/accounts/", "status": 200, "user": "anon", "duration_ms": 175, "query": ""}
+2025-08-13 17:59:53,096 | INFO | requests | pid=7 tid=139791043651264 | {"method": "GET", "path": "/api-auth/login/", "status": 200, "user": "anon", "duration_ms": 10, "query": "next=/api/accounts/"}
+2025-08-13 18:00:28,237 | INFO | requests | pid=7 tid=139791043651264 | {"method": "POST", "path": "/api-auth/login/", "status": 302, "user": "user_id=2", "duration_ms": 1189, "query": ""}
+2025-08-13 18:00:28,437 | INFO | requests | pid=7 tid=139791043651264 | {"method": "GET", "path": "/api/accounts/", "status": 200, "user": "user_id=2", "duration_ms": 134, "query": ""}
+2025-08-13 18:00:45,059 | INFO | requests | pid=7 tid=139791052043968 | {"method": "GET", "path": "/api/accounts/me/", "status": 200, "user": "user_id=2", "duration_ms": 257, "query": ""}
+2025-08-13 18:00:49,467 | INFO | requests | pid=7 tid=139791052043968 | {"method": "GET", "path": "/", "status": 200, "user": "user_id=2", "duration_ms": 0, "query": ""}
+2025-08-13 18:00:52,308 | INFO | requests | pid=7 tid=139791412745920 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "user_id=2", "duration_ms": 0, "query": ""}
+2025-08-13 18:00:54,052 | INFO | requests | pid=7 tid=139791412745920 | {"method": "GET", "path": "/api/properties/create/", "status": 403, "user": "user_id=2", "duration_ms": 141, "query": ""}
+2025-08-13 18:00:59,536 | INFO | requests | pid=7 tid=139791412745920 | {"method": "POST", "path": "/api-auth/logout/", "status": 302, "user": "anon", "duration_ms": 162, "query": "next=/api/properties/create/"}
+2025-08-13 18:00:59,549 | INFO | requests | pid=7 tid=139791412745920 | {"method": "GET", "path": "/api/properties/create/", "status": 401, "user": "anon", "duration_ms": 4, "query": ""}
+2025-08-13 18:01:00,503 | INFO | requests | pid=7 tid=139791412745920 | {"method": "GET", "path": "/api-auth/login/", "status": 200, "user": "anon", "duration_ms": 2, "query": "next=/api/properties/create/"}
+2025-08-13 18:01:24,193 | INFO | requests | pid=7 tid=139791052043968 | {"method": "POST", "path": "/api-auth/login/", "status": 302, "user": "user_id=3", "duration_ms": 1006, "query": ""}
+2025-08-13 18:01:24,653 | INFO | requests | pid=7 tid=139791052043968 | {"method": "GET", "path": "/api/properties/create/", "status": 200, "user": "user_id=3", "duration_ms": 398, "query": ""}
+2025-08-13 18:24:09,829 | INFO | django.utils.autoreload | pid=7 tid=140119794535360 | Watching for file changes with StatReloader
+2025-08-13 18:26:20,892 | INFO | requests | pid=7 tid=140119730288320 | {"method": "GET", "path": "/", "status": 200, "user": "user_id=3", "duration_ms": 46, "query": ""}
+2025-08-13 19:19:46,005 | INFO | django.utils.autoreload | pid=7 tid=140657284746176 | Watching for file changes with StatReloader
+2025-08-13 19:20:36,658 | INFO | requests | pid=7 tid=140657152751296 | {"method": "GET", "path": "/", "status": 200, "user": "anon", "duration_ms": 36, "query": ""}
+2025-08-13 19:20:37,005 | INFO | requests | pid=7 tid=140657152751296 | {"method": "GET", "path": "/favicon.ico", "status": 404, "user": "anon", "duration_ms": 43, "query": ""}
+2025-08-13 20:57:34,730 | INFO | django.utils.autoreload | pid=7 tid=140657284746176 | /app/accounts/admin.py changed, reloading.
+2025-08-13 20:57:38,184 | INFO | django.utils.autoreload | pid=16 tid=140344913939392 | Watching for file changes with StatReloader
+2025-08-13 20:57:53,323 | INFO | django.utils.autoreload | pid=16 tid=140344913939392 | /app/accounts/admin.py changed, reloading.
+2025-08-13 20:57:56,541 | INFO | django.utils.autoreload | pid=18 tid=139758707071936 | Watching for file changes with StatReloader
+2025-08-13 20:58:16,786 | INFO | django.utils.autoreload | pid=18 tid=139758707071936 | /app/accounts/admin.py changed, reloading.
+2025-08-13 20:58:20,029 | INFO | django.utils.autoreload | pid=20 tid=140124123524032 | Watching for file changes with StatReloader
+2025-08-13 20:59:08,601 | INFO | django.utils.autoreload | pid=20 tid=140124123524032 | /app/accounts/models.py changed, reloading.
+2025-08-13 20:59:11,014 | INFO | django.utils.autoreload | pid=22 tid=140110187244480 | Watching for file changes with StatReloader
+2025-08-13 21:00:44,820 | INFO | django.utils.autoreload | pid=22 tid=140110187244480 | /app/accounts/serializers.py changed, reloading.
+2025-08-13 21:01:05,505 | INFO | django.utils.autoreload | pid=24092 tid=20696 | Watching for file changes with StatReloader
+2025-08-13 21:08:28,283 | INFO | django.utils.autoreload | pid=24092 tid=20696 | C:\Users\ICH\PycharmProjects\rental_platform\rental_platform\middleware.py changed, reloading.
+2025-08-13 21:08:29,397 | INFO | django.utils.autoreload | pid=5340 tid=26492 | Watching for file changes with StatReloader
+2025-08-13 21:08:50,338 | INFO | requests | pid=5340 tid=1552 | {"method": "GET", "path": "/", "status": 200, "user": "anon", "duration_ms": 3, "query": ""}
+2025-08-13 21:08:52,990 | INFO | requests | pid=5340 tid=1552 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": ""}
+2025-08-13 21:08:54,805 | INFO | requests | pid=5340 tid=1552 | {"method": "GET", "path": "/api/properties/create/", "status": 401, "user": "anon", "duration_ms": 155, "query": ""}
+2025-08-13 21:09:01,477 | INFO | requests | pid=5340 tid=9616 | {"method": "GET", "path": "/api/properties/5/", "status": 401, "user": "anon", "duration_ms": 137, "query": ""}
+2025-08-13 21:09:06,018 | INFO | requests | pid=5340 tid=9616 | {"method": "GET", "path": "/api/properties/create/", "status": 401, "user": "anon", "duration_ms": 107, "query": ""}
+2025-08-13 21:09:10,639 | INFO | requests | pid=5340 tid=9616 | {"method": "GET", "path": "/api/docs/", "status": 200, "user": "anon", "duration_ms": 98, "query": ""}
+2025-08-13 21:09:11,256 | INFO | requests | pid=5340 tid=9616 | {"method": "GET", "path": "/api/schema/", "status": 200, "user": "anon", "duration_ms": 299, "query": ""}
