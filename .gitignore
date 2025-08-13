@@ -114,3 +114,4 @@ celery*.log
 *.json
 
 submissions/
+/evgt_key.pem

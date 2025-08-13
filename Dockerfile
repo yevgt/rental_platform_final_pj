@@ -1,5 +1,5 @@
 # Используем официальный Python-образ как базовый
-FROM python:3.13
+FROM python:3.13-slim
 
 SHELL ["/bin/bash", "-c"]
 
@@ -12,8 +12,12 @@ WORKDIR /app
 
 RUN pip install --upgrade pip
 
-RUN apt update && apt install -y --no-install-recommends \
-    libpq-dev \
+RUN apt-get update && apt-get install -y --no-install-recommends \
+#    libpq-dev \
+#    build-essential \
+#    && rm -rf /var/lib/apt/lists/* \
+    pkg-config \
+    default-libmysqlclient-dev \
     build-essential \
     && rm -rf /var/lib/apt/lists/*
 
