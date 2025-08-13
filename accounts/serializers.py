@@ -38,7 +38,7 @@ class RegisterSerializer(serializers.ModelSerializer):
         fields = [
             "id", "first_name", "last_name",
             "email", "password", "password_confirm",
-            "role", "date_of_birth", "phone_number",
+            "role", "date_of_birth", "phone_number", "profile_picture",
         ]
         read_only_fields = ["id"]
 

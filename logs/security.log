@@ -14,3 +14,4 @@
 2025-08-11 17:58:30,216 | WARNING | django.security.csrf | pid=3032 tid=35192 | Forbidden (CSRF cookie not set.): /api/properties/
 2025-08-11 17:58:30,222 | WARNING | django.security.csrf | pid=3032 tid=35192 | Forbidden (CSRF cookie not set.): /api/properties/
 2025-08-11 17:58:30,227 | WARNING | django.security.csrf | pid=3032 tid=35192 | Forbidden (CSRF cookie not set.): /api/properties/
+2025-08-12 23:02:09,217 | WARNING | django.security.csrf | pid=1652 tid=34920 | Forbidden (CSRF token from the 'X-Csrftoken' HTTP header incorrect.): /api/properties/

@@ -1,4 +1,5 @@
 import os
+from datetime import timedelta
 from pathlib import Path
 import environ
 
@@ -175,23 +176,29 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": (
-        "rest_framework_simplejwt.authentication.JWTAuthentication",
-        "rest_framework.authentication.SessionAuthentication",
+        "rest_framework_simplejwt.authentication.JWTAuthentication",  # для работы с access/refresh токенами
+        "rest_framework.authentication.SessionAuthentication",        # для работы с сессиями (обычно браузер)
     ),
     "DEFAULT_PERMISSION_CLASSES": (
-        "rest_framework.permissions.AllowAny",
+        "rest_framework.permissions.AllowAny",  # любой пользователь (даже неавторизованный) может делать запросы к API по умолчанию
+    ),
+    'DEFAULT_RENDERER_CLASSES': (
+        'rest_framework.renderers.JSONRenderer',
+        'rest_framework.renderers.BrowsableAPIRenderer',
     ),
     "DEFAULT_FILTER_BACKENDS": (
         "django_filters.rest_framework.DjangoFilterBackend",
         "rest_framework.filters.SearchFilter",
         "rest_framework.filters.OrderingFilter",
     ),
-    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",  # для автогенерации схемы OpenAPI (Swagger).
 }
 
 SIMPLE_JWT = {
     # Для совместимости с blacklist всех активных refresh-токенов при удалении аккаунта
     "BLACKLIST_AFTER_ROTATION": True,
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60),  # Например, 60 минут вместо стандартных 5
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=7),     # Например, 7 дней
 }
 
 SPECTACULAR_SETTINGS = {

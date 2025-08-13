@@ -3264,3 +3264,638 @@ AttributeError: type object 'Notification' has no attribute 'Type'. Did you mean
 2025-08-12 18:15:08,417 | INFO | requests | pid=18196 tid=24344 | {"method": "GET", "path": "/api/reviews/", "status": 200, "user": "user_id=1", "duration_ms": 6, "query": "property=1&rating=5"}
 2025-08-12 18:15:08,424 | INFO | requests | pid=18196 tid=24344 | {"method": "GET", "path": "/api/reviews/", "status": 200, "user": "user_id=1", "duration_ms": 5, "query": "property=1&rating_min=4&rating_max=5"}
 2025-08-12 18:15:08,431 | INFO | requests | pid=18196 tid=24344 | {"method": "GET", "path": "/api/reviews/", "status": 200, "user": "user_id=1", "duration_ms": 5, "query": "property=1&ordering=rating"}
+2025-08-12 18:26:24,753 | INFO | requests | pid=32216 tid=12116 | HTTP POST /api/accounts/register/ -> 201 [anon] 1344ms
+2025-08-12 18:26:26,099 | INFO | requests | pid=32216 tid=12116 | HTTP POST /api/token/ -> 200 [anon] 1344ms
+2025-08-12 18:26:27,511 | INFO | requests | pid=32216 tid=12116 | {"method": "POST", "path": "/api/properties/create/", "status": 201, "user": "user_id=1", "duration_ms": 18, "query": ""}
+2025-08-12 18:26:27,524 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/public/", "status": 200, "user": "anon", "duration_ms": 8, "query": "search=fa21050a&ordering=-price"}
+2025-08-12 18:26:28,872 | INFO | requests | pid=32216 tid=12116 | HTTP POST /api/accounts/register/ -> 201 [anon] 1327ms
+2025-08-12 18:26:30,210 | INFO | requests | pid=32216 tid=12116 | HTTP POST /api/token/ -> 200 [anon] 1337ms
+2025-08-12 18:26:32,918 | INFO | requests | pid=32216 tid=12116 | HTTP POST /api/token/ -> 200 [anon] 1353ms
+2025-08-12 18:26:32,935 | INFO | requests | pid=32216 tid=12116 | {"method": "PATCH", "path": "/api/accounts/profile/", "status": 404, "user": "anon", "duration_ms": 15, "query": ""}
+2025-08-12 18:26:32,936 | WARNING | django.request | pid=32216 tid=12116 | Not Found: /api/accounts/profile/
+2025-08-12 18:26:36,229 | INFO | requests | pid=32216 tid=12116 | HTTP POST /api/token/ -> 200 [anon] 1884ms
+2025-08-12 18:26:37,629 | INFO | requests | pid=32216 tid=12116 | {"method": "POST", "path": "/api/bookings/create/", "status": 403, "user": "user_id=1", "duration_ms": 1, "query": ""}
+2025-08-12 18:26:37,630 | WARNING | django.request | pid=32216 tid=12116 | Forbidden: /api/bookings/create/
+2025-08-12 18:26:41,766 | INFO | requests | pid=32216 tid=12116 | HTTP POST /api/token/ -> 200 [anon] 1363ms
+2025-08-12 18:26:43,106 | INFO | requests | pid=32216 tid=12116 | {"method": "POST", "path": "/api/properties/create/", "status": 201, "user": "user_id=1", "duration_ms": 7, "query": ""}
+2025-08-12 18:26:43,116 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/public/", "status": 200, "user": "user_id=1", "duration_ms": 9, "query": "search=16396b6e"}
+2025-08-12 18:26:44,487 | INFO | requests | pid=32216 tid=12116 | HTTP POST /api/token/ -> 200 [anon] 1369ms
+2025-08-12 18:26:45,944 | INFO | requests | pid=32216 tid=12116 | {"method": "POST", "path": "/api/bookings/create/", "status": 201, "user": "user_id=2", "duration_ms": 6, "query": ""}
+2025-08-12 18:26:47,351 | INFO | requests | pid=32216 tid=12116 | {"method": "POST", "path": "/api/bookings/1/confirm/", "status": 200, "user": "user_id=1", "duration_ms": 6, "query": ""}
+2025-08-12 18:26:47,356 | INFO | requests | pid=32216 tid=12116 | {"method": "POST", "path": "/api/reviews/", "status": 400, "user": "user_id=2", "duration_ms": 3, "query": ""}
+2025-08-12 18:26:47,357 | WARNING | django.request | pid=32216 tid=12116 | Bad Request: /api/reviews/
+2025-08-12 18:26:47,366 | INFO | requests | pid=32216 tid=12116 | {"method": "POST", "path": "/api/reviews/", "status": 201, "user": "user_id=2", "duration_ms": 4, "query": ""}
+2025-08-12 18:26:47,370 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/reviews/", "status": 200, "user": "user_id=2", "duration_ms": 3, "query": "property=1"}
+2025-08-12 18:26:51,536 | INFO | requests | pid=32216 tid=12116 | HTTP POST /api/token/ -> 200 [anon] 1370ms
+2025-08-12 18:26:52,897 | INFO | requests | pid=32216 tid=12116 | {"method": "POST", "path": "/api/properties/create/", "status": 201, "user": "user_id=1", "duration_ms": 6, "query": ""}
+2025-08-12 18:26:54,262 | INFO | requests | pid=32216 tid=12116 | HTTP POST /api/token/ -> 200 [anon] 1362ms
+2025-08-12 18:26:55,618 | INFO | requests | pid=32216 tid=12116 | {"method": "POST", "path": "/api/bookings/create/", "status": 201, "user": "user_id=2", "duration_ms": 5, "query": ""}
+2025-08-12 18:26:55,625 | INFO | requests | pid=32216 tid=12116 | {"method": "POST", "path": "/api/bookings/1/confirm/", "status": 200, "user": "user_id=1", "duration_ms": 5, "query": ""}
+2025-08-12 18:26:59,786 | INFO | requests | pid=32216 tid=12116 | HTTP POST /api/token/ -> 200 [anon] 1445ms
+2025-08-12 18:27:01,197 | INFO | requests | pid=32216 tid=12116 | {"method": "POST", "path": "/api/properties/create/", "status": 201, "user": "user_id=1", "duration_ms": 6, "query": ""}
+2025-08-12 18:27:02,688 | INFO | requests | pid=32216 tid=12116 | HTTP POST /api/token/ -> 200 [anon] 1488ms
+2025-08-12 18:27:04,058 | INFO | requests | pid=32216 tid=12116 | {"method": "POST", "path": "/api/bookings/create/", "status": 201, "user": "user_id=2", "duration_ms": 6, "query": ""}
+2025-08-12 18:27:04,065 | INFO | requests | pid=32216 tid=12116 | {"method": "POST", "path": "/api/bookings/1/reject/", "status": 200, "user": "user_id=1", "duration_ms": 4, "query": ""}
+2025-08-12 18:27:08,224 | INFO | requests | pid=32216 tid=12116 | HTTP POST /api/token/ -> 200 [anon] 1354ms
+2025-08-12 18:27:09,578 | INFO | requests | pid=32216 tid=12116 | {"method": "POST", "path": "/api/properties/create/", "status": 201, "user": "user_id=1", "duration_ms": 7, "query": ""}
+2025-08-12 18:27:10,973 | INFO | requests | pid=32216 tid=12116 | HTTP POST /api/token/ -> 200 [anon] 1393ms
+2025-08-12 18:27:12,359 | INFO | requests | pid=32216 tid=12116 | {"method": "POST", "path": "/api/bookings/create/", "status": 201, "user": "user_id=2", "duration_ms": 6, "query": ""}
+2025-08-12 18:27:12,363 | INFO | requests | pid=32216 tid=12116 | {"method": "POST", "path": "/api/bookings/1/confirm/", "status": 403, "user": "user_id=2", "duration_ms": 3, "query": ""}
+2025-08-12 18:27:12,364 | WARNING | django.request | pid=32216 tid=12116 | Forbidden: /api/bookings/1/confirm/
+2025-08-12 18:27:16,509 | INFO | requests | pid=32216 tid=12116 | HTTP POST /api/token/ -> 200 [anon] 1378ms
+2025-08-12 18:27:17,945 | INFO | requests | pid=32216 tid=12116 | {"method": "POST", "path": "/api/bookings/create/", "status": 201, "user": "user_id=1", "duration_ms": 5, "query": ""}
+2025-08-12 18:27:17,950 | INFO | requests | pid=32216 tid=12116 | {"method": "POST", "path": "/api/bookings/create/", "status": 400, "user": "user_id=1", "duration_ms": 3, "query": ""}
+2025-08-12 18:27:17,950 | WARNING | django.request | pid=32216 tid=12116 | Bad Request: /api/bookings/create/
+2025-08-12 18:27:22,076 | INFO | requests | pid=32216 tid=12116 | HTTP POST /api/token/ -> 200 [anon] 1354ms
+2025-08-12 18:27:23,495 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/bookings/", "status": 200, "user": "user_id=1", "duration_ms": 0, "query": ""}
+2025-08-12 18:27:24,966 | INFO | requests | pid=32216 tid=12116 | HTTP POST /api/token/ -> 200 [anon] 1469ms
+2025-08-12 18:27:26,410 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/bookings/", "status": 200, "user": "user_id=2", "duration_ms": 0, "query": ""}
+2025-08-12 18:27:30,481 | INFO | requests | pid=32216 tid=12116 | HTTP POST /api/token/ -> 200 [anon] 1336ms
+2025-08-12 18:27:31,844 | INFO | requests | pid=32216 tid=12116 | {"method": "POST", "path": "/api/bookings/1/confirm/", "status": 200, "user": "user_id=2", "duration_ms": 5, "query": ""}
+2025-08-12 18:27:33,194 | INFO | requests | pid=32216 tid=12116 | HTTP POST /api/token/ -> 200 [anon] 1348ms
+2025-08-12 18:27:34,597 | INFO | requests | pid=32216 tid=12116 | {"method": "POST", "path": "/api/bookings/1/confirm/", "status": 403, "user": "user_id=1", "duration_ms": 2, "query": ""}
+2025-08-12 18:27:34,597 | WARNING | django.request | pid=32216 tid=12116 | Forbidden: /api/bookings/1/confirm/
+2025-08-12 18:27:34,608 | INFO | requests | pid=32216 tid=12116 | {"method": "POST", "path": "/api/bookings/2/reject/", "status": 200, "user": "user_id=2", "duration_ms": 8, "query": ""}
+2025-08-12 18:27:34,612 | INFO | requests | pid=32216 tid=12116 | {"method": "POST", "path": "/api/bookings/2/reject/", "status": 403, "user": "user_id=1", "duration_ms": 2, "query": ""}
+2025-08-12 18:27:34,613 | WARNING | django.request | pid=32216 tid=12116 | Forbidden: /api/bookings/2/reject/
+2025-08-12 18:27:38,943 | INFO | requests | pid=32216 tid=12116 | HTTP POST /api/token/ -> 200 [anon] 1469ms
+2025-08-12 18:27:40,373 | INFO | requests | pid=32216 tid=12116 | {"method": "POST", "path": "/api/bookings/1/cancel/", "status": 200, "user": "user_id=1", "duration_ms": 4, "query": ""}
+2025-08-12 18:27:44,660 | INFO | requests | pid=32216 tid=12116 | HTTP POST /api/token/ -> 200 [anon] 1464ms
+2025-08-12 18:27:46,143 | INFO | requests | pid=32216 tid=12116 | {"method": "POST", "path": "/api/bookings/1/cancel/", "status": 400, "user": "user_id=1", "duration_ms": 3, "query": ""}
+2025-08-12 18:27:46,143 | WARNING | django.request | pid=32216 tid=12116 | Bad Request: /api/bookings/1/cancel/
+2025-08-12 18:27:50,421 | INFO | requests | pid=32216 tid=12116 | HTTP POST /api/token/ -> 200 [anon] 1400ms
+2025-08-12 18:27:51,813 | INFO | requests | pid=32216 tid=12116 | {"method": "POST", "path": "/api/bookings/1/reject/", "status": 200, "user": "user_id=2", "duration_ms": 4, "query": ""}
+2025-08-12 18:27:56,352 | INFO | requests | pid=32216 tid=12116 | HTTP POST /api/token/ -> 200 [anon] 1402ms
+2025-08-12 18:27:57,716 | INFO | requests | pid=32216 tid=12116 | {"method": "POST", "path": "/api/bookings/create/", "status": 201, "user": "user_id=1", "duration_ms": 7, "query": ""}
+2025-08-12 18:27:57,722 | INFO | requests | pid=32216 tid=12116 | {"method": "POST", "path": "/api/bookings/create/", "status": 400, "user": "user_id=1", "duration_ms": 3, "query": ""}
+2025-08-12 18:27:57,722 | WARNING | django.request | pid=32216 tid=12116 | Bad Request: /api/bookings/create/
+2025-08-12 18:28:01,981 | INFO | requests | pid=32216 tid=12116 | HTTP POST /api/token/ -> 200 [anon] 1423ms
+2025-08-12 18:28:03,397 | INFO | requests | pid=32216 tid=12116 | {"method": "POST", "path": "/api/bookings/create/", "status": 201, "user": "user_id=1", "duration_ms": 6, "query": ""}
+2025-08-12 18:28:06,233 | INFO | requests | pid=32216 tid=12116 | HTTP POST /api/token/ -> 200 [anon] 1385ms
+2025-08-12 18:28:07,601 | INFO | requests | pid=32216 tid=12116 | {"method": "POST", "path": "/api/bookings/create/", "status": 403, "user": "user_id=1", "duration_ms": 1, "query": ""}
+2025-08-12 18:28:07,602 | WARNING | django.request | pid=32216 tid=12116 | Forbidden: /api/bookings/create/
+2025-08-12 18:28:11,789 | INFO | requests | pid=32216 tid=12116 | HTTP POST /api/token/ -> 200 [anon] 1375ms
+2025-08-12 18:28:13,169 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/bookings/", "status": 200, "user": "user_id=1", "duration_ms": 0, "query": ""}
+2025-08-12 18:28:17,424 | INFO | requests | pid=32216 tid=12116 | HTTP POST /api/token/ -> 200 [anon] 1379ms
+2025-08-12 18:28:18,784 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/bookings/", "status": 200, "user": "user_id=2", "duration_ms": 0, "query": ""}
+2025-08-12 18:28:23,102 | INFO | requests | pid=32216 tid=12116 | HTTP POST /api/token/ -> 200 [anon] 1419ms
+2025-08-12 18:28:24,467 | INFO | requests | pid=32216 tid=12116 | {"method": "POST", "path": "/api/bookings/1/cancel/", "status": 200, "user": "user_id=1", "duration_ms": 3, "query": ""}
+2025-08-12 18:28:29,358 | INFO | requests | pid=32216 tid=12116 | HTTP POST /api/token/ -> 200 [anon] 1482ms
+2025-08-12 18:28:30,890 | INFO | requests | pid=32216 tid=12116 | {"method": "POST", "path": "/api/bookings/1/confirm/", "status": 200, "user": "user_id=1", "duration_ms": 4, "query": ""}
+2025-08-12 18:28:36,552 | INFO | requests | pid=32216 tid=12116 | HTTP POST /api/token/ -> 200 [anon] 1397ms
+2025-08-12 18:28:38,007 | INFO | requests | pid=32216 tid=12116 | {"method": "POST", "path": "/api/bookings/1/confirm/", "status": 403, "user": "user_id=2", "duration_ms": 6, "query": ""}
+2025-08-12 18:28:38,008 | WARNING | django.request | pid=32216 tid=12116 | Forbidden: /api/bookings/1/confirm/
+2025-08-12 18:28:38,048 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": ""}
+2025-08-12 18:28:42,400 | INFO | requests | pid=32216 tid=12116 | HTTP POST /api/token/ -> 200 [anon] 1505ms
+2025-08-12 18:28:43,828 | INFO | requests | pid=32216 tid=12116 | {"method": "POST", "path": "/api/bookings/1/messages/", "status": 201, "user": "user_id=1", "duration_ms": 4, "query": ""}
+2025-08-12 18:28:45,199 | INFO | requests | pid=32216 tid=12116 | HTTP POST /api/token/ -> 200 [anon] 1369ms
+2025-08-12 18:28:46,592 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/bookings/1/messages/", "status": 200, "user": "user_id=2", "duration_ms": 5, "query": ""}
+2025-08-12 18:28:50,899 | INFO | requests | pid=32216 tid=12116 | HTTP POST /api/token/ -> 200 [anon] 1370ms
+2025-08-12 18:28:52,294 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/notifications/", "status": 200, "user": "user_id=1", "duration_ms": 3, "query": "is_read=false"}
+2025-08-12 18:28:52,297 | INFO | requests | pid=32216 tid=12116 | {"method": "POST", "path": "/api/notifications/1/read/", "status": 200, "user": "user_id=1", "duration_ms": 3, "query": ""}
+2025-08-12 18:28:52,303 | INFO | requests | pid=32216 tid=12116 | {"method": "POST", "path": "/api/bookings/1/confirm/", "status": 200, "user": "user_id=1", "duration_ms": 5, "query": ""}
+2025-08-12 18:28:53,668 | INFO | requests | pid=32216 tid=12116 | HTTP POST /api/token/ -> 200 [anon] 1363ms
+2025-08-12 18:28:55,050 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/notifications/", "status": 200, "user": "user_id=2", "duration_ms": 2, "query": "is_read=false"}
+2025-08-12 18:28:55,053 | INFO | requests | pid=32216 tid=12116 | {"method": "POST", "path": "/api/notifications/read_all/", "status": 200, "user": "user_id=2", "duration_ms": 1, "query": ""}
+2025-08-12 18:28:55,056 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/notifications/", "status": 200, "user": "user_id=2", "duration_ms": 2, "query": "is_read=false"}
+2025-08-12 18:28:58,013 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/public/1/", "status": 200, "user": "anon", "duration_ms": 9, "query": ""}
+2025-08-12 18:28:59,424 | INFO | requests | pid=32216 tid=12116 | HTTP POST /api/token/ -> 200 [anon] 1408ms
+2025-08-12 18:29:00,877 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/public/1/", "status": 200, "user": "user_id=2", "duration_ms": 9, "query": ""}
+2025-08-12 18:29:03,792 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/analytics/top_properties", "status": 404, "user": "anon", "duration_ms": 0, "query": "by=views"}
+2025-08-12 18:29:03,793 | WARNING | django.request | pid=32216 tid=12116 | Not Found: /api/analytics/top_properties
+2025-08-12 18:29:03,795 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/analytics/top_properties", "status": 404, "user": "anon", "duration_ms": 0, "query": "by=reviews"}
+2025-08-12 18:29:03,796 | WARNING | django.request | pid=32216 tid=12116 | Not Found: /api/analytics/top_properties
+2025-08-12 18:29:06,642 | INFO | requests | pid=32216 tid=12116 | HTTP POST /api/token/ -> 200 [anon] 1414ms
+2025-08-12 18:29:08,131 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/public/", "status": 200, "user": "user_id=1", "duration_ms": 4, "query": "search=Berlin"}
+2025-08-12 18:29:08,137 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/public/", "status": 200, "user": "user_id=1", "duration_ms": 5, "query": "search=Hamburg"}
+2025-08-12 18:29:08,143 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/public/", "status": 200, "user": "user_id=1", "duration_ms": 4, "query": "search=Berlin"}
+2025-08-12 18:29:08,148 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/public/", "status": 200, "user": "user_id=1", "duration_ms": 4, "query": "search=Munich"}
+2025-08-12 18:29:08,153 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/public/", "status": 200, "user": "user_id=1", "duration_ms": 4, "query": "search=Berlin"}
+2025-08-12 18:29:08,158 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/public/", "status": 200, "user": "user_id=1", "duration_ms": 4, "query": "search=Munich"}
+2025-08-12 18:29:08,161 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/analytics/popular_searches", "status": 404, "user": "user_id=1", "duration_ms": 0, "query": "limit=3"}
+2025-08-12 18:29:08,161 | WARNING | django.request | pid=32216 tid=12116 | Not Found: /api/analytics/popular_searches
+2025-08-12 18:29:09,609 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/public/", "status": 200, "user": "anon", "duration_ms": 7, "query": ""}
+2025-08-12 18:29:13,901 | INFO | requests | pid=32216 tid=12116 | HTTP POST /api/token/ -> 200 [anon] 1406ms
+2025-08-12 18:29:13,905 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/my/", "status": 404, "user": "user_id=1", "duration_ms": 2, "query": ""}
+2025-08-12 18:29:13,905 | WARNING | django.request | pid=32216 tid=12116 | Not Found: /api/properties/my/
+2025-08-12 18:29:13,906 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/landlord/properties/", "status": 404, "user": "anon", "duration_ms": 0, "query": ""}
+2025-08-12 18:29:13,906 | WARNING | django.request | pid=32216 tid=12116 | Not Found: /api/landlord/properties/
+2025-08-12 18:29:13,907 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "owner=me"}
+2025-08-12 18:29:13,908 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "owner_id=1"}
+2025-08-12 18:29:13,910 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "owner=1"}
+2025-08-12 18:29:13,911 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": ""}
+2025-08-12 18:29:13,922 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/public/", "status": 200, "user": "user_id=1", "duration_ms": 9, "query": ""}
+2025-08-12 18:29:16,667 | INFO | requests | pid=32216 tid=12116 | HTTP POST /api/token/ -> 200 [anon] 1362ms
+2025-08-12 18:29:16,676 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/1/", "status": 200, "user": "user_id=1", "duration_ms": 7, "query": ""}
+2025-08-12 18:29:20,740 | INFO | requests | pid=32216 tid=12116 | HTTP POST /api/token/ -> 200 [anon] 1317ms
+2025-08-12 18:29:20,744 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/1/", "status": 404, "user": "user_id=1", "duration_ms": 3, "query": ""}
+2025-08-12 18:29:20,745 | WARNING | django.request | pid=32216 tid=12116 | Not Found: /api/properties/1/
+2025-08-12 18:29:24,813 | INFO | requests | pid=32216 tid=12116 | HTTP POST /api/token/ -> 200 [anon] 1399ms
+2025-08-12 18:29:24,815 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/1/", "status": 403, "user": "user_id=1", "duration_ms": 1, "query": ""}
+2025-08-12 18:29:24,816 | WARNING | django.request | pid=32216 tid=12116 | Forbidden: /api/properties/1/
+2025-08-12 18:29:24,819 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/public/1/", "status": 404, "user": "anon", "duration_ms": 2, "query": ""}
+2025-08-12 18:29:24,819 | WARNING | django.request | pid=32216 tid=12116 | Not Found: /api/properties/public/1/
+2025-08-12 18:29:26,240 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "search=Berlin"}
+2025-08-12 18:29:26,241 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "q=Berlin"}
+2025-08-12 18:29:26,242 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "query=Berlin"}
+2025-08-12 18:29:26,243 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "term=Berlin"}
+2025-08-12 18:29:26,251 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/public/", "status": 200, "user": "anon", "duration_ms": 6, "query": "search=Berlin"}
+2025-08-12 18:29:27,517 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&price_max=2000&rooms_min=2&rooms_max=3"}
+2025-08-12 18:29:27,519 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&price_max=2000&rooms_min=2&max_rooms=3"}
+2025-08-12 18:29:27,520 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&price_max=2000&rooms_min=2&rooms_to=3"}
+2025-08-12 18:29:27,523 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 1, "query": "price_min=1000&price_max=2000&rooms_min=2&maxRooms=3"}
+2025-08-12 18:29:27,524 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&price_max=2000&min_rooms=2&rooms_max=3"}
+2025-08-12 18:29:27,525 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&price_max=2000&min_rooms=2&max_rooms=3"}
+2025-08-12 18:29:27,526 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&price_max=2000&min_rooms=2&rooms_to=3"}
+2025-08-12 18:29:27,527 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&price_max=2000&min_rooms=2&maxRooms=3"}
+2025-08-12 18:29:27,528 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&price_max=2000&rooms_from=2&rooms_max=3"}
+2025-08-12 18:29:27,529 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&price_max=2000&rooms_from=2&max_rooms=3"}
+2025-08-12 18:29:27,530 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&price_max=2000&rooms_from=2&rooms_to=3"}
+2025-08-12 18:29:27,530 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&price_max=2000&rooms_from=2&maxRooms=3"}
+2025-08-12 18:29:27,531 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&price_max=2000&minRooms=2&rooms_max=3"}
+2025-08-12 18:29:27,532 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&price_max=2000&minRooms=2&max_rooms=3"}
+2025-08-12 18:29:27,533 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&price_max=2000&minRooms=2&rooms_to=3"}
+2025-08-12 18:29:27,534 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&price_max=2000&minRooms=2&maxRooms=3"}
+2025-08-12 18:29:27,534 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&max_price=2000&rooms_min=2&rooms_max=3"}
+2025-08-12 18:29:27,535 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&max_price=2000&rooms_min=2&max_rooms=3"}
+2025-08-12 18:29:27,537 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&max_price=2000&rooms_min=2&rooms_to=3"}
+2025-08-12 18:29:27,538 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&max_price=2000&rooms_min=2&maxRooms=3"}
+2025-08-12 18:29:27,538 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&max_price=2000&min_rooms=2&rooms_max=3"}
+2025-08-12 18:29:27,539 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&max_price=2000&min_rooms=2&max_rooms=3"}
+2025-08-12 18:29:27,540 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&max_price=2000&min_rooms=2&rooms_to=3"}
+2025-08-12 18:29:27,542 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&max_price=2000&min_rooms=2&maxRooms=3"}
+2025-08-12 18:29:27,543 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&max_price=2000&rooms_from=2&rooms_max=3"}
+2025-08-12 18:29:27,543 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&max_price=2000&rooms_from=2&max_rooms=3"}
+2025-08-12 18:29:27,544 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&max_price=2000&rooms_from=2&rooms_to=3"}
+2025-08-12 18:29:27,545 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&max_price=2000&rooms_from=2&maxRooms=3"}
+2025-08-12 18:29:27,546 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&max_price=2000&minRooms=2&rooms_max=3"}
+2025-08-12 18:29:27,547 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&max_price=2000&minRooms=2&max_rooms=3"}
+2025-08-12 18:29:27,548 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&max_price=2000&minRooms=2&rooms_to=3"}
+2025-08-12 18:29:27,549 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&max_price=2000&minRooms=2&maxRooms=3"}
+2025-08-12 18:29:27,550 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&price_to=2000&rooms_min=2&rooms_max=3"}
+2025-08-12 18:29:27,551 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&price_to=2000&rooms_min=2&max_rooms=3"}
+2025-08-12 18:29:27,552 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&price_to=2000&rooms_min=2&rooms_to=3"}
+2025-08-12 18:29:27,553 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&price_to=2000&rooms_min=2&maxRooms=3"}
+2025-08-12 18:29:27,554 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&price_to=2000&min_rooms=2&rooms_max=3"}
+2025-08-12 18:29:27,555 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&price_to=2000&min_rooms=2&max_rooms=3"}
+2025-08-12 18:29:27,556 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&price_to=2000&min_rooms=2&rooms_to=3"}
+2025-08-12 18:29:27,557 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&price_to=2000&min_rooms=2&maxRooms=3"}
+2025-08-12 18:29:27,558 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&price_to=2000&rooms_from=2&rooms_max=3"}
+2025-08-12 18:29:27,559 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&price_to=2000&rooms_from=2&max_rooms=3"}
+2025-08-12 18:29:27,560 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&price_to=2000&rooms_from=2&rooms_to=3"}
+2025-08-12 18:29:27,561 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&price_to=2000&rooms_from=2&maxRooms=3"}
+2025-08-12 18:29:27,562 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&price_to=2000&minRooms=2&rooms_max=3"}
+2025-08-12 18:29:27,562 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&price_to=2000&minRooms=2&max_rooms=3"}
+2025-08-12 18:29:27,563 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&price_to=2000&minRooms=2&rooms_to=3"}
+2025-08-12 18:29:27,564 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&price_to=2000&minRooms=2&maxRooms=3"}
+2025-08-12 18:29:27,565 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&maxPrice=2000&rooms_min=2&rooms_max=3"}
+2025-08-12 18:29:27,566 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&maxPrice=2000&rooms_min=2&max_rooms=3"}
+2025-08-12 18:29:27,566 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&maxPrice=2000&rooms_min=2&rooms_to=3"}
+2025-08-12 18:29:27,567 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&maxPrice=2000&rooms_min=2&maxRooms=3"}
+2025-08-12 18:29:27,568 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&maxPrice=2000&min_rooms=2&rooms_max=3"}
+2025-08-12 18:29:27,569 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&maxPrice=2000&min_rooms=2&max_rooms=3"}
+2025-08-12 18:29:27,570 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&maxPrice=2000&min_rooms=2&rooms_to=3"}
+2025-08-12 18:29:27,572 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&maxPrice=2000&min_rooms=2&maxRooms=3"}
+2025-08-12 18:29:27,573 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&maxPrice=2000&rooms_from=2&rooms_max=3"}
+2025-08-12 18:29:27,574 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&maxPrice=2000&rooms_from=2&max_rooms=3"}
+2025-08-12 18:29:27,575 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&maxPrice=2000&rooms_from=2&rooms_to=3"}
+2025-08-12 18:29:27,575 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&maxPrice=2000&rooms_from=2&maxRooms=3"}
+2025-08-12 18:29:27,576 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&maxPrice=2000&minRooms=2&rooms_max=3"}
+2025-08-12 18:29:27,577 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&maxPrice=2000&minRooms=2&max_rooms=3"}
+2025-08-12 18:29:27,578 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&maxPrice=2000&minRooms=2&rooms_to=3"}
+2025-08-12 18:29:27,579 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_min=1000&maxPrice=2000&minRooms=2&maxRooms=3"}
+2025-08-12 18:29:27,580 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&price_max=2000&rooms_min=2&rooms_max=3"}
+2025-08-12 18:29:27,581 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&price_max=2000&rooms_min=2&max_rooms=3"}
+2025-08-12 18:29:27,582 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&price_max=2000&rooms_min=2&rooms_to=3"}
+2025-08-12 18:29:27,582 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&price_max=2000&rooms_min=2&maxRooms=3"}
+2025-08-12 18:29:27,583 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&price_max=2000&min_rooms=2&rooms_max=3"}
+2025-08-12 18:29:27,584 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&price_max=2000&min_rooms=2&max_rooms=3"}
+2025-08-12 18:29:27,585 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&price_max=2000&min_rooms=2&rooms_to=3"}
+2025-08-12 18:29:27,587 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&price_max=2000&min_rooms=2&maxRooms=3"}
+2025-08-12 18:29:27,588 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&price_max=2000&rooms_from=2&rooms_max=3"}
+2025-08-12 18:29:27,588 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&price_max=2000&rooms_from=2&max_rooms=3"}
+2025-08-12 18:29:27,589 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&price_max=2000&rooms_from=2&rooms_to=3"}
+2025-08-12 18:29:27,590 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&price_max=2000&rooms_from=2&maxRooms=3"}
+2025-08-12 18:29:27,591 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&price_max=2000&minRooms=2&rooms_max=3"}
+2025-08-12 18:29:27,592 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&price_max=2000&minRooms=2&max_rooms=3"}
+2025-08-12 18:29:27,593 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&price_max=2000&minRooms=2&rooms_to=3"}
+2025-08-12 18:29:27,594 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&price_max=2000&minRooms=2&maxRooms=3"}
+2025-08-12 18:29:27,595 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&max_price=2000&rooms_min=2&rooms_max=3"}
+2025-08-12 18:29:27,597 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&max_price=2000&rooms_min=2&max_rooms=3"}
+2025-08-12 18:29:27,598 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&max_price=2000&rooms_min=2&rooms_to=3"}
+2025-08-12 18:29:27,598 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&max_price=2000&rooms_min=2&maxRooms=3"}
+2025-08-12 18:29:27,599 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&max_price=2000&min_rooms=2&rooms_max=3"}
+2025-08-12 18:29:27,600 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&max_price=2000&min_rooms=2&max_rooms=3"}
+2025-08-12 18:29:27,601 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&max_price=2000&min_rooms=2&rooms_to=3"}
+2025-08-12 18:29:27,602 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&max_price=2000&min_rooms=2&maxRooms=3"}
+2025-08-12 18:29:27,603 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&max_price=2000&rooms_from=2&rooms_max=3"}
+2025-08-12 18:29:27,604 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&max_price=2000&rooms_from=2&max_rooms=3"}
+2025-08-12 18:29:27,605 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&max_price=2000&rooms_from=2&rooms_to=3"}
+2025-08-12 18:29:27,606 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&max_price=2000&rooms_from=2&maxRooms=3"}
+2025-08-12 18:29:27,607 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&max_price=2000&minRooms=2&rooms_max=3"}
+2025-08-12 18:29:27,608 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&max_price=2000&minRooms=2&max_rooms=3"}
+2025-08-12 18:29:27,609 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&max_price=2000&minRooms=2&rooms_to=3"}
+2025-08-12 18:29:27,610 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&max_price=2000&minRooms=2&maxRooms=3"}
+2025-08-12 18:29:27,611 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&price_to=2000&rooms_min=2&rooms_max=3"}
+2025-08-12 18:29:27,612 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&price_to=2000&rooms_min=2&max_rooms=3"}
+2025-08-12 18:29:27,613 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&price_to=2000&rooms_min=2&rooms_to=3"}
+2025-08-12 18:29:27,614 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&price_to=2000&rooms_min=2&maxRooms=3"}
+2025-08-12 18:29:27,615 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&price_to=2000&min_rooms=2&rooms_max=3"}
+2025-08-12 18:29:27,616 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&price_to=2000&min_rooms=2&max_rooms=3"}
+2025-08-12 18:29:27,617 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&price_to=2000&min_rooms=2&rooms_to=3"}
+2025-08-12 18:29:27,618 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&price_to=2000&min_rooms=2&maxRooms=3"}
+2025-08-12 18:29:27,619 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&price_to=2000&rooms_from=2&rooms_max=3"}
+2025-08-12 18:29:27,620 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&price_to=2000&rooms_from=2&max_rooms=3"}
+2025-08-12 18:29:27,621 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&price_to=2000&rooms_from=2&rooms_to=3"}
+2025-08-12 18:29:27,622 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&price_to=2000&rooms_from=2&maxRooms=3"}
+2025-08-12 18:29:27,623 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&price_to=2000&minRooms=2&rooms_max=3"}
+2025-08-12 18:29:27,624 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&price_to=2000&minRooms=2&max_rooms=3"}
+2025-08-12 18:29:27,625 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&price_to=2000&minRooms=2&rooms_to=3"}
+2025-08-12 18:29:27,626 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&price_to=2000&minRooms=2&maxRooms=3"}
+2025-08-12 18:29:27,627 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&maxPrice=2000&rooms_min=2&rooms_max=3"}
+2025-08-12 18:29:27,628 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&maxPrice=2000&rooms_min=2&max_rooms=3"}
+2025-08-12 18:29:27,629 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&maxPrice=2000&rooms_min=2&rooms_to=3"}
+2025-08-12 18:29:27,630 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&maxPrice=2000&rooms_min=2&maxRooms=3"}
+2025-08-12 18:29:27,631 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&maxPrice=2000&min_rooms=2&rooms_max=3"}
+2025-08-12 18:29:27,632 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&maxPrice=2000&min_rooms=2&max_rooms=3"}
+2025-08-12 18:29:27,633 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&maxPrice=2000&min_rooms=2&rooms_to=3"}
+2025-08-12 18:29:27,634 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&maxPrice=2000&min_rooms=2&maxRooms=3"}
+2025-08-12 18:29:27,635 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&maxPrice=2000&rooms_from=2&rooms_max=3"}
+2025-08-12 18:29:27,637 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&maxPrice=2000&rooms_from=2&max_rooms=3"}
+2025-08-12 18:29:27,638 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&maxPrice=2000&rooms_from=2&rooms_to=3"}
+2025-08-12 18:29:27,639 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&maxPrice=2000&rooms_from=2&maxRooms=3"}
+2025-08-12 18:29:27,640 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&maxPrice=2000&minRooms=2&rooms_max=3"}
+2025-08-12 18:29:27,640 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&maxPrice=2000&minRooms=2&max_rooms=3"}
+2025-08-12 18:29:27,641 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&maxPrice=2000&minRooms=2&rooms_to=3"}
+2025-08-12 18:29:27,642 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "min_price=1000&maxPrice=2000&minRooms=2&maxRooms=3"}
+2025-08-12 18:29:27,643 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&price_max=2000&rooms_min=2&rooms_max=3"}
+2025-08-12 18:29:27,644 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&price_max=2000&rooms_min=2&max_rooms=3"}
+2025-08-12 18:29:27,645 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&price_max=2000&rooms_min=2&rooms_to=3"}
+2025-08-12 18:29:27,646 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&price_max=2000&rooms_min=2&maxRooms=3"}
+2025-08-12 18:29:27,647 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&price_max=2000&min_rooms=2&rooms_max=3"}
+2025-08-12 18:29:27,648 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&price_max=2000&min_rooms=2&max_rooms=3"}
+2025-08-12 18:29:27,650 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&price_max=2000&min_rooms=2&rooms_to=3"}
+2025-08-12 18:29:27,651 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&price_max=2000&min_rooms=2&maxRooms=3"}
+2025-08-12 18:29:27,652 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&price_max=2000&rooms_from=2&rooms_max=3"}
+2025-08-12 18:29:27,653 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&price_max=2000&rooms_from=2&max_rooms=3"}
+2025-08-12 18:29:27,654 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&price_max=2000&rooms_from=2&rooms_to=3"}
+2025-08-12 18:29:27,655 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&price_max=2000&rooms_from=2&maxRooms=3"}
+2025-08-12 18:29:27,656 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&price_max=2000&minRooms=2&rooms_max=3"}
+2025-08-12 18:29:27,657 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&price_max=2000&minRooms=2&max_rooms=3"}
+2025-08-12 18:29:27,658 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&price_max=2000&minRooms=2&rooms_to=3"}
+2025-08-12 18:29:27,659 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&price_max=2000&minRooms=2&maxRooms=3"}
+2025-08-12 18:29:27,660 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&max_price=2000&rooms_min=2&rooms_max=3"}
+2025-08-12 18:29:27,661 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&max_price=2000&rooms_min=2&max_rooms=3"}
+2025-08-12 18:29:27,662 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&max_price=2000&rooms_min=2&rooms_to=3"}
+2025-08-12 18:29:27,663 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&max_price=2000&rooms_min=2&maxRooms=3"}
+2025-08-12 18:29:27,664 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&max_price=2000&min_rooms=2&rooms_max=3"}
+2025-08-12 18:29:27,665 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&max_price=2000&min_rooms=2&max_rooms=3"}
+2025-08-12 18:29:27,665 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&max_price=2000&min_rooms=2&rooms_to=3"}
+2025-08-12 18:29:27,666 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&max_price=2000&min_rooms=2&maxRooms=3"}
+2025-08-12 18:29:27,668 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&max_price=2000&rooms_from=2&rooms_max=3"}
+2025-08-12 18:29:27,670 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&max_price=2000&rooms_from=2&max_rooms=3"}
+2025-08-12 18:29:27,671 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&max_price=2000&rooms_from=2&rooms_to=3"}
+2025-08-12 18:29:27,673 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&max_price=2000&rooms_from=2&maxRooms=3"}
+2025-08-12 18:29:27,674 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&max_price=2000&minRooms=2&rooms_max=3"}
+2025-08-12 18:29:27,675 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&max_price=2000&minRooms=2&max_rooms=3"}
+2025-08-12 18:29:27,676 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&max_price=2000&minRooms=2&rooms_to=3"}
+2025-08-12 18:29:27,677 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&max_price=2000&minRooms=2&maxRooms=3"}
+2025-08-12 18:29:27,678 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&price_to=2000&rooms_min=2&rooms_max=3"}
+2025-08-12 18:29:27,680 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&price_to=2000&rooms_min=2&max_rooms=3"}
+2025-08-12 18:29:27,681 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&price_to=2000&rooms_min=2&rooms_to=3"}
+2025-08-12 18:29:27,682 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&price_to=2000&rooms_min=2&maxRooms=3"}
+2025-08-12 18:29:27,683 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&price_to=2000&min_rooms=2&rooms_max=3"}
+2025-08-12 18:29:27,684 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&price_to=2000&min_rooms=2&max_rooms=3"}
+2025-08-12 18:29:27,686 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&price_to=2000&min_rooms=2&rooms_to=3"}
+2025-08-12 18:29:27,687 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&price_to=2000&min_rooms=2&maxRooms=3"}
+2025-08-12 18:29:27,688 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&price_to=2000&rooms_from=2&rooms_max=3"}
+2025-08-12 18:29:27,689 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&price_to=2000&rooms_from=2&max_rooms=3"}
+2025-08-12 18:29:27,690 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&price_to=2000&rooms_from=2&rooms_to=3"}
+2025-08-12 18:29:27,690 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&price_to=2000&rooms_from=2&maxRooms=3"}
+2025-08-12 18:29:27,691 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&price_to=2000&minRooms=2&rooms_max=3"}
+2025-08-12 18:29:27,692 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&price_to=2000&minRooms=2&max_rooms=3"}
+2025-08-12 18:29:27,693 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&price_to=2000&minRooms=2&rooms_to=3"}
+2025-08-12 18:29:27,694 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&price_to=2000&minRooms=2&maxRooms=3"}
+2025-08-12 18:29:27,695 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&maxPrice=2000&rooms_min=2&rooms_max=3"}
+2025-08-12 18:29:27,696 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&maxPrice=2000&rooms_min=2&max_rooms=3"}
+2025-08-12 18:29:27,697 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&maxPrice=2000&rooms_min=2&rooms_to=3"}
+2025-08-12 18:29:27,698 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&maxPrice=2000&rooms_min=2&maxRooms=3"}
+2025-08-12 18:29:27,699 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&maxPrice=2000&min_rooms=2&rooms_max=3"}
+2025-08-12 18:29:27,700 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&maxPrice=2000&min_rooms=2&max_rooms=3"}
+2025-08-12 18:29:27,701 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&maxPrice=2000&min_rooms=2&rooms_to=3"}
+2025-08-12 18:29:27,702 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&maxPrice=2000&min_rooms=2&maxRooms=3"}
+2025-08-12 18:29:27,703 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&maxPrice=2000&rooms_from=2&rooms_max=3"}
+2025-08-12 18:29:27,704 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&maxPrice=2000&rooms_from=2&max_rooms=3"}
+2025-08-12 18:29:27,705 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&maxPrice=2000&rooms_from=2&rooms_to=3"}
+2025-08-12 18:29:27,707 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&maxPrice=2000&rooms_from=2&maxRooms=3"}
+2025-08-12 18:29:27,708 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&maxPrice=2000&minRooms=2&rooms_max=3"}
+2025-08-12 18:29:27,709 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&maxPrice=2000&minRooms=2&max_rooms=3"}
+2025-08-12 18:29:27,710 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&maxPrice=2000&minRooms=2&rooms_to=3"}
+2025-08-12 18:29:27,711 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "price_from=1000&maxPrice=2000&minRooms=2&maxRooms=3"}
+2025-08-12 18:29:27,711 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&price_max=2000&rooms_min=2&rooms_max=3"}
+2025-08-12 18:29:27,712 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&price_max=2000&rooms_min=2&max_rooms=3"}
+2025-08-12 18:29:27,713 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&price_max=2000&rooms_min=2&rooms_to=3"}
+2025-08-12 18:29:27,714 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&price_max=2000&rooms_min=2&maxRooms=3"}
+2025-08-12 18:29:27,716 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&price_max=2000&min_rooms=2&rooms_max=3"}
+2025-08-12 18:29:27,717 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&price_max=2000&min_rooms=2&max_rooms=3"}
+2025-08-12 18:29:27,718 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&price_max=2000&min_rooms=2&rooms_to=3"}
+2025-08-12 18:29:27,719 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&price_max=2000&min_rooms=2&maxRooms=3"}
+2025-08-12 18:29:27,720 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&price_max=2000&rooms_from=2&rooms_max=3"}
+2025-08-12 18:29:27,721 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&price_max=2000&rooms_from=2&max_rooms=3"}
+2025-08-12 18:29:27,722 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&price_max=2000&rooms_from=2&rooms_to=3"}
+2025-08-12 18:29:27,723 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&price_max=2000&rooms_from=2&maxRooms=3"}
+2025-08-12 18:29:27,724 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&price_max=2000&minRooms=2&rooms_max=3"}
+2025-08-12 18:29:27,725 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&price_max=2000&minRooms=2&max_rooms=3"}
+2025-08-12 18:29:27,725 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&price_max=2000&minRooms=2&rooms_to=3"}
+2025-08-12 18:29:27,726 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&price_max=2000&minRooms=2&maxRooms=3"}
+2025-08-12 18:29:27,727 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&max_price=2000&rooms_min=2&rooms_max=3"}
+2025-08-12 18:29:27,728 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&max_price=2000&rooms_min=2&max_rooms=3"}
+2025-08-12 18:29:27,729 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&max_price=2000&rooms_min=2&rooms_to=3"}
+2025-08-12 18:29:27,730 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&max_price=2000&rooms_min=2&maxRooms=3"}
+2025-08-12 18:29:27,731 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&max_price=2000&min_rooms=2&rooms_max=3"}
+2025-08-12 18:29:27,733 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&max_price=2000&min_rooms=2&max_rooms=3"}
+2025-08-12 18:29:27,733 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&max_price=2000&min_rooms=2&rooms_to=3"}
+2025-08-12 18:29:27,734 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&max_price=2000&min_rooms=2&maxRooms=3"}
+2025-08-12 18:29:27,735 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&max_price=2000&rooms_from=2&rooms_max=3"}
+2025-08-12 18:29:27,736 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&max_price=2000&rooms_from=2&max_rooms=3"}
+2025-08-12 18:29:27,737 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&max_price=2000&rooms_from=2&rooms_to=3"}
+2025-08-12 18:29:27,738 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&max_price=2000&rooms_from=2&maxRooms=3"}
+2025-08-12 18:29:27,739 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&max_price=2000&minRooms=2&rooms_max=3"}
+2025-08-12 18:29:27,739 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&max_price=2000&minRooms=2&max_rooms=3"}
+2025-08-12 18:29:27,740 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&max_price=2000&minRooms=2&rooms_to=3"}
+2025-08-12 18:29:27,741 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&max_price=2000&minRooms=2&maxRooms=3"}
+2025-08-12 18:29:27,742 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&price_to=2000&rooms_min=2&rooms_max=3"}
+2025-08-12 18:29:27,743 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&price_to=2000&rooms_min=2&max_rooms=3"}
+2025-08-12 18:29:27,744 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&price_to=2000&rooms_min=2&rooms_to=3"}
+2025-08-12 18:29:27,744 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&price_to=2000&rooms_min=2&maxRooms=3"}
+2025-08-12 18:29:27,745 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&price_to=2000&min_rooms=2&rooms_max=3"}
+2025-08-12 18:29:27,746 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&price_to=2000&min_rooms=2&max_rooms=3"}
+2025-08-12 18:29:27,747 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&price_to=2000&min_rooms=2&rooms_to=3"}
+2025-08-12 18:29:27,748 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&price_to=2000&min_rooms=2&maxRooms=3"}
+2025-08-12 18:29:27,749 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&price_to=2000&rooms_from=2&rooms_max=3"}
+2025-08-12 18:29:27,750 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&price_to=2000&rooms_from=2&max_rooms=3"}
+2025-08-12 18:29:27,751 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&price_to=2000&rooms_from=2&rooms_to=3"}
+2025-08-12 18:29:27,751 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&price_to=2000&rooms_from=2&maxRooms=3"}
+2025-08-12 18:29:27,753 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&price_to=2000&minRooms=2&rooms_max=3"}
+2025-08-12 18:29:27,754 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&price_to=2000&minRooms=2&max_rooms=3"}
+2025-08-12 18:29:27,755 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&price_to=2000&minRooms=2&rooms_to=3"}
+2025-08-12 18:29:27,756 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&price_to=2000&minRooms=2&maxRooms=3"}
+2025-08-12 18:29:27,757 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&maxPrice=2000&rooms_min=2&rooms_max=3"}
+2025-08-12 18:29:27,758 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&maxPrice=2000&rooms_min=2&max_rooms=3"}
+2025-08-12 18:29:27,758 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&maxPrice=2000&rooms_min=2&rooms_to=3"}
+2025-08-12 18:29:27,759 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&maxPrice=2000&rooms_min=2&maxRooms=3"}
+2025-08-12 18:29:27,760 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&maxPrice=2000&min_rooms=2&rooms_max=3"}
+2025-08-12 18:29:27,761 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&maxPrice=2000&min_rooms=2&max_rooms=3"}
+2025-08-12 18:29:27,762 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&maxPrice=2000&min_rooms=2&rooms_to=3"}
+2025-08-12 18:29:27,763 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&maxPrice=2000&min_rooms=2&maxRooms=3"}
+2025-08-12 18:29:27,764 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&maxPrice=2000&rooms_from=2&rooms_max=3"}
+2025-08-12 18:29:27,765 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&maxPrice=2000&rooms_from=2&max_rooms=3"}
+2025-08-12 18:29:27,765 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&maxPrice=2000&rooms_from=2&rooms_to=3"}
+2025-08-12 18:29:27,766 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&maxPrice=2000&rooms_from=2&maxRooms=3"}
+2025-08-12 18:29:27,767 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&maxPrice=2000&minRooms=2&rooms_max=3"}
+2025-08-12 18:29:27,768 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&maxPrice=2000&minRooms=2&max_rooms=3"}
+2025-08-12 18:29:27,769 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&maxPrice=2000&minRooms=2&rooms_to=3"}
+2025-08-12 18:29:27,770 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "anon", "duration_ms": 0, "query": "minPrice=1000&maxPrice=2000&minRooms=2&maxRooms=3"}
+2025-08-12 18:29:27,779 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/public/", "status": 200, "user": "anon", "duration_ms": 7, "query": "price_min=1000&price_max=2000&rooms_min=2&rooms_max=3"}
+2025-08-12 18:29:30,266 | INFO | requests | pid=32216 tid=12116 | HTTP POST /api/token/ -> 200 [anon] 1225ms
+2025-08-12 18:29:31,496 | INFO | requests | pid=32216 tid=12116 | {"method": "POST", "path": "/api/properties/", "status": 200, "user": "user_id=1", "duration_ms": 0, "query": ""}
+2025-08-12 18:29:31,500 | INFO | requests | pid=32216 tid=12116 | {"method": "POST", "path": "/api/landlord/properties/", "status": 404, "user": "user_id=1", "duration_ms": 0, "query": ""}
+2025-08-12 18:29:31,500 | WARNING | django.request | pid=32216 tid=12116 | Not Found: /api/landlord/properties/
+2025-08-12 18:29:31,507 | INFO | requests | pid=32216 tid=12116 | {"method": "POST", "path": "/api/properties/create/", "status": 201, "user": "user_id=1", "duration_ms": 5, "query": ""}
+2025-08-12 18:29:34,180 | INFO | requests | pid=32216 tid=12116 | HTTP POST /api/token/ -> 200 [anon] 1329ms
+2025-08-12 18:29:35,569 | INFO | requests | pid=32216 tid=12116 | {"method": "POST", "path": "/api/properties/", "status": 200, "user": "user_id=1", "duration_ms": 0, "query": ""}
+2025-08-12 18:29:35,573 | INFO | requests | pid=32216 tid=12116 | {"method": "POST", "path": "/api/landlord/properties/", "status": 404, "user": "user_id=1", "duration_ms": 0, "query": ""}
+2025-08-12 18:29:35,574 | WARNING | django.request | pid=32216 tid=12116 | Not Found: /api/landlord/properties/
+2025-08-12 18:29:35,576 | INFO | requests | pid=32216 tid=12116 | {"method": "POST", "path": "/api/properties/create/", "status": 403, "user": "user_id=1", "duration_ms": 0, "query": ""}
+2025-08-12 18:29:35,576 | WARNING | django.request | pid=32216 tid=12116 | Forbidden: /api/properties/create/
+2025-08-12 18:29:39,432 | INFO | requests | pid=32216 tid=12116 | HTTP POST /api/token/ -> 200 [anon] 1244ms
+2025-08-12 18:29:40,707 | INFO | requests | pid=32216 tid=12116 | {"method": "PATCH", "path": "/api/properties/1/", "status": 200, "user": "user_id=1", "duration_ms": 7, "query": ""}
+2025-08-12 18:29:40,710 | INFO | requests | pid=32216 tid=12116 | {"method": "PATCH", "path": "/api/properties/2/", "status": 403, "user": "user_id=1", "duration_ms": 1, "query": ""}
+2025-08-12 18:29:40,711 | WARNING | django.request | pid=32216 tid=12116 | Forbidden: /api/properties/2/
+2025-08-12 18:29:41,976 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/public/", "status": 200, "user": "anon", "duration_ms": 5, "query": ""}
+2025-08-12 18:29:41,983 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/public/1/", "status": 200, "user": "anon", "duration_ms": 5, "query": ""}
+2025-08-12 18:29:44,387 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/public/", "status": 200, "user": "anon", "duration_ms": 8, "query": "search=Berlin"}
+2025-08-12 18:29:44,394 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/public/", "status": 200, "user": "anon", "duration_ms": 5, "query": "price_min=1000&price_max=2000"}
+2025-08-12 18:29:44,401 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/public/", "status": 200, "user": "anon", "duration_ms": 6, "query": "property_type=house"}
+2025-08-12 18:29:44,412 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/public/", "status": 200, "user": "anon", "duration_ms": 9, "query": "ordering=-price"}
+2025-08-12 18:29:45,659 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/public/", "status": 200, "user": "anon", "duration_ms": 3, "query": "search=Berlin"}
+2025-08-12 18:29:46,871 | INFO | requests | pid=32216 tid=12116 | HTTP POST /api/token/ -> 200 [anon] 1210ms
+2025-08-12 18:29:46,876 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/properties/public/", "status": 200, "user": "user_id=1", "duration_ms": 4, "query": "search=Hamburg"}
+2025-08-12 18:29:50,529 | INFO | requests | pid=32216 tid=12116 | HTTP POST /api/token/ -> 200 [anon] 1196ms
+2025-08-12 18:29:50,533 | INFO | requests | pid=32216 tid=12116 | {"method": "POST", "path": "/api/reviews/", "status": 400, "user": "user_id=1", "duration_ms": 2, "query": ""}
+2025-08-12 18:29:50,533 | WARNING | django.request | pid=32216 tid=12116 | Bad Request: /api/reviews/
+2025-08-12 18:29:54,174 | INFO | requests | pid=32216 tid=12116 | HTTP POST /api/token/ -> 200 [anon] 1216ms
+2025-08-12 18:29:54,178 | INFO | requests | pid=32216 tid=12116 | {"method": "POST", "path": "/api/reviews/", "status": 201, "user": "user_id=1", "duration_ms": 2, "query": ""}
+2025-08-12 18:29:57,933 | INFO | requests | pid=32216 tid=12116 | HTTP POST /api/token/ -> 200 [anon] 1265ms
+2025-08-12 18:29:57,936 | INFO | requests | pid=32216 tid=12116 | {"method": "POST", "path": "/api/reviews/", "status": 400, "user": "user_id=1", "duration_ms": 2, "query": ""}
+2025-08-12 18:29:57,937 | WARNING | django.request | pid=32216 tid=12116 | Bad Request: /api/reviews/
+2025-08-12 18:30:01,980 | INFO | requests | pid=32216 tid=12116 | HTTP POST /api/token/ -> 200 [anon] 1354ms
+2025-08-12 18:30:01,984 | INFO | requests | pid=32216 tid=12116 | {"method": "POST", "path": "/api/reviews/", "status": 201, "user": "user_id=1", "duration_ms": 3, "query": ""}
+2025-08-12 18:30:05,696 | INFO | requests | pid=32216 tid=12116 | HTTP POST /api/token/ -> 200 [anon] 1262ms
+2025-08-12 18:30:05,701 | INFO | requests | pid=32216 tid=12116 | {"method": "POST", "path": "/api/reviews/", "status": 201, "user": "user_id=1", "duration_ms": 3, "query": ""}
+2025-08-12 18:30:05,704 | INFO | requests | pid=32216 tid=12116 | {"method": "POST", "path": "/api/reviews/", "status": 400, "user": "user_id=1", "duration_ms": 2, "query": ""}
+2025-08-12 18:30:05,705 | WARNING | django.request | pid=32216 tid=12116 | Bad Request: /api/reviews/
+2025-08-12 18:30:09,276 | INFO | requests | pid=32216 tid=12116 | HTTP POST /api/token/ -> 200 [anon] 1176ms
+2025-08-12 18:30:09,280 | INFO | requests | pid=32216 tid=12116 | {"method": "POST", "path": "/api/reviews/", "status": 201, "user": "user_id=1", "duration_ms": 2, "query": ""}
+2025-08-12 18:30:10,478 | INFO | requests | pid=32216 tid=12116 | HTTP POST /api/token/ -> 200 [anon] 1196ms
+2025-08-12 18:30:10,482 | INFO | requests | pid=32216 tid=12116 | {"method": "PATCH", "path": "/api/reviews/1/", "status": 403, "user": "user_id=2", "duration_ms": 2, "query": ""}
+2025-08-12 18:30:10,483 | WARNING | django.request | pid=32216 tid=12116 | Forbidden: /api/reviews/1/
+2025-08-12 18:30:10,486 | INFO | requests | pid=32216 tid=12116 | {"method": "PATCH", "path": "/api/reviews/1/", "status": 200, "user": "user_id=1", "duration_ms": 3, "query": ""}
+2025-08-12 18:30:10,488 | INFO | requests | pid=32216 tid=12116 | {"method": "DELETE", "path": "/api/reviews/1/", "status": 403, "user": "user_id=2", "duration_ms": 1, "query": ""}
+2025-08-12 18:30:10,489 | WARNING | django.request | pid=32216 tid=12116 | Forbidden: /api/reviews/1/
+2025-08-12 18:30:14,184 | INFO | requests | pid=32216 tid=12116 | HTTP POST /api/token/ -> 200 [anon] 1209ms
+2025-08-12 18:30:14,187 | INFO | requests | pid=32216 tid=12116 | {"method": "POST", "path": "/api/reviews/", "status": 201, "user": "user_id=1", "duration_ms": 2, "query": ""}
+2025-08-12 18:30:16,602 | INFO | requests | pid=32216 tid=12116 | HTTP POST /api/token/ -> 200 [anon] 1193ms
+2025-08-12 18:30:16,606 | INFO | requests | pid=32216 tid=12116 | {"method": "POST", "path": "/api/reviews/", "status": 201, "user": "user_id=3", "duration_ms": 2, "query": ""}
+2025-08-12 18:30:19,013 | INFO | requests | pid=32216 tid=12116 | HTTP POST /api/token/ -> 200 [anon] 1179ms
+2025-08-12 18:30:19,017 | INFO | requests | pid=32216 tid=12116 | {"method": "POST", "path": "/api/reviews/", "status": 201, "user": "user_id=4", "duration_ms": 2, "query": ""}
+2025-08-12 18:30:19,020 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/reviews/", "status": 200, "user": "user_id=1", "duration_ms": 2, "query": "property=1&rating=5"}
+2025-08-12 18:30:19,024 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/reviews/", "status": 200, "user": "user_id=1", "duration_ms": 2, "query": "property=1&rating_min=4&rating_max=5"}
+2025-08-12 18:30:19,028 | INFO | requests | pid=32216 tid=12116 | {"method": "GET", "path": "/api/reviews/", "status": 200, "user": "user_id=1", "duration_ms": 3, "query": "property=1&ordering=rating"}
+2025-08-12 21:43:06,533 | INFO | requests | pid=20904 tid=9280 | HTTP GET /api/token/ -> 405 [anon] 70ms
+2025-08-12 21:43:06,536 | WARNING | django.request | pid=20904 tid=9280 | Method Not Allowed: /api/token/
+2025-08-12 21:43:20,237 | INFO | requests | pid=20904 tid=9280 | HTTP POST /api/token/ -> 401 [anon] 1389ms
+2025-08-12 21:43:20,238 | WARNING | django.request | pid=20904 tid=9280 | Unauthorized: /api/token/
+2025-08-12 21:43:44,476 | INFO | requests | pid=20904 tid=9280 | HTTP POST /api/token/ -> 200 [anon] 1279ms
+2025-08-12 21:44:22,183 | INFO | requests | pid=20904 tid=9280 | HTTP POST /api/token/ -> 200 [anon] 1198ms
+2025-08-12 22:21:20,395 | INFO | requests | pid=1652 tid=14256 | {"method": "GET", "path": "/api/accounts/", "status": 200, "user": "user_id=7", "duration_ms": 50, "query": ""}
+2025-08-12 22:22:19,349 | INFO | requests | pid=1652 tid=14256 | {"method": "GET", "path": "/api/accounts/", "status": 401, "user": "anon", "duration_ms": 12, "query": ""}
+2025-08-12 22:22:19,350 | WARNING | django.request | pid=1652 tid=14256 | Unauthorized: /api/accounts/
+2025-08-12 22:24:41,464 | INFO | requests | pid=1652 tid=14256 | {"method": "GET", "path": "/api/redoc/", "status": 200, "user": "user_id=7", "duration_ms": 8, "query": ""}
+2025-08-12 22:24:42,061 | INFO | requests | pid=1652 tid=14256 | {"method": "GET", "path": "/api/schema/", "status": 200, "user": "user_id=7", "duration_ms": 311, "query": ""}
+2025-08-12 22:29:24,945 | INFO | requests | pid=1652 tid=22600 | {"method": "GET", "path": "/api/accounts/", "status": 401, "user": "anon", "duration_ms": 0, "query": ""}
+2025-08-12 22:29:24,946 | WARNING | django.request | pid=1652 tid=22600 | Unauthorized: /api/accounts/
+2025-08-12 22:34:19,145 | INFO | requests | pid=1652 tid=13344 | {"method": "GET", "path": "/api/accounts/", "status": 401, "user": "anon", "duration_ms": 1, "query": ""}
+2025-08-12 22:34:19,146 | WARNING | django.request | pid=1652 tid=13344 | Unauthorized: /api/accounts/
+2025-08-12 22:35:17,806 | INFO | requests | pid=1652 tid=19424 | HTTP GET /api/token/refresh/ -> 405 [anon] 17ms
+2025-08-12 22:35:17,808 | WARNING | django.request | pid=1652 tid=19424 | Method Not Allowed: /api/token/refresh/
+2025-08-12 22:35:31,840 | INFO | requests | pid=1652 tid=19424 | HTTP POST /api/token/refresh/ -> 200 [anon] 13ms
+2025-08-12 22:36:41,357 | INFO | requests | pid=1652 tid=21276 | {"method": "GET", "path": "/api/accounts/", "status": 200, "user": "user_id=7", "duration_ms": 2, "query": ""}
+2025-08-12 22:38:34,510 | INFO | requests | pid=1652 tid=19424 | {"method": "GET", "path": "/", "status": 200, "user": "user_id=7", "duration_ms": 1, "query": ""}
+2025-08-12 22:38:36,885 | INFO | requests | pid=1652 tid=19424 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "user_id=7", "duration_ms": 0, "query": ""}
+2025-08-12 22:38:39,053 | INFO | requests | pid=1652 tid=19424 | {"method": "GET", "path": "/api/properties/create/", "status": 200, "user": "user_id=7", "duration_ms": 54, "query": ""}
+2025-08-12 22:39:21,022 | INFO | requests | pid=1652 tid=4260 | {"method": "GET", "path": "/api/properties/create/", "status": 401, "user": "anon", "duration_ms": 0, "query": ""}
+2025-08-12 22:39:21,023 | WARNING | django.request | pid=1652 tid=4260 | Unauthorized: /api/properties/create/
+2025-08-12 22:39:48,463 | INFO | requests | pid=1652 tid=4260 | {"method": "GET", "path": "/api/properties/create/", "status": 200, "user": "user_id=7", "duration_ms": 10, "query": ""}
+2025-08-12 22:42:41,839 | INFO | requests | pid=1652 tid=18108 | {"method": "POST", "path": "/api/properties/create/", "status": 401, "user": "anon", "duration_ms": 0, "query": ""}
+2025-08-12 22:42:41,839 | WARNING | django.request | pid=1652 tid=18108 | Unauthorized: /api/properties/create/
+2025-08-12 22:43:03,823 | INFO | requests | pid=1652 tid=18108 | {"method": "POST", "path": "/api/properties/create/", "status": 401, "user": "anon", "duration_ms": 0, "query": ""}
+2025-08-12 22:43:03,823 | WARNING | django.request | pid=1652 tid=18108 | Unauthorized: /api/properties/create/
+2025-08-12 22:44:36,378 | INFO | requests | pid=1652 tid=23656 | {"method": "GET", "path": "/api/properties/create/", "status": 401, "user": "anon", "duration_ms": 0, "query": ""}
+2025-08-12 22:44:36,378 | WARNING | django.request | pid=1652 tid=23656 | Unauthorized: /api/properties/create/
+2025-08-12 22:45:42,925 | INFO | requests | pid=1652 tid=23656 | {"method": "GET", "path": "/api/properties/create/", "status": 401, "user": "anon", "duration_ms": 0, "query": ""}
+2025-08-12 22:45:42,926 | WARNING | django.request | pid=1652 tid=23656 | Unauthorized: /api/properties/create/
+2025-08-12 22:46:25,620 | INFO | requests | pid=1652 tid=23656 | {"method": "GET", "path": "/api/properties/create/", "status": 401, "user": "anon", "duration_ms": 0, "query": "location=Berlin&price_max=1000"}
+2025-08-12 22:46:25,621 | WARNING | django.request | pid=1652 tid=23656 | Unauthorized: /api/properties/create/
+2025-08-12 22:47:41,240 | INFO | requests | pid=1652 tid=23656 | {"method": "POST", "path": "/api/properties/create/", "status": 401, "user": "anon", "duration_ms": 0, "query": ""}
+2025-08-12 22:47:41,241 | WARNING | django.request | pid=1652 tid=23656 | Unauthorized: /api/properties/create/
+2025-08-12 22:48:19,120 | INFO | requests | pid=1652 tid=13476 | {"method": "GET", "path": "/api/properties/create/", "status": 401, "user": "anon", "duration_ms": 0, "query": ""}
+2025-08-12 22:48:19,121 | WARNING | django.request | pid=1652 tid=13476 | Unauthorized: /api/properties/create/
+2025-08-12 22:49:24,480 | INFO | requests | pid=1652 tid=17620 | {"method": "GET", "path": "/api/properties/create/", "status": 401, "user": "anon", "duration_ms": 0, "query": ""}
+2025-08-12 22:49:24,481 | WARNING | django.request | pid=1652 tid=17620 | Unauthorized: /api/properties/create/
+2025-08-12 22:49:32,619 | INFO | requests | pid=1652 tid=17620 | {"method": "GET", "path": "/api/properties/create/", "status": 401, "user": "anon", "duration_ms": 0, "query": ""}
+2025-08-12 22:49:32,620 | WARNING | django.request | pid=1652 tid=17620 | Unauthorized: /api/properties/create/
+2025-08-12 22:49:55,218 | INFO | requests | pid=1652 tid=23656 | HTTP POST /api/token/refresh/ -> 200 [anon] 15ms
+2025-08-12 22:50:34,527 | INFO | requests | pid=1652 tid=11700 | {"method": "GET", "path": "/api/properties/create/", "status": 200, "user": "user_id=7", "duration_ms": 19, "query": ""}
+2025-08-12 22:51:26,728 | INFO | requests | pid=1652 tid=23656 | {"method": "POST", "path": "/api/properties/create/", "status": 201, "user": "user_id=7", "duration_ms": 24, "query": ""}
+2025-08-12 22:51:51,830 | INFO | requests | pid=1652 tid=27440 | {"method": "GET", "path": "/api/properties/create/", "status": 200, "user": "user_id=7", "duration_ms": 13, "query": ""}
+2025-08-12 22:51:56,580 | INFO | requests | pid=1652 tid=27440 | {"method": "GET", "path": "/api/properties/create/", "status": 200, "user": "user_id=7", "duration_ms": 12, "query": ""}
+2025-08-12 22:52:32,730 | INFO | requests | pid=1652 tid=27440 | {"method": "POST", "path": "/api/properties/create/", "status": 201, "user": "user_id=7", "duration_ms": 18, "query": ""}
+2025-08-12 22:53:36,251 | INFO | requests | pid=1652 tid=18540 | {"method": "DELETE", "path": "/api/properties/create/", "status": 405, "user": "user_id=7", "duration_ms": 2, "query": ""}
+2025-08-12 22:53:36,252 | WARNING | django.request | pid=1652 tid=18540 | Method Not Allowed: /api/properties/create/
+2025-08-12 22:53:57,156 | INFO | requests | pid=1652 tid=18540 | {"method": "GET", "path": "/api/properties/7", "status": 404, "user": "anon", "duration_ms": 6, "query": ""}
+2025-08-12 22:53:57,170 | INFO | requests | pid=1652 tid=13568 | {"method": "GET", "path": "/api/properties/7/", "status": 200, "user": "user_id=7", "duration_ms": 10, "query": ""}
+2025-08-12 22:54:05,681 | INFO | requests | pid=1652 tid=13568 | {"method": "DELETE", "path": "/api/properties/7", "status": 404, "user": "anon", "duration_ms": 6, "query": ""}
+2025-08-12 22:54:05,720 | ERROR | django.request | pid=1652 tid=13568 | Internal Server Error: /api/properties/7
+Traceback (most recent call last):
+  File "C:\Users\ICH\PycharmProjects\rental_platform\venv2\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\ICH\PycharmProjects\rental_platform\venv2\Lib\site-packages\django\utils\deprecation.py", line 122, in __call__
+    response = self.process_response(request, response)
+  File "C:\Users\ICH\PycharmProjects\rental_platform\venv2\Lib\site-packages\django\middleware\common.py", line 108, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ICH\PycharmProjects\rental_platform\venv2\Lib\site-packages\django\middleware\common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+    ...<9 lines>...
+    )
+RuntimeError: You called this URL via DELETE, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining DELETE data. Change your form to point to 127.0.0.1:8000/api/properties/7/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2025-08-12 22:54:57,590 | INFO | requests | pid=1652 tid=23656 | {"method": "DELETE", "path": "/api/properties/7/", "status": 401, "user": "anon", "duration_ms": 0, "query": ""}
+2025-08-12 22:54:57,591 | WARNING | django.request | pid=1652 tid=23656 | Unauthorized: /api/properties/7/
+2025-08-12 22:55:51,079 | INFO | requests | pid=1652 tid=23656 | {"method": "DELETE", "path": "/api/properties/7/", "status": 401, "user": "anon", "duration_ms": 0, "query": ""}
+2025-08-12 22:55:51,080 | WARNING | django.request | pid=1652 tid=23656 | Unauthorized: /api/properties/7/
+2025-08-12 22:56:33,794 | INFO | requests | pid=1652 tid=23656 | {"method": "DELETE", "path": "/api/properties/7/", "status": 401, "user": "anon", "duration_ms": 0, "query": ""}
+2025-08-12 22:56:33,795 | WARNING | django.request | pid=1652 tid=23656 | Unauthorized: /api/properties/7/
+2025-08-12 22:56:56,759 | INFO | requests | pid=1652 tid=23656 | HTTP POST /api/token/refresh/ -> 200 [anon] 12ms
+2025-08-12 22:57:15,076 | INFO | requests | pid=1652 tid=23656 | {"method": "DELETE", "path": "/api/properties/7/", "status": 204, "user": "user_id=7", "duration_ms": 17, "query": ""}
+2025-08-12 23:00:58,753 | INFO | requests | pid=1652 tid=34920 | {"method": "GET", "path": "/api/properties/7/", "status": 404, "user": "user_id=7", "duration_ms": 5, "query": ""}
+2025-08-12 23:00:58,754 | WARNING | django.request | pid=1652 tid=34920 | Not Found: /api/properties/7/
+2025-08-12 23:01:09,105 | INFO | requests | pid=1652 tid=34920 | {"method": "GET", "path": "/api/properties/5/", "status": 200, "user": "user_id=7", "duration_ms": 10, "query": ""}
+2025-08-12 23:02:09,221 | INFO | requests | pid=1652 tid=34920 | {"method": "POST", "path": "/api/properties/", "status": 403, "user": "user_id=7", "duration_ms": 5, "query": ""}
+2025-08-12 23:03:51,884 | INFO | requests | pid=1652 tid=34920 | {"method": "GET", "path": "/api/properties/5/", "status": 401, "user": "anon", "duration_ms": 1, "query": ""}
+2025-08-12 23:03:51,885 | WARNING | django.request | pid=1652 tid=34920 | Unauthorized: /api/properties/5/
+2025-08-12 23:04:12,418 | INFO | requests | pid=1652 tid=34920 | {"method": "GET", "path": "/api/accounts/", "status": 200, "user": "user_id=7", "duration_ms": 12, "query": ""}
+2025-08-12 23:04:19,384 | INFO | requests | pid=1652 tid=34920 | {"method": "GET", "path": "/api/accounts/change-password/", "status": 405, "user": "user_id=7", "duration_ms": 8, "query": ""}
+2025-08-12 23:04:19,384 | WARNING | django.request | pid=1652 tid=34920 | Method Not Allowed: /api/accounts/change-password/
+2025-08-12 23:05:33,848 | INFO | requests | pid=1652 tid=34920 | {"method": "POST", "path": "/api/accounts/change-password/", "status": 200, "user": "user_id=7", "duration_ms": 2205, "query": ""}
+2025-08-12 23:13:47,680 | INFO | requests | pid=11304 tid=24684 | HTTP POST /api/token/refresh/ -> 200 [anon] 114ms
+2025-08-12 23:14:28,510 | INFO | requests | pid=11304 tid=24684 | {"method": "GET", "path": "/api/properties/5/", "status": 200, "user": "user_id=7", "duration_ms": 24, "query": ""}
+2025-08-12 23:14:38,238 | INFO | requests | pid=11304 tid=24684 | {"method": "GET", "path": "/api/properties/2/", "status": 404, "user": "user_id=7", "duration_ms": 6, "query": ""}
+2025-08-12 23:14:38,241 | WARNING | django.request | pid=11304 tid=24684 | Not Found: /api/properties/2/
+2025-08-12 23:18:25,515 | INFO | requests | pid=11304 tid=24684 | {"method": "GET", "path": "/api/properties/2/", "status": 404, "user": "user_id=7", "duration_ms": 5, "query": ""}
+2025-08-12 23:18:25,516 | WARNING | django.request | pid=11304 tid=24684 | Not Found: /api/properties/2/
+2025-08-12 23:18:32,840 | INFO | requests | pid=11304 tid=24684 | {"method": "GET", "path": "/api/properties/5/", "status": 200, "user": "user_id=7", "duration_ms": 10, "query": ""}
+2025-08-12 23:35:37,044 | INFO | requests | pid=17360 tid=8616 | {"method": "GET", "path": "/api/properties/2/", "status": 401, "user": "anon", "duration_ms": 144, "query": ""}
+2025-08-12 23:35:37,046 | WARNING | django.request | pid=17360 tid=8616 | Unauthorized: /api/properties/2/
+2025-08-12 23:35:45,612 | INFO | requests | pid=17360 tid=8616 | {"method": "GET", "path": "/api/properties/5/", "status": 401, "user": "anon", "duration_ms": 107, "query": ""}
+2025-08-12 23:35:45,613 | WARNING | django.request | pid=17360 tid=8616 | Unauthorized: /api/properties/5/
+2025-08-12 23:43:09,197 | INFO | requests | pid=17360 tid=24828 | {"method": "GET", "path": "/api/properties/create/", "status": 401, "user": "anon", "duration_ms": 164, "query": ""}
+2025-08-12 23:43:09,198 | WARNING | django.request | pid=17360 tid=24828 | Unauthorized: /api/properties/create/
+2025-08-12 23:43:15,320 | INFO | requests | pid=17360 tid=24828 | {"method": "GET", "path": "/", "status": 200, "user": "anon", "duration_ms": 1, "query": ""}
+2025-08-12 23:46:18,230 | INFO | requests | pid=17360 tid=26580 | {"method": "GET", "path": "/", "status": 200, "user": "user_id=1", "duration_ms": 0, "query": ""}
+2025-08-12 23:46:21,937 | INFO | requests | pid=17360 tid=26580 | {"method": "GET", "path": "/api/accounts/", "status": 200, "user": "user_id=1", "duration_ms": 98, "query": ""}
+2025-08-12 23:46:25,476 | INFO | requests | pid=17360 tid=26580 | HTTP GET /api/accounts/register/ -> 405 [user_id=1] 115ms
+2025-08-12 23:46:25,477 | WARNING | django.request | pid=17360 tid=26580 | Method Not Allowed: /api/accounts/register/
+2025-08-12 23:48:07,750 | INFO | requests | pid=17360 tid=26580 | HTTP POST /api/accounts/register/ -> 201 [user_id=1] 1357ms
+2025-08-12 23:48:55,000 | INFO | requests | pid=17360 tid=26580 | HTTP POST /api/accounts/register/ -> 201 [user_id=1] 1268ms
+2025-08-12 23:49:41,607 | INFO | requests | pid=17360 tid=26580 | HTTP POST /api/accounts/register/ -> 201 [user_id=1] 1178ms
+2025-08-12 23:49:55,918 | INFO | requests | pid=17360 tid=26580 | {"method": "GET", "path": "/", "status": 200, "user": "user_id=1", "duration_ms": 0, "query": ""}
+2025-08-12 23:49:58,107 | INFO | requests | pid=17360 tid=26580 | {"method": "GET", "path": "/api/accounts/", "status": 200, "user": "user_id=1", "duration_ms": 94, "query": ""}
+2025-08-12 23:50:01,433 | INFO | requests | pid=17360 tid=26580 | {"method": "GET", "path": "/api/accounts/me/", "status": 200, "user": "user_id=1", "duration_ms": 105, "query": ""}
+2025-08-12 23:50:18,179 | INFO | requests | pid=17360 tid=26580 | {"method": "GET", "path": "/api/accounts", "status": 404, "user": "user_id=1", "duration_ms": 6, "query": ""}
+2025-08-12 23:50:18,284 | INFO | requests | pid=17360 tid=24828 | {"method": "GET", "path": "/api/accounts/", "status": 200, "user": "user_id=1", "duration_ms": 100, "query": ""}
+2025-08-12 23:50:36,928 | INFO | requests | pid=17360 tid=24828 | {"method": "GET", "path": "/", "status": 200, "user": "user_id=1", "duration_ms": 0, "query": ""}
+2025-08-12 23:50:44,397 | INFO | requests | pid=17360 tid=24828 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "user_id=1", "duration_ms": 0, "query": ""}
+2025-08-12 23:50:46,172 | INFO | requests | pid=17360 tid=24828 | {"method": "GET", "path": "/api/properties/create/", "status": 403, "user": "user_id=1", "duration_ms": 97, "query": ""}
+2025-08-12 23:50:46,173 | WARNING | django.request | pid=17360 tid=24828 | Forbidden: /api/properties/create/
+2025-08-12 23:50:51,314 | INFO | requests | pid=17360 tid=24828 | {"method": "POST", "path": "/api-auth/logout/", "status": 302, "user": "anon", "duration_ms": 127, "query": "next=/api/properties/create/"}
+2025-08-12 23:50:51,321 | INFO | requests | pid=17360 tid=24828 | {"method": "GET", "path": "/api/properties/create/", "status": 401, "user": "anon", "duration_ms": 3, "query": ""}
+2025-08-12 23:50:51,322 | WARNING | django.request | pid=17360 tid=24828 | Unauthorized: /api/properties/create/
+2025-08-12 23:50:52,644 | INFO | requests | pid=17360 tid=24828 | {"method": "GET", "path": "/api-auth/login/", "status": 200, "user": "anon", "duration_ms": 4, "query": "next=/api/properties/create/"}
+2025-08-12 23:51:10,363 | INFO | requests | pid=17360 tid=24828 | {"method": "POST", "path": "/api-auth/login/", "status": 302, "user": "user_id=3", "duration_ms": 1260, "query": ""}
+2025-08-12 23:51:10,615 | INFO | requests | pid=17360 tid=24828 | {"method": "GET", "path": "/api/properties/create/", "status": 200, "user": "user_id=3", "duration_ms": 191, "query": ""}
+2025-08-12 23:52:31,304 | INFO | requests | pid=17360 tid=24828 | {"method": "POST", "path": "/api/properties/create/", "status": 201, "user": "user_id=3", "duration_ms": 206, "query": ""}
+2025-08-12 23:53:01,632 | INFO | requests | pid=17360 tid=24828 | {"method": "POST", "path": "/api/properties/create/", "status": 201, "user": "user_id=3", "duration_ms": 181, "query": ""}
+2025-08-12 23:57:56,706 | INFO | requests | pid=27452 tid=17588 | {"method": "POST", "path": "/api/properties/create/", "status": 201, "user": "user_id=3", "duration_ms": 251, "query": ""}
+2025-08-12 23:58:06,933 | INFO | requests | pid=27452 tid=17588 | {"method": "GET", "path": "/api/accounts/change-password/", "status": 405, "user": "user_id=3", "duration_ms": 126, "query": ""}
+2025-08-12 23:58:06,936 | WARNING | django.request | pid=27452 tid=17588 | Method Not Allowed: /api/accounts/change-password/
+2025-08-12 23:58:14,785 | INFO | requests | pid=27452 tid=17588 | {"method": "GET", "path": "/api/accounts/change-password/", "status": 405, "user": "user_id=3", "duration_ms": 142, "query": ""}
+2025-08-12 23:58:14,794 | WARNING | django.request | pid=27452 tid=17588 | Method Not Allowed: /api/accounts/change-password/
+2025-08-13 00:03:10,873 | INFO | requests | pid=27452 tid=26576 | {"method": "GET", "path": "/api/accounts/change-password/", "status": 405, "user": "user_id=3", "duration_ms": 150, "query": ""}
+2025-08-13 00:03:10,875 | WARNING | django.request | pid=27452 tid=26576 | Method Not Allowed: /api/accounts/change-password/
+2025-08-13 00:11:22,804 | INFO | requests | pid=30120 tid=35712 | {"method": "GET", "path": "/api/accounts/change-password/", "status": 405, "user": "user_id=3", "duration_ms": 156, "query": ""}
+2025-08-13 00:11:22,806 | WARNING | django.request | pid=30120 tid=35712 | Method Not Allowed: /api/accounts/change-password/
+2025-08-13 00:12:30,898 | INFO | requests | pid=29676 tid=31024 | {"method": "GET", "path": "/api/accounts/change-password/", "status": 405, "user": "user_id=3", "duration_ms": 198, "query": ""}
+2025-08-13 00:12:30,901 | WARNING | django.request | pid=29676 tid=31024 | Method Not Allowed: /api/accounts/change-password/
+2025-08-13 00:12:34,338 | INFO | requests | pid=29676 tid=31024 | {"method": "GET", "path": "/api/accounts/", "status": 200, "user": "user_id=3", "duration_ms": 114, "query": ""}
+2025-08-13 00:12:38,368 | INFO | requests | pid=29676 tid=31024 | {"method": "GET", "path": "/api/accounts/change-password/", "status": 405, "user": "user_id=3", "duration_ms": 137, "query": ""}
+2025-08-13 00:12:38,369 | WARNING | django.request | pid=29676 tid=31024 | Method Not Allowed: /api/accounts/change-password/
+2025-08-13 00:14:21,418 | INFO | requests | pid=34504 tid=5228 | {"method": "GET", "path": "/api/accounts/change-password/", "status": 405, "user": "user_id=3", "duration_ms": 284, "query": ""}
+2025-08-13 00:14:21,420 | WARNING | django.request | pid=34504 tid=5228 | Method Not Allowed: /api/accounts/change-password/
+2025-08-13 00:14:23,956 | INFO | requests | pid=34504 tid=5228 | {"method": "GET", "path": "/api/accounts/change-password/", "status": 405, "user": "user_id=3", "duration_ms": 313, "query": ""}
+2025-08-13 00:14:23,981 | WARNING | django.request | pid=34504 tid=5228 | Method Not Allowed: /api/accounts/change-password/
+2025-08-13 00:14:25,229 | INFO | requests | pid=34504 tid=5228 | {"method": "GET", "path": "/api/accounts/change-password/", "status": 405, "user": "user_id=3", "duration_ms": 111, "query": ""}
+2025-08-13 00:14:25,229 | WARNING | django.request | pid=34504 tid=5228 | Method Not Allowed: /api/accounts/change-password/
+2025-08-13 00:14:27,615 | INFO | requests | pid=34504 tid=5228 | {"method": "GET", "path": "/api/accounts/change-password/", "status": 405, "user": "user_id=3", "duration_ms": 97, "query": ""}
+2025-08-13 00:14:27,616 | WARNING | django.request | pid=34504 tid=5228 | Method Not Allowed: /api/accounts/change-password/
+2025-08-13 00:14:33,425 | INFO | requests | pid=34504 tid=5228 | {"method": "GET", "path": "/api/accounts/change-password/", "status": 405, "user": "user_id=3", "duration_ms": 103, "query": ""}
+2025-08-13 00:14:33,426 | WARNING | django.request | pid=34504 tid=5228 | Method Not Allowed: /api/accounts/change-password/
+2025-08-13 00:15:05,429 | INFO | requests | pid=29320 tid=32384 | {"method": "GET", "path": "/api/accounts/change-password/", "status": 405, "user": "user_id=3", "duration_ms": 164, "query": ""}
+2025-08-13 00:15:05,431 | WARNING | django.request | pid=29320 tid=32384 | Method Not Allowed: /api/accounts/change-password/
+2025-08-13 00:17:21,872 | INFO | requests | pid=29320 tid=32384 | {"method": "GET", "path": "/", "status": 200, "user": "user_id=3", "duration_ms": 0, "query": ""}
+2025-08-13 00:17:24,100 | INFO | requests | pid=29320 tid=32384 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "user_id=3", "duration_ms": 0, "query": ""}
+2025-08-13 00:17:26,692 | INFO | requests | pid=29320 tid=32384 | {"method": "GET", "path": "/api/properties/create/", "status": 200, "user": "user_id=3", "duration_ms": 289, "query": ""}
+2025-08-13 00:17:48,613 | INFO | requests | pid=29320 tid=32384 | {"method": "GET", "path": "/api/properties/1/", "status": 200, "user": "user_id=3", "duration_ms": 206, "query": ""}
+2025-08-13 00:18:11,679 | INFO | requests | pid=29320 tid=32384 | {"method": "GET", "path": "/api/properties/public/", "status": 200, "user": "user_id=3", "duration_ms": 250, "query": ""}
+2025-08-13 00:22:35,379 | INFO | requests | pid=29320 tid=32384 | {"method": "POST", "path": "/api-auth/logout/", "status": 302, "user": "anon", "duration_ms": 150, "query": "next=/api/properties/public/"}
+2025-08-13 00:22:35,611 | INFO | requests | pid=29320 tid=32384 | {"method": "GET", "path": "/api/properties/public/", "status": 200, "user": "anon", "duration_ms": 225, "query": ""}
+2025-08-13 00:22:38,260 | INFO | requests | pid=29320 tid=32384 | {"method": "GET", "path": "/api-auth/login/", "status": 200, "user": "anon", "duration_ms": 9, "query": "next=/api/properties/public/"}
+2025-08-13 00:22:59,471 | INFO | requests | pid=29320 tid=32384 | {"method": "POST", "path": "/api-auth/login/", "status": 302, "user": "user_id=2", "duration_ms": 1458, "query": ""}
+2025-08-13 00:23:00,108 | INFO | requests | pid=29320 tid=32384 | {"method": "GET", "path": "/api/properties/public/", "status": 200, "user": "user_id=2", "duration_ms": 586, "query": ""}
+2025-08-13 00:23:10,908 | INFO | requests | pid=29320 tid=32384 | {"method": "GET", "path": "/", "status": 200, "user": "user_id=2", "duration_ms": 0, "query": ""}
+2025-08-13 00:23:15,151 | INFO | requests | pid=29320 tid=32384 | {"method": "GET", "path": "/api/bookings/", "status": 200, "user": "user_id=2", "duration_ms": 0, "query": ""}
+2025-08-13 00:23:19,479 | INFO | requests | pid=29320 tid=32384 | {"method": "GET", "path": "/api/bookings/create/", "status": 405, "user": "user_id=2", "duration_ms": 120, "query": ""}
+2025-08-13 00:23:19,480 | WARNING | django.request | pid=29320 tid=32384 | Method Not Allowed: /api/bookings/create/
+2025-08-13 00:23:50,593 | INFO | requests | pid=29320 tid=32384 | {"method": "POST", "path": "/api/bookings/create/", "status": 201, "user": "user_id=2", "duration_ms": 194, "query": ""}
+2025-08-13 00:24:07,006 | INFO | requests | pid=29320 tid=32384 | {"method": "GET", "path": "/", "status": 200, "user": "user_id=2", "duration_ms": 0, "query": ""}
+2025-08-13 00:24:12,644 | INFO | requests | pid=29320 tid=32384 | {"method": "GET", "path": "/api/analytics/", "status": 200, "user": "user_id=2", "duration_ms": 104, "query": ""}
+2025-08-13 00:24:14,475 | INFO | requests | pid=29320 tid=30060 | {"method": "GET", "path": "/api/analytics/top-properties/", "status": 200, "user": "user_id=2", "duration_ms": 118, "query": ""}
+2025-08-13 00:24:20,750 | INFO | requests | pid=29320 tid=30060 | {"method": "GET", "path": "/api/analytics/popular-searches/", "status": 200, "user": "user_id=2", "duration_ms": 112, "query": ""}
+2025-08-13 00:24:29,269 | INFO | requests | pid=29320 tid=30060 | {"method": "GET", "path": "/api/properties/", "status": 200, "user": "user_id=2", "duration_ms": 0, "query": ""}
+2025-08-13 00:24:32,323 | INFO | requests | pid=29320 tid=30060 | {"method": "GET", "path": "/api/properties/public/", "status": 200, "user": "user_id=2", "duration_ms": 273, "query": ""}
+2025-08-13 00:24:46,110 | INFO | requests | pid=29320 tid=30060 | {"method": "GET", "path": "/api/properties/public/", "status": 200, "user": "user_id=2", "duration_ms": 183, "query": "search=Berlin"}
+2025-08-13 00:25:02,931 | INFO | requests | pid=29320 tid=30060 | {"method": "GET", "path": "/api/properties/public/", "status": 200, "user": "user_id=2", "duration_ms": 138, "query": "search=Hamburg"}
+2025-08-13 00:27:17,798 | INFO | requests | pid=29320 tid=30060 | {"method": "GET", "path": "/", "status": 200, "user": "user_id=2", "duration_ms": 0, "query": ""}
+2025-08-13 00:27:25,642 | INFO | requests | pid=29320 tid=30060 | {"method": "GET", "path": "/", "status": 200, "user": "user_id=2", "duration_ms": 0, "query": ""}
+2025-08-13 00:27:34,260 | INFO | requests | pid=29320 tid=30060 | {"method": "GET", "path": "/api/analytics/", "status": 200, "user": "user_id=2", "duration_ms": 103, "query": ""}
+2025-08-13 00:27:36,157 | INFO | requests | pid=29320 tid=33812 | {"method": "GET", "path": "/api/analytics/popular-searches/", "status": 200, "user": "user_id=2", "duration_ms": 130, "query": ""}
+2025-08-13 00:27:41,912 | INFO | requests | pid=29320 tid=28844 | {"method": "GET", "path": "/api/analytics/top-properties/", "status": 200, "user": "user_id=2", "duration_ms": 189, "query": ""}
+2025-08-13 00:28:00,468 | INFO | requests | pid=29320 tid=28844 | {"method": "GET", "path": "/", "status": 200, "user": "user_id=2", "duration_ms": 1, "query": ""}
+2025-08-13 00:28:03,523 | INFO | requests | pid=29320 tid=28844 | {"method": "GET", "path": "/api/bookings/", "status": 200, "user": "user_id=2", "duration_ms": 0, "query": ""}
+2025-08-13 00:28:06,188 | INFO | requests | pid=29320 tid=28844 | {"method": "GET", "path": "/api/bookings/create/", "status": 405, "user": "user_id=2", "duration_ms": 126, "query": ""}
+2025-08-13 00:28:06,188 | WARNING | django.request | pid=29320 tid=28844 | Method Not Allowed: /api/bookings/create/
+2025-08-13 00:28:17,352 | INFO | requests | pid=29320 tid=28844 | {"method": "GET", "path": "/api/bookings/", "status": 200, "user": "user_id=2", "duration_ms": 0, "query": ""}
+2025-08-13 00:28:41,988 | INFO | requests | pid=29320 tid=28844 | {"method": "GET", "path": "/api/bookings/available_properties", "status": 404, "user": "user_id=2", "duration_ms": 8, "query": ""}
+2025-08-13 00:28:42,344 | INFO | requests | pid=29320 tid=34580 | {"method": "GET", "path": "/api/bookings/available_properties/", "status": 200, "user": "user_id=2", "duration_ms": 351, "query": ""}
+2025-08-13 08:25:20,834 | INFO | requests | pid=29320 tid=18100 | {"method": "GET", "path": "/api/docs/", "status": 200, "user": "user_id=2", "duration_ms": 226, "query": ""}
+2025-08-13 08:25:21,629 | INFO | requests | pid=29320 tid=18100 | {"method": "GET", "path": "/api/schema/", "status": 200, "user": "user_id=2", "duration_ms": 354, "query": ""}
