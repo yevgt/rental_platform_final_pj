@@ -1,7 +1,7 @@
 from rest_framework import permissions
 
 class IsLandlord(permissions.BasePermission):
-    message = "Доступ разрешён только арендодателям."
+    message = "Access is restricted to landlords only.."
 
     def has_permission(self, request, view):
         return (
@@ -11,7 +11,7 @@ class IsLandlord(permissions.BasePermission):
         )
 
 class IsRenter(permissions.BasePermission):
-    message = "Доступ разрешён только арендаторам."
+    message = "Access is restricted to tenants only.."
 
     def has_permission(self, request, view):
         return (
@@ -22,10 +22,10 @@ class IsRenter(permissions.BasePermission):
 
 class IsOwnerOrReadOnly(permissions.BasePermission):
     """
-    Разрешает изменять объект только его владельцу.
-    SAFE_METHODS здесь могут быть дополнительно отрезаны др. пермишенами (IsRenter/IsLandlord).
+    Allows only its owner to modify the object.
+    SAFE_METHODS here can be additionally cut off by other permissions (IsRenter/IsLandlord).
     """
-    message = "Только владелец может изменять этот объект."
+    message = "Only the owner can modify this object.."
 
     def has_object_permission(self, request, view, obj):
         if request.method in permissions.SAFE_METHODS:

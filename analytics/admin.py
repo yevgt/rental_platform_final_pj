@@ -8,12 +8,12 @@ def has_field(model, name: str) -> bool:
 
 class AnalyticsModelAdmin(admin.ModelAdmin):
     """
-    Универсальная админка для моделей аналитики.
-    Автоматически подбирает:
-    - list_display: id, ключевое поле (query/title/property), метрики (views/count), дата
+    Universal admin panel for analytics models.
+    Automatically selects:
+    - list_display: id, key field (query/title/property), metrics (views/count), date
     - search_fields: query/title/property__title/user__email
-    - list_filter: по дате, типам/флагам если есть
-    - ordering: по убыванию основной метрики или по дате
+    - list_filter: by date, types/flags if any
+    - ordering: by descending main metric or by date
     """
 
     def get_primary_text_field(self):
@@ -111,28 +111,28 @@ class AnalyticsModelAdmin(admin.ModelAdmin):
         return tuple(rels)
 
     # Колонки-коллбеки
-    @admin.display(description="Объект")
+    @admin.display(description="Object")
     def property_col(self, obj):
         for name in ("property", "listing", "estate"):
             if hasattr(obj, name):
                 return getattr(obj, name)
         return None
 
-    @admin.display(description="Показатель")
+    @admin.display(description="Indicator")
     def metric_col(self, obj):
         for n in ("count", "search_count", "views", "views_count", "total", "score"):
             if hasattr(obj, n):
                 return getattr(obj, n)
         return None
 
-    @admin.display(description="Значение")
+    @admin.display(description="Meaning")
     def primary_col(self, obj):
         for n in ("query", "term", "title", "name", "keyword"):
             if hasattr(obj, n):
                 return getattr(obj, n)
         return None
 
-    @admin.display(description="Дата/период")
+    @admin.display(description="Date/period")
     def date_col(self, obj):
         for n in ("date", "day", "period", "created_at", "created", "last_used_at", "last_viewed_at"):
             if hasattr(obj, n):
@@ -140,7 +140,7 @@ class AnalyticsModelAdmin(admin.ModelAdmin):
         return None
 
 
-# Регистрируем все модели из приложения analytics (или analitic) одной универсальной админкой
+# We register all models from the analytics (or analitic) application with one universal admin panel
 for app_label in ("analytics", "analitic"):
     try:
         cfg = apps.get_app_config(app_label)

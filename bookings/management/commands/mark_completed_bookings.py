@@ -5,25 +5,26 @@ from django.utils import timezone
 from bookings.models import Booking
 
 class Command(BaseCommand):
-    help = "Отмечает бронирования со статусом CONFIRMED и прошедшей end_date как COMPLETED."
+    help = "Marks reservations with status CONFIRMED and past end_date as COMPLETED."
 
     def add_arguments(self, parser):
         parser.add_argument(
             "--batch-size",
             type=int,
             default=500,
-            help="Размер пакета (bulk) для обновления (по умолчанию 500).",
+            help="Bulk size of the update (default 500)).",
         )
         parser.add_argument(
             "--dry-run",
             action="store_true",
-            help="Показать, что будет сделано, без реального обновления.",
+            help="Show what will be done without actually updating.",
         )
         parser.add_argument(
             "--days-back",
             type=int,
             default=90,
-            help="Ограничить обработку бронированиями, end_date не старше N дней (оптимизация). 0 = без ограничения.",
+            help="Limit processing to bookings whose end_date is not older than N days (optimization). "
+                 "0 = without limitation.",
         )
 
     def handle(self, *args, **options):
@@ -43,15 +44,15 @@ class Command(BaseCommand):
 
         total = qs.count()
         if total == 0:
-            self.stdout.write(self.style.SUCCESS("Нет бронирований для завершения."))
+            self.stdout.write(self.style.SUCCESS("No bookings to complete."))
             return
 
-        self.stdout.write(f"Найдено {total} подтвержденных завершившихся бронирований.")
+        self.stdout.write(f"Found {total} confirmed completed bookings.")
 
         if dry_run:
             sample = list(qs.order_by("end_date").values_list("id", "end_date")[:10])
-            self.stdout.write(f"[DRY RUN] Пример первых 10: {sample}")
-            self.stdout.write(self.style.WARNING("Dry run: обновлений не выполнено."))
+            self.stdout.write(f"[DRY RUN] Example of the first 10: {sample}")
+            self.stdout.write(self.style.WARNING("Dry run: no updates performed."))
             return
 
         updated = 0
@@ -67,6 +68,6 @@ class Command(BaseCommand):
                         booking.completed_at = timezone.now()
                         booking.save(update_fields=["status", "completed_at"])
                         updated += 1
-            self.stdout.write(f"Обработано {updated}/{total} ...")
+            self.stdout.write(f"Processed {updated}/{total} ...")
 
-        self.stdout.write(self.style.SUCCESS(f"Готово. Завершено {updated} бронирований."))
+        self.stdout.write(self.style.SUCCESS(f"Done. Completed {updated} bookings."))

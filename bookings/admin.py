@@ -17,9 +17,9 @@ class BookingAdmin(admin.ModelAdmin):
     ordering = ("-start_date",)
     readonly_fields = ['monthly_rent', 'created_at', 'updated_at', 'confirmed_at', 'cancel_until']
 
-    @admin.display(description="Владелец (email)")
+    @admin.display(description="Owner (email)")
     def owner_email(self, obj):
-        # Безопасный доступ: obj -> property -> owner -> email
+        # Secure access: obj -> property -> owner -> email
         return getattr(getattr(getattr(obj, "property", None), "owner", None), "email", None)
 
 
@@ -37,5 +37,5 @@ class MessageAdmin(admin.ModelAdmin):
 
     @admin.display(description="Время")
     def timestamp(self, obj):
-        # Поддержка разных названий поля времени
+        # Support different time field names
         return getattr(obj, "created_at", None) or getattr(obj, "sent_at", None)

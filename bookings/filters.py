@@ -4,12 +4,12 @@ from .models import Booking
 
 class BookingFilter(django_filters.FilterSet):
     """
-    Фильтры для списка бронирований:
-    - status: точное совпадение
-    - property_id: по id объявления
-    - renter_id: по id арендатора (user)
-    - start_date_from / start_date_to: диапазон по start_date
-    - end_date_from / end_date_to: диапазон по end_date
+    Filters for the booking list:
+    - status: exact match
+    - property_id: by listing id
+    - renter_id: by renter id (user)
+    - start_date_from / start_date_to: range by start_date
+    - end_date_from / end_date_to: range by end_date
     """
     status = django_filters.CharFilter(field_name="status", lookup_expr="exact")
     property_id = django_filters.NumberFilter(field_name="property__id", lookup_expr="exact")

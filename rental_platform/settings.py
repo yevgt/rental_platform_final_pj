@@ -91,7 +91,7 @@ ROOT_URLCONF = 'rental_platform.urls'
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [BASE_DIR / "templates"],  # для кастомных шаблонов DRF (если потребуется)
+        "DIRS": [BASE_DIR / "templates"],  # for custom DRF templates (if required)
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -177,11 +177,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": (
-        "rest_framework_simplejwt.authentication.JWTAuthentication",  # для работы с access/refresh токенами
-        "rest_framework.authentication.SessionAuthentication",        # для работы с сессиями (обычно браузер)
+        "rest_framework_simplejwt.authentication.JWTAuthentication",  # for working with access/refresh tokens
+        "rest_framework.authentication.SessionAuthentication",        # to work with sessions (usually a browser)
     ),
     "DEFAULT_PERMISSION_CLASSES": (
-        "rest_framework.permissions.AllowAny",  # любой пользователь (даже неавторизованный) может делать запросы к API по умолчанию
+        "rest_framework.permissions.AllowAny",  # any user (even unauthorized) can make requests to the API by default
     ),
     'DEFAULT_RENDERER_CLASSES': (
         'rest_framework.renderers.JSONRenderer',
@@ -192,19 +192,19 @@ REST_FRAMEWORK = {
         "rest_framework.filters.SearchFilter",
         "rest_framework.filters.OrderingFilter",
     ),
-    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",  # для автогенерации схемы OpenAPI (Swagger).
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",  # for autogeneration of OpenAPI schema (Swagger).
 }
 
 SIMPLE_JWT = {
-    # Для совместимости с blacklist всех активных refresh-токенов при удалении аккаунта
+    # For compatibility with blacklisting all active refresh tokens when deleting an account
     "BLACKLIST_AFTER_ROTATION": True,
-    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60),  # Например, 60 минут вместо стандартных 5
-    'REFRESH_TOKEN_LIFETIME': timedelta(days=7),     # Например, 7 дней
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60),  # For example, 60 minutes instead of the standard 5
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=7),     # For example, 7 days
 }
 
 SPECTACULAR_SETTINGS = {
     "TITLE": "Rental Platform API",
-    "DESCRIPTION": "API для системы аренды жилья (объявления, бронирования, отзывы, аналитика).",
+    "DESCRIPTION": "API for housing rental system (ads, bookings, reviews, analytics).",
     "VERSION": "1.0.0",
     "SERVE_INCLUDE_SCHEMA": False,
     "COMPONENT_SPLIT_REQUEST": True,
@@ -220,7 +220,7 @@ SPECTACULAR_SETTINGS = {
     },
 }
 
-# Каталог для логов
+# Directory for logs
 LOG_DIR = BASE_DIR / "logs"
 os.makedirs(LOG_DIR, exist_ok=True)
 
@@ -237,7 +237,7 @@ LOGGING = {
             "format": "{asctime} | {levelname} | {name} | pid={process} tid={thread} | {message}",
             "style": "{",
         },
-        # при желании можно добавить JSON-форматер (потребуется пакет python-json-logger)
+        # If desired, you can add a JSON formatter (you will need the python-json-logger package)
         # "json": {
         #     "()": "pythonjsonlogger.jsonlogger.JsonFormatter",
         #     "fmt": "%(asctime)s %(levelname)s %(name)s %(message)s",
@@ -279,32 +279,32 @@ LOGGING = {
         },
     },
 
-    # root-логгер для проекта
+    # root logger for the project
     "root": {
         "handlers": ["console", "app_file"],
         "level": "INFO",
     },
 
     "loggers": {
-        # Запросы/ответы (используется middleware ниже)
+        # Requests/Responses (uses middleware below)
         "requests": {
             "handlers": ["console", "requests_file"],
             "level": "INFO",
             "propagate": True,
         },
-        # Django запросы с ошибками (4xx-5xx)
+        # Django queries with errors (4xx-5xx)
         "django.request": {
             "handlers": ["console", "requests_file"],
             "level": "WARNING",
             "propagate": False,
         },
-        # Безопасность
+        # Safety
         "django.security": {
             "handlers": ["console", "security_file"],
             "level": "WARNING",
             "propagate": False,
         },
-        # Пример: более подробные логи в ваших приложениях
+        # Example: More detailed logs in your applications
         "accounts": {"level": "INFO"},
         "properties": {"level": "INFO"},
         "bookings": {"level": "INFO"},

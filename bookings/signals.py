@@ -11,8 +11,8 @@ except Exception:
 
 def _resolve_notif_value(*candidates: str):
     """
-    Вернуть значение для Notification.type из возможных контейнеров (Type/Types/TypeChoices),
-    либо строковый fallback, если в модели есть поле 'type'.
+    Return a value for Notification.type from the possible containers (Type/Types/TypeChoices),
+    or a string fallback if the model has a 'type' field.
     """
     if Notification is None:
         return None
@@ -32,7 +32,7 @@ def _resolve_notif_value(*candidates: str):
     try:
         field_names = {f.name for f in Notification._meta.fields}
         if "type" in field_names:
-            # Возьмем первый из кандидатов в нижнем регистре как fallback
+            # Let's take the first of the lowercase candidates as fallback
             return candidates[0].lower()
     except Exception:
         pass
@@ -61,7 +61,7 @@ def notify_on_booking_events(sender, instance: Booking, created, **kwargs):
     landlord = getattr(prop, "owner", None)
     renter = getattr(instance, "user", None)
 
-    # 1) Новая заявка -> уведомление арендодателю
+    # 1) New application -> notification to landlord
     if created and getattr(instance, "status", None) == getattr(Booking.Status, "PENDING", "pending") and landlord:
         notif_type = _resolve_notif_value("BOOKING_NEW", "NEW_BOOKING")
         payload = {
@@ -78,7 +78,7 @@ def notify_on_booking_events(sender, instance: Booking, created, **kwargs):
         except Exception:
             pass
 
-    # 2) Смена статуса -> уведомление арендатору
+    # 2) Change of status -> notification to tenant
     prev_status = getattr(instance, "_previous_status", None)
     new_status = getattr(instance, "status", None)
     if not created and renter and prev_status != new_status:

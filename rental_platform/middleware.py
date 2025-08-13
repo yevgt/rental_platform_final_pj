@@ -14,9 +14,9 @@ SENSITIVE_PATHS = (
 
 class RequestLogMiddleware(MiddlewareMixin):
     """
-    Логирует входящие запросы и ответы:
-    - метод, путь, статус, пользователь, длительность, query string
-    - не логирует тело и токены, исключает чувствительные пути
+    Logs incoming requests and responses:
+    - method, path, status, user, duration, query string
+    - does not log body and tokens, excludes sensitive paths
     """
 
     def process_request(self, request):
@@ -29,7 +29,7 @@ class RequestLogMiddleware(MiddlewareMixin):
 
             path = request.path
 
-            # Пропускаем статику/админку и др. неинтересные пути
+            # Skip statics/admin and other uninteresting paths
             if path.startswith("/static/") or path.startswith("/admin/"):
                 return response
 
@@ -40,7 +40,7 @@ class RequestLogMiddleware(MiddlewareMixin):
             status = getattr(response, "status_code", "-")
 
             if is_sensitive:
-                # Короткий лог для чувствительных эндпоинтов
+                # Short log for sensitive endpoints
                 requests_logger.info(
                     "HTTP %s %s -> %s [%s] %sms",
                     request.method,
@@ -50,7 +50,7 @@ class RequestLogMiddleware(MiddlewareMixin):
                     duration_ms if duration_ms is not None else "-",
                 )
             else:
-                # Подробный лог в виде JSON одной строкой
+                # Detailed log as JSON in one line
                 payload = {
                     "method": request.method,
                     "path": path,
@@ -61,6 +61,6 @@ class RequestLogMiddleware(MiddlewareMixin):
                 }
                 requests_logger.info(json.dumps(payload, ensure_ascii=False))
         except Exception as e:
-            # Никогда не ломаем ответ из-за логирования
+            # Never break a response due to logging
             fallback_logger.warning("Failed to log request/response: %s", e)
         return response

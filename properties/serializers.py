@@ -34,7 +34,7 @@ class PropertySerializer(serializers.ModelSerializer):
     review_count = serializers.ReadOnlyField()
     images = PropertyImageSerializer(many=True, read_only=True)
 
-    # Для загрузки / замены главной картинки при create/update (необязательно)
+    # To upload/replace main image on create/update (optional)
     main_image = serializers.ImageField(required=False, allow_null=True, write_only=True)
 
     class Meta:
@@ -51,7 +51,7 @@ class PropertySerializer(serializers.ModelSerializer):
             "id", "owner_id", "views_count", "created_at", "updated_at",
             "listing", "main_image_url", "average_rating", "review_count",
             "images",
-            # если нужно будет запретить прямое изменение статуса:
+            # if you need to prohibit direct status change:
             # "status"
         ]
 
@@ -62,15 +62,15 @@ class PropertySerializer(serializers.ModelSerializer):
                 return request.build_absolute_uri(obj.main_image.url)
         return None
 
-    # Базовые проверки
+    # Basic checks
     def validate_price(self, value):
         if value <= 0:
-            raise serializers.ValidationError("Цена должна быть > 0.")
+            raise serializers.ValidationError("The price should be > 0.")
         return value
 
     def validate_number_of_rooms(self, value):
         if value <= 0:
-            raise serializers.ValidationError("Количество комнат должно быть > 0.")
+            raise serializers.ValidationError("The number of rooms should be > 0.")
         return value
 
     def create(self, validated_data):
@@ -81,7 +81,7 @@ class PropertySerializer(serializers.ModelSerializer):
 
     def update(self, instance, validated_data):
         prop = super().update(instance, validated_data)
-        # синхронизируем активность листинга с статусом property
+        # synchronize listing activity with property status
         if hasattr(prop, "listing"):
             prop.listing.is_active = (prop.status == prop.Status.ACTIVE)
             prop.listing.save(update_fields=["is_active"])
@@ -89,10 +89,10 @@ class PropertySerializer(serializers.ModelSerializer):
 
 class PropertyImageUploadSerializer(serializers.Serializer):
     """
-    Для action upload_images.
-    Принимает:
-      - images[]: список файлов
-      - captions[]: список подписей (необязательно, по индексу)
+    For action upload_images.
+    Accepts:
+    - images[]: list of files
+    - captions[]: list of captions (optional, by index)
     """
     images = serializers.ListField(
         child=serializers.ImageField(),
@@ -109,11 +109,11 @@ class PropertyImageUploadSerializer(serializers.Serializer):
     def validate(self, attrs):
         images = attrs.get("images", [])
         if len(images) > 10:
-            raise serializers.ValidationError("Максимум 10 изображений за раз.")
+            raise serializers.ValidationError("Maximum 10 images at a time.")
         return attrs
 
     def create(self, validated_data):
-        # Не используется напрямую, action сам создаёт
+        # Not used directly, action creates itself
         return validated_data
 
 class ReviewSerializer(serializers.ModelSerializer):
@@ -130,5 +130,5 @@ class ReviewSerializer(serializers.ModelSerializer):
 
     def validate_rating(self, value):
         if not (1 <= value <= 5):
-            raise serializers.ValidationError("Рейтинг должен быть от 1 до 5.")
+            raise serializers.ValidationError("Rating must be from 1 to 5.")
         return value

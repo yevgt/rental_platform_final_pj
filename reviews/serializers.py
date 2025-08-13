@@ -16,17 +16,17 @@ class ReviewSerializer(serializers.ModelSerializer):
 
     def validate_rating(self, value):
         if not 1 <= value <= 5:
-            raise serializers.ValidationError("Рейтинг должен быть от 1 до 5.")
+            raise serializers.ValidationError("Rating must be from 1 to 5.")
         return value
 
     def validate_comment(self, value: str):
         value = (value or "").strip()
         if len(value) > MAX_COMMENT_LEN:
-            raise serializers.ValidationError(f"Комментарий слишком длинный (максимум {MAX_COMMENT_LEN} символов).")
-        # Простая «текстовая» проверка — отфильтруем управляющие, кроме стандартных переносов
+            raise serializers.ValidationError(f"The comment is too long (maximum {MAX_COMMENT_LEN} symbols).")
+        # Simple "text" check - filter out controls except standard hyphens
         for ch in value:
             if ord(ch) < 32 and ch not in ("\n", "\r", "\t"):
-                raise serializers.ValidationError("Комментарий содержит недопустимые управляющие символы.")
+                raise serializers.ValidationError("The comment contains invalid control characters..")
         return value
 
     def validate(self, attrs):
@@ -37,7 +37,7 @@ class ReviewSerializer(serializers.ModelSerializer):
         if not prop:
             return attrs
         today = timezone.now().date()
-        # Должно быть подтвержденное бронирование, которое уже завершено
+        # There must be a confirmed booking that has already been completed.
         has_finished_booking = Booking.objects.filter(
             property=prop,
             user=user,
@@ -46,7 +46,7 @@ class ReviewSerializer(serializers.ModelSerializer):
             end_date__lt=today
         ).exists()
         if not has_finished_booking:
-            raise serializers.ValidationError("Оставлять отзыв можно только после завершенного подтвержденного бронирования.")
+            raise serializers.ValidationError("You can only leave a review after a completed, confirmed booking..")
         return attrs
 
     def create(self, validated_data):
@@ -54,7 +54,7 @@ class ReviewSerializer(serializers.ModelSerializer):
         return super().create(validated_data)
 
     def update(self, instance, validated_data):
-        # Запрещаем менять объект property при обновлении
+        # Prevent changing the property object when updating
         if "property" in validated_data:
             validated_data.pop("property")
         return super().update(instance, validated_data)

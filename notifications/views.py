@@ -25,14 +25,14 @@ class NotificationViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
     def read(self, request, pk=None):
         notif = self.get_object()
         if notif.user != request.user:
-            return Response({"detail": "Нет доступа."}, status=403)
+            return Response({"detail": "No access."}, status=403)
         if not notif.is_read:
             notif.is_read = True
             notif.save(update_fields=["is_read"])
-        return Response({"detail": "Уведомление отмечено как прочитанное.", "id": notif.id, "is_read": notif.is_read})
+        return Response({"detail": "Notification marked as read.", "id": notif.id, "is_read": notif.is_read})
 
     @decorators.action(detail=False, methods=["post"])
     def read_all(self, request):
         qs = Notification.objects.filter(user=request.user, is_read=False)
         updated = qs.update(is_read=True)
-        return Response({"detail": "Все уведомления отмечены как прочитанные.", "updated": updated})
+        return Response({"detail": "All notifications are marked as read.", "updated": updated})

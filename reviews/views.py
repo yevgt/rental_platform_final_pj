@@ -6,9 +6,9 @@ from .models import Review
 from .serializers import ReviewSerializer
 
 class IsReviewOwnerOrReadOnly(permissions.BasePermission):
-    message = "Изменять или удалять отзыв может только его автор."
+    message = "Only the author of a review can change or delete it."
     def has_object_permission(self, request, view, obj):
-        # SAFE_METHODS (GET, HEAD, OPTIONS) разрешены всем
+        # SAFE_METHODS (GET, HEAD, OPTIONS) are allowed to all
         if request.method in permissions.SAFE_METHODS:
             return True
         return obj.user_id == getattr(request.user, "id", None)
@@ -26,7 +26,7 @@ class ReviewViewSet(viewsets.ModelViewSet):
         if prop_id:
             qs = qs.filter(property_id=prop_id)
 
-        # Фильтр по точному рейтингу
+        # Filter by exact rating
         rating = self.request.query_params.get("rating")
         if rating is not None:
             try:
@@ -34,7 +34,7 @@ class ReviewViewSet(viewsets.ModelViewSet):
             except ValueError:
                 pass
 
-        # Фильтры диапазона
+        # Range filters
         rating_min = self.request.query_params.get("rating_min")
         if rating_min is not None:
             try:
@@ -53,5 +53,5 @@ class ReviewViewSet(viewsets.ModelViewSet):
         try:
             serializer.save()
         except IntegrityError:
-            # Нарушение unique_together (property, user)
-            raise ValidationError({"detail": "Вы уже оставляли отзыв на это объявление."})
+            # Violation of unique_together(property, user)
+            raise ValidationError({"detail": "You have already left a review for this advert.."})

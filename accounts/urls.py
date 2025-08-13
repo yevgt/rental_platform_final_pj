@@ -9,7 +9,6 @@ from .views import (
 )
 
 urlpatterns = [
-    # Root для /api/accounts/ со списком кликабельных ссылок
     path("", accounts_root, name="accounts-root"),
 
     path("register/", RegisterView.as_view(), name="register"),

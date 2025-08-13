@@ -2,6 +2,7 @@ from django.conf import settings
 from django.db import models
 from properties.models import Property
 
+
 class ViewHistory(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, blank=True, null=True, related_name="view_history")
     property = models.ForeignKey(Property, on_delete=models.CASCADE, related_name="view_history")

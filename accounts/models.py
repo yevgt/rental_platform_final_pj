@@ -7,6 +7,7 @@ from django.db import models
 class UserManager(BaseUserManager):
     use_in_migrations = True
 
+    # Internal method to create and save a user with given email and password
     def _create_user(self, email, password=None, **extra_fields):
         if not email:
             raise ValueError("The Email must be set")
@@ -19,13 +20,13 @@ class UserManager(BaseUserManager):
         user.save(using=self._db)
         return user
 
-    # ВАЖНО: принимаем email, а не username
+    # Creates a regular user with email instead of username
     def create_user(self, email, password=None, **extra_fields):
         extra_fields.setdefault("is_staff", False)
         extra_fields.setdefault("is_superuser", False)
         return self._create_user(email, password, **extra_fields)
 
-    # ВАЖНО: принимаем email, а не username
+    # Creates a superuser with elevated permissions
     def create_superuser(self, email, password=None, **extra_fields):
         extra_fields.setdefault("is_staff", True)
         extra_fields.setdefault("is_superuser", True)
@@ -37,13 +38,13 @@ class UserManager(BaseUserManager):
 
         return self._create_user(email, password, **extra_fields)
 
-
+# Custom user
 class User(AbstractUser):
     class Roles(models.TextChoices):
-        RENTER = "renter", "Арендатор"
-        LANDLORD = "landlord", "Арендодатель"
+        RENTER = "renter", "Renter"
+        LANDLORD = "landlord", "Landlord"
 
-    #используем email вместо username
+    # use email instead of username
     username = None
     email = models.EmailField(unique=True)
     # name = models.CharField(max_length=150, blank=True)
@@ -54,7 +55,7 @@ class User(AbstractUser):
     date_of_birth = models.DateField(blank=True, null=True)
 
     USERNAME_FIELD = "email"
-    REQUIRED_FIELDS = ["first_name", "last_name"]  # что дополнительно спросить при createsuperuser
+    REQUIRED_FIELDS = ["first_name", "last_name"]  # additionally ask when createsuperuser
 
     objects = UserManager()
 

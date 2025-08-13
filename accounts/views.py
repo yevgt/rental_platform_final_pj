@@ -23,7 +23,7 @@ class RegisterView(generics.CreateAPIView):
     permission_classes = [permissions.AllowAny]
 
 class MeView(generics.RetrieveAPIView):
-    """Получение текущего пользователя."""
+    """Getting the current user."""
 
     serializer_class = UserSerializer
     permission_classes = [permissions.IsAuthenticated]
@@ -33,8 +33,8 @@ class MeView(generics.RetrieveAPIView):
 
 class ProfileUpdateView(generics.UpdateAPIView):
     """
-    Обновление профиля (PUT/PATCH).
-    Например: PATCH /api/accounts/profile/ {"first_name": "Ivan"}.
+    Profile update (PUT/PATCH).
+    For example: PATCH /api/accounts/profile/ {"first_name": "Ivan"}.
     """
     serializer_class = ProfileUpdateSerializer
     permission_classes = [permissions.IsAuthenticated]
@@ -58,23 +58,23 @@ class PasswordChangeView(APIView):
         serializer = PasswordChangeSerializer(data=request.data, context={"request": request})
         serializer.is_valid(raise_exception=True)
         serializer.save()
-        return Response({"detail": "Пароль успешно изменён."}, status=status.HTTP_200_OK)
+        return Response({"detail": "Password successfully changed."}, status=status.HTTP_200_OK)
 
 class DeleteAccountView(APIView):
     permission_classes = [permissions.IsAuthenticated]
 
     def delete(self, request):
         user = request.user
-        # Вносим все выданные пользователю refresh-токены в blacklist (разлогин везде)
+        # We add all refresh tokens issued to the user to the blacklist (logout everywhere)
         try:
             tokens = OutstandingToken.objects.filter(user=user)
             for t in tokens:
                 BlacklistedToken.objects.get_or_create(token=t)
         except Exception:
-            # Даже если blacklist недоступен, всё равно удаляем аккаунт
+            # Even if blacklist is unavailable, we still delete the account
             pass
         user.delete()
-        return Response({"detail": "Аккаунт удалён, токены отозваны."}, status=status.HTTP_200_OK)
+        return Response({"detail": "Account deleted, tokens revoked."}, status=status.HTTP_200_OK)
 
 @api_view(["GET"])
 @permission_classes([AllowAny])

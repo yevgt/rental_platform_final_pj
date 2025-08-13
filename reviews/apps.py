@@ -5,5 +5,5 @@ class ReviewsConfig(AppConfig):
     name = "reviews"
 
     def ready(self):
-        # Импортируем сигналы
+        # Import signals
         from . import signals  # noqa

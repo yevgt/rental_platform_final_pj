@@ -6,16 +6,16 @@ from rest_framework import serializers
 User = get_user_model()
 
 def _validate_date_of_birth(dob):
-    """Общая функция проверки даты рождения."""
+    """General function for checking date of birth."""
     if dob is None:
-        raise serializers.ValidationError("Дата рождения обязательна.")
+        raise serializers.ValidationError("Date of birth is required.")
     today = timezone.now().date()
     if dob > today:
-        raise serializers.ValidationError("Дата рождения не может быть в будущем.")
-    # Расчёт возраста
+        raise serializers.ValidationError("Date of birth cannot be in the future.")
+    # Age calculation
     age = today.year - dob.year - ((today.month, today.day) < (dob.month, dob.day))
     if age < 18:
-        raise serializers.ValidationError("Регистрация разрешена только пользователям 18+.")
+        raise serializers.ValidationError("Registration is allowed only for users 18+.")
     return dob
 
 class UserSerializer(serializers.ModelSerializer):
@@ -42,13 +42,10 @@ class RegisterSerializer(serializers.ModelSerializer):
         ]
         read_only_fields = ["id"]
 
-    # def validate_password(self, value):
-    #     validate_password(value)
-    #     return value
 
     def validate_email(self, value):
         if User.objects.filter(email__iexact=value).exists():
-            raise serializers.ValidationError("Пользователь с таким email уже существует.")
+            raise serializers.ValidationError("A user with this email already exists.")
         return value
 
     def validate_date_of_birth(self, value):
@@ -58,7 +55,7 @@ class RegisterSerializer(serializers.ModelSerializer):
         pw = attrs.get("password")
         pw2 = attrs.pop("password_confirm", None)
         if pw != pw2:
-            raise serializers.ValidationError({"password_confirm": "Пароли не совпадают."})
+            raise serializers.ValidationError({"password_confirm": "The passwords do not match."})
         validate_password(pw)
         return attrs
 
@@ -72,7 +69,7 @@ class RegisterSerializer(serializers.ModelSerializer):
 
 class ProfileUpdateSerializer(serializers.ModelSerializer):
     """
-    Обновление профиля пользователем.
+    User profile update.
     """
 
     date_of_birth = serializers.DateField(required=False)
@@ -90,12 +87,12 @@ class ProfileUpdateSerializer(serializers.ModelSerializer):
         if user and user.email.lower() == value.lower():
             return value
         if User.objects.filter(email__iexact=value).exists():
-            raise serializers.ValidationError("Email уже занят.")
+            raise serializers.ValidationError("Email is already taken.")
         return value
 
     def validate_role(self, value):
         if value not in [c[0] for c in User.Roles.choices]:
-            raise serializers.ValidationError("Некорректная роль.")
+            raise serializers.ValidationError("Incorrect role.")
         return value
 
     def validate_date_of_birth(self, value):
@@ -114,11 +111,11 @@ class PasswordChangeSerializer(serializers.Serializer):
         user = self.context["request"].user
         old = attrs.get("old_password")
         if not user.check_password(old):
-            raise serializers.ValidationError({"old_password": "Неверный текущий пароль."})
+            raise serializers.ValidationError({"old_password": "Incorrect current password."})
         new = attrs.get("new_password")
         new2 = attrs.pop("new_password_confirm", None)
         if new != new2:
-            raise serializers.ValidationError({"new_password_confirm": "Подтверждение не совпадает."})
+            raise serializers.ValidationError({"new_password_confirm": "Confirmation does not match."})
         validate_password(new, user=user)
         return attrs
 

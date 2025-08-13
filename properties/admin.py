@@ -10,7 +10,7 @@ class PropertyImageInline(admin.TabularInline):
 
 
 class PropertyPriceRangeFilter(admin.SimpleListFilter):
-    title = "Цена"
+    title = "Price"
     parameter_name = "price_range"
 
     def lookups(self, request, model_admin):
@@ -35,7 +35,7 @@ class PropertyPriceRangeFilter(admin.SimpleListFilter):
 
 
 class RoomsCountFilter(admin.SimpleListFilter):
-    title = "Комнаты"
+    title = "Rooms"
     parameter_name = "rooms_bucket"
 
     def lookups(self, request, model_admin):

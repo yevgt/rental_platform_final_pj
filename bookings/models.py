@@ -6,11 +6,11 @@ from django.utils import timezone
 
 class Booking(models.Model):
     class Status(models.TextChoices):
-        PENDING = "pending", "Ожидает подтверждения"
-        CONFIRMED = "confirmed", "Подтверждено"
-        CANCELLED = "cancelled", "Отменено"
-        COMPLETED = "completed", "Завершено"
-        REJECTED = "rejected", "Отклонено"
+        PENDING = "pending", "Awaiting confirmation"
+        CONFIRMED = "confirmed", "Confirmed"
+        CANCELLED = "cancelled", "Cancelled"
+        COMPLETED = "completed", "Completed"
+        REJECTED = "rejected", "Rejected"
 
     property = models.ForeignKey(Property, on_delete=models.CASCADE, related_name="bookings")
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="bookings") # user
@@ -28,7 +28,7 @@ class Booking(models.Model):
     class Meta:
         ordering = ["-created_at"]
         indexes = [
-            models.Index(fields=["status", "end_date"]),  # ускоряет автозавершение
+            models.Index(fields=["status", "end_date"]),  # speeds up autocompletion
         ]
 
     def __str__(self):
@@ -45,7 +45,7 @@ class Booking(models.Model):
         return True
 
     def mark_completed(self, commit=True):
-        """Отметить бронирование завершённым, если оно подтверждено и end_date в прошлом."""
+        """ Mark a booking as completed if it is confirmed and end_date is in the past. """
         if self.status != self.Status.CONFIRMED:
             return False
         today = timezone.now().date()

@@ -19,13 +19,13 @@ from reviews.models import Review
 
 class PropertyViewSet(viewsets.ModelViewSet):
     """
-    Основной приватный (для авторизованных ролей) ViewSet.
-    Правила (предыдущая логика):
-      - Аноним / renter: использовать теперь публичный endpoint /api/properties/public/
-      - Landlord: list — только свои объявления (все статусы);
-                  retrieve — свои любые, чужие (если достигнут напрямую) не предназначены для этого ViewSet (используйте публичный).
-      - Создание/изменение/удаление/toggle_status: только landlord-владелец.
-    Реально теперь этот ViewSet ориентирован на операции landlord.
+    Main private (for authorized roles) ViewSet.
+    Rules (previous logic):
+    - Anonymous / renter: now use public endpoint /api/properties/public/
+    - Landlord: list — only your listings (all statuses);
+    retrieve — any of yours, others' (if reached directly) are not intended for this ViewSet (use public).
+    - Create/modify/delete/toggle_status: only landlord-owner.
+    In reality, this ViewSet is now focused on landlord operations.
     """
     queryset = Property.objects.select_related("owner").all()
     # queryset = Property.objects.select_related("owner")
@@ -46,25 +46,25 @@ class PropertyViewSet(viewsets.ModelViewSet):
             "reorder_images", "update_image_caption", "set_main_image"
         ]:
             return [permissions.IsAuthenticated(), IsLandlord(), IsOwnerOrReadOnly()]
-        # Ограничим list/retrieve здесь только авторизованными landlord (их собственные)
+        # Let's limit list/retrieve here to authorized landlords only (their own)
         if self.action in ["list", "retrieve"]:
             return [permissions.IsAuthenticated(), IsLandlord(), IsOwnerOrReadOnly()]
         return [permissions.IsAuthenticated()]
 
     def get_queryset(self):
         user = self.request.user
-        # list: только свои
+        # list: only our own
         if self.action == "list":
             return Property.objects.select_related("owner").filter(owner=user)
-        # retrieve: тоже только свои (исправление утечки)
+        # retrieve: also only our own (leak fix)
         if self.action == "retrieve":
             return Property.objects.select_related("owner").filter(owner=user)
-        # Остальные действия: вернём все, object-permission ограничит (только владелец сможет модифицировать)
+        # Other actions: return everything, object-permission will limit (only the owner will be able to modify)
         return Property.objects.select_related("owner")
 
 
     def perform_create(self, serializer):
-        serializer.save()  # owner устанавливается в serializer.create
+        serializer.save()  # owner is set in serializer.create
 
     @decorators.action(detail=True, methods=["post"])
     def toggle_status(self, request, pk=None):
@@ -81,10 +81,10 @@ class PropertyViewSet(viewsets.ModelViewSet):
     @decorators.action(detail=True, methods=["post"], url_path="upload-images")
     def upload_images(self, request, pk=None):
         """
-        Массовая загрузка дополнительных изображений.
-        Формат (multipart):
-          images: (многократные файлы) images[0], images[1] ...
-          captions: (опционально) captions[0], captions[1] ...
+        Bulk upload additional images.
+        Format (multipart):
+        images: (multiple files) images[0], images[1] ...
+        captions: (optional) captions[0], captions[1] ...
         """
         prop = self.get_object()
         self.check_object_permissions(request, prop)
@@ -94,7 +94,7 @@ class PropertyViewSet(viewsets.ModelViewSet):
         images = serializer.validated_data["images"]
         captions = serializer.validated_data.get("captions", [])
 
-        # лимит по общему количеству изображений на объявление
+        # limit on total number of images per ad
         total_existing = prop.images.count()
         if total_existing + len(images) > 10:
             return response.Response(
@@ -103,7 +103,7 @@ class PropertyViewSet(viewsets.ModelViewSet):
             )
 
         created = []
-        # Определяем начальный max order
+        # We define the initial max order
         current_max = prop.images.aggregate(m=models.Max("order")).get("m") or 0
         for idx, img in enumerate(images, start=1):
             caption = captions[idx - 1] if idx - 1 < len(captions) else ""
@@ -123,8 +123,8 @@ class PropertyViewSet(viewsets.ModelViewSet):
     @decorators.action(detail=True, methods=["post"], url_path="delete-image")
     def delete_image(self, request, pk=None):
         """
-        Удалить одно изображение.
-        Тело (JSON или multipart):
+        Delete one image.
+        Body (JSON or multipart):
         {
           "image_id": <id>
         }
@@ -133,25 +133,25 @@ class PropertyViewSet(viewsets.ModelViewSet):
         self.check_object_permissions(request, prop)
         image_id = request.data.get("image_id")
         if not image_id:
-            return response.Response({"detail": "image_id обязателен."}, status=400)
+            return response.Response({"detail": "image_id mandatory."}, status=400)
         try:
             img = prop.images.get(id=image_id)
         except PropertyImage.DoesNotExist:
-            return response.Response({"detail": "Изображение не найдено."}, status=404)
+            return response.Response({"detail": "Image not found."}, status=404)
         img.delete()
         return response.Response(status=204)
 
     @decorators.action(detail=True, methods=["post"], url_path="reorder-images")
     def reorder_images(self, request, pk=None):
         """
-        Переупорядочивание изображений.
-        Тело: {"order": [image_id1, image_id2, ...]}
+        Reordering images.
+        Body: {"order": [image_id1, image_id2, ...]}
         """
         prop = self.get_object()
         self.check_object_permissions(request, prop)
         order_list = request.data.get("order", [])
         if not isinstance(order_list, list) or not order_list:
-            return response.Response({"detail": "order должен быть непустым списком id."}, status=400)
+            return response.Response({"detail": "order must be a non-empty list id."}, status=400)
 
         images = {img.id: img for img in prop.images.all()}
         next_order = 1
@@ -161,7 +161,7 @@ class PropertyViewSet(viewsets.ModelViewSet):
                 img.order = next_order
                 img.save(update_fields=["order"])
                 next_order += 1
-        # любые изображения не попавшие в список — идут далее
+        # any images not included in the list go further
         for img_id, img in images.items():
             if img.id not in order_list:
                 img.order = next_order
@@ -175,19 +175,19 @@ class PropertyViewSet(viewsets.ModelViewSet):
     @decorators.action(detail=True, methods=["post"], url_path="update-image-caption")
     def update_image_caption(self, request, pk=None):
         """
-        Обновление подписи одного изображения.
-        Тело: {"image_id": <id>, "caption": "текст"}
+        Update the signature of one image.
+        Body: {"image_id": <id>, "caption": "текст"}
         """
         prop = self.get_object()
         self.check_object_permissions(request, prop)
         image_id = request.data.get("image_id")
         caption = request.data.get("caption", "")
         if not image_id:
-            return response.Response({"detail": "image_id обязателен."}, status=400)
+            return response.Response({"detail": "image_id mandatory."}, status=400)
         try:
             img = prop.images.get(id=image_id)
         except PropertyImage.DoesNotExist:
-            return response.Response({"detail": "Изображение не найдено."}, status=404)
+            return response.Response({"detail": "Image not found."}, status=404)
         img.caption = caption
         img.save(update_fields=["caption"])
         return response.Response(PropertyImageSerializer(img, context={"request": request}).data)
@@ -195,11 +195,10 @@ class PropertyViewSet(viewsets.ModelViewSet):
     @decorators.action(detail=True, methods=["post"], url_path="set-main-image")
     def set_main_image(self, request, pk=None):
         """
-        Установка главной картинки либо из уже загруженных дополнительных,
-        либо новой загрузкой.
-        Форматы:
-          1) {"image_id": <id already uploaded>}  -> возьмём файл из PropertyImage.image и скопируем в main_image.
-          2) multipart с полем main_image (файл).
+        Installing the main image either from already downloaded additional ones, or by new download.
+        Formats:
+          1) {"image_id": <id already uploaded>}  -> let's take the file from PropertyImage.image and copy it to main_image.
+          2) multipart with main_image field (file).
         """
         prop = self.get_object()
         self.check_object_permissions(request, prop)
@@ -208,18 +207,18 @@ class PropertyViewSet(viewsets.ModelViewSet):
         main_file = request.data.get("main_image")
 
         if not image_id and not main_file:
-            return response.Response({"detail": "Передайте image_id или файл main_image."}, status=400)
+            return response.Response({"detail": "Pass image_id or main_image file."}, status=400)
 
         if image_id and main_file:
-            return response.Response({"detail": "Используйте либо image_id, либо main_image файл — не оба."},
+            return response.Response({"detail": "Use either image_id or main_image file — not both."},
                                      status=400)
 
         if image_id:
             try:
                 p_img = prop.images.get(id=image_id)
             except PropertyImage.DoesNotExist:
-                return response.Response({"detail": "Изображение не найдено."}, status=404)
-            # Просто переназначаем ссылку (копию файла можно сделать при необходимости)
+                return response.Response({"detail": "Image not found."}, status=404)
+            # Just reassign the link (you can make a copy of the file if necessary))
             prop.main_image = p_img.image
             prop.save(update_fields=["main_image"])
         else:
@@ -233,11 +232,11 @@ class PropertyViewSet(viewsets.ModelViewSet):
 
 class PublicPropertyViewSet(viewsets.ReadOnlyModelViewSet):
     """
-    Публичный (анонимный) просмотр активных объявлений:
-      - GET /api/properties/public/           (list)  — только ACTIVE
-      - GET /api/properties/public/{id}/      (retrieve) — только ACTIVE
-    Авторизованный landlord тоже может пользоваться этим endpoint'ом,
-    но увидит только активные чужие объявления (без доступа к неактивным).
+    Public (anonymous) viewing of active listings:
+    - GET /api/properties/public/ (list) — ACTIVE only
+    - GET /api/properties/public/{id}/ (retrieve) — ACTIVE only
+    An authorized landlord can also use this endpoint,
+    but will only see active other listings (without access to inactive ones).
     """
     serializer_class = PropertySerializer
     permission_classes = [permissions.AllowAny]
@@ -257,13 +256,13 @@ class PublicPropertyViewSet(viewsets.ReadOnlyModelViewSet):
     def list(self, request, *args, **kwargs):
         search_q = request.query_params.get("search")
         if search_q and request.user.is_authenticated:
-            # Записываем историю поиска только для авторизованных
+            # We record search history only for authorized users
             SearchHistory.objects.create(user=request.user, search_query=search_q)
         return super().list(request, *args, **kwargs)
 
     def retrieve(self, request, *args, **kwargs):
         obj = self.get_object()
-        # Инкремент просмотров
+        # Views increment
         Property.objects.filter(pk=obj.pk).update(views_count=F("views_count") + 1)
         if request.user.is_authenticated:
             ViewHistory.objects.create(user=request.user, property=obj)
@@ -272,10 +271,10 @@ class PublicPropertyViewSet(viewsets.ReadOnlyModelViewSet):
     @decorators.action(detail=True, methods=["get"], url_path="reviews", permission_classes=[permissions.AllowAny])
     def reviews(self, request, pk=None):
         """
-        Публичный список отзывов по объявлению.
+        Public list of reviews for the ad.
         GET /api/properties/public/{id}/reviews/
         """
-        prop = self.get_object()  # гарантирует ACTIVE
+        prop = self.get_object()  # guarantees ACTIVE
         qs = Review.objects.filter(property=prop).order_by("-created_at")
 
         page = self.paginate_queryset(qs)

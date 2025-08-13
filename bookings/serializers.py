@@ -31,12 +31,12 @@ class BookingSerializer(serializers.ModelSerializer):
         if not start or not end:
             raise serializers.ValidationError("start and end must be specified")
         if start >= end:
-            raise serializers.ValidationError("start_date должен быть раньше end_date.")
+            raise serializers.ValidationError("start_date should be earlier end_date.")
         today = timezone.now().date()
         if start < today:
-            raise serializers.ValidationError("Нельзя бронировать прошедшие даты.")
+            raise serializers.ValidationError("You cannot book past dates..")
         if prop.status != Property.Status.ACTIVE:
-            raise serializers.ValidationError("Нельзя бронировать неактивное объявление.")
+            raise serializers.ValidationError("You cannot book an inactive listing.")
 
         overlap = Booking.objects.filter(
             # property=prop, status=Booking.Status.CONFIRMED
@@ -46,7 +46,7 @@ class BookingSerializer(serializers.ModelSerializer):
             Q(start_date__lt=end) & Q(end_date__gt=start)
         ).exists()
         if overlap:
-            raise serializers.ValidationError("На эти даты уже есть подтверждённое бронирование.")
+            raise serializers.ValidationError("There are already confirmed reservations for these dates.")
         return attrs
 
     def create(self, validated_data):
@@ -55,7 +55,7 @@ class BookingSerializer(serializers.ModelSerializer):
         prop = validated_data["property"]
 
         if user == prop.owner:
-            raise serializers.ValidationError("Владелец не может бронировать собственный объект.")
+            raise serializers.ValidationError("The owner cannot book his own property.")
 
         # берем цену; если у вас только price
         price_monthly = getattr(prop, "price_monthly", None)
@@ -69,7 +69,6 @@ class BookingSerializer(serializers.ModelSerializer):
         months = (Decimal(days) / Decimal("30.44"))
         total_amount = (price_monthly * months).quantize(Decimal("0.01"), rounding=ROUND_HALF_UP)
         validated_data["total_amount"] = total_amount
-        # cancel_until = день начала (можно -1 день, если хотите)
         validated_data["cancel_until"] = start_date
 
         return Booking.objects.create(

@@ -10,6 +10,6 @@ class ReviewAdmin(admin.ModelAdmin):
     list_filter = ("rating", ("property", admin.RelatedOnlyFieldListFilter), ("user", admin.RelatedOnlyFieldListFilter))
     ordering = ("-id",)
 
-    @admin.display(description="Создано")
+    @admin.display(description="Created by")
     def created(self, obj):
         return getattr(obj, "created_at", None)

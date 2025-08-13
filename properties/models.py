@@ -7,18 +7,18 @@ def validate_image_size(image_field):
     # Пример мягкой валидации (можно убрать или скорректировать)
     max_mb = 5
     if image_field.size > max_mb * 1024 * 1024:
-        raise ValidationError(f"Размер изображения не должен превышать {max_mb}MB.")
+        raise ValidationError(f"The image size must not exceed {max_mb}MB.")
 
 class Property(models.Model):
     class Status(models.TextChoices):
-        ACTIVE = "active", "Активно"
-        INACTIVE = "inactive", "Неактивно"
+        ACTIVE = "active", "Actively"
+        INACTIVE = "inactive", "Inactive"
 
     class PropertyType(models.TextChoices):
-        APARTMENT = "apartment", "Квартира"
-        HOUSE = "house", "Дом"
-        ROOM = "room", "Комната"
-        OTHER = "other", "Другое"
+        APARTMENT = "apartment", "Apartment"
+        HOUSE = "house", "House"
+        ROOM = "room", "Room"
+        OTHER = "other", "Other"
 
     title = models.CharField(max_length=255)
     description = models.TextField(blank=True)
@@ -32,7 +32,7 @@ class Property(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
-    # Главная картинка
+    # Main picture
     main_image = models.ImageField(
         upload_to="properties/main/",
         blank=True,

@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.apps import apps
 
-# Пытаемся получить модель Notification из приложения notifications (или notification)
+# Trying to get the Notification model from the notifications app (or notification)
 Notification = None
 for app_label in ("notifications", "notification"):
     try:
@@ -18,11 +18,11 @@ def has_field(model, name: str) -> bool:
 
 class NotificationAdmin(admin.ModelAdmin):
     """
-    Динамическая админка уведомлений:
-    - list_display: id, получатель, тип, прочитано?, связанный объект, создано
-    - search: по тексту/заголовку и email получателя/отправителя
-    - фильтры: прочитано, тип/категория, канал, дата
-    - сортировка: по -created_at/-created/-timestamp/-id
+    Dynamic notification admin panel:
+    - list_display: id, recipient, type, read?, related object, created
+    - search: by text/title and recipient/sender email
+    - filters: read, type/category, channel, date
+    - sort: by -created_at/-created/-timestamp/-id
     """
 
     def get_list_display(self, request):
@@ -30,11 +30,11 @@ class NotificationAdmin(admin.ModelAdmin):
 
     def get_search_fields(self, request):
         fields = []
-        # Текст/заголовок
+        # Text/heading
         for name in ("title", "message", "text", "body"):
             if has_field(self.model, name):
                 fields.append(name)
-        # Email получателя/отправителя
+        # Email recipient/sender
         if has_field(self.model, "user"):
             fields.append("user__email")
         if has_field(self.model, "recipient"):
@@ -76,8 +76,8 @@ class NotificationAdmin(admin.ModelAdmin):
                 rels.append(rel)
         return tuple(rels)
 
-    # Колонки-коллбеки (без привязки к конкретным именам полей)
-    @admin.display(description="Получатель")
+    # Callback columns (not tied to specific field names)
+    @admin.display(description="Recipient")
     def recipient_col(self, obj):
         for name in ("user", "recipient", "to_user"):
             if hasattr(obj, name):
@@ -85,31 +85,31 @@ class NotificationAdmin(admin.ModelAdmin):
                 return getattr(val, "email", None) or str(val)
         return None
 
-    @admin.display(description="Тип")
+    @admin.display(description="Type")
     def type_col(self, obj):
         for name in ("type", "category", "kind", "channel"):
             if hasattr(obj, name):
                 return getattr(obj, name)
         return None
 
-    @admin.display(boolean=True, description="Прочитано")
+    @admin.display(boolean=True, description="Read")
     def is_read_col(self, obj):
         for name in ("is_read", "read"):
             if hasattr(obj, name):
                 return bool(getattr(obj, name))
-        # Если есть read_at
+        # If there is read_at
         if hasattr(obj, "read_at"):
             return getattr(obj, "read_at") is not None
         return False
 
-    @admin.display(description="Связано с")
+    @admin.display(description="Related to")
     def related_col(self, obj):
         for name in ("booking", "property", "object", "content_object"):
             if hasattr(obj, name):
                 return getattr(obj, name)
         return None
 
-    @admin.display(description="Создано")
+    @admin.display(description="Created by")
     def created_col(self, obj):
         for name in ("created_at", "created", "timestamp", "sent_at"):
             if hasattr(obj, name):

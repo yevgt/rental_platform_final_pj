@@ -3,21 +3,21 @@ from django.dispatch import receiver
 
 from .models import Review
 
-# Notification может отличаться по реализации, поэтому импорт в try/except
+# Notification may differ in implementation, so import in try/except
 try:
-    from notifications.models import Notification  # проверь имя app'а, если другое — поправь
+    from notifications.models import Notification  # check the app name, if it's different, correct it
 except Exception:
     Notification = None
 
 
 def _resolve_notification_type():
     """
-    Пытаемся найти корректное значение для поля Notification.type среди разных вариантов:
-    - Notification.Type.REVIEW_NEW (или NEW_REVIEW/REVIEW_CREATED/REVIEW)
-    - Notification.Types.REVIEW_NEW (альтернативное имя)
+    Trying to find the correct value for the Notification.type field among the different options:
+    - Notification.Type.REVIEW_NEW (or NEW_REVIEW/REVIEW_CREATED/REVIEW)
+    - Notification.Types.REVIEW_NEW (alternate name)
     - Notification.TypeChoices.REVIEW_NEW
-    - Первый элемент из choices
-    - Строковый fallback "review_new", если поле 'type' существует
+    - First element from choices
+    - String fallback "review_new" if the 'type' field exists
     """
     if Notification is None:
         return None
@@ -47,8 +47,8 @@ def _resolve_notification_type():
 @receiver(post_save, sender=Review)
 def notify_owner_on_new_review(sender, instance: Review, created, **kwargs):
     """
-    Создаёт уведомление владельцу объекта при создании нового отзыва.
-    Любые ошибки при создании уведомления НЕ должны ломать сохранение отзыва.
+    Creates a notification to the object owner when a new review is created.
+    Any errors in creating the notification should NOT break the review saving.
     """
     if not created or Notification is None:
         return
@@ -61,7 +61,7 @@ def notify_owner_on_new_review(sender, instance: Review, created, **kwargs):
     if owner is None:
         return
 
-    # Не уведомляем, если владелец = автор
+    # We do not notify if the owner = author
     owner_id = getattr(owner, "id", None)
     if owner_id == getattr(instance, "user_id", None):
         return
@@ -81,5 +81,5 @@ def notify_owner_on_new_review(sender, instance: Review, created, **kwargs):
     try:
         Notification.objects.create(**create_kwargs)
     except Exception:
-        # уведомления best-effort — не падаем
+        # best-effort notifications — don't crash
         pass

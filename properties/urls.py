@@ -12,8 +12,6 @@ public_router = DefaultRouter()
 public_router.register(r"", PublicPropertyViewSet, basename="public-property")
 
 # Алиас на создание объявления:
-# GET  /api/properties/create/  -> list (покажет список и HTML-форму, если залогинен через сессию)
-# POST /api/properties/create/  -> create (создание объявления)
 property_list_create_alias = PropertyViewSet.as_view({"get": "list", "post": "create"})
 
 urlpatterns = [
