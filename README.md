@@ -83,7 +83,7 @@ providing complete functionality for property management, booking system, review
 ## Quick Start
 
 ### Prerequisites
-- Python 3.8+
+- Python 3.13
 - pip (Python package manager)
 
 ### Installation
@@ -158,7 +158,7 @@ JWT_SECRET_KEY=your-jwt-secret-key
 ## Project Structure
 
 ```
-rental-housing-backend/
+rental-platform/
 ├── accounts/              # User management app
 ├── analytics/             # Analytics and reporting
 ├── bookings/              # Booking system

@@ -18,7 +18,7 @@ class BookingSerializer(serializers.ModelSerializer):
              "cancel_until", "created_at", "property_owner_id",
         ]
         read_only_fields = [
-            "id", "user_id", "property_owner_id", "status",
+            "id", "user_id", "user", "property_owner_id", "status",
             "monthly_rent", "total_amount", "cancel_until",
             "created_at", "confirmed_at",
         ]

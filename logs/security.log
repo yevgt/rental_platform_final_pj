@@ -15,3 +15,24 @@
 2025-08-11 17:58:30,222 | WARNING | django.security.csrf | pid=3032 tid=35192 | Forbidden (CSRF cookie not set.): /api/properties/
 2025-08-11 17:58:30,227 | WARNING | django.security.csrf | pid=3032 tid=35192 | Forbidden (CSRF cookie not set.): /api/properties/
 2025-08-12 23:02:09,217 | WARNING | django.security.csrf | pid=1652 tid=34920 | Forbidden (CSRF token from the 'X-Csrftoken' HTTP header incorrect.): /api/properties/
+2025-08-13 11:36:29,641 | WARNING | django.security.SuspiciousSession | pid=8 tid=139715209590464 | Session data corrupted
+2025-08-13 11:36:40,377 | WARNING | django.security.SuspiciousSession | pid=8 tid=139715209590464 | Session data corrupted
+2025-08-13 17:59:31,951 | WARNING | django.security.SuspiciousSession | pid=7 tid=139791430579904 | Session data corrupted
+2025-08-13 17:59:36,847 | WARNING | django.security.SuspiciousSession | pid=7 tid=139791430579904 | Session data corrupted
+2025-08-13 17:59:51,218 | WARNING | django.security.SuspiciousSession | pid=7 tid=139791430579904 | Session data corrupted
+2025-08-13 17:59:53,095 | WARNING | django.security.SuspiciousSession | pid=7 tid=139791043651264 | Session data corrupted
+2025-08-13 18:00:28,117 | WARNING | django.security.SuspiciousSession | pid=7 tid=139791043651264 | Session data corrupted
+2025-08-13 21:08:38,984 | WARNING | django.security.SuspiciousSession | pid=5340 tid=10884 | Session data corrupted
+2025-08-13 21:08:39,197 | WARNING | django.security.SuspiciousSession | pid=5340 tid=10884 | Session data corrupted
+2025-08-13 21:08:50,336 | WARNING | django.security.SuspiciousSession | pid=5340 tid=1552 | Session data corrupted
+2025-08-13 21:08:52,989 | WARNING | django.security.SuspiciousSession | pid=5340 tid=1552 | Session data corrupted
+2025-08-13 21:08:54,737 | WARNING | django.security.SuspiciousSession | pid=5340 tid=1552 | Session data corrupted
+2025-08-13 21:09:01,456 | WARNING | django.security.SuspiciousSession | pid=5340 tid=9616 | Session data corrupted
+2025-08-13 21:09:05,999 | WARNING | django.security.SuspiciousSession | pid=5340 tid=9616 | Session data corrupted
+2025-08-13 21:09:10,630 | WARNING | django.security.SuspiciousSession | pid=5340 tid=9616 | Session data corrupted
+2025-08-13 21:09:11,038 | WARNING | django.security.SuspiciousSession | pid=5340 tid=9616 | Session data corrupted
+2025-08-13 23:21:48,779 | WARNING | django.security.SuspiciousSession | pid=12232 tid=26516 | Session data corrupted
+2025-08-13 23:21:57,688 | WARNING | django.security.SuspiciousSession | pid=12232 tid=26516 | Session data corrupted
+2025-08-13 23:22:27,380 | WARNING | django.security.SuspiciousSession | pid=24384 tid=17636 | Session data corrupted
+2025-08-14 00:53:12,712 | WARNING | django.security.SuspiciousSession | pid=12240 tid=22404 | Session data corrupted
+2025-08-14 00:53:12,840 | WARNING | django.security.SuspiciousSession | pid=12240 tid=22404 | Session data corrupted

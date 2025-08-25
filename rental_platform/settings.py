@@ -197,6 +197,7 @@ REST_FRAMEWORK = {
 
 SIMPLE_JWT = {
     # For compatibility with blacklisting all active refresh tokens when deleting an account
+    'ROTATE_REFRESH_TOKENS': True,
     "BLACKLIST_AFTER_ROTATION": True,
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60),  # For example, 60 minutes instead of the standard 5
     'REFRESH_TOKEN_LIFETIME': timedelta(days=7),     # For example, 7 days
